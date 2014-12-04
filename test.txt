@@ -19,3 +19,5 @@ http://www.bootcss.com/p/git-guide/
 git config --global user.name nuke2015
 
 
+git 保存密码居然是明文的,郁闷,非得用ssh-key么.
+
