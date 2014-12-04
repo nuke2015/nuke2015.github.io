@@ -5,3 +5,12 @@
 tortoise git
 
 hello git
+
+
+拉取>保存,
+提交>推送
+
+
+pull>save
+commit>push
+
