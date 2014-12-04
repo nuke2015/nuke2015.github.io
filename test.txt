@@ -14,3 +14,4 @@ hello git
 pull>save
 commit>push
 
+http://www.bootcss.com/p/git-guide/
