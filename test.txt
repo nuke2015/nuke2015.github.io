@@ -15,3 +15,7 @@ pull>save
 commit>push
 
 http://www.bootcss.com/p/git-guide/
+
+git config --global user.name nuke2015
+
+
