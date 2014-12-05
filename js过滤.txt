@@ -1,0 +1,11 @@
+
+过滤特殊符号:
+function escapeHtml(raw) {
+    return raw.replace(/[&<>"']/g, function onReplace(match) {
+        return '&#' + match.charCodeAt(0) + ';';
+    });
+}
+
+去除XSS injection:
+var regex = /[&<>"'` !@$%()=+{}[\]]/g
+
