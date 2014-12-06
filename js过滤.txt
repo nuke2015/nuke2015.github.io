@@ -9,3 +9,8 @@ function escapeHtml(raw) {
 去除XSS injection:
 var regex = /[&<>"'` !@$%()=+{}[\]]/g
 
+
+http://my.oschina.net/u/142836/blog/169382
+
+http://www.vagrantbox.es/
+
