@@ -27,7 +27,8 @@ shift+f10右键
 ctrl+[跳标签(首尾标识符跳转)
 ctrl+shift+1文件在项目中的位置
 alt+left/right编辑位跳转(ctrl+b,alt+left)
-
+ctrl+shift+enter全屏
+ctrl+2文件窗口,选中文件后自动消失.
 
 
 
