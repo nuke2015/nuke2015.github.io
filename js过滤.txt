@@ -33,3 +33,6 @@ http://www.iteye.com/news/28275
 js框架
 http://todomvc.com/
 
+php文档生成
+http://lztian.com/blog/2386.html
+
