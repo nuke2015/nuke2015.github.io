@@ -25,13 +25,14 @@ ctrl+w关闭当前文件
 ctrl+shift+w关闭所有文件
 shift+f10右键
 ctrl+[跳标签(首尾标识符跳转)
-ctrl+shift+1文件在项目中的位置
 alt+left/right编辑位跳转(ctrl+b,alt+left)
 ctrl+shift+enter全屏
 alt+shift+enter隐藏标题栏
 
+ctrl+shift+1文件在项目中的位置
 ctrl+2文件窗口,选中文件后自动消失.
-
+ctrl+shift+2文件在文件树中的位置
+ctrl+r重构,类似于sublime的同步编辑.
 
 
 常规快捷键
