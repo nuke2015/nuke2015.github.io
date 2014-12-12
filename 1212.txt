@@ -1,7 +1,0 @@
-
-奇怪的网站
-http://scotch.io/tutorials
-
-QuickPHP(和thinkphp相似的框架)
-用来给新手做留言本;
-
