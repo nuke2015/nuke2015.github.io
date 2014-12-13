@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>系统提示</title>
+</head>
+<style type="text/css">
+a{
+text-decoration:none;
+}
+.ok {
+	padding:8px 8px;
+	border:1px solid #aaa5a3;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin:100px auto 10px auto;
+	background:#fff;
+	text-align:center;
+	max-width:400px;
+	box-shadow: 0 1px 1px #999;
+	-moz-box-shadow: 0 1px 1px #999;
+	-webkit-box-shadow: 0 1px 1px #999;
+}
+.ok h1 {
+	font-size:1.25em;
+	font-weight:normal;
+	margin:10px auto 15px;
+}
+.ok p {
+	color:#666;
+	margin-bottom:10px;
+}
+.ok p a:link, .ok p a:visited {
+	color:#f00;
+}
+</style>
+<body>
+	<!-- 主要内容 -->
+    <div id="container">
+		<div class="ok">
+			<present name="message">
+			<h1><font style="color:green;"><?php echo($message); ?></font></h1>
+			<else/>
+			<h1><font style="color:red;"><?php echo($error); ?></font></h1>
+			</present>
+			<p>等待<b id="wait"><?php echo($waitSecond); ?></b>秒&nbsp;<a  id="href" href="{$jumpUrl}">自动跳转</a>,或返回&nbsp;<a href="{:U('Index/index');}">首页</a></p>
+		</div>
+    
+    </div>
+    <!-- 主要内容 结束 -->
+	<script type="text/javascript">
+	(function(){
+	var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+	var interval = setInterval(function(){
+		var time = --wait.innerHTML;
+		if(time == 0) {
+			location.href = href;
+			clearInterval(interval);
+		};
+	}, 1000);
+	})();
+	</script>    
+</body>
+</html>

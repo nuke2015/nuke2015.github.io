@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>锋速网络中心</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Le styles -->
+	<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<script src="/bootstrap/js/jquery.js"></script>	
+	<script src="/bootstrap/js/bootstrap-validation.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .form-signin{
+            width:250px;
+            padding:5px 5px;
+            float:left;
+        }
+        .myform{
+            width:300px;
+            margin-top:6%;
+        }
+    </style>
+    <div class="container myform">
+        <form class="form-signin" action="/login/check" method="post">
+            <h3>管理员登陆</h3>
+            <p>用户名:
+            <input type="text" name="user" class="input-block-level" />
+            </p>
+            <p>密码
+            <input type="password" name="pwd" class="input-block-level" />
+            </p>
+            <input type="submit" class="btn btn-primary" value="登陆" />
+        </form>
+    </div>
+	
+</body>
+</html>

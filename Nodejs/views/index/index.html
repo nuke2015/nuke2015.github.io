@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>锋速网络中心</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Le styles -->
+	<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<script src="/bootstrap/js/jquery.js"></script>	
+</head>
+<body>
+<div class="container">
+    <h1><a href="/">锋速VPN控制中心</a></h1>
+    <hr />
+	<h3>客户列表</h3>
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>账号</td>
+			<td>密码</td>
+			<td>分类</td>
+			<td>备注</td>
+			<td colspan="2">操作</td>
+		</tr>
+	<%shops.forEach(function(shop){%>
+		<tr>
+			<td><%=shop._id%></td>
+			<td><%=shop.username%></td>
+			<td><%=shop.password%></td>
+			<td><%=shop.type%></td>
+			<td><%=shop.remark%></td>
+			<td><a href="/index/edit?id=<%=shop._id%>">编辑</a></td>
+			<td><a href="/index/remove?id=<%=shop._id%>">删除</a></td>
+		</tr>
+	<%})%>
+	</table>
+	<%if(data._id){%>
+	<h4>编辑客户</h4>
+	<form action="/index/update" method="post">
+		<input type="hidden" name="id" value="<%=data._id%>" />
+		<p>标题:<input type="text" name="username" value="<%=data.username%>" /></p>
+		<p>地址:<input type="text" name="password" value="<%=data.password%>" /></p>
+		<p>分类:<input type="text" name="type" value="<%=data.type%>" /></p>
+		<p>备注:<input type="text" name="remark" value="<%=data.remark%>" /></p>
+		<input type="submit" value="保存" class="btn btn-primary" />
+	</form>
+	<%}else{%>
+	<h4>添加客户</h4>
+	<form action="/index/insert" method="post">
+		<p>账号:<input type="text" name="username" /></p>
+		<p>密码:<input type="text" name="password" /></p>
+		<p>分类:<input type="text" name="type" /></p>
+		<p>备注:<input type="text" name="remark" /></p>
+		<input type="submit" value="提交" class="btn" />
+	</form>
+	<%}%>
+    <hr />
+    <div>
+        <a href="/index/vpnok">重启服务</a>&nbsp;
+        <a href="/login/logout">退出系统</a>&nbsp;
+    </div>
+</div>
+</body>
+</html>
