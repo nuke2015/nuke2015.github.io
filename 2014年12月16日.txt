@@ -1,3 +1,13 @@
 
 http://database.51cto.com/art/201011/235159.htm
 
+
+
+android沙盒
+http://www.kanxue.com/bbs/showthread.php?t=175163
+http://www.leiphone.com/news/201406/famigo-sandbox-creates.html
+http://blog.csdn.net/jiayanhui2877/article/details/8120533
+
+代码部署
+http://www.infoq.com/cn/articles/interview-sam-haskins
+
