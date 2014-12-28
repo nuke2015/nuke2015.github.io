@@ -1,0 +1,66 @@
+
+<link href="/css/uploadify.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jq.uploadify.min.js"></script>
+
+<tr>
+    <td width="20%"> 
+    <span id="file_button_1"></span>
+    <span id="file_tip_1"></span>
+    </td> 
+    <td>
+    <div id="file_result_1" class="file_result"></div>
+    </td>
+</tr>
+
+<script type="text/javascript">
+    var index='1';
+    jQuery("#file_button_"+index).live('click',myupload(index));
+    function myupload(index){
+        jQuery("#file_button_"+index).uploadify({
+            'formData'     : {
+                'sess':'<?php echo session_id(); ?>'
+            },
+            'swf'      : '/img/swf/uploadify_new.swf',
+            'uploader' : '/home/upload.php',
+            'buttonText':'图片上传',
+            'width': 60,
+            'height': 15,
+
+            'multi': true,
+            'auto': true,
+            'onUploadStart': function(){
+                jQuery('.uploadify-queue-item').hide();
+                jQuery('#file_tip_'+index).text('正在上传...');
+            },
+            'onUploadSuccess'  : function(file,data,resp){
+                json=eval('(' + data + ')');
+                if(json.status==1){
+                    jQuery('#file_tip_'+index).text('');
+                    var html='<div><img src="'+json.message+'" alt="" width="50px" height="50px" /><span onclick="RemovePic(this)">X</span>';
+                    html+='<input type="hidden" name="thumb" value="'+json.message+'"/></div>';
+                    jQuery('#file_result_'+index).html(html);
+                }else{
+                    jQuery('#file_tip_'+index).text(json.message);
+                }
+            },
+        });
+    }
+    /**
+     * 图片删除
+     * nuke.zou     锋子
+     * 2014年12月26日 20:22:26
+     * 
+     */
+    function RemovePic(obj){
+        var url=jQuery(obj).prev('img').attr('src');
+        jQuery.post(
+            "{url('pic','remove')}",
+            {url:url},
+            function(result){
+            }
+        )
+        //即使没有返回值,也要删除界面;
+        jQuery(obj).parent().remove();
+    }
+</script>
+<script src="/js/calendar.js"></script>

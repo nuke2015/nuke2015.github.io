@@ -11,3 +11,8 @@ http://blog.csdn.net/jiayanhui2877/article/details/8120533
 代码部署
 http://www.infoq.com/cn/articles/interview-sam-haskins
 
+http://115.28.221.31:8889/report_laravel.html
+
+http://www.sitepoint.com/visualize-codes-quality-phpmetrics/
+
+http://www.thinkphp.cn/topic/4140.html

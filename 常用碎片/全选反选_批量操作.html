@@ -1,0 +1,39 @@
+<script>
+    jQuery('#checkAll').click(function () {
+        jQuery('[name="ids[]"]').each(function (index, item) {
+            item.checked = true;
+        })
+    });
+    jQuery('#reverse').click(function () {
+        jQuery('[name="ids[]"]').each(function (index, item) {
+            item.checked = !item.checked;
+        })
+    });
+    jQuery('#cancel').click(function () {
+        jQuery('[name="ids[]"]').each(function (index, item) {
+            item.checked = false;
+        })
+    });
+    jQuery('#remove').click(function(){
+        var ids='';
+        jQuery('[name="ids[]"]').each(function (index,item){
+            if(item.checked)ids += item.value+",";
+        });
+        if(ids)post(ids);
+    });
+    function post(ids){
+        jQuery.post(
+            "{url('Default','Remove')}", 
+            {'ids':ids},
+            function(data){
+                json=eval('('+data+')');
+                if(json.status){
+                    alert(json.message);
+                    history.go(0);
+                }else{
+                    alert(json.message);
+                }
+            }
+        );
+    }
+</script>
