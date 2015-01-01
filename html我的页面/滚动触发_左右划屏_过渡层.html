@@ -1,0 +1,91 @@
+
+	
+<div class="zzc">
+	<div class="zzc_pic">
+		<img src="__PUBLIC__/car/images/wait3.gif" alt="" width="120px;" height="120px" />
+	</div>
+</div>
+	
+	<script src="__PUBLIC__/car/js/jquery-1.5.min.js"></script>
+	<script src="__PUBLIC__/car/js/jquery.mobile-1.0a3.min.js"></script>
+	<script>
+    $(document).ready(function(){
+		showmenu({:session('catid')-1});//默认第一频道;
+        $("#content").live("swipeleft",function(){
+           go('right');           
+        });
+		$("#content").live("swiperight",function(){
+           go('left');
+        });
+		enablehref();
+    });
+	//跳转;
+	function go(type){
+		$('.zzc').show();
+		$.post("{:U('Index/swipe','type=');}"+type,function(data){
+			json=$.parseJSON(data);
+			if(json.status){
+				showmenu(json.key)
+				$("#myshow" ).html(json.html);
+				enablehref();
+				$(".zzc").hide();
+			}else{
+				$(".zzc").hide();
+			}
+		});	 
+	}
+	 
+	var page=1;
+	
+	//滚动触发;
+	$(window).scroll(function () {
+	   if ($(window).scrollTop() == $(document).height() - $(window).height()){
+		  more(page);
+		  page++;//递增;
+	   }
+	});
+
+	//ajax
+	function more(){
+		$(".more").html("正在加载下一页,请稍候...");
+		$.post("{:U('Index/more','p=');}"+page, function(data){
+			if(data==1){
+				$(".more" ).html("亲,没有下一页啦!");
+			}else{
+				$(".main" ).append(data);
+				enablehref();
+				$(".more").html();
+			}
+		});
+	}
+	
+	//恢复a点击;
+	function enablehref(){
+		//恢复点击事件;
+		$('a').click(function (){
+			var url=$(this).attr("href");
+			location.href=url;
+		})
+	}
+	
+	//隐藏多余菜单;
+	function showmenu(index){
+		$("#pagenavi1 li").removeClass('ohye');
+		$("#pagenavi1 li").removeClass('active');
+		$("#pagenavi1 li a").removeClass('active');
+		if(index<5){
+			$('#pagenavi1 li:lt(5)').addClass('ohye');
+		}else if(index>8){
+			$('#pagenavi1 li:gt(8)').addClass('ohye');
+		}else{
+			$("#pagenavi1 li:gt("+(index-3)+"):lt(5)").addClass('ohye');
+		}
+		$("#pagenavi1 li").eq(index).addClass('active');
+		$("#pagenavi1 li a").eq(index).addClass('active');
+		$("#pagenavi1 li").not('.ohye').hide();
+		$("#pagenavi1 li.ohye").show();
+	}
+    </script>
+	
+	</body>
+</html>
