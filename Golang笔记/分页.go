@@ -1,0 +1,1 @@
+this.Data["pagebar"] = models.NewPager(int64(page), int64(count), int64(pagesize), "").ToString()
