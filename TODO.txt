@@ -1,0 +1,3 @@
+
+effective_go
+http://www.hellogcc.org/effective_go.html
