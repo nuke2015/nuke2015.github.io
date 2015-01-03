@@ -1,3 +1,7 @@
 
 effective_go
 http://www.hellogcc.org/effective_go.html
+
+go文档
+http://docscn.studygolang.com/doc/
+
