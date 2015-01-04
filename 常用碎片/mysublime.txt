@@ -1,0 +1,20 @@
+{
+    "auto_wrap": true,
+    "color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+    "font_face": "微软雅黑",
+    "font_size": 14,
+    "hot_exit": true,
+    "ignored_packages":
+    [
+        "BracketHighlighter",
+        "ConvertToUTF8",
+        "Vintage",
+        "DocBlockr"
+    ],
+    "remember_open_files": false,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "update_check": false,
+    "use_simple_full_screen": true,
+    "word_wrap": true
+}
