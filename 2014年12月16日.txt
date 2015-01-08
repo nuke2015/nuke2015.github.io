@@ -24,3 +24,11 @@ https://www.b2m.cn/
 
 http://shanghai.emay.cn/
 http://www.eoom.cn/
+
+AMQP
+RABBITMQ
+
+esb
+http://blog.csdn.net/caolaosanahnu/article/details/8157272
+
+
