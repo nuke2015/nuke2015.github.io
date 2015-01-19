@@ -31,4 +31,9 @@ RABBITMQ
 esb
 http://blog.csdn.net/caolaosanahnu/article/details/8157272
 
+集群
+mongo shard,mongo replset,mongo mongos
+
+phptrace
+https://github.com/Qihoo360/phptrace/wiki
 
