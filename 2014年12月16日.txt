@@ -37,3 +37,5 @@ mongo shard,mongo replset,mongo mongos
 phptrace
 https://github.com/Qihoo360/phptrace/wiki
 
+laravel-curd
+http://www.jb51.net/article/54713.htm
