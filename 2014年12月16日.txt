@@ -39,3 +39,10 @@ https://github.com/Qihoo360/phptrace/wiki
 
 laravel-curd
 http://www.jb51.net/article/54713.htm
+
+视频
+http://www.happycasts.net/all
+
+apk重新打包
+http://www.jb51.net/article/32888.htm
+
