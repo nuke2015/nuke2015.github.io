@@ -49,5 +49,9 @@ http://www.jb51.net/article/32888.htm
 docker集群
 http://blog.liuts.com/post/247/
 
+nodejs模板
+https://github.com/longbill/EndSkin
 
+yum源
+http://www.cnblogs.com/MockingBirdHome/p/3599278.html
 
