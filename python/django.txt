@@ -1,0 +1,79 @@
+运行
+python manage.py runserver
+127.0.0.1:8000
+
+
+# Install from PyPI
+$ pip install mezzanine
+
+# Create a project
+$ mezzanine-project myproject
+$ cd myproject
+
+# Create a database
+$ python manage.py createdb
+
+# Run the web server
+$ python manage.py runserver
+
+
+最简单的页面
+from django.http import HttpResponse
+
+def hello(request):
+    return HttpResponse("Hello world")
+
+url页面
+from django.conf.urls.defaults import *
+from mysite.views import hello
+
+urlpatterns = patterns('',
+    ('^hello/$', hello),
+)
+
+
+正则表达式字符串的开头字母“r”。 它告诉Python这是个原始字符串，不需要处理里面的反斜杠（转义字符）
+
+from django.http import Http404, HttpResponse
+import datetime
+
+
+offset是url中正则匹配出来的
+def hours_ahead(request, offset):
+    try:
+        offset = int(offset)
+    except ValueError:
+        raise Http404()
+    dt = datetime.datetime.now() + datetime.timedelta(hours=offset)
+    html = "<html><body>In %s hour(s), it will be %s.</body></html>" % (offset, dt)
+    return HttpResponse(html)
+
+在你视图的任何位置，临时插入一个 assert False 来触发出错页,然后会有详细的出错信息。
+
+
+模板技术:
+例如 {{ person_name }} ）称为 变量(variable) 
+{% for item in item_list %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% if ordered_warranty %}
+    <p>Your warranty information will be included in the packaging.</p>
+{% else %}
+    <p>You didn't order a warranty, so you're on your own when
+    the products inevitably stop working.</p>
+{% endif %}
+{{ship_date|date:”F j, Y” }}，
+
+{% include 'includes/nav.html' %}
+
+
+为什么我们运行python manage.py shell而不是python
+django有依赖的文件.
+
+t.render(c)返回的值是一个Unicode对象，不是普通的Python字符串。 你可以通过字符串前的u来区分
+
+ Python 的内建函数 locals() 。它返回的字典对所有局部变量的名称与值进行映射。
+
+django.contrib是一套庞大的功能集，它是Django基本代码的组成部分，Django框架就是由众多包含附加组件(add-on)的基本代码构成的。
+

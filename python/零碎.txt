@@ -1,0 +1,51 @@
+
+1.pexpect,paramiko,fabric这三个库的区别在哪里，各自使用场景在什么地方？
+
+2.怎样做好自动化运维.
+http://noops.me/?p=1036
+
+3.http://www.vpsee.com/2013/08/a-system-configuration-management-and-orchestration-tool-saltstack/
+
+4.sublime的sftp插件
+
+5.python2.79,django,
+安装mysql扩展
+MySQL-python-1.2.3.win-amd64-py2.7
+easy_install MySQL-python或pip install mysql-python
+
+vc++编译器for python2.7
+http://www.microsoft.com/en-us/download/details.aspx?id=44266
+
+python与sublime
+https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/
+
+基于flask的cms
+https://github.com/quokkaproject/quokka
+
+#python的dump代码
+print vars(variable)
+#或者
+variable.__dict__
+
+python语法32[装饰器decorator]
+http://www.cnblogs.com/itech/archive/2011/12/31/2308766.html
+
+python 装饰器和 functools 模块
+http://blog.jkey.lu/2013/03/15/python-decorator-and-functools-module/
+
+python标准类中的math库中的ceil方法
+python,math,ceil
+https://docs.python.org/2/library/math.html
+
+python_yield生成器,与逻辑优化.
+http://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/
+http://pyzh.readthedocs.org/en/latest/the-python-yield-keyword-explained.html
+
+js依赖管理工具,用于nodejs
+http://blog.fens.me/nodejs-bower-intro/
+
+python安装依赖pip install -r requirements.txt
+django运行python manage.py runserver
+python库安装python setup.py install
+
+

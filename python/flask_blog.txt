@@ -1,0 +1,258 @@
+
+从文件引入第三方辅助函数
+from helper_functions import *
+
+引入第三方类
+import post
+import user
+import pagination
+import settings
+
+类定义
+class Post:
+
+    def __init__(self, default_config):
+        self.collection = default_config['POSTS_COLLECTION']
+        self.response = {'error': None, 'data': None}
+        self.debug_mode = default_config['DEBUG']
+
+    def get_posts(self, limit, skip, tag=None, search=None):
+        return
+
+系统类引入
+import cgi
+import os
+
+markdown支持
+from flaskext.markdown import Markdown
+
+默认路由
+@app.route('/', defaults={'page': 1})
+@app.route('/page-<int:page>')
+
+文章模型
+post.py
+import datetime
+import cgi
+from bson.objectid import ObjectId
+from helper_functions import *
+
+模板渲染
+return render_template('index.html', posts=posts['data'], pagination=pag, meta_title=app.config['BLOG_TITLE'])
+
+if not posts['data']:
+        abort(404)
+404页面,否定判断
+
+读取配置信息
+app.config['PER_PAGE']
+
+url传参
+@app.route('/q/<query>', defaults={'page': 1})
+@app.route('/q/<query>/page-<int:page>')
+def search_results(page, query):
+
+调用分页类的,构造方法,普通类
+pagination.Pagination(page, app.config['PER_PAGE'], count)
+引入post文件,调用postClass中的get_posts方法
+import post
+类构造初始化
+postClass = post.Post(app.config)
+调用类方法
+posts = postClass.get_posts(int(app.config['PER_PAGE']), skip, search=query)
+
+跳转
+return redirect(url_for('search_results', query=query))
+
+读取参数
+query = request.form.get('query', None)
+
+前置路由拦截,全局函数拦截
+@app.route('/newpost', methods=['GET', 'POST'])
+@login_required()
+def new_post():
+
+去空格
+request.form.get('post-title').strip()
+
+字符串转数组
+extract_tags(tags)
+
+utf8中文转码
+cgi.escape()
+
+//当前时间
+datetime.datetime.utcnow()
+
+//解码带杠
+cgi.escape(post_data['body'], quote=True)
+
+//三元操作符,session写操作
+session['post-preview']['action'] = 'edit' if request.form.get('post-id') else 'add'
+session销毁
+session.pop('post-preview', None)
+
+//只取表单中的数据
+request.form['post-id']
+
+信息提示
+flash(response['error'], 'error')
+flash('New post created!', 'success')
+
+转小写,去空格
+request.form.get('login-username').lower().strip()
+
+逻辑或且非or,and,not
+if not post_data['email'] or not post_data['_id']:
+
+置空
+error = None
+
+foreach操作
+for key, value in blog_data.items():
+    if not value and key != 'text_search' and key != 'description':
+        error = True
+        break
+
+break与continue的区别,break中止循环,continue跳过一次循环,进入下一次.
+
+非空
+if i is not None:
+
+前置路由,令牌表单
+@app.before_request
+def csrf_protect():
+    if request.method == "POST":
+        token = session.pop('_csrf_token', None)
+        if not token or token != request.form.get('_csrf_token'):
+            abort(400)
+
+往模板传送全局变量
+app.jinja_env.globals['meta_description'] = app.config['BLOG_DESCRIPTION']
+
+404定制
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', meta_title='404'), 404
+
+//默认时间格式化;
+@app.template_filter('formatdate')
+def format_datetime_filter(input_value, format_="%a, %d %b %Y"):
+    return input_value.strftime(format_)
+
+//引入bson处理类
+from bson.objectid import ObjectId
+
+//类构造,是因为要传了self才能用self么.
+def __init__(self, default_config):
+    self.collection = default_config['POSTS_COLLECTION']
+    self.response = {'error': None, 'data': None}
+    self.debug_mode = default_config['DEBUG']
+
+//mongo正则搜索
+elif search is not None:
+    cond = {'$or': [
+            {'title': {'$regex': search, '$options': 'i'}},
+            {'body': {'$regex': search, '$options': 'i'}},
+            {'preview': {'$regex': search, '$options': 'i'}}]}
+try:
+    cursor = self.collection.find(cond).sort(
+        'date', direction=-1).skip(skip).limit(limit)
+
+//数组追加
+self.response['data'].append()
+
+//出错信息捕获
+except Exception, e:
+    self.print_debug_info(e, self.debug_mode)
+    self.response['error'] = 'Posts not found..'
+
+//mongo查找单条
+data=self.collection.find_one({'_id': ObjectId(post_id)})
+
+//数组合成字符串
+join(self.response['data']['tags'])
+
+//高大上用法
+self.response['data'] = self.collection.aggregate([
+                {'$unwind': '$tags'},
+                {'$group': {'_id': '$tags', 'count': {'$sum': 1}}},
+                {'$sort': {'count': -1}},
+                {'$limit': 10},
+                {'$project': {'title': '$_id', 'count': 1, '_id': 0}}
+            ])
+
+//mongo入库
+self.collection.insert(post_data)
+
+//mongo更新
+update({'_id': ObjectId(post_id)}, {"$set": post_data}, upsert=False)
+
+//try语句,类自身调用
+try:
+    if self.get_post_by_id(post_id) and self.collection.remove({'_id': ObjectId(post_id)}):
+        self.response['data'] = True
+    else:
+        self.response['data'] = False
+except Exception, e:
+    self.print_debug_info(e, self.debug_mode)
+    self.response['error'] = 'Deleting post error..'
+
+//随机字符串
+def random_string(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for x in range(size))
+
+//类中的静态方法
+@staticmethod
+def validate_post_data(post_data):
+    return
+
+类似printf用法
+print '\n\n---\nError type: %s in file: %s on line: %s\nError details: %s\n---\n\n'\
+                  % (error['type'], error['file'], error['line'], error['details'])
+
+in_array,为空判断
+if tag not in cleaned and tag != "":
+
+拆成数组
+split(,'a,b,c')
+
+//python装饰器
+def login_required():
+    def wrapper(f):
+        @wraps(f)
+        def wrapped(*args, **kwargs):
+            if not session.get('user'):
+                flash('You must be logged in..', 'error')
+                return redirect(url_for('login'))
+            return f(*args, **kwargs)
+        return wrapped
+    return wrapper
+
+//一个函数一个类,一个全局变量和php一样嘛
+import markdown
+
+BLOCKQUOTE_RE = r'(~{2})(.+?)\2'
+
+
+class QuoteExtension(markdown.Extension):
+    def extendMarkdown(self, md, md_globals):
+        md.inlinePatterns.add('blockquote', markdown.inlinepatterns.SimpleTagPattern(BLOCKQUOTE_RE, 'blockquote'), '>strong')
+
+
+def makeExtension(configs=None):
+    return QuoteExtension(configs = configs)
+
+//目测是类的方法,同时可当作类属性
+@property
+def pages(self):
+    return int(ceil(self.total_count / float(self.per_page)))
+
+//类构造,可以不返回
+class Pagination(object):
+
+    def __init__(self, page, per_page, total_count):
+        self.page = page
+
+xrange和range的区别都是生成数据序列,但是xrange性能更优,用到才生成.
+

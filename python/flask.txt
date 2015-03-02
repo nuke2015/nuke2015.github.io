@@ -1,0 +1,175 @@
+
+最小的应用
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run()
+
+你应该使用 __name__ ，因为模块的名称将会因其作为单独应用启动还是作为模块导入而有不同（ 也即是 '__main__' 或实际的导入名）
+
+我们使用 route() 装饰器告诉 Flask 什么样的URL 能触发我们的函数。
+
+所有ip
+app.run(host='0.0.0.0')
+
+调试模式
+app.debug = True
+app.run()
+
+日志邮件
+ADMINS = ['yourname@example.com']
+if not app.debug:
+    import logging
+    from logging.handlers import SMTPHandler
+    mail_handler = SMTPHandler('127.0.0.1',
+                               'server-error@example.com',
+                               ADMINS, 'YourApplication Failed')
+    mail_handler.setLevel(logging.ERROR)
+    app.logger.addHandler(mail_handler)
+
+不同的日志方式
+FileHandler - 在文件系统上记录日志
+RotatingFileHandler - 在文件系统上记录日志， 并且当消息达到一定数目时，会滚动记录
+NTEventLogHandler - 记录到 Windows 系统中的系统事件日志。如果你在 Windows 上做开发，这就是你想要用的。
+SysLogHandler - 发送日志到 Unix 的系统日志
+
+控制日志格式
+from logging import Formatter
+file_handler.setFormatter(Formatter(
+    '%(asctime)s %(levelname)s: %(message)s '
+    '[in %(pathname)s:%(lineno)d]'
+))
+
+日志处理器
+from logging import getLogger
+loggers = [app.logger, getLogger('sqlalchemy'),
+           getLogger('otherlibrary')]
+for logger in loggers:
+    logger.addHandler(mail_handler)
+    logger.addHandler(file_handler)
+
+分支路由
+@app.route('/hello')
+def hello():
+    return 'Hello World'
+
+@app.route('/user/<username>')
+@app.route('/post/<int:post_id>')
+int 接受整数
+float   同 int ，但是接受浮点数
+path    和默认的相似，但也接受斜线
+
+@app.route('/projects/')
+def projects():
+    return 'The project page'
+支持不带杠
+
+路由生成
+print url_for('index')
+...  print url_for('login')
+...  print url_for('login', next='/')
+...  print url_for('profile', username='John Doe')
+
+路由请求方式
+@app.route('/login', methods=['GET', 'POST'])
+
+静态资源文件
+url_for('static', filename='style.css')
+static/style.css 。
+
+模板渲染
+from flask import render_template
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('hello.html', name=name)
+
+模板语法jinja2
+<!doctype html>
+<title>Hello from Flask</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello World!</h1>
+{% endif %}
+
+自动转义功能默认是开启的,若不转义|safe
+
+全局变量
+你也可以访问 request 、 session 和 g [1] 对象， 以及get_flashed_messages()函数
+
+对request的单元测试,需要结合 with 声明，绑定一个测试请求，这样你才能与之交互。
+
+读取参数并绑定默认值
+searchword = request.args.get('q', '')
+
+文件上传
+enctype=multipart/form-data
+f = request.files['the_file']
+f.save('/var/www/uploads/' + secure_filename(f.filename))
+
+
+import os
+from flask import Flask, request, redirect, url_for
+from werkzeug import secure_filename
+UPLOAD_FOLDER = '/path/to/the/uploads'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+访问上传的文件
+from flask import send_from_directory
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               filename)
+文件上传大小限制
+app = Flask(__name__)
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
+上传插件
+Plupload - HTML5, Java, Flash
+SWFUpload - Flash
+JumpLoader - Java
+flask-uploads上传工具
+
+cookie操作
+username = request.cookies.get('username')
+设置cookie
+from flask import make_response
+resp = make_response(render_template(...))
+resp.set_cookie('username', 'the username')
+return resp
+延迟设置cookie
+@after_this_request
+def remember_language(response):
+    response.set_cookie('user_lang', language)
+
+404页面
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('error.html'), 404
+
+随机密钥
+import os
+os.urandom(24)
+'\xfd{H\xe5<\x95\xf9\xe3\x96.5\xd1\x01O<!\xd5\xa2\xa0\x9fR"\xa1\xa8'
+
+消息闪现
+from flask import Flask, flash, redirect, render_template, \
+http://docs.jinkan.org/docs/flask/patterns/flashing.html#message-flashing-pattern
+     request, url_for
+flash('You were successfully logged in')
+{% with messages = get_flashed_messages() %}
+
+日志分级记录
+app.logger.debug('A value for debugging')
+app.logger.warning('A warning occurred (%d apples)', 42)
+app.logger.error('An error occurred')
+
