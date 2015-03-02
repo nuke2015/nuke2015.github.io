@@ -108,7 +108,7 @@ if not post_data['email'] or not post_data['_id']:
 置空
 error = None
 
-foreach操作
+foreach操作,python也有continue
 for key, value in blog_data.items():
     if not value and key != 'text_search' and key != 'description':
         error = True
@@ -133,17 +133,17 @@ app.jinja_env.globals['meta_description'] = app.config['BLOG_DESCRIPTION']
 404定制
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('404.html', meta_title='404'), 404
+    return render_template('404.html', meta_title='404')
 
 //默认时间格式化;
 @app.template_filter('formatdate')
 def format_datetime_filter(input_value, format_="%a, %d %b %Y"):
-    return input_value.strftime(format_)
+    return input_value.strftime(format)
 
 //引入bson处理类
 from bson.objectid import ObjectId
 
-//类构造,是因为要传了self才能用self么.
+//类构造,都要传self.
 def __init__(self, default_config):
     self.collection = default_config['POSTS_COLLECTION']
     self.response = {'error': None, 'data': None}
@@ -156,11 +156,10 @@ elif search is not None:
             {'body': {'$regex': search, '$options': 'i'}},
             {'preview': {'$regex': search, '$options': 'i'}}]}
 try:
-    cursor = self.collection.find(cond).sort(
-        'date', direction=-1).skip(skip).limit(limit)
+    cursor = self.collection.find(cond).sort('date', direction=-1).skip(skip).limit(limit)
 
 //数组追加
-self.response['data'].append()
+self.response['data'].append('a')
 
 //出错信息捕获
 except Exception, e:
@@ -173,7 +172,8 @@ data=self.collection.find_one({'_id': ObjectId(post_id)})
 //数组合成字符串
 join(self.response['data']['tags'])
 
-//高大上用法
+//高大上用法,分类汇总
+select by_user, count(*) from mycol group by by_user
 self.response['data'] = self.collection.aggregate([
                 {'$unwind': '$tags'},
                 {'$group': {'_id': '$tags', 'count': {'$sum': 1}}},
@@ -185,7 +185,8 @@ self.response['data'] = self.collection.aggregate([
 //mongo入库
 self.collection.insert(post_data)
 
-//mongo更新
+//mongo更新,这个upsert=false,与php一样,是在定义的时候设置默认值
+//但这里再写一次,估计是为了提高代码的可读性.
 update({'_id': ObjectId(post_id)}, {"$set": post_data}, upsert=False)
 
 //try语句,类自身调用
@@ -198,7 +199,7 @@ except Exception, e:
     self.print_debug_info(e, self.debug_mode)
     self.response['error'] = 'Deleting post error..'
 
-//随机字符串
+//随机字母和数字字符串
 def random_string(size=6, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for x in range(size))
 
@@ -211,13 +212,13 @@ def validate_post_data(post_data):
 print '\n\n---\nError type: %s in file: %s on line: %s\nError details: %s\n---\n\n'\
                   % (error['type'], error['file'], error['line'], error['details'])
 
-in_array,为空判断
+in_array,数组为空判断
 if tag not in cleaned and tag != "":
 
-拆成数组
+字符串拆成数组
 split(,'a,b,c')
 
-//python装饰器
+//python装饰器,不明觉历
 def login_required():
     def wrapper(f):
         @wraps(f)
@@ -234,16 +235,14 @@ import markdown
 
 BLOCKQUOTE_RE = r'(~{2})(.+?)\2'
 
-
 class QuoteExtension(markdown.Extension):
     def extendMarkdown(self, md, md_globals):
         md.inlinePatterns.add('blockquote', markdown.inlinepatterns.SimpleTagPattern(BLOCKQUOTE_RE, 'blockquote'), '>strong')
 
-
 def makeExtension(configs=None):
     return QuoteExtension(configs = configs)
 
-//目测是类的方法,同时可当作类属性
+//目测是类的方法,返回值同时,可当作类属性
 @property
 def pages(self):
     return int(ceil(self.total_count / float(self.per_page)))

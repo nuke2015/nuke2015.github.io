@@ -48,4 +48,8 @@ python安装依赖pip install -r requirements.txt
 django运行python manage.py runserver
 python库安装python setup.py install
 
+类继承
+http://sebug.net/paper/python/ch11s07.html
+
+有个叫zope3的东东
 
