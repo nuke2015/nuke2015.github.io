@@ -1,0 +1,4 @@
+
+删除重复数据
+delete qq_user from qq_user , (select id from qq_user group by openid having count(*)>1 ) as tmp where qq_user.id=tmp.id; 
+

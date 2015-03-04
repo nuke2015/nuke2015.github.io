@@ -1,0 +1,4 @@
+sublime自带有php格式化工具(coolformat),
+ctrl+shift+p,查找format,选quick format.
+或者
+ctrl+shift+alt+q
