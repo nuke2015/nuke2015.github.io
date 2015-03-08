@@ -1,0 +1,143 @@
+dd删除一行,dw删除单词.
+yyp复制一行.xp前后交换,y2wp复制两个并粘贴
+ctrl+o临时命令模式.
+:w 保存
+:q 退出
+:q!强退
+yy复制行,
+G到末尾
+esc正常模式.i插入模式.:命令模式
+:pw当前目录
+:cd切换目录
+:u撤消:U反撤消
+vim的兼容模式是兼容vi用的.not-compatible不兼容.
+兼容模式不能连续撤消
+ctrl+R重做.
+3a!追加三个感叹号
+zz保存并退出
+:e!重载
+ctrl+t弹出标签
+:help 帮助
+:3w移动三个单词
+^头尾$
+fh查找h开头的命令.
+;重复命令,反方向
+%括号匹配
+33G第33行
+HML,home,middle,last
+50%文件中间
+:set number显示行号
+:set ruler当前光标位置
+ctrl+UD,上下滚屏
+/string简单搜索n下一个?反向搜索
+.*[]^%/?~$需要转义
+:set ignorecase关闭大小写
+上下方向键,命令回溯
+:开头的命令也有历史记录
+单词+*=按单词搜索.
+:set hlsearch 高亮搜索
+:set incsearch即时搜索
+:set nowrapscan回环搜索
+ctrl+o跳回,ctrl+i跳到
+`起跳"回归[最后修改]
+d2e两单词尾部
+c2wbe改变两单词
+d$删除至尾,c$改变至尾
+dh删除左边d1删除当前
+3d2w删除三次每次两个.
+5rx替换成5个
+/four,cwfive把four改成five,n.n.n.继续继续
+daw,delete a word.
+:scriptnames脚本目录
+set backspace=indent,eol,start
+设置退格键能删除.
+set autoindent自动缩进
+set history 50设置历史条数
+set showcmd设置命令
+map Q gq键盘映射
+filetype plugin indent on
+文件类型识别,自动缩进.
+autocmd FileType text setlocal textwidth=78
+ctrl+p上补全,ctrl+n下补全
+ctrl+y,插件emmet的自动编码
+viw选中一词.
+bcw换掉一词
+byw复制一词
+bye复制一词不包含空格
+
+这个命令到项目目录生成tags文件.
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
+ctrl+]跟进,ctrl+o返回
+
+块编辑操作
+ctrl+q块编辑,I输入,esc+esc完成
+
+可视化模式:
+ctrl+a,=格式化代码
+
+主题
+colors koehler
+gg=G自动排版
+选中块>>缩进.
+=a{段落缩进}
+
+
+\cc注释   \cu取消注释
+\c<space>切换注释
+
+:Bookmark v2添加书签.
+shift+b打开书签
+
+set ff=unix转化为unix格式
+ctrl+tab跳窗
+自动全屏
+au GUIEnter * simalt ~x
+完全使用sublime中的ctrl+p功能
+ctrl+p文件搜索
+
+加入了F9开启taglist
+:TlistToggle
+
+
+ctrl+p字符查找.
+orderindex查找匹配:
+order\index或order-index两种字符.
+需要用:cd切换到工作目录.
+
+1,7 s/true/false/g
+替换1-7行的true为false,不询问.
+%s/this/that/g
+
+文件树时/action是查找action的文件
+
+:menu会出菜单列表,似乎有全部的快捷键.
+
+
+:help 会出帮助
+ctrl+f向前, ctrl+b向后,
+ctrl+]跟进,ctrl+o或t跟出.
+
+ctrl+p默认以.hg, .svn, .bzr, and _darcs类型的目录做根目录 ,可以构造一个.git目录,做为锁定根目录.
+
+
+在终端上,ctrl+s会挂起,ctrl+q解除挂起.
+explore文件浏览.exit退出.
+
+:ls缓冲区列表
+:b2第二个缓冲区
+:files打开的文件列表
+:b edit.php切换到edit.php的缓冲区.
+:tabdo :q对所有的标签执行相同命令
+:qa关闭全部
+:only单一窗口
+:bufdo :q对所有buffer执行相同命令
+命令后单点.重复执行上一条命令.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,160 @@
+—– BEGIN LICENSE —–
+Andrew Weber
+Single User License
+EA7E-855605
+813A03DD 5E4AD9E6 6C0EEB94 BC99798F
+942194A6 02396E98 E62C9979 4BB979FE
+91424C9D A45400BF F6747D88 2FB88078
+90F5CC94 1CDC92DC 8457107A F151657B
+1D22E383 A997F016 42397640 33F41CFC
+E1D0AE85 A0BBD039 0E9C8D55 E1B89D5D
+5CDB7036 E56DE1C0 EFCC0840 650CD3A6
+B98FC99C 8FAC73EE D2B95564 DF450523
+—— END LICENSE ——
+
+
+PHP代码格式化工具CodeFormatter
+支持sublime3.
+使用方法:
+选中要格式化的PHP代码,然后ctrl+alt+F
+注意事项:
+格式损坏太严重的无法处理,
+就是通篇挤成一行的无法处理!
+
+ctags代码追踪插件.
+需要在windows安装ctags.exe
+然后到项目目标文件夹中,执行命令:
+ctags -R -f .tags
+生成索引.
+然后把项目文件,加入到项目中.
+用ctrl+tt,就能追踪函数所在的文件了.
+用ctrl+tb,就能返回函数原来的文件了.
+
+
+
+
+
+//我的配置
+
+{
+     "auto_wrap": true,
+     "color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+     "folders":
+     [
+          {
+               "folder_exclude_patterns":
+               [
+                    "img",
+                    "x-library"
+               ],
+               "path": "D:/SVN/trunk/"
+          }
+     ],
+     "font_size": 16,
+     "hot_exit": false,
+     "ignored_packages":
+     [
+          "Vintage",
+          "BracketHighlighter"
+     ],
+     "remember_open_files": false,
+     "settings":
+     {
+          "tab_size": 4,
+          "translate_tabs_to_spaces": true
+     },
+     "update_check": false,
+     "word_wrap": true
+}
+
+
+//好用下载
+
+http://www.xiazaiba.com/html/24343.html
+
+
+///支持项目文件
+
+
+{
+     "auto_wrap": true,
+     "color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+     "font_size": 18,
+     "hot_exit": true,
+     "remember_open_files": false,
+     "settings":
+     {
+          "tab_size": 4,
+          "translate_tabs_to_spaces": true
+     },
+     "update_check": false,
+     "word_wrap": true
+}
+
+//按键调整
+[
+     { "keys": ["ctrl+shift+w"], "command": "close_all" },
+]
+
+
+
+
+
+
+ctrl+d同步编辑
+ctrl+shift+d复制
+ctrl+shift+k删除一行.
+ctrl++放大
+ctrl--缩小
+ctrl+j合并
+ctrl+,块选中
+ctrl+alt+j头尾跳
+html:5+tab扩展
+ctrl+M 跳符号,
+ctrl+alt+j 跳标签
+ctrl+j 合并成行
+选中:然后ctrl+k,ctrl+u转大写,ctrl+k,ctrl+l转为小写.
+
+
+
+
+
+
+我的sublime配置:
+
+
+
+{
+     //自动换行
+     "auto_wrap": true,
+     //样式
+     "color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+     //字体
+     "font_size": 16,
+     //热退出
+     "hot_exit": true,
+     //忽略vim
+     "ignored_packages":
+     [
+          "Vintage"
+     ],
+     //记住打开的文件
+     "remember_open_files": false,
+     //tab换4个空格
+     "tab_size": 4,
+     //tab换空格
+     "translate_tabs_to_spaces": true,
+     //不更新
+     "update_check": false,
+     //单词折行
+     "word_wrap": true,
+     //默认全屏
+     "use_simple_full_screen": true,
+}
+
+//按键绑定
+
+[
+     { "keys": ["ctrl+shift+w"], "command": "close_all" },
+]
+
