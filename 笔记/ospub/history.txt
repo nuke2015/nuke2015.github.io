@@ -1,0 +1,439 @@
+    1  ifconfigh
+    2  ifconfig
+    3  chkconfig sshd on
+    4  service sshd start
+    5  reboot
+    6  ifconfig
+    7  service sshd status
+    8  exit
+    9  ifconfig
+   10  exit
+   11  uname
+   12  yum update
+   13  yum update -y 
+   14  cd /home
+   15  ls
+   16  yum install -y httpd mysql mysql-server php-*
+   17  ipconfig
+   18  ipconfig -a
+   19  ipconfig 
+   20  ifconfig -a
+   21  cd /home
+   22  wget http://mirrors.163.com/.help/CentOS-Base-163.repo
+   23  yum makecache
+   24  yum install -y php-* httpd mysql mysql-server
+   25  yum clean
+   26  yum makecache
+   27  yum update -y 
+   28  wget http://mirrors.sohu.com/help/CentOS-Base-sohu.repo
+   29  yum makecache
+   30  ls
+   31  rpm -Uvh http://mirrors.163.com/rpmfusion/free/el/updates/6/i386/rpmfusion-free-release-6-1.noarch.rpm
+   32  yum install http mysql mysql-server php-*
+   33  ifconfig
+   34    
+   35  yum install php-* mysql mysql-server http
+   36  exit
+   37  cd /home
+   38  ls
+   39  yum install
+   40  yum clean
+   41  yum install httpd
+   42  ls
+   43  cd /etc/yum.repos.d
+   44  mv CentOS-Base.repo CentOS-Base.repo.bak
+   45  wget http://mirrors.163.com/.help/CentOS-Base-163.repo
+   46  ls
+   47  yum makecache
+   48  yum clean all
+   49  wget Loading mirror speeds from cached hostfile
+   50  wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+   51  ls
+   52  rm CentOS-Base-163.repo 
+   53  ls
+   54  yum makecache
+   55  cd /home
+   56  ls
+   57  yum install httpd msyql mysql-server php-* -y
+   58  service httpd start
+   59  service mysqld start
+   60  mysql_secure_installation 
+   61  exit
+   62  yum update
+   63  yum install httpd -y
+   64  chkconfig --list
+   65  chkconfig --list|grep on
+   66  shutdonw
+   67  shutdown
+   68  shutdown --help
+   69  shutdown --help|more
+   70  shutdown -P
+   71  shutdown -p
+   72  shutdown --help|more
+   73  shutdown -P 0
+   74  ifconfig
+   75  shutdown -p 0
+   76  shutdown -P 0
+   77  cd /home
+   78  ls
+   79  ifconfig
+   80  exit
+   81  service httpd 
+   82  service httpd status
+   83  exit
+   84  top
+   85  uname
+   86  uname -a
+   87  uname -all
+   88  uname -a
+   89  list
+   90  cd /home
+   91  ls
+   92  cd /home
+   93  ls
+   94  cd /
+   95  find 
+   96  uname
+   97  uname -a
+   98  ps -aux
+   99  top
+  100  netstat -anp
+  101  netstat -an
+  102  chkconfig --list
+  103  startx
+  104  cd /home
+  105  ls
+  106  tar -xvf imagick-3.0.1.tgz 
+  107  cd imagick-3.0.1
+  108  ls
+  109  phpize 
+  110  ls
+  111  ./config
+  112  ./configure 
+  113  make && make install
+  114  ./configure 
+  115  cd /home
+  116  ls
+  117  rm -rf ./*
+  118  ls
+  119  service httpd start
+  120  service mysqld start
+  121  yum install -y make gcc php-devel php-fpm
+  122  yum install imagick-devel
+  123  yum install imagick
+  124  service httpd restart
+  125  service iptables stop
+  126  yum search imagick
+  127  yum search pear
+  128  yum install php-pear
+  129  pecl install imagick
+  130  checking if zts is enabled... no
+  131  checking for re2c... no
+  132  pecl
+  133  pecl install imagick
+  134  wget http://pecl.php.net/get/imagick-3.1.0RC2.tgz
+  135  ls
+  136  tar imagick-3.1.0RC2.tgz 
+  137  tar -xvf imagick-3.1.0RC2.tgz 
+  138  cd imagick-3.1.0RC2
+  139  ls
+  140  phpize 
+  141  export export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+  142  ./configure –with-imagick
+  143  make
+  144  make install
+  145  export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+  146  ./configure –with-imagick
+  147  make
+  148  make install
+  149  ./configure -with-imagick
+  150  phpize 
+  151  ./configure 
+  152  cd /
+  153  find -name Magicwand
+  154  yum search magic
+  155  yum install ImageMagick-devel
+  156  pecl install imagick
+  157  cd /home
+  158  ls
+  159  service httpd restart
+  160  ls
+  161  rm -rf ./*
+  162  ls
+  163  pecl install redis
+  164  service httpd restart
+  165  pecl install mongo
+  166  pecl channel-update
+  167  pecl channel-update pecl.php.net
+  168  service httpd restart
+  169  ls
+  170  exit
+  171  service sshd status
+  172  startx
+  173  cd /home
+  174  hostname fengsu
+  175  hostname to8toKit
+  176  ls
+  177  exit
+  178  cd /home
+  179  ls
+  180  vi /etc/networks/
+  181  cd /etc/networks 
+  182  vi /etc/networks 
+  183  ls
+  184  exit
+  185  ifconfig
+  186  ls
+  187  exit
+  188  cd /home
+  189  ls
+  190  wget http://www.osapub.com/download/OSA_BETA_V1.0.5.tar.gz
+  191  tar -zvxf OSA_BETA_V1.0.5.tar.gz 
+  192  ls
+  193  yum install nginx
+  194  y
+  195  ls
+  196  wget http://nginx.org/download/nginx-1.6.2.tar.gz
+  197  ls
+  198  tar -zvxf nginx-1.6.2.tar.gz 
+  199  cd nginx-1.6.2
+  200  ls
+  201  ./configure 
+  202  make && make install
+  203  yum install pcre
+  204  ./configure --with-pcre
+  205  yum install libpcre
+  206  yum search pcre
+  207  yum install pcre-devel
+  208  ./configure 
+  209  make && make install
+  210  nginx
+  211  ls
+  212  make && make install
+  213  service nginx status
+  214  ls
+  215  cd auto
+  216  ls
+  217  cd ../
+  218  ls
+  219  cd /home
+  220  ls
+  221  yum clean all
+  222  yum install nginx
+  223  service nginx status
+  224  exit
+  225  service nginx start
+  226  yum install telnet
+  227  telnet 127.0.0.1
+  228  service nginx start 
+  229  service nginx status 
+  230  telnet 127.0.0.1 80
+  231  service iptables stop
+  232  service nginx restart
+  233  yum install php-fpm
+  234  servivce nginx start
+  235  service nginx start
+  236  service nginx status
+  237  telnet 127.0.0.1 80
+  238  service php-fpm start
+  239  service nginx start
+  240  service nginx restart
+  241  cd /home
+  242  lls
+  243  ls
+  244  cd OSA_BETA_V1.0.5
+  245  LS
+  246  ls
+  247  rm /usr/local/osa
+  248  rm -rf /usr/local/osa
+  249  ls
+  250  cp -rf ./osa /usr/local/osa
+  251  cd /usr/local/osa
+  252  ls
+  253  service nginx restart
+  254  cd ../
+  255  ls
+  256  cd /usr/local/
+  257  ls
+  258  cd osa
+  259  ls
+  260  cd ctrlp
+  261  cd ctrlphp/
+  262  ls
+  263  cd install/
+  264  ls
+  265  ./auto_prepare.sh 
+  266  cat >/etc/yum.repos.d/osa.repo<<EOF
+  267  [osa]
+  268  name=osa
+  269  baseurl=http://down.osapub.com/osayumsoft
+  270  enabled=1
+  271  gpgcheck=0
+  272  EOF
+  273  yum clean all
+  274  yum --disablerepo=\* --enablerepo=osa -y install osa.x86_64
+  275  service nginx stop
+  276  service php-fpm stop
+  277  service mysql stop
+  278  service mysqld stop
+  279  rpm -e mysql-server
+  280  rpm -e php-fpm
+  281  rpm -e nginx
+  282  rpm -qa|grep mysql
+  283  rpm -qa|grep php-fpm
+  284  rpm -qa|grep nginx
+  285  ls
+  286  ./auto_prepare.sh 
+  287  yum --disablerepo=\* --enablerepo=osa -y install osa.x86_64
+  288  cd /usr/local/init
+  289  ls
+  290  cd ../
+  291  ls
+  292  cd init
+  293  ls
+  294  cd ../
+  295  ls
+  296  cd init
+  297  ls
+  298  cd bin
+  299  ls
+  300  cd ../
+  301  ls
+  302  cd ../
+  303  ls
+  304  cd osa
+  305  ls
+  306  cd bin
+  307  ls
+  308  osadmin start
+  309  osaadmin start
+  310  ls
+  311  ./osadmin start
+  312  ./osaadmin start
+  313  yum install mysql-server php-fpm nginx
+  314  service mysqld start
+  315  service php-fpm start
+  316  service nginx start
+  317  cd ../
+  318  ls
+  319  ./auto_install_client.sh 
+  320  cd ctrlphp/
+  321  ls
+  322  cd install
+  323  ls
+  324  ./auto_prepare.sh 
+  325  ./new_auto_prepare.sh 
+  326  cd /usr/local/osa
+  327  ls
+  328  cd bin
+  329  ls
+  330  ./osaserver 
+  331  ./osaserver restart
+  332  pip
+  333  cd /home
+  334  ls
+  335  python get-pip.py 
+  336  pip install mysqldb simplejson sjson
+  337  pip search mysql
+  338  pip install mysql-python
+  339  yum install gcc make autoconf 
+  340  pip install mysql-python
+  341  pip install gcc-python
+  342  yum search gcc
+  343  yum install -y gcc-python2-plugin
+  344  yum install gcc-plugin-devel python-devel python-six python-pygments graphviz
+  345  ls
+  346  pip install mysql-python
+  347  wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+  348  pip install mysql-python
+  349  ls
+  350  unzip setuptools-13.0.1.zip 
+  351  ls
+  352  cd setuptools-13.0.1
+  353  ls
+  354  python setup.py install
+  355  pip install mysql-python
+  356  pip install mysqldb
+  357  cd /usr/local/osa
+  358  ls
+  359  cd bin
+  360  ls
+  361  ./osaadmin start
+  362  ./osaadmin status
+  363  ./osaadmin restart
+  364  yum install python-mysqldb
+  365  cd /home
+  366  ls
+  367  wget http://sourceforge.net/projects/mysql-python/files/mysql-python/1.2.3/MySQL-python-1.2.3.tar.gz/download
+  368  ls\
+  369  ls
+  370  cd download 
+  371  ls
+  372  wget http://downloads.sourceforge.net/project/mysql-python/mysql-python/1.2.3/MySQL-python-1.2.3.tar.gz?r=&ts=1425621893&use_mirror=ncu
+  373  ls
+  374  tar -zvxf MySQL-python-1.2.3.tar.gz
+  375  cd MySQL-python-1.2.3
+  376  ls
+  377  python setup.py install
+  378  yum install c++ gcc make autoconf -y
+  379  yum install python-devel mysql-devel zlib-devel openssl-devel
+  380  pip install mysql-pytho
+  381  pip install simplejson sjson
+  382  cd /usr/local/osa/
+  383  ls
+  384  cd bin
+  385  ls
+  386  osadmin --help
+  387  ./osaadmin --help
+  388  ./osaadmin start
+  389  pip search simple
+  390  cd /home
+  391  ls
+  392  wget file:///D:/Documents/simplejson-3.6.5.tar.gz
+  393  wget https://pypi.python.org/packages/source/s/simplejson/simplejson-3.6.5.tar.gz#md5=b65dc21c7aaad14c6b4ad0d9179e437d
+  394  ls
+  395  tar -zvxf simplejson-3.6.5.tar.gz 
+  396  cd simplejson-3.6.5
+  397  ls
+  398  python setup.py install
+  399  cd /usr/local/osa
+  400  ls
+  401  cd bin
+  402  ls
+  403  ./osaadmin start
+  404  ./osaadmin restart
+  405  cd ../
+  406  ls
+  407  cd ctrlphp
+  408  ls
+  409  cd install
+  410  ls
+  411  ./auto_prepare.sh 
+  412  cd /usr/local
+  413  cd osa
+  414  chmod 0777 ./ctrlphp/etc
+  415  chmod 0777 ./crtlpy/etc/config.py
+  416  chmod 0777 ./ctrlpy/etc/config.py
+  417  chmod 0777 unctrl/etc/confiy.py
+  418  chmod 0777 unctrlpy/etc/confiy.py
+  419  chmod 0777 unctrlpy/etc/config.py
+  420  chmod 0777 ctrlphp/session/
+  421  ls
+  422  cd ctrlphp/
+  423  cd install/
+  424  ls
+  425  ./auto_prepare.sh 
+  426  service mysqld status
+  427  mysql -u root -p 
+  428  cd /usr/local/osa
+  429  ls
+  430  cd bin
+  431  ls
+  432  osaadmin start
+  433  exit
+  434  ls
+  435  cd /home
+  436  ls
+  437  cd /home
+  438  ls
+  439  history >h.txt

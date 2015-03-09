@@ -1,0 +1,39 @@
+
+centos使用yum快速安装osa v1.0.3版本
+
+#第一步，创建repo文件
+
+cat >/etc/yum.repos.d/osa.repo<<EOF
+[osa]
+name=osa
+baseurl=http://down.osapub.com/osayumsoft
+enabled=1
+gpgcheck=0
+EOF
+
+
+#清理缓存
+yum clean all
+
+#使用yum命令进行yum安装
+yum --disablerepo=\* --enablerepo=osa -y install osa.x86_64
+
+#########如果希望安装i386的版本，可以使用下面这条命令。
+#yum --disablerepo=\* --enablerepo=osa -y install osa.i386
+
+#####启动数据库，nginx等相关程序，mysql默认端口为13306,nginx默认为8080端口，在启动前请确认端口是否被占用。
+####nginx,mysql默认安装位置为：/usr/local/osa/程序名
+/usr/local/osa/init/mysqld start
+/usr/local/osa/init/nginx start
+/usr/local/osa/init/php-fpm start
+
+####启动osa########
+osaadmin start
+
+默认用户名密码都为：osapub
+
+
+安装过程提示mysql-server和php-fpm冲突,
+用rpm -qa|grep php-fpm查找.
+用rpm -e php-fpm卸载,再安装就行了
+

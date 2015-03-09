@@ -1,0 +1,9 @@
+
+今天尝试编译内核，下载到了一份tar.xz结尾的压缩文件，网上解决方法比较少，不过还是找到了，如下：
+
+$xz -d python.tar.xz
+$tar -xvf  python.tar
+
+可以看到这个压缩包也是打包后再压缩，外面是xz压缩方式，里层是tar打包方式。
+补充：目前可以直接使用 tar xvJf  python.tar.xz来解压
+
