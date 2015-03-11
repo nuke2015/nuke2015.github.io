@@ -63,3 +63,10 @@ http://www.swoole.com/
 
 小微OA
 http://xiaowei.smeoa.com/public/login
+
+netty高性能thrift
+http://www.infoq.com/cn/articles/netty-high-performance
+http://ifeve.com/netty5-user-guide/
+
+
+
