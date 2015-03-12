@@ -70,5 +70,11 @@ http://ifeve.com/netty5-user-guide/
 
 php共享内存
 http://www.ibm.com/developerworks/cn/opensource/os-php-shared-memory/
+共享内存操作类
+https://github.com/klaussilveira/SimpleSHM
 
+rpc-avro主要用来支持数据密集型应用
+http://dmyz.org/archives/409
+Avro和Thrift都是跨语言，基于二进制的高性能的通讯中间件.
+http://www.alidata.org/archives/1307
 
