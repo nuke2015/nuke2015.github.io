@@ -47,3 +47,6 @@ tuple 转为list：
 temp_tuple = (1,2,3)
 方法类似，也是进行强制转换即可：list(temp_tuple)
 
+python操作mongo
+https://serholiu.com/python-mongodb
+
