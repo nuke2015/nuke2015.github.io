@@ -68,5 +68,7 @@ netty高性能thrift
 http://www.infoq.com/cn/articles/netty-high-performance
 http://ifeve.com/netty5-user-guide/
 
+php共享内存
+http://www.ibm.com/developerworks/cn/opensource/os-php-shared-memory/
 
 
