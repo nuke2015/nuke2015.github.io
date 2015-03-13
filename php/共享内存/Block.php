@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * 注意事项:
+ * 1.内存中只能存放字符串,其它请用json_encode转成字符串
+ * 2.内存中的数据取一次出来就自动失效了.
+ * 锋子
+ * 2015年3月13日 15:23:11
+ */
 class Block
 {
     /**
@@ -92,7 +99,6 @@ class Block
     public function write($data)
     {
         $size = mb_strlen($data, 'UTF-8');
-
         if($this->exists($this->id)) {
             shmop_delete($this->shmid);
             shmop_close($this->shmid);
@@ -112,9 +118,11 @@ class Block
      */
     public function read()
     {
-        $size = shmop_size($this->shmid);
-        $data = shmop_read($this->shmid, 0, $size);
-
+        $data='';
+        if($this->shmid){
+            $size = shmop_size($this->shmid);
+            $data = shmop_read($this->shmid, 0, $size);
+        }
         return $data;
     }
 
@@ -125,7 +133,7 @@ class Block
      */
     public function delete()
     {
-        shmop_delete($this->shmid);
+        if($this->shmid)shmop_delete($this->shmid);
     }
 
     /**
@@ -166,6 +174,6 @@ class Block
      */
     public function __destruct()
     {
-        shmop_close($this->shmid);
+        if($this->shmid)shmop_close($this->shmid);
     }
 }
