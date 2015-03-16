@@ -1,0 +1,8 @@
+
+c处理进程间通信的常用方式相信大家都知道：共享内存，消息队列，信号量，管道，信号，socket，文件mmap等。而python中只支持上述列表中的管道，信号，socket，文件mmap。
+
+轻量级消息列队
+http://www.linux120.com/article/2012-12-20/php-msg-get-queue.html
+
+共享内存,消息队列,信号量
+http://www.laruence.com/2008/04/21/101.html
