@@ -9,16 +9,6 @@
 
 error_reporting(2047);
 
-// // 小测试
-// jsonlog::log(10000, 50);
-// jsonlog::log(10002, 45);
-// jsonlog::log(10000, 45);
-// jsonlog::log(10000, 66);
-// jsonlog::save();
-// $tmp = jsonlog::getFile();
-// dump($tmp);
-// exit;
-
 // 大测试
 if (file_exists('json.txt')) unlink('json.txt');
 for ($i = 0; $i < 1000; $i++) {
@@ -47,6 +37,7 @@ function dump($v) {
  jsonlog::log(10002, 45);
  jsonlog::log(10000, 45);
  jsonlog::log(10000, 66);
+ jsonlog::save();
  $tmp = jsonlog::getFile();
  dump($tmp);
  *
@@ -95,6 +86,7 @@ class jsonlog
             return self::$data;
         } 
         else {
+            
             //无数据时从数据库加载;
             if (file_exists(self::$file)) {
                 $data = file_get_contents(self::$file);
