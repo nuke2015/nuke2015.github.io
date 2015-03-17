@@ -6,3 +6,9 @@ http://www.linux120.com/article/2012-12-20/php-msg-get-queue.html
 
 共享内存,消息队列,信号量
 http://www.laruence.com/2008/04/21/101.html
+
+netty+redis的消息队列服务(java)
+http://www.blogjava.net/yongboy/archive/2015/02/13/372308.html
+
+高并发下文件读写
+http://num7.iteye.com/blog/710268

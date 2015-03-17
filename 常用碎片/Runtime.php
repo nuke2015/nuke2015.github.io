@@ -8,10 +8,10 @@
 // 调用示例
 dump('long long ago...it is a story about the time...');
 dump('time now:');
-$Runtime= new Runtime();
+$Runtime = new Runtime();
 dump($Runtime->microtime());
 
-$Runtime->start(array('eating','drinking','dancing'));
+$Runtime->start(array('eating', 'drinking', 'dancing'));
 sleep(1);
 $Runtime->stop('eating');
 $Runtime->start('dancing');
@@ -21,15 +21,24 @@ sleep(1);
 $Runtime->stop('dancing');
 
 dump('eating spent time:');
-dump($Runtime->spent('eating'));
+dump($Runtime->log('eating'));
+
 dump('drinking spent time:');
-dump($Runtime->spent('drinking'));
-dump('eat and dance spent time:');
-dump($Runtime->spent(array('eating','dancing')));
-dump('story time:');
+dump($Runtime->log(array('eating', 'dancing')));
+
+dump('story log:');
+dump($Runtime->log());
+
+dump('eating spent');
+dump($Runtime->spent('eating'));
+
+dump('spent array');
+dump($Runtime->spent(array('eating', 'dancing')));
+
+dump('story spent:');
 dump($Runtime->spent());
 
-function dump($v){
+function dump($v) {
     echo '<pre>';
     print_r($v);
     echo '<pre>';
@@ -82,6 +91,34 @@ class Runtime
     }
     
     //耗时统计
+    function log($sig = null) {
+        if ($sig) {
+            if (is_array($sig)) {
+                foreach ($sig as $item) {
+                    if ($this->log[$item]) {
+                        $result[$item] = $this->log[$item];
+                    } 
+                    else {
+                        $result[$item] = - 1;
+                    }
+                }
+                return $result;
+            } 
+            else {
+                if ($this->log[$sig]) {
+                    return $this->log[$sig];
+                } 
+                else {
+                    return -1;
+                }
+            }
+        } 
+        else {
+            return $this->log;
+        }
+    }
+    
+    //长度
     function spent($sig = null) {
         if ($sig) {
             if (is_array($sig)) {
@@ -105,8 +142,12 @@ class Runtime
             }
         } 
         else {
-            return $this->log;
+            if ($this->log && is_array($this->log)) {
+                foreach ($this->log as $key => & $item) {
+                    $result[$key] = round(($item['stop'] - $item['start']) * 1000, 1);
+                }
+            }
+            return $result;
         }
     }
 }
-
