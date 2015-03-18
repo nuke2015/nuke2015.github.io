@@ -1,0 +1,29 @@
+
+Jacky.yao(Jacky.yao) 03-17 13:33:58
+    db.LOGV2_ACCESS.aggregate( [
+   {$match:{"REQUEST_TIME.sec" : {$gt:1426392000,$lt:1426478399}}},
+   {
+     $group: {
+        _id: "$title",
+        count: { $sum: 1 },
+        total: { $sum: "$data.runtime" },
+        avg: { $avg: "$data.runtime" },
+        max: { $max: "$data.runtime" },
+        min: { $min: "$data.runtime" }
+     }
+   },
+      { $sort: { count:-1 } },
+] ,
+{
+     explain:true
+},
+{ $out: "aggregate16"} 
+Jacky.yao(Jacky.yao) 03-17 13:33:58
+)
+
+这个你们可以记一下，用mongo做聚合查询，分组，平均值，求合，最大值，最小值等，非常有用
+
+
+分类汇总
+http://blog.51yip.com/php/1645.html
+
