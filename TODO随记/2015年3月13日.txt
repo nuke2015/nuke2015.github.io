@@ -16,3 +16,6 @@ http://num7.iteye.com/blog/710268
 nodejs监控计数器
 http://blog.csdn.net/puncha/article/details/9083061
 
+echarts百度图表ppt
+http://echarts.baidu.com/doc/slide/whyEcharts.html
+

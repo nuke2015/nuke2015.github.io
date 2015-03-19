@@ -1,0 +1,4 @@
+
+mongo此配置:
+集群复制,成从库了,不能写入.
+replSet=shard1
