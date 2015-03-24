@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    全选和反选
+    <input type="checkbox" id="toggleCheck" />
+    <br>
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <input type="checkbox" name="ids[]" value="" />
+    <script>
+    $('#toggleCheck').click(function(){
+        if(this.checked){
+            // 全选
+            $('[name="ids[]"]').each(function(index, el){
+                el.checked = true;
+            });
+        }else{
+            // 反选
+            $('[name="ids[]"]').each(function(index, el){
+                el.checked = !el.checked;
+            });
+        }
+    });
+    </script>
+</body>
+</html>
+  
