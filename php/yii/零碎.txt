@@ -1,0 +1,42 @@
+
+yii操作session
+http://liyongjiang.blog.51cto.com/5800344/1147499
+'session'=>array(  
+            'class' => 'CDbHttpSession',  
+            'autoStart' => true,  
+            'sessionTableName'=>'YiiSession',  
+            'autoCreateSessionTable'=> false,  
+            'connectionID'=>'db',  
+        ),  
+
+/***** 方式一、实例添加 *****/  
+$session=new CHttpSession;  
+$session->open();  
+$value1=$session['name1'];  
+  
+/***** 方式二、直接调用应用添加 *****/  
+Yii::app()->session->add('name','foobar');  
+Yii::app()->session->add('name2','foobar');  
+Yii::app()->session->add('name3','foobar');  
+//或者  
+$session = Yii::app()->session;  
+$session['key'] = 'value';  
+var_dump($session['key']);  
+   
+//遍历  
+foreach($session as $name=>$value)  
+
+
+
+
+// 检索一个名为$name的cookie值  
+$cookie=Yii::app()->request->cookies[$name];  
+$value=$cookie->value;  
+......  
+// 设置一个cookie  
+$cookie=new CHttpCookie($name,$value);  
+Yii::app()->request->cookies[$name]=$cookie; 
+
+yii消息提示
+http://my.oschina.net/cxz001/blog/188593
+
