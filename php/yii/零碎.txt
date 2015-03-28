@@ -40,3 +40,6 @@ Yii::app()->request->cookies[$name]=$cookie;
 yii消息提示
 http://my.oschina.net/cxz001/blog/188593
 
+yii整合smarty模板引擎
+http://www.yiibai.com/yii/yii_with_smarty.html
+
