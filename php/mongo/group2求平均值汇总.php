@@ -3,7 +3,6 @@
 // header("Content-type: text/html;charset=utf-8");
 define('NO_AJAX', 1);
 
-require_once ("../../include/start_init.inc.php");
 require_once (ROOT . "/gb_php/MongoBase.php");
 require_once (__DIR__ . "/lib/runtime.php");
 require_once (__DIR__ . "/lib/jsonlog.php");
