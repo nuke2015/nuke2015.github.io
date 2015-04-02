@@ -27,3 +27,9 @@ http://115.28.221.31:8081/
 https://github.com/elastic/elasticsearch
 https://github.com/ruflin/Elastica
 
+高端消息队列
+http://blog.fity.cn/post/377/
+
+ZeroMQ
+http://www.searchtb.com/2012/08/zeromq-primer.html
+
