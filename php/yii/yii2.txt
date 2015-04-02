@@ -1,0 +1,25 @@
+
+// 补丁
+php composer.phar global require "fxp/composer-asset-plugin:1.0.0"
+// composer安装
+php composer.phar require yiisoft/yii2 2.0.3
+
+普通模板
+curl -s http://getcomposer.org/installer | php
+php composer.phar create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic /path/to/yii-application
+
+高级模板
+创建
+php composer.phar create-project --prefer-dist --stability=dev yiisoft/yii2-app-advanced /path/to/yii-application
+初始化入口文件
+php /path/to/yii-application/init
+导入数据库
+yii migrate
+访问
+127.0.0.1/frontend/web/
+
+
+
+
+
+
