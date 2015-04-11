@@ -1,4 +1,8 @@
 
+2015年1月4日 14:33:46
+json_encode(): Invalid UTF-8 sequence in argument
+
+2015年4月11日 13:46:24
 mongo此配置:
 集群复制,成从库了,不能写入.
 replSet=shard1
