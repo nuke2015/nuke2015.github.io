@@ -55,3 +55,7 @@ http://sebug.net/paper/python/ch11s07.html
 
 Been.zhang(Been.zhang) 03-02 18:12:03
 http://pan.baidu.com/s/1kTwrRYf
+
+又一报表插件
+http://www.hcharts.cn/demo/index.php?p=11
+
