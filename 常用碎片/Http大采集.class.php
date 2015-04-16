@@ -19,14 +19,15 @@
 
 class Http
 {
+    const debug = 0;
     
     // 单线程
     public static function curl($url, $method = 'get', $params = array(), $header = array()) {
         
-        $opts = array(CURLOPT_TIMEOUT => 30, CURLOPT_RETURNTRANSFER => 1, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false, CURLOPT_USERAGENT => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322)');
+        $opts = array(CURLOPT_TIMEOUT => 30, CURLOPT_RETURNTRANSFER => 1, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false, CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36');
         
         // 报头合并
-        if ($header) $opts['CURLOPT_HTTPHEADER'] = $header;
+        if ($header) $opts[CURLOPT_HTTPHEADER] = $header;
         
         $ch = curl_init();
         
@@ -36,7 +37,7 @@ class Http
         $data = curl_exec($ch);
         $error = curl_error($ch);
         curl_close($ch);
-        if ($error) throw new Exception('请求发生错误：' . $error);
+        if (self::debug && $error) throw new Exception('请求发生错误：' . $error);
         return $data;
     }
     
@@ -49,7 +50,7 @@ class Http
         $opts = array(CURLOPT_TIMEOUT => 30, CURLOPT_RETURNTRANSFER => 1, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false, CURLOPT_USERAGENT => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322)');
         
         // 报头合并
-        if ($header) $opts['CURLOPT_HTTPHEADER'] = $header;
+        if ($header) $opts[CURLOPT_HTTPHEADER] = $header;
         
         $mh = curl_multi_init();
         $chArray = array();
@@ -74,30 +75,31 @@ class Http
             $return[] = curl_multi_getcontent($ch);
             curl_multi_remove_handle($mh, $ch);
         }
+        $error = curl_error($ch);
+        if (self::debug && $error) {
+            throw new Exception('请求发生错误：' . $error);
+        }
         curl_multi_close($mh);
         return $return;
     }
     
     // 方法构造
     private static function build(&$opts, $url, $method, $params) {
-        if ($vars) $vars = http_build_query($params);
-        switch (strtolower($method)) {
-            case 'get':
-                if ($vars) $url.= "?" . $vars;
-                $opts[CURLOPT_URL] = $url;
-                break;
-
-            case 'post':
-                $opts[CURLOPT_URL] = $url;
-                $opts[CURLOPT_POST] = 1;
-                if ($vars) {
-                    $opts[CURLOPT_POSTFIELDS] = $vars;
-                }
-                break;
-
-            default:
-                throw new Exception('不支持的请求方式！');
+        if ($params) $vars = http_build_query($params);
+        if (strtolower($method) == 'post') {
+            
+            // POST请求
+            $opts[CURLOPT_URL] = $url;
+            $opts[CURLOPT_POST] = 1;
+            if ($vars) {
+                $opts[CURLOPT_POSTFIELDS] = $vars;
             }
-            return $opts;
+        } else {
+            
+            // GET请求
+            if ($vars) $url.= "?" . $vars;
+            $opts[CURLOPT_URL] = $url;
+        }
+        return $opts;
     }
 }
