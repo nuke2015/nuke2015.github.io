@@ -5,6 +5,7 @@ $a = range(1, 3);
 foreach ($a as & $v) {
     echo $v . ",";
 }
+
 print_r($a);
 echo '<hr/>';
 foreach ($a as $v) {
@@ -25,3 +26,8 @@ print_r($a);
 //     [1] => 2
 //     [2] => 2
 // )
+
+解决办法:
+指针变量用完就unset掉.
+比如在第8行unset($v);
+
