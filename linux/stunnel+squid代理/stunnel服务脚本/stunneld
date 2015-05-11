@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# chkconfig: - 80 12 
+# description: stunnel daemon 
+# Simple stunnel init.d script conceived to work on Linux systems
+# as it does use of the /proc filesystem.
+
+EXEC=/usr/bin/stunnel
+PIDFILE=/var/run/stunnel.pid
+CONF="/etc/stunnel/stunnel.conf"
+
+case "$1" in
+    start)
+        if [ -f $PIDFILE ]
+        then
+                echo "$PIDFILE exists, process is already running or crashed"
+        else
+                echo "Starting stunnel..."
+                $EXEC
+                echo "ps -aux|grep $EXEC"
+                ps -aux|grep $EXEC
+        fi
+        ;;
+    stop)
+        if [ ! -f $PIDFILE ]
+        then
+                echo "$PIDFILE does not exist, process is not running"
+        else
+                PID=$(cat $PIDFILE)
+                echo "Stopping ..."
+                killall $EXEC
+                echo "ps -aux|grep $EXEC"
+                ps -aux|grep $EXEC
+        fi
+        ;;
+    status)
+        if [ ! -f $PIDFILE ]
+        then
+                echo "$PIDFILE does not exist, process is not running"
+        else
+                echo "ps -aux|grep $EXEC"
+                ps -aux|grep $EXEC
+        fi
+        ;;
+    *)
+        echo "Please use start or stop or status as first argument"
+        ;;
+esac
+
