@@ -1,0 +1,82 @@
+系统centos6.5_x86_64的64位版本
+
+yum install -y docker-io
+
+docker version
+检查安装是否成功
+
+setenforce 0
+关闭selinux
+
+service docker start
+启动服务
+
+docker search lamp
+找出官方的lamp映像.centos映像有中文问题
+
+docker pull dockerfiles/centos-lamp  
+下载映像
+
+根据dockerfile构建镜像
+docker build -t fengsunode /home
+
+进入运行中的容器
+docker exec -it abbca0f3cb58a318a01b795548c8d32448f29164e0a4dd35a56256b4fd7b9d3c bash
+
+运行镜像中的bash命令
+docker run -i -t dockerfile/nodejs /bin/bash
+
+docker ps -a
+查进程
+
+docker start 容器ID
+启动已有映像
+
+docker images
+镜像列表
+
+前台运行镜像
+docker run -it mynode
+abbca0f3cb58a318a01b795548c8d32448f29164e0a4dd35a56256b4fd7b9d3c
+
+后台运行镜像
+docker run -itd mynode 
+
+结束运行.
+docker stop abbca0f3cb58a318a01b795548c8d32448f29164e0a4dd35a56256b4fd7b9d3c
+
+提交到总仓
+docker commit 866cfb7217a6b6f737d1e06088f2ffd165be98a96fd7aec0218a4600d689c381 
+
+镜像导出
+docker save mynode > mynode.tar
+
+镜像导入
+docker load  < mynode.tar
+
+删除一个镜像
+docker rmi 1f1ac42329fb48978e0b168d8147c7565e2493c0e0abbdc8fd34a75bac5af9f6 
+
+停止全部实例
+docker stop $(docker ps -a -q)
+删除全部实例
+docker rm $(docker ps -a -q)
+删除全部镜像
+docker rmi $(docker images -q)
+
+
+自动构建映像
+sudo docker build -t dockerfile .  
+
+dockerfile文件:
+FROM    centos:centos6
+# Enable EPEL for Node.js
+RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+# Install Node.js and npm
+RUN     yum install -y npm
+COPY . /src
+RUN cd /src; npm install
+EXPOSE  8080
+CMD ["node", "/src/index.js"]
+
+
