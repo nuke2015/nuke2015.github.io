@@ -1,0 +1,4 @@
+//按键调整
+[
+     { "keys": ["ctrl+shift+w"], "command": "close_all" },
+]

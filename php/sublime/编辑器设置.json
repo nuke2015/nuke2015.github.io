@@ -1,0 +1,15 @@
+{
+    "auto_wrap": true,
+    "color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+    "font_size": 18,
+    "hot_exit": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "remember_open_files": false,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "update_check": false,
+    "word_wrap": true
+}
