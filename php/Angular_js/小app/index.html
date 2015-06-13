@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myTodoApp" ng-controller="myTodoCtrl">
+            <h2>我的笔记</h2>
+            <p><textarea ng-model="message" cols="40" rows="10"></textarea></p>
+            <p>
+            <button ng-click="save()">保存</button>
+            <button ng-click="clear()">清除</button>
+            </p>
+            <p>剩下的字符数: <span ng-bind="left()"></span></p>
+        </div>
+        <script src="app.js"></script>
+        <script src="ctrl.js"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<h3>&nbsp;用户列表</h3>
+<table class="table table-striped">
+<thead><tr>
+<th>编辑</th>
+<th>名</th>
+<th>姓</th>
+</tr></thead>
+<tbody><tr ng-repeat="user in users">
+<td>
+<button class="btn" ng-click="editUser(user.id)">
+<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;编辑
+</button>
+</td>
+<td>{{ user.fName }}</td>
+<td>{{ user.lName }}</td>
+</tr></tbody>
+</table>

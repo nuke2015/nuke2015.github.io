@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="" ng-controller="formController">
+            <form novalidate>
+                First Name:<br>
+                <input type="text" ng-model="user.firstName"><br>
+                Last Name:<br>
+                <input type="text" ng-model="user.lastName">
+                <br><br>
+                <button ng-click="reset()">RESET</button>
+            </form>
+            <p>form = {{user }}</p>
+            <p>master = {{master}}</p>
+        </div>
+        <script>
+        function formController ($scope) {
+            $scope.master = {firstName:"John", lastName:"Doe"};
+            $scope.reset = function() {
+                $scope.user = angular.copy($scope.master);
+            };
+            $scope.reset();
+        }
+        </script>
+    </body>
+</html>
