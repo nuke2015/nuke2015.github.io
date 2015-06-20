@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <style>
+	.number{
+		color:red;
+	}
+    </style>
+    <body>
+       	<span onclick="number();">点击排名</span>
+        <table id="tablelist" border="1">
+            <thead>
+            	<tr>
+	                <td>head</td>
+	                <td>head</td>
+	                <td>head</td>
+	                <td>head</td>
+	                <td>head</td>
+            	</tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            </tbody>
+        </table>
+        <script>
+            //排名;
+            function number(){
+            	$("#tablelist tbody tr").each(function(k,v){
+                    $(v).find("td:first i").remove();
+                    var str="<i class='number'>[第"+(k+1)+"名]</i>";
+                    $(v).find("td:first").append(str);
+                });
+            }
+        </script>
+    </body>
+</html>
