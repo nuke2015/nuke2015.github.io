@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="./Document_files/2.0.2.5.js"></script>
+    <script type="text/javascript" src="./Document_files/import.php"></script>
+</head>
+<body>
+    <div id="demo_input" data-name="my-div">
+        <a class="button" id="demo_btn">点击</a>
+    </div>
+    <div class="pannel-show">
+        运行结果：<span id="demo_execute_result"></span>
+    </div>
+    <div id="demo_list"></div>
+    <script>
+    // 加载完成的回调函数
+    function fn(data) {
+        var list = baidu('#demo_list');
+        baidu.array(data).each(function(index, item){
+            list.append('<li class="dynamic">'+item+'</li>');
+        });
+        baidu('#demo_execute_result').html('数据加载成功');
+    }
+    T('#demo_btn').on('click', function(){
+        baidu.sio('http://tangram.baidu.com/?m=demousage&file=/demos/baidu.sio().callByServer()/request.php').callByServer('fn');
+    });
+    </script>
+</body>
+</html>
