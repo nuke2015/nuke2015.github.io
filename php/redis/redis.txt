@@ -1,0 +1,19 @@
+
+//时间30秒过期
+// S('feng','hello world',30);
+//永久存储
+// S('feng','hello world');
+echo S('feng');
+exit;
+配置文件
+//redis缓存
+'DATA_CACHE_TYPE'=>'Redis',
+'REDIS_HOST'=>'192.168.1.235',
+'REDIS_PORT'=>'6379',
+'DATA_CACHE_TIMEOUT'=>'30',
+'DATA_CACHE_TIME'=>'FOREVER',
+'DATA_CACHE_PREFIX'=>'API_',
+
+forever是根据缓存驱动文件
+Thinkphp\Extend\Driver\Cache\CacheRedis.class.php
+来的,TP官方找不到这个,呵呵.
