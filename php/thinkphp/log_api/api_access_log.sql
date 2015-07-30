@@ -22,7 +22,7 @@ CREATE TABLE `api_access_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `ip` char(16) NOT NULL,
-  `useragent` varchar(50) NOT NULL,
+  `useragent` varchar(200) NOT NULL,
   `spent` int(11) NOT NULL,
   `data` text NOT NULL,
   `create_time` int(11) NOT NULL,
