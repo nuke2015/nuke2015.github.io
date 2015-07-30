@@ -9,11 +9,14 @@
 	.pagination a{
 		margin:5px 5px;
 	}
+	#main{
+		width: 80%;
+	}
 	</style>
-    <div class="container">
+    <div id="main" class="container">
     	<br/>
         <div id="header">
-	        <div class="lead">日志列表</div>
+	        <div class="lead"><h2>API接口日志列表</h2></div>
         </div>
         <!-- 	<ul class="breadcrumb">
                             <li><a href="http://127.0.0.1:8080/main/index">文章管理</a></li>
@@ -41,14 +44,14 @@
                     <td>耗时(毫秒)</td>
                     <td>IP</td>
                     <td>UA</td>
-                    <td>操作</td>
+                    <td width="5%">操作</td>
                 </tr>
             </thead>
             <tbody>
             <volist name="data" id="vo">
                 <tr>
                     <td>{$vo.id}</td>
-                    <td>{$vo.title}</td>
+                    <td><a href="{:Url('Web-Log/view');}&id={$vo.id}">{$vo.title}</a></td>
                     <td>{$vo.spent}</td>
                     <td>{$vo.ip}</td>
                     <td>{$vo.useragent}</td>

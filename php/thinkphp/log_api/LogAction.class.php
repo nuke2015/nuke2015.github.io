@@ -7,7 +7,6 @@ class LogAction extends BaseAction
 {
     public function index() {
         
-
         //默认第一页;
         $page = intval($_GET['p']);
         if ($page < 1) {
@@ -17,7 +16,7 @@ class LogAction extends BaseAction
         //默认每页10条;
         $size = intval($_GET['size']);
         if (!$size) {
-            $size = 20;
+            $size = 15;
         }
         
         import("@.ORG.Page");
@@ -29,32 +28,37 @@ class LogAction extends BaseAction
         if ($count) {
             $Page_helper = new Page($count, $size, $page);
             $list = $api_access_log->where($where)->order('create_time desc')->limit($Page_helper->firstRow . ',' . $Page_helper->listRows)->select();
-			$this->assign('pager',$Page_helper->show());           
-			$this->assign('data',$list);           
+            $this->assign('pager', $Page_helper->show());
+            $this->assign('data', $list);
         }
         $this->display();
     }
-
-    private function search(){
-    	$where=array();
-    	$keyword=get_safe_replace($_POST['keyword']);
-    	if($_POST['type']=='title'){
-    		$where['title']=array('like',"%{$keyword}%");
-    	}
-    	if($_POST['type']=='ip'){
-    		$where['ip']=array('like',"%{$keyword}%");
-    	}
-    	if($_POST['type']=='spent'){
-    		$where['spent']=array('gt',$keyword);
-    	}
-    	return $where;
+    
+    private function search() {
+        if ($_GET['p']) {
+            $where = session('LogAction_where');
+        } else {
+            $where = array();
+        }
+        $keyword = get_safe_replace($_POST['keyword']);
+        if ($_POST['type'] == 'title') {
+            $where['title'] = array('like', "%{$keyword}%");
+        }
+        if ($_POST['type'] == 'ip') {
+            $where['ip'] = array('like', "%{$keyword}%");
+        }
+        if ($_POST['type'] == 'spent') {
+            $where['spent'] = array('gt', $keyword);
+        }
+        session('LogAction_where', $where);
+        return $where;
     }
-
-    public function view(){
-    	$id=intval($_GET['id']);
-    	$api_access_log=D('api_access_log');
-    	$data=$api_access_log->where("id={$id}")->find();
-    	$this->assign('data',$data);
-    	$this->display();
+    
+    public function view() {
+        $id = intval($_GET['id']);
+        $api_access_log = D('api_access_log');
+        $data = $api_access_log->where("id={$id}")->find();
+        $this->assign('data', $data);
+        $this->display();
     }
 }

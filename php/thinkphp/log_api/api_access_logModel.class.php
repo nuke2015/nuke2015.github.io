@@ -1,4 +1,19 @@
 <?php
+// api_access_logModel::sign('start');
+// api_access_logModel::sign('stop');
+// $spent = api_access_logModel::spent('stop', 'start');
+// try {
+//     $title = trim($_POST['methodName']);
+//     $api_access_log = D('api_access_log');
+//     $user_agent = trim($_SERVER['HTTP_USER_AGENT']);
+    
+//     // $param = array('request' => $_POST, 'response' => '');
+//     $param = array('request' => $_POST, 'response' => $return);
+//     $ip = get_client_ip();
+//     $api_access_log->save($title, $param, $ip, $user_agent, $spent);
+// }
+// catch(Exception $e) {
+// }
 
 /**
  * 日志模块
