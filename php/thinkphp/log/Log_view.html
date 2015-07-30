@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title> API监测系统</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <br/>
+        <div id="header">
+            <div class="lead">日志详情</div>
+        </div>
+        <!--    <ul class="breadcrumb">
+                                                <li><a href="http://127.0.0.1:8080/main/index">文章管理</a></li>
+                                                <li><a href="http://127.0.0.1:8080/category/index">分类管理</a></li>
+                                                <li><a href="http://127.0.0.1:8080/menu/index">菜单管理</a></li>
+                                                <li><a href="http://127.0.0.1:8080/user/index">用户管理</a></li>
+        </ul> -->
+        <div>
+            <a href="javascript:history.go(-1);" class="btn btn-primary pull-right">返回</a>
+        </div>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td>id</td>
+                <td>{$data.id}</td>
+            </tr>
+            <tr>
+                <td>标题</td>
+                <td>{$data.title}</td>
+            </tr>
+            <tr>
+                <td>耗时</td>
+                <td>{$data.spent}</td>
+            </tr>
+            <tr>
+                <td>IP</td>
+                <td>{$data.ip}</td>
+            </tr>
+            <tr>
+                <td>UA</td>
+                <td>{$data.useragent}</td>
+            </tr>
+            <tr>
+                <td>参数</td>
+                <td>
+                <pre>
+                    {:print_r(json_decode($data['data'],1),1);}
+                </pre>
+                </td>
+            </tr>
+        </table>
+        <div class="clearfix"></div>
+        <div id="footer" class="row">
+            <div class="copyright text-center text-muted">掌厨,全球最大的视频厨房! ^.^</div>
+            <div>
+                <a href="javascript:history.go(-1);" class="btn btn-primary pull-right">返回</a>
+            </div>
+        </div>
+    </div>
+    <br>
+</body></html>
