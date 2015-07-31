@@ -1,99 +1,112 @@
 <!DOCTYPE html>
 <!-- saved from url=(0022)http://127.0.0.1:8080/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
-	<title>CRM-客户管理系统-锋速网络</title>
-	<link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>CRM-客户管理系统-锋速网络</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-	<div id="header">
-			<h1>CRM-客户管理系统</h1>
-	</div>
-	<ul class="breadcrumb">
-		<li><a href="http://127.0.0.1:8080/main/index">文章管理</a></li>
-		<li><a href="http://127.0.0.1:8080/category/index">分类管理</a></li>
-		<li><a href="http://127.0.0.1:8080/menu/index">菜单管理</a></li>
-		<li><a href="http://127.0.0.1:8080/user/index">用户管理</a></li>
-	</ul>
-
-	<div class="lead">文章管理</div>
-	<table class="table table-striped table-bordered">
-		<tbody><tr>
-			<td>id</td>
-			<td>标题</td>
-			<td>内容</td>
-			<td>时间</td>
-			<td>操作</td>
-		</tr>
-		
-		<tr>
-			<td>54c598c4cbff856c65834ea9</td>
-			<td>标题</td>
-			<td>内容</td>
-			<td>2015-01-26 09:30:44.013 +0800 CST</td>
-			<td>
-				<a href="http://127.0.0.1:8080/main/edit/?id=54c598c4cbff856c65834ea9">编辑</a>
-				<a href="http://127.0.0.1:8080/main/delete/?id=54c598c4cbff856c65834ea9">删除</a>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>54c598c9cbff856c65834eaa</td>
-			<td>大标题</td>
-			<td>大内容</td>
-			<td>2015-01-26 09:30:49.241 +0800 CST</td>
-			<td>
-				<a href="http://127.0.0.1:8080/main/edit/?id=54c598c9cbff856c65834eaa">编辑</a>
-				<a href="http://127.0.0.1:8080/main/delete/?id=54c598c9cbff856c65834eaa">删除</a>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>54c598cfcbff856c65834eab</td>
-			<td>奇怪的标题</td>
-			<td>奇怪的内容</td>
-			<td>2015-01-26 09:30:55.722 +0800 CST</td>
-			<td>
-				<a href="http://127.0.0.1:8080/main/edit/?id=54c598cfcbff856c65834eab">编辑</a>
-				<a href="http://127.0.0.1:8080/main/delete/?id=54c598cfcbff856c65834eab">删除</a>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>54c598d4cbff856c65834eac</td>
-			<td>有标题</td>
-			<td>有内容</td>
-			<td>2015-01-26 09:31:00.803 +0800 CST</td>
-			<td>
-				<a href="http://127.0.0.1:8080/main/edit/?id=54c598d4cbff856c65834eac">编辑</a>
-				<a href="http://127.0.0.1:8080/main/delete/?id=54c598d4cbff856c65834eac">删除</a>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>54c598dacbff856c65834ead</td>
-			<td>好标题</td>
-			<td>好内容</td>
-			<td>2015-01-26 09:31:06.228 +0800 CST</td>
-			<td>
-				<a href="http://127.0.0.1:8080/main/edit/?id=54c598dacbff856c65834ead">编辑</a>
-				<a href="http://127.0.0.1:8080/main/delete/?id=54c598dacbff856c65834ead">删除</a>
-			</td>
-		</tr>
-		
-	</tbody></table>
-	<div class="clearfix"><ul class="pagination pagination-sm pull-right"><li class="disabled"><span>«</span></li><li class="active"><span>1</span></li><li><a href="http://127.0.0.1:8080/main/index?page=2">2</a></li><li><a href="http://127.0.0.1:8080/main/index?page=2">»</a></li></ul></div>
-	<div>
-		<a href="http://127.0.0.1:8080/main/add" class="btn btn-primary">添加</a>
-	</div>
-<div id="footer" class="row">
-	<div class="copyright text-center text-muted">锋速科技,版权所有,盗版不究,感谢模仿^.^</div>
-</div>
+    <div class="container">
+        <div id="header">
+            <h1>CRM-客户管理系统</h1>
+        </div>
+        <div class="row">
+            <ul class="breadcrumb">
+                <li><a href="http://127.0.0.1:8080/main/index">文章管理</a></li>
+                <li><a href="http://127.0.0.1:8080/category/index">分类管理</a></li>
+                <li><a href="http://127.0.0.1:8080/menu/index">菜单管理</a></li>
+                <li><a href="http://127.0.0.1:8080/user/index">用户管理</a></li>
+            </ul>
+        </div>
+        <div id="search" class="row">
+            <b class="lead">文章管理</b>
+            <form action="#" method="post" class="co-xs-4 pull-right">
+                <div class="form-inline">
+                	<input type="text" name="title" class="form-control" />
+                	<input type="submit" value="保存" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        <br/>
+        <div class="clearfix"></div>
+        <div id="main">
+            <table class="table table-striped table-bordered">
+                <tbody><tr>
+                    <td>id</td>
+                    <td>标题</td>
+                    <td>内容</td>
+                    <td>时间</td>
+                    <td>操作</td>
+                </tr>
+                <tr>
+                    <td>54c598c4cbff856c65834ea9</td>
+                    <td>标题</td>
+                    <td>内容</td>
+                    <td>2015-01-26 09:30:44.013 +0800 CST</td>
+                    <td>
+                        <a href="http://127.0.0.1:8080/main/edit/?id=54c598c4cbff856c65834ea9">编辑</a>
+                        <a href="http://127.0.0.1:8080/main/delete/?id=54c598c4cbff856c65834ea9">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>54c598c9cbff856c65834eaa</td>
+                    <td>大标题</td>
+                    <td>大内容</td>
+                    <td>2015-01-26 09:30:49.241 +0800 CST</td>
+                    <td>
+                        <a href="http://127.0.0.1:8080/main/edit/?id=54c598c9cbff856c65834eaa">编辑</a>
+                        <a href="http://127.0.0.1:8080/main/delete/?id=54c598c9cbff856c65834eaa">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>54c598cfcbff856c65834eab</td>
+                    <td>奇怪的标题</td>
+                    <td>奇怪的内容</td>
+                    <td>2015-01-26 09:30:55.722 +0800 CST</td>
+                    <td>
+                        <a href="http://127.0.0.1:8080/main/edit/?id=54c598cfcbff856c65834eab">编辑</a>
+                        <a href="http://127.0.0.1:8080/main/delete/?id=54c598cfcbff856c65834eab">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>54c598d4cbff856c65834eac</td>
+                    <td>有标题</td>
+                    <td>有内容</td>
+                    <td>2015-01-26 09:31:00.803 +0800 CST</td>
+                    <td>
+                        <a href="http://127.0.0.1:8080/main/edit/?id=54c598d4cbff856c65834eac">编辑</a>
+                        <a href="http://127.0.0.1:8080/main/delete/?id=54c598d4cbff856c65834eac">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>54c598dacbff856c65834ead</td>
+                    <td>好标题</td>
+                    <td>好内容</td>
+                    <td>2015-01-26 09:31:06.228 +0800 CST</td>
+                    <td>
+                        <a href="http://127.0.0.1:8080/main/edit/?id=54c598dacbff856c65834ead">编辑</a>
+                        <a href="http://127.0.0.1:8080/main/delete/?id=54c598dacbff856c65834ead">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clearfix"></div>
+    <div id="pager">
+        <ul class="pagination pagination-sm pull-right">
+            <li class="disabled"><span>«</span></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="http://127.0.0.1:8080/main/index?page=2">2</a></li>
+            <li><a href="http://127.0.0.1:8080/main/index?page=2">»</a></li>
+        </ul>
+    </div>
+    <div id="act">
+        <a href="http://127.0.0.1:8080/main/add" class="btn btn-primary">添加</a>
+    </div>
+    <div id="footer" class="row">
+        <div class="copyright text-center text-muted">锋速科技,版权所有,盗版不究,感谢模仿^.^</div>
+    </div>
 </div>
 <br>
-
-
-
-
-</body></html>
+</body>
+</html>
