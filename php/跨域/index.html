@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var url="http://127.0.0.1/json.php?callback=?";
+            jQuery(function(){
+                jQuery.getJSON(url,{"hello":"world"},function(data){
+                	console.log(data);
+                	alert (data.msg);
+                });
+            });
+        </script>
+    </body>
+</html>
