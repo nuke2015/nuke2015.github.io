@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:10086/index/index -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta charset="utf-8">
+	<title>锋速网络中心</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Le styles -->
+	<link href="http://127.0.0.1:10086/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<script src="/cssjs/jquery.js"></script>	
+</head>
+<body>
+<div class="container">
+    <h1><a href="http://127.0.0.1:10086/">锋速VPN控制中心</a></h1>
+    <hr>
+	<h3>客户列表</h3>
+	<table border="1">
+		<tbody><tr>
+			<td>ID</td>
+			<td>账号</td>
+			<td>密码</td>
+			<td>分类</td>
+			<td>备注</td>
+			<td colspan="2">操作</td>
+		</tr>
+	
+		<tr>
+			<td>54b1199e979871e80f000002</td>
+			<td>sdf4s65464sdf</td>
+			<td>dfsfdsf</td>
+			<td>465</td>
+			<td>465</td>
+			<td><a href="http://127.0.0.1:10086/index/edit?id=54b1199e979871e80f000002">编辑</a></td>
+			<td><a href="http://127.0.0.1:10086/index/remove?id=54b1199e979871e80f000002">删除</a></td>
+		</tr>
+	
+		<tr>
+			<td>54b119a1979871e80f000003</td>
+			<td>65</td>
+			<td>6465</td>
+			<td>46</td>
+			<td>4</td>
+			<td><a href="http://127.0.0.1:10086/index/edit?id=54b119a1979871e80f000003">编辑</a></td>
+			<td><a href="http://127.0.0.1:10086/index/remove?id=54b119a1979871e80f000003">删除</a></td>
+		</tr>
+	
+		<tr>
+			<td>552d28484560cab002000001</td>
+			<td>55456+</td>
+			<td>46</td>
+			<td>46</td>
+			<td>46</td>
+			<td><a href="http://127.0.0.1:10086/index/edit?id=552d28484560cab002000001">编辑</a></td>
+			<td><a href="http://127.0.0.1:10086/index/remove?id=552d28484560cab002000001">删除</a></td>
+		</tr>
+	
+	</tbody></table>
+	
+	<h4>添加客户</h4>
+	<form action="http://127.0.0.1:10086/index/insert" method="post">
+		<p>账号:<input type="text" name="username"></p>
+		<p>密码:<input type="text" name="password"></p>
+		<p>分类:<input type="text" name="type"></p>
+		<p>备注:<input type="text" name="remark"></p>
+		<input type="submit" value="提交" class="btn">
+	</form>
+	
+    <hr>
+    <div>
+        <a href="http://127.0.0.1:10086/index/vpnok">重启服务</a>&nbsp;
+        <a href="http://127.0.0.1:10086/login/logout">退出系统</a>&nbsp;
+    </div>
+</div>
+
+
+</body></html>
