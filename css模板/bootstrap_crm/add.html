@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:8080/user/add -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>CRM-客户管理系统-锋速网络</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div id="header">
+			<h1>CRM-客户管理系统</h1>
+	</div>
+	<ul class="breadcrumb">
+		<li><a href="http://127.0.0.1:8080/main/index">文章管理</a></li>
+		<li><a href="http://127.0.0.1:8080/category/index">分类管理</a></li>
+		<li><a href="http://127.0.0.1:8080/menu/index">菜单管理</a></li>
+		<li><a href="http://127.0.0.1:8080/user/index">用户管理</a></li>
+		<li><a href="http://127.0.0.1:8080/index/logout">退出</a></li>
+	</ul>
+
+	<div class="lead">添加用户</div>
+	<form action="http://127.0.0.1:8080/user/insert" method="post">
+	<table class="table table-bordered">
+		<tbody><tr>
+			<td>用户名称</td>
+			<td>
+				<input type="text" name="username" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>用户密码</td>
+			<td>
+				<input type="text" name="password" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>用户组</td>
+			<td>
+				<input type="text" name="group" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" class="btn btn-primary" value="保存">
+				<input type="reset" class="btn" value="重置">
+			</td>
+		</tr>
+	</tbody></table>
+	</form>
+</div>
+<br>
+<div id="footer" class="row">
+	<div class="copyright text-center text-muted">锋速科技,版权所有,盗版不究,感谢模仿^.^</div>
+</div>
+
+
+
+
+</body></html>
