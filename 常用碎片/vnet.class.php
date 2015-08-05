@@ -2,7 +2,7 @@
 #常用工具函数,全部静态调用;
 class vnet{
 	#读取Excel表,静态调用;
-	public function readexcel($filePath){
+	public static function readexcel($filePath){
 		include APP_PATH.'/Lib/Excel/PHPExcel/IOFactory.php'; //必须手动包含;
 		$reader = PHPExcel_IOFactory::createReader('Excel5'); 
 		$PHPExcel = $reader->load($filePath); // 载入excel文件
@@ -21,7 +21,7 @@ class vnet{
 		return $dataset;
 	}
 	#Excel表格输出;
-	private function toexcel($data,$offset){
+	public static function toexcel($data,$offset){
 		include APP_PATH.'/Lib/Excel/PHPExcel.php'; //必须手动包含;
 		$type = 'Excel5'; //输出为excel2003
 		$file = APP_PATH.'/Lib/Excel/excel.xls';
@@ -44,7 +44,7 @@ class vnet{
 		$obj->save('php://output'); 
 	}
 	#读取文本;
-	public function readtxt($file){
+	public static function readtxt($file){
 		$f= fopen($file,"r");
 		while (!feof($f)){
 		  $line = fgets($f);
@@ -55,7 +55,7 @@ class vnet{
 		return $tmp;
 	}
 	#附件上传;
-	public function readattach($filetype){
+	public static function readattach($filetype){
 		#enctype="multipart/form-data"前端;
         import('@.ORG.UploadFile');
         //导入上传类
@@ -82,7 +82,7 @@ class vnet{
         }
     }
 	#跨库sql;
-	public function sql($sqlary,$conn){
+	public static function sql($sqlary,$conn){
 		$link = mysql_connect($conn['host'],$conn['user'],$conn['pwd'],$conn['dbname']) or die("数据库连接失败!");  	
 		$db_selected=mysql_select_db($conn['dbname'],$link);
 		mysql_query('set names utf8'); //utf8编码;
@@ -96,14 +96,14 @@ class vnet{
 		return $result;
 	}
 	#即时刷新;
-	public function flush($msg){
+	public static function flush($msg){
 		if($msg)echo $msg;
 		ob_flush();
 		flush();
 		echo '<br/>';//换行好一点;
 	}
 	#快速缓存KVDB,key变量名,value值;
-	public function kvdb($key,$value=null){
+	public static function kvdb($key,$value=null){
 		include_once(APP_PATH.'Lib/ORG/Secache.class.php');
 		$cache=new secache();
 		$cache->workat(RUNTIME_PATH.'KVDB');
