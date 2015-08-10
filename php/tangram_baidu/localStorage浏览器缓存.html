@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js" ></script>
+    </head>
+    <body>
+        <div id="result">test#</div>
+        <script>
+            //先null值,再得到字符串.
+            $(function(){
+                var db=window.localStorage;
+                v=db.getItem('hello');
+                alert(v);
+                if(!v){
+                    db.setItem('hello','world');
+                }else{
+                    alert(v);
+                }
+            })();
+        </script>
+    </body>
+</html>
