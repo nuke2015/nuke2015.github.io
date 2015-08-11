@@ -1,0 +1,251 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"sr",
+				"strlen"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"arr",
+				"array"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 244.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/svn_kitchen/dev_api"
+	],
+	"file_history":
+	[
+		"/F/mnt/logs/kitchen/Logs/Api_Api_2015_08_11.log",
+		"/F/desktop/事务.txt",
+		"/D/soft/SublimeText/Data/Packages/User/sftp_servers/config",
+		"/F/svn_kitchen/dev_api/Zhangchu/error_code.php",
+		"/D/soft/SublimeText/Data/Packages/SFTP/Default (Windows).sublime-keymap",
+		"/D/soft/SublimeText/Data/Packages/SFTP/SFTP.sublime-settings",
+		"/D/soft/SublimeText/Data/Packages/User/SFTP.sublime-settings",
+		"/C/Users/Administrator/AppData/Local/Temp/scp19481/var/www/kitchen/dev_api/Zhangchu/error_code.php",
+		"/F/svn_kitchen/dev_api/config.json",
+		"/C/users/admini~1/appdata/local/temp/sublime-sftp-browse-1439302951/config/var/www/kitchen/dev_api/db_config.php",
+		"/F/svn_kitchen/dev_api/新建文本文档.txt",
+		"/F/svn_nuke.zou/软件/sn3083注册.txt",
+		"/F/github/trunk/php/sublime/sn3083注册.txt",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/material_typeModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/materialModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/dishesModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/dishes_tagsModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/UserQQAction.class.php",
+		"/F/mnt/logs/kitchen/Logs/Api_access_2015_08_11.log",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/UserWeixinAction.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/UserWeiboAction.class.php",
+		"/F/svn_kitchen/online_api/Zhangchu/Lib/Action/Api/CategoryIndexAction.class.php",
+		"/F/svn_kitchen/online_api/Zhangchu/Lib/Model/dishes_tagsModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/CategoryIndexAction.class.php",
+		"/C/Users/Administrator/AppData/Local/Temp/scp34310/var/www/kitchen/dev_api/Sites/Api/index.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/UserLikesServiceModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Common/common.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/UserPortrayAction.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/ORG/StrUtf8.php",
+		"/F/svn_nuke.zou/软件/sublime/sn3083注册.txt",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/ORG/StrUtf8.txt",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/UserLikesAction.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/CategorySearchAction.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/SearchServiceModel.class.php",
+		"/F/工作文档/文案.txt",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/HomeCategoryAction.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/redisModel.class.php",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Action/Api/HomeIndexAction.class.php",
+		"/F/工作文档/用户标签/用户标签.txt",
+		"/D/soft/SublimeText/Data/Packages/User/CodeFormatter.sublime-settings",
+		"/F/svn_kitchen/dev_api/Thinkphp/Core.php",
+		"/F/工作文档/用户标签/用户标签 - 副本.txt",
+		"/F/svn_kitchen/dev_api/Zhangchu/Lib/Model/userModel.class.php",
+		"/F/desktop/新建文本文档.txt",
+		"/D/soft/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/soft/SublimeText/Data/Packages/User/Preferences.sublime-settings",
+		"/F/github/trunk/php/sublime/编辑器设置.json",
+		"/F/github/trunk/php/sublime/package.txt",
+		"/F/github/trunk/php/sublime/sn3083.txt",
+		"/F/desktop/注册码.txt"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"save",
+			"sub",
+			"this",
+			"s",
+			"UserLikesService",
+			"dishes_recomment",
+			" "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			","
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 202.0
+	},
+	"pinned_build_system": "",
+	"project": "dev.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
