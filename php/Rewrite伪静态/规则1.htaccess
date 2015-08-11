@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /test.php?s=$1 [QSA,PT,L]
+RewriteRule ^(.*)Bestphp/Tpl/(.*).html$ /403.html [QSA,PT,L]
