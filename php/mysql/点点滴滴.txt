@@ -1,0 +1,35 @@
+
+查找复选框的内容,用半角逗号分割
+select * from dishes where find_in_set('384',dishes_material);
+
+标准时间查询datetime
+SELECT * FROM `homepage_banner` WHERE `start_date` > '2015-06-30 09:44:50' AND `id` LIKE '%1%' LIMIT 0, 1000
+
+日志表删除,
+每天跑个离线任务,把库里七天前的日志删除.
+
+分类汇总
+select search_content,count(user_id) as count from platformkichen.search_id
+group by search_content
+order by count(user_id) desc
+limit 0,3
+
+定时任务
+CREATE EVENT `NewEvent`
+ON SCHEDULE EVERY 1 DAY STARTS '2012-07-18 03:00:00'
+ON COMPLETION NOT PRESERVE
+ENABLE
+DO
+DELETE FROM `api_access_log` WHERE `create_time` < unix_timestamp(now())-86400*7
+
+创建事件
+CREATE DEFINER=`root`@`%` EVENT `delete_log_week_ago_by_day` ON SCHEDULE EVERY 1 DAY STARTS '2012-07-18 03:00:00' ON COMPLETION NOT PRESERVE ENABLE DO DELETE FROM `api_access_log` WHERE `create_time` < unix_timestamp(now())-86400*7
+
+查询四天前的数据条数
+SELECT count(id) FROM `api_access_log` WHERE `create_time` < unix_timestamp(now())-86400*4
+
+菜例表,里面有热门推荐字段,放在里面就能筛选出热门菜和推荐菜,但是如果把这两个字段抽出来,单独成一张表,就能对它们进行定制排序,比如热门排序,新品排序.比如热门操作时间排序.
+
+查询数据按in排序,不升序不降序
+SELECT * FROM dishes WHERE dishes_id IN(246,249,248) ORDER BY INSTR('246,249,248',CONCAT(dishes_id))
+
