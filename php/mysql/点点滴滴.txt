@@ -33,3 +33,9 @@ SELECT count(id) FROM `api_access_log` WHERE `create_time` < unix_timestamp(now(
 查询数据按in排序,不升序不降序
 SELECT * FROM dishes WHERE dishes_id IN(246,249,248) ORDER BY INSTR('246,249,248',CONCAT(dishes_id))
 
+今遇到一奇葩的问题,sql查询的时候,limit 0,10和limit 0,100居然得到不相同的排序.
+原因在于两字段排序,listorder(bigint) 和 lasttime (timestamp)都是相同的值.
+而表又刚好没有主键.在两次排序都失败的情况下,sql调用主键排序.
+而主键没有,所以,就乱序了.
+但是有个奇怪的现象:就是 limit 0,10的结果是完全一样的,这个不会变.
+联合主键有排重效果但是不能解决排序问题.为避免排序混乱,需要加个主键唯一索引.
