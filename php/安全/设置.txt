@@ -1,0 +1,16 @@
+
+Server  nginx/1.2.4
+X-Powered-By    PHP/5.3.17-1~dotdeb.0
+it´s necessary to edit php.ini & nginx.conf as follows.
+
+PHP:
+To remove X-Powered-By completely, expose_php should be disabled in php.ini.
+...
+expose_php = Off
+...
+
+
+Nginx:
+To remove Server Version from Header, server_tokens should be disabled in nginx.conf.
+...
+server_tokens off;
