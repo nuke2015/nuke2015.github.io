@@ -1,0 +1,83 @@
+
+Template Lite - the faster compiling PHP template engine
+
+Installation
+
+Requirements
+
+Template Lite requires a web server running PHP 4.1.0 or greater. Note that it hasn't been tested on anything less than 4.3, but it should, in theory, work on anything greater than 4.1.0.
+
+Basic Installation
+
+The files needed to run Template Lite are located in the /src/ directory of the distribution. These are simply PHP files and contain source code. Feel free to play with it and make any changes you want to. Just remember that changes made to Template Lite are not supported. (If you do decide that you made a cool change, submit it to the maintainers and it might be included in a future release!)
+
+So to install Template Lite copy over the files:
+	class.template.php
+	class.compiler.php
+	class.config.php
+	/plugins/*.php
+	
+You don't necessarily need all the files. The plugins are optional, but extremely useful (and also their usage is detailed in these documents) and the configuration loader is not needed if you don't plan on using config files.
+
+After you've copied the above files somewhere into your program, probably a subfolder of your includes folder entitled something such as template_lite, you need to include them in your script. Here is an example of how to do that:
+	require('/path/to/class.template.php');
+	$tpl = new Template_Lite;
+	
+You should replace /path/to/ with some relative or absolute path to template_lite.
+
+Once the files are successfully included, you can begin setting some basic variables. There are two variables that you need to set after loading Template Lite: $template_dir and $compile_dir.
+	require('/path/to/class.template.php');
+	$tpl = new Template_Lite;
+	$tpl->compile_dir = "compiled/";
+	$tpl->template_dir = "templates/";
+	
+One caveat is important to note. Template Lite needs write access to the server. Usually the webserver will run as "nobody". There are two ways to handle this. The first way is more secure, but requires you to have root or administrator access to your server. It involves changing the ownership of the compile directory (and optionally the cache directory if you opt to do caching). Here is how you do that:
+	chown nobody:nobody /path/tocompiled/
+	chmod 700 /path/to/compiled/
+
+	# you only need to do this if you are using caching
+	chown nobody:nobody /path/to/cached/
+	chmod 700 /path/to/cached/
+	
+The other way involves giving your compile and cache directories world write access. This is fairly insecure, but probably the only option if you do not have root or administrator access to the server. Here is how to do that:
+	chmod 777 /path/to/compiled/
+
+	# you only need to do this if you are using caching
+	chmod 777 /path/to/compiled/
+	
+So now that you have it all set up, here is a sample template that you can write to see that it all works.
+	test.php
+	=============================
+	require('class.template.php');
+	$tpl = new Template_Lite;
+	$tpl->compile_dir = "compiled/";
+	$tpl->template_dir = "templates/";
+
+	$tpl->assign("foo","bar");
+	$tpl->display("test.tpl");
+
+	test.tpl
+	=============================
+	<html>
+	<head>
+	<title>Document Title</title>
+	</head>
+	<body>
+	{* this is a comment *}
+	{ $foo }
+	</body>
+	</html>
+
+	output
+	=============================
+	<html>
+	<head>
+	<title>Document Title</title>
+	</head>
+	<body>
+	bar
+	</body>
+	</html>
+	
+Home
+

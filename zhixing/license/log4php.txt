@@ -1,0 +1,42 @@
+
+What is Apache log4php?
+Apache log4php™ is a versatile logging framework for PHP.
+
+Feature highlights:
+
+Configuration through XML, properties or PHP files
+Various logging destinations, including:
+Console (stdout, stderr)
+Files (including daily and rolling files)
+Email
+Databases
+Sockets
+Syslog
+Several built-in log message formats, including:
+HTML
+XML
+User defined pattern
+Nested (NDC) and Mapped (MDC) Diagnostic Contexts.
+The Apache log4php project
+Apache log4php™ is an open source project at the Apache Software Foundation, a part the Apache Logging Services project.
+
+Apache log4php™ graduated in March 2010.
+
+Who uses Apache log4php?
+This sections lists some of the projects which use Apache log4php.
+
+In alphabetic order:
+
+CMS Made Simple - an open source (GPL) CMS
+Ding - a dependency injection, AOP, and MVC container, with features similar to the Spring Framework
+Helpzilla - interactive solutions for customer care
+Imento - a danish company which uses log4php in their commercial MVC framework
+Paloose - a simplified version of Cocoon using PHP
+PAMI / PAGI - OOP clients for the Asterisk Manager Protocol and the Asterisk Gateway Protocol, implemented in PHP.
+PIWI Framework - a framework for quick website building and PHP Dependency Injection similar to Apache Cocoon and Apache Forrest.
+Scalr - a fully redundant, self-curing and self-scaling hosting environment using Amazon's EC2
+SiteSupra - an enterprise PHP platform
+SugarCRM - low-cost customer relationship management solutions
+vtiger - an open source CRM
+If you think that you should be on this list, please let us know by sending a message to the log4php user lists.
+

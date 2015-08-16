@@ -1,0 +1,53 @@
+INSTALLATION
+
+Highcharts requires two files to run, highcharts.js and either jQuery, MooTools or Prototype or our own Highcharts Standalone Framework which are used for some common JavaScript tasks. If you're installing Highstock, the procedure is the same as below, except the JavaScript file name is highstock.js rather than highcharts.js.
+
+ 
+
+A. INCLUDE HIGHCHARTS AND FRAMEWORK
+
+Include the JavaScript files in the <head> section of your web page as shown below.
+
+OPTION #1: USE JQUERY
+
+Use this code to include Highcharts with jQuery:
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+ 
+
+OPTION #2: USE HIGHCHARTS STANDALONE FRAMEWORK
+
+jQuery is currently used in most websites, but there may be situations where you don't want to load the full framework in order to utilize Highcharts. For this we have built the Highcharts Standalone Framework, a compact file of 2 kB gzipped. It is available since Highcharts 3.0.5. Use this code to load the Standalone Framework from our CDN:
+
+<script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+ 
+
+OPTION #3: USE MOOTOOLS OR PROTOTYPE
+
+While the jQuery adapter is built into Highcharts and Highstock, the MooTools and Prototype adapter has to be included separately. Use this code to include Highcharts with MooTools:
+
+<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+<script src="http://code.highcharts.com/adapters/mootools-adapter.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+and use this code to include Highcharts with Prototype:
+
+<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7/prototype.js"></script>
+<script src="http://code.highcharts.com/adapters/prototype-adapter.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+Note: If MooTools or Prototype is used they need to be included before highcharts.js, this is because highcharts.js checks to see if MooTools or Prototype are present.
+
+ 
+
+B. ALTERNATIVELY, LOAD FILES FROM YOUR OWN DOMAIN
+
+In the example above the JavaScript files are loaded from ajax.googleapis.com and code.highcharts.com. The Highcharts files can be downloaded from highcharts.com and put on your webpage. Here is an example with jQuery and highcharts served from your own server:
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/highcharts.js"></script>
+C. GET STARTED
+
+You are now ready to use Highcharts, see Your first chart to get started.
+
+*) Highcharts version 1.x relied on excanvas.js for rendering in IE. From Highcharts 2.0 (and all Highstock versions) IE VML rendering is built into the library.
+
