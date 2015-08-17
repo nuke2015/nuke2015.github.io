@@ -50,6 +50,9 @@ class DaoruAction extends Action
     
     /**
      * 分片读取注意释放资源,不用file($filename)数组;
+     * 此处直接返回单行文本内容不拆分,
+     * 而在业务消费处把文本拆分成数组,
+     * 有利于当前函数功能复用.
      * @param  [type] $i [description]
      * @return [type]    [description]
      */
