@@ -32,17 +32,17 @@ class DaoruAction extends Action
             foreach ($data as $key => $value) {
                 $arr = explode(',', $value);
                 if (count($arr) != 8) print_r($value);
-                $data = array();
-                $data['id'] = $arr[0];
-                $data['tag_id'] = $arr[1];
-                $data['tag_name'] = $arr[2];
-                $data['dishes_id'] = $arr[3];
-                $data['dishes_name'] = $arr[4];
-                $data['listorder'] = $arr[5];
-                $data['status'] = $arr[6];
-                $data['last_update'] = date("Y-m-d H:i:s");
+                $insert = array();
+                $insert['id'] = $arr[0];
+                $insert['tag_id'] = $arr[1];
+                $insert['tag_name'] = $arr[2];
+                $insert['dishes_id'] = $arr[3];
+                $insert['dishes_name'] = $arr[4];
+                $insert['listorder'] = $arr[5];
+                $insert['status'] = $arr[6];
+                $insert['last_update'] = date("Y-m-d H:i:s");
                 try {
-                    $dishes_tags_sorter->data($data)->add();
+                    $dishes_tags_sorter->data($insert)->add();
                 }
                 catch(Exception $e) {
                 }
