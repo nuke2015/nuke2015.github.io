@@ -7,9 +7,11 @@ class DaoruAction extends Action
 {
     public function index() {
         set_time_limit(3600);
-        for ($i = 0; $i < 80000; $i+= 10) {
-            $data = $this->data($i);
-            $this->insert($data);
+        $filename = __DIR__ . '/i.csv';
+        $length = 10;
+        for ($i = 0; $i < 80000; $i+= $length) {
+            $data = $this->data($filename, $i, $length);
+            if (count($data)) $this->insert($data);
         }
         echo 'done!';
         exit;
@@ -51,17 +53,15 @@ class DaoruAction extends Action
      * @param  [type] $i [description]
      * @return [type]    [description]
      */
-    private function data($offset) {
-        $filename = __DIR__ . '/i.csv';
+    private function data($filename, $offset, $length) {
         $result = array();
-        
         $fp = fopen($filename, "r");
         while (!feof($fp)) {
             $i++;
             $line = fgets($fp);
             if ($i < $offset) continue;
             $result[] = trim($line);
-            if ($i >= $offset + 10) break;
+            if ($i >= $offset + $length) break;
         }
         fclose($fp);
         return $result;
