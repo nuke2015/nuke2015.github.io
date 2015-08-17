@@ -90,7 +90,7 @@ class files
         while (!feof($fp)) {
             $i++;
             $line = fgets($fp);
-            if ($i < $offset) continue;
+            if ($i <= $offset) continue;
             $result[] = trim($line);
             if ($i >= $offset + $length) break;
         }
