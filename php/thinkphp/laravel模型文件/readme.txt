@@ -1,0 +1,13 @@
+
+在thinkphp项目中,整合laravel的模型操作方法
+
+
+把laravel移动到lib/ORG/目录下.
+把demo/article.sql导入数据库
+修改laravel/eloquent.class.php中的数据库连接.
+把demo下面的  Model与Action移动到Lib目录下.
+
+详细的查询方法见laravel官方文档.
+
+锋子
+2015年8月21日 12:03:54
