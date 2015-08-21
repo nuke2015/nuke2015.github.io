@@ -3,8 +3,19 @@
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action
 {
+    
+    // 所有数据
+    public function index() {
+        $articles = articleModel::all();
+        foreach ($articles as $article) {
+            print_r($article->title);
+            echo '<br/>';
+        }
+        exit;
+    }
+    
     // 范围查询
-    public function scope(){
+    public function scope() {
         $articles = articleModel::women()->orderBy('created_at')->get();
         foreach ($articles as $article) {
             print_r($article->title);
@@ -12,11 +23,11 @@ class IndexAction extends Action
         }
         exit;
     }
-
+    
     // 摸一下
     public function touch() {
-        $article=articleModel::find(1);
-        $affectedRows =$article->touch();
+        $article = articleModel::find(1);
+        $affectedRows = $article->touch();
         var_dump($affectedRows);
         exit;
     }
@@ -65,7 +76,7 @@ class IndexAction extends Action
     }
     
     // 根据id取一条
-    public function index() {
+    public function find() {
         $article = articleModel::find(1);
         print_r($article->title);
         exit;
