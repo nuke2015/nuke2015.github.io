@@ -1,0 +1,1104 @@
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000279s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000421s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000784s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001492s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001555s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000225s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000182s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000153s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000207s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000887s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000251s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000293s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.002172s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000399s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:37 HTTP/1.1 GET : /
+            [运行时间] => 0.0253s ( Load:0.0010s Init:0.0035s Exec:0.0156s Template:0.0051s )
+            [吞吐率] => 39.53req/s
+            [内存开销] => 700.48 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000188s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000437s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000717s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001553s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001642s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000223s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000177s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000104s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000188s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000815s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000230s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000274s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001685s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000348s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:39 HTTP/1.1 GET : /
+            [运行时间] => 0.1481s ( Load:0.0006s Init:0.0024s Exec:0.1404s Template:0.0047s )
+            [吞吐率] => 6.75req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000309s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000698s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001576s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001638s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000239s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000186s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000152s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000210s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000911s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000204s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000249s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001699s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000262s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:39 HTTP/1.1 GET : /
+            [运行时间] => 0.0264s ( Load:0.0010s Init:0.0029s Exec:0.0177s Template:0.0048s )
+            [吞吐率] => 37.88req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000180s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000420s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000685s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001337s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001395s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000167s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000165s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000101s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000194s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000744s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000253s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000297s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.007015s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000258s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:39 HTTP/1.1 GET : /
+            [运行时间] => 0.0368s ( Load:0.0007s Init:0.0114s Exec:0.0201s Template:0.0045s )
+            [吞吐率] => 27.17req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000170s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000421s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000677s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.002079s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.002165s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000238s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000219s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000131s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000234s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000965s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000297s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000347s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001968s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000729s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:39 HTTP/1.1 GET : /
+            [运行时间] => 0.0254s ( Load:0.0007s Init:0.0024s Exec:0.0161s Template:0.0061s )
+            [吞吐率] => 39.37req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000169s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000412s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000663s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001440s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001507s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000216s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000173s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000189s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000811s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000227s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000271s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.002297s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000340s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:39 HTTP/1.1 GET : /
+            [运行时间] => 0.0229s ( Load:0.0007s Init:0.0023s Exec:0.0154s Template:0.0045s )
+            [吞吐率] => 43.67req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000185s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000433s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000703s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001638s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001715s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000227s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000174s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000192s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000827s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000269s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000313s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.010592s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000326s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:39 HTTP/1.1 GET : /
+            [运行时间] => 0.0325s ( Load:0.0007s Init:0.0024s Exec:0.0247s Template:0.0048s )
+            [吞吐率] => 30.77req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000173s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000417s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000684s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001655s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001734s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000206s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000171s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000103s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000192s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000793s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000229s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000272s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001714s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000333s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:40 HTTP/1.1 GET : /
+            [运行时间] => 0.0239s ( Load:0.0007s Init:0.0025s Exec:0.0157s Template:0.0049s )
+            [吞吐率] => 41.84req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000181s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000185s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000454s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001187s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001248s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000171s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000144s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000103s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000160s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000730s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000137s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000180s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001797s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000509s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:40 HTTP/1.1 GET : /
+            [运行时间] => 0.0214s ( Load:0.0007s Init:0.0021s Exec:0.0151s Template:0.0034s )
+            [吞吐率] => 46.73req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000175s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000175s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000433s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001196s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001255s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000169s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000133s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000102s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000159s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000682s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000137s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000181s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001727s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000333s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:40 HTTP/1.1 GET : /
+            [运行时间] => 0.0217s ( Load:0.0007s Init:0.0021s Exec:0.0155s Template:0.0034s )
+            [吞吐率] => 46.08req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000176s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000196s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000467s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001607s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001680s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000225s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000152s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000167s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000782s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000152s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000196s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.001610s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.001248s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:40 HTTP/1.1 GET : /
+            [运行时间] => 0.0126s ( Load:0.0007s Init:0.0022s Exec:0.0057s Template:0.0040s )
+            [吞吐率] => 79.37req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
+Array
+(
+    [NOTIC] => Array
+        (
+            [0] => [8] Constant MODULE_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 178 行.
+            [1] => [8] Constant ACTION_NAME already defined D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 179 行.
+            [2] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php 第 184 行.
+            [3] => [8] Use of undefined constant __GROUP__ - assumed '__GROUP__' D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php 第 43 行.
+        )
+
+    [INFO] => Array
+        (
+            [0] => [ app_begin ] --START--
+            [1] => ReadHtmlCache Behavior ::run [ RunTime:0.000170s ]
+            [2] => CheckLang Behavior ::run [ RunTime:0.000188s ]
+            [3] => [ app_begin ] --END-- [ RunTime:0.000443s ]
+            [4] => [ view_parse ] --START--
+            [5] => ParseTemplate Behavior ::run [ RunTime:0.001387s ]
+            [6] => [ view_parse ] --END-- [ RunTime:0.001453s ]
+            [7] => [ view_filter ] --START--
+            [8] => ContentReplace Behavior ::run [ RunTime:0.000180s ]
+            [9] => TokenBuild Behavior ::run [ RunTime:0.000161s ]
+            [10] => WriteHtmlCache Behavior ::run [ RunTime:0.000117s ]
+            [11] => ShowRuntime Behavior ::run [ RunTime:0.000176s ]
+            [12] => [ view_filter ] --END-- [ RunTime:0.000759s ]
+            [13] => [ view_end ] --START--
+            [14] => ShowPageTrace Behavior ::run [ RunTime:0.000149s ]
+            [15] => [ view_end ] --END-- [ RunTime:0.000195s ]
+            [16] => [ app_end ] --START--
+        )
+
+    [SQL] => Array
+        (
+            [0] => SHOW COLUMNS FROM `bestphp_log` [ RunTime:0.002222s ]
+            [1] => SELECT * FROM `bestphp_log`  [ RunTime:0.000336s ]
+        )
+
+    [FILES] => Array
+        (
+            [0] => D:\AMP\htdoc\vhost4\index.php
+            [1] => D:\AMP\htdoc\vhost4\Thinkphp\Core.php
+            [2] => D:\AMP\htdoc\vhost4\Thinkphp\Common\runtime.php
+            [3] => D:\AMP\htdoc\vhost4\Thinkphp\Common\common.php
+            [4] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Think.class.php
+            [5] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\ThinkException.class.php
+            [6] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Behavior.class.php
+            [7] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\alias.php
+            [8] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\convention.php
+            [9] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\config.php
+            [10] => D:\AMP\htdoc\vhost4\Thinkphp\Lang\zh-cn.php
+            [11] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\tags.php
+            [12] => D:\AMP\htdoc\vhost4\Zhangchu\Conf\tags.php
+            [13] => D:\AMP\htdoc\vhost4\Thinkphp\Common\functions.php
+            [14] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Log.class.php
+            [15] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Dispatcher.class.php
+            [16] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\App.class.php
+            [17] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Action.class.php
+            [18] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\View.class.php
+            [19] => D:\AMP\htdoc\vhost4\Thinkphp\Conf\debug.php
+            [20] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ReadHtmlCacheBehavior.class.php
+            [21] => D:\AMP\htdoc\vhost4\Thinkphp\Extend\Behavior\CheckLangBehavior.class.php
+            [22] => D:\AMP\htdoc\vhost4\Zhangchu\Lib\Action\Api\IndexAction.class.php
+            [23] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Model.class.php
+            [24] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Core\Db.class.php
+            [25] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Driver\Db\DbMysql.class.php
+            [26] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ParseTemplateBehavior.class.php
+            [27] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Template\ThinkTemplate.class.php
+            [28] => D:\mnt\logs\kitchen\Cache\Api\6753d22ab29858cab394ca09611b8a89.php
+            [29] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ContentReplaceBehavior.class.php
+            [30] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\TokenBuildBehavior.class.php
+            [31] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\WriteHtmlCacheBehavior.class.php
+            [32] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowRuntimeBehavior.class.php
+            [33] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\ShowPageTraceBehavior.class.php
+            [34] => D:\AMP\htdoc\vhost4\Thinkphp\Lib\Behavior\FTraceBehavior.class.php
+        )
+
+    [BASE] => Array
+        (
+            [请求信息] => 2015-08-23 19:24:40 HTTP/1.1 GET : /
+            [运行时间] => 0.0233s ( Load:0.0006s Init:0.0021s Exec:0.0167s Template:0.0039s )
+            [吞吐率] => 42.92req/s
+            [内存开销] => 700.30 kb
+            [查询信息] => 2 queries 0 writes 
+            [文件加载] => 35
+            [缓存信息] => 0 gets 0 writes 
+            [配置加载] => 144
+            [会话信息] => SESSION_ID=2bnhjocc4uop4lbaq3attrfn03
+        )
+
+)
+
+
