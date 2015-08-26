@@ -19,7 +19,7 @@ class search_idModel extends Model
     public function hotword_cache($force_update) {
         $diffkey = "search_idModel#hotword_cache";
         $result = redisModel::get($diffkey);
-        if (!$result1 || $force_update) {
+        if (!$result || $force_update) {
             $list = $this->hotword();
             $result = array();
             if (count($list)) {
