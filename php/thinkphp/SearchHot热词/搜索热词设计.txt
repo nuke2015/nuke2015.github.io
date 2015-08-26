@@ -21,5 +21,6 @@ SELECT `search_id`,`search_content`,count(user_id) FROM `search_id` WHERE 1 GROU
 即便是定时任务正在更新缓存,
 它也不是完全没有内容.
 所以,碰撞的概率大大减少.
-从一天之内,蛋疼24次,直接变成0次.
-
+从一天之内蛋疼24次,直接变成蛋疼0次.
+虽然数据还是要全表group by查询,但是接口是不会遇到它慢的,
+因为接口访问的时候,数据已经生成好放在redis里了.

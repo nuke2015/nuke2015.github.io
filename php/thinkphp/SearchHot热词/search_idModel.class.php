@@ -15,10 +15,11 @@ class search_idModel extends Model
         return $info;
     }
     
-    public function hotword_cache() {
+    //无数据时动态生成,异步更新
+    public function hotword_cache($force_update) {
         $diffkey = "search_idModel#hotword_cache";
         $result = redisModel::get($diffkey);
-        if (!$result) {
+        if (!$result1 || $force_update) {
             $list = $this->hotword();
             $result = array();
             if (count($list)) {

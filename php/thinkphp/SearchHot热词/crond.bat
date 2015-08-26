@@ -1,2 +1,2 @@
-php index.php Crond/Test/index/
+php index.php Crond/Search/index/
 pause
