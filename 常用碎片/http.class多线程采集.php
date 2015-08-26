@@ -3,10 +3,10 @@
 /**
  测试
  header("Content-type: text/html;charset=utf-8");
- include 'http.class.php';
+ include 'Http.class.php';
  echo "<pre>";
  echo 'curl:<br>';
- $data=http::curl("http://www.baidu.com");
+ $data=Http::curl("http://www.baidu.com");
  print_r($data);
  echo 'multicurl:<br>';
  $urls[] = 'http://www.baidu.com';
@@ -16,19 +16,15 @@
  $tmp= Http::multicurl($urls);
  print_r($tmp);
  */
-
-class http
+class Http
 {
     const debug = 0;
     
     // 单线程
-    public static function curl($url, $method = 'get', $params = array(), $header = array()) {
-        
-        $opts = array(CURLOPT_TIMEOUT => 30, CURLOPT_RETURNTRANSFER => 1, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false, CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36');
+    public static function curl($url, $method = 'get', $params = array(), $header = array(), $opts = array()) {
         
         // 报头合并
-        if ($header) $opts[CURLOPT_HTTPHEADER] = $header;
-        
+        if (count($header)) $opts[CURLOPT_HTTPHEADER] = $header;
         $ch = curl_init();
         
         // 参数构造
@@ -42,15 +38,13 @@ class http
     }
     
     // 模拟多线程
-    public static function multicurl($urls, $method = "get", $params = array(), $headers = array()) {
+    public static function multicurl($urls, $method = "get", $params = array(), $headers = array(), $opts = array()) {
         
         //参数构造
         $params = http_build_query($params);
         
-        $opts = array(CURLOPT_TIMEOUT => 30, CURLOPT_RETURNTRANSFER => 1, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false, CURLOPT_USERAGENT => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322)');
-        
         // 报头合并
-        if ($header) $opts[CURLOPT_HTTPHEADER] = $header;
+        if (count($header)) $opts[CURLOPT_HTTPHEADER] = $header;
         
         $mh = curl_multi_init();
         $chArray = array();
@@ -85,8 +79,16 @@ class http
     
     // 方法构造
     private static function build(&$opts, $url, $method, $params) {
-        $vars='';
         if ($params) $vars = http_build_query($params);
+        
+        //补充参数
+        $opts_base = array(CURLOPT_TIMEOUT => 30, CURLOPT_RETURNTRANSFER => 1, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false, CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36');
+        foreach ($opts_base as $key => $value) {
+            if (!isset($opts[$key])) {
+                $opts[$key] = $value;
+            }
+        }
+        
         if (strtolower($method) == 'post') {
             
             // POST请求
@@ -95,7 +97,8 @@ class http
             if ($vars) {
                 $opts[CURLOPT_POSTFIELDS] = $vars;
             }
-        } else {
+        } 
+        else {
             
             // GET请求
             if ($vars) $url.= "?" . $vars;
