@@ -8,10 +8,10 @@ php index.php 就能唤醒心跳了,把它做成后台服务.
 
 设置开机启动.
 service heartphp start
-chkconfig heartphp stop
+chkconfig heartphp off
+
 维护
-就是修改心跳目标比如:
-http://127.0.0.4/mms.php
+就是修改心跳目标比如:http://127.0.0.4/mms.php
 这个是发短信中心.
 目前的心跳频率是1s/次,不等待直接返回.
 因为mms.php发短信需要5s的时间.
