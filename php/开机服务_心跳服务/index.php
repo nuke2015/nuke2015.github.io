@@ -26,6 +26,8 @@ function notice() {
     // $ch = curl_init('http://example.com/');
     $ch = curl_init('http://127.0.0.4/mms.php');
     curl_setopt($ch, CURLOPT_TIMEOUT, 1);
+    
+    //以head的方式请求,流量 消耗非常小!
     curl_setopt($ch, CURLOPT_NOBODY, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_exec($ch);
