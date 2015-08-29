@@ -23,8 +23,15 @@ class redisModel
      * @return [type] [description]
      */
     public static function conn() {
-        self::$redis = new redis();
-        self::$redis->connect(C('REDIS_HOST'), C('REDIS_PORT'));
+        if (!self::$redis) {
+            self::$redis = new redis();
+            self::$redis->connect(C('REDIS_HOST'), C('REDIS_PORT'));
+            
+            //如果有设置密码
+            if (C('REDIS_PWD')) {
+                self::$redis->auth(C('REDIS_PWD'));
+            }
+        }
         return self::$redis;
     }
     
@@ -51,10 +58,12 @@ class redisModel
         $redis = self::conn();
         $value = serialize($value);
         if ($expire > 0) {
-            $redis->setex($key, $expire, $value);
-        } else {
-            $redis->set($key, $value);
+            $status=$redis->setex($key, $expire, $value);
+        } 
+        else {
+            $status=$redis->set($key, $value);
         }
+        return $status;
     }
     
     /**
@@ -72,7 +81,7 @@ class redisModel
      * 键名修饰
      */
     private static function modify_key($key) {
-        $prefix = C('DATA_CACHE_PREFIX');
+        $prefix = C('REDIS_CACHE_PREFIX');
         $key = $prefix . md5($key);
         return $key;
     }
