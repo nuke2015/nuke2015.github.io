@@ -1,5 +1,36 @@
 <?php
 
+// 配置文件,举个例子:
+$config = array('first' => 'mms_zhangchu', 'MMS_JG_username' => '', 'MMS_JG_password' => '', 'MMS_ZC_userid' => '', 'MMS_ZC_account' => '', 'MMS_ZC_password' => '');
+
+// 演示变量
+$mobile = '13800138000';
+$content = 'hello mms!';
+
+// 发送短信集成方法
+function send_mms($mobile, $content) {
+    
+    //默认使用哪种实现方式
+    if ($config['first'] == 'mms_zhangchu') {
+        
+        //mysqli
+        list($status, $info) = mms_zhangchu::send($mobile, $content);
+        if (!$status) {
+            list($status, $info) = mms_jiuage::send($mobile, $content);
+        }
+        return array($status, $info);
+    } 
+    else {
+        
+        //或mysql
+        list($status, $info) = mms_jiuage::send($mobile, $content);
+        if (!$status) {
+            list($status, $info) = mms_zhangchu::send($mobile, $content);
+        }
+        return array($status, $info);
+    }
+}
+
 //内部短信网关工厂类,
 //作用:把不同渠道的具体实现,统一为相同的调用方式!
 abstract class mms_factory
@@ -44,8 +75,7 @@ class class mms_jiuage extends mms_factory
     //私有方法
     private static function request($mobile, $content, $sendTime = '') {
         $param = array();
-        $param['userid'] = C('MMS_JG_USERID');
-        $param['account'] = C('MMS_JG_account');
+        $param['username'] = C('MMS_JG_username');
         $param['password'] = C('MMS_JG_password');
         $param['mobile'] = $mobile;
         $param['content'] = $content . "【九阿哥】";
