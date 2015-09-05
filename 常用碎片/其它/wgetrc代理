@@ -76,8 +76,8 @@
 # You can set the default proxies for Wget to use for http, https, and ftp.
 # They will override the value in the environment.
 #https_proxy = http://proxy.yoyodyne.com:18023/
-http_proxy = http://61.142.100.219:3106/ –proxy-user=user2 –proxy-password=515400
-ftp_proxy = http://61.142.100.219:3106/ –proxy-user=user2 –proxy-password=515400
+http_proxy = http://61.142.100.219:3106/ –proxy-user=user2 –proxy-password=password
+ftp_proxy = http://61.142.100.219:3106/ –proxy-user=user2 –proxy-password=password
 
 # If you do not want to use proxy at all, set this to off.
 use_proxy = on
