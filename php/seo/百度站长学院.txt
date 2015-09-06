@@ -1,0 +1,132 @@
+
+http://zhanzhang.baidu.com/college/courseinfo?id=267&page=3#h2_article_title9
+
+
+百度Sitemap支持哪些格式
+百度Sitemap协议支持三种格式：文本格式、xml格式、Sitemap索引格式,可以根据自己情况来选择任意一种格式组织sitemap。具体格式说明及示例如下：
+
+1.第一种格式样例：txt文本格式
+在一个txt文本列明需要向百度提交的链接地址，将txt文本文件通过站长平台进行提交    
+http://www.example.com/repaste/101562698_5230191316.html
+http://www.example.com/repaste/101586283_5230215075.html
+http://www.example.com/repaste/101639435_5230310576.html  
+
+此文本文件需要遵循以下指南：
+· 文本文件每行都必须有一个网址。网址中不能有换行。
+· 不应包含网址列表以外的任何信息。
+· 您必须书写完整的网址，包括 http。
+· 每个文本文件最多可包含 50,000 个网址，并且应小于10MB（10,485,760字节）。如果网站所包含的网址超过 50,000 个，则可将列表分割成多个文本文件，然后分别添加每个文件。
+· 文本文件需使用 UTF-8 编码或GBK编码。  
+
+
+2.第二种格式样例：xml格式
+单个xml数据格式如下：
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML文件需以utf-8编码-->
+<urlset>
+<!--必填标签-->
+    <url>
+        <!--必填标签,这是具体某一个链接的定义入口，每一条数据都要用<url>和</url>包含在里面，这是必须的 -->
+        <loc>http://www.yoursite.com/yoursite.html</loc>
+        <!--必填,URL链接地址,长度不得超过256字节-->
+        <lastmod>2009-12-14</lastmod>
+        <!--可以不提交该标签,用来指定该链接的最后更新时间-->
+        <changefreq>daily</changefreq>
+        <!--可以不提交该标签,用这个标签告诉此链接可能会出现的更新频率 -->
+        <priority>0.8</priority>
+        <!--可以不提交该标签,用来指定此链接相对于其他链接的优先权比值，此值定于0.0-1.0之间-->
+    </url>
+    <url>
+        <loc>http://www.yoursite.com/yoursite2.html</loc>
+        <lastmod>2010-05-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
+上述Sitemap向百度提交了一个url:http://www.yoursite.com/yoursite.html 
+
+
+若有多条url，按照上述格式重复<url></url>之间的片断，列明所有url地址，打包到一个xml文件，向站长平台进行提交。
+
+3.第三种格式样例：Sitemap索引格式
+如需提交大量sitemap文件，则可将其列在sitemap索引文件中，然后将该索引文件提交。您无需分别提交每个文件。
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML文件需以utf-8编码-->
+<sitemapindex>
+<!--必填，以 <sitemapindex> 开始标记作为开始，以 </sitemapindex> 结束标记作为结束-->
+    <sitemap>
+        <!--必填，以<sitemap>标签提交一个子sitemap文件-->
+                    <loc>http://example.com/ext/xmlsitemap/add/201201/index_20120106.xml</loc>
+
+        <!--必填，识别sitemap的位置-->
+        <lastmod>2009-12-14</lastmod>
+        <!--选填，识别相对sitemap文件的修改时间-->
+    </sitemap>
+    <!--必填，标签闭合-->
+</sitemapindex>
+<!--必填，标签闭合-->
+
+有多个Sitemap，按上述格式重复<sitemap></sitemap>之间的片断，列明所有Sitemap地址，向站长平台进行提交。
+
+
+创建Sitemap时有哪些注意事项？
+第一，一个Sitemap文件包含的网址不得超过 5 万个，且文件大小不得超过 10 MB。如果您的Sitemap超过了这些限值，请将其拆分为几个小的Sitemap。这些限制条件有助于确保您的网络服务器不会因提供大文件而超载。
+
+第二，一次性最多提交50个地址，提交地址的文件类型和更新周期必须一致。
+第三，如果验证了网站的主域，那么Sitemap文件中可包含该网站主域下的所有网址。
+第四，如果验证的www.example.com，你只能提交该验证网站的网址，不能出现其他网站的网址。
+
+
+如何提交Sitemap
+第一步，将需提交的网页列表制作成一个Sitemap文件，文件格式请阅读百度Sitemap协议都支持哪些格式。
+　　第二步，将Sitemap文件放置在网站目录下。比如您的网站为example.com，您已制作了一个sitemap_example.xml的Sitemap文件，将sitemap_example.xml上传至网站根目录即example.com/sitemap_example.xml
+　　第三步，登录百度站长平台，确保提交Sitemap数据的网站已验证归属。
+　　第四步，进入Sitemap工具，点击“添加新数据”，文件类型选择“URL列表”，填写抓取周期和Sitemap文件地址
+　　最后，提交完之后，可在Sitemap列表里看到提交的Sitemap文件，如果Sitemap文件里面有新的网站链接，可以选择文件后，点击更新所选，即对更新的网站链接进行了提交。
+
+
+
+什么是移动Sitemap协议,如何提交移动Sitemap协议
+百度推出了移动Sitemap协议，用于将网址提交给移动搜索收录。百度移动Sitemap协议是在标准Sitemap协议基础上制定的，增加了<mobile:mobile/>标签，它有四种取值：
+<mobile:mobile/> ：移动网页
+<mobile:mobile type="mobile"/> ：移动网页      
+<mobile:mobile type="pc,mobile"/>：自适应网页
+<mobile:mobile type="htmladapt"/>：代码适配
+
+无该上述标签表示为PC网页
+
+下方样例相当于向百度移动搜索提交了一个移动网页：http://m.example.com/index.html，向PC搜索提交了一个传统网页：http://www.example.com/index.html，同时向移动搜索和PC搜索提交了一个自适配网页http://www.example.com/autoadapt.html：
+<?xml version="1.0" encoding="UTF-8" ?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/"> 
+<url> 
+<loc>http://m.example.com/index.html</loc> 
+<mobile:mobile type="mobile"/>
+<lastmod>2009-12-14</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url> 
+<url> 
+<loc>http://www.example.com/index.html</loc>
+<lastmod>2009-12-14</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url> 
+<url> 
+<loc>http://www.example.com/autoadapt.html</loc> 
+<mobile:mobile type="pc,mobile"/>
+<lastmod>2009-12-14</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url> 
+<url> 
+<loc>http://www.example.com/htmladapt.html</loc> 
+<mobile:mobile type="htmladapt"/>
+<lastmod>2009-12-14</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url> 
+</urlset>
+
+按照移动Sitemap协议做好Sitemap后，在Sitemap工具点击添加新数据提交，与提交普通Sitemap方式一致。
+
