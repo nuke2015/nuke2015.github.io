@@ -1,20 +1,19 @@
 
+系统环境 centos6.7
+
 安装依赖
+yum update
 yum install make apr* autoconf automake curl curl-devel gcc gcc-c++ zlib-devel openssl openssl-devel pcre-devel gd kernel keyutils patch perl kernel-headers compat* mpfr cpp glibc libgomp libstdc++-devel ppl cloog-ppl keyutils-libs-devel libcom_err-devel libsepol-devel libselinux-devel krb5-devel zlib-devel libXpm* freetype libjpeg* libpng* php-common php-gd ncurses* libtool* libxml2 libxml2-devel patch
 
 yum install bison -y
 yum install freetype-devel -y
-yum install mysql mysql-server-devel -y
-检查配置脚本在哪里
-whereis mysql_config
+yum install mysql-devel mysql-server-devel -y
 
 安装libmcrypt2.56以上
 http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fmcrypt%2Ffiles%2FLibmcrypt%2F2.5.8%2F&ts=1441601799&use_mirror=ncu
 
 下载php7
 wget https://downloads.php.net/~ab/php-7.0.0RC1.tar.gz
-
-
 
 ./buildconf
 # 配置参数
