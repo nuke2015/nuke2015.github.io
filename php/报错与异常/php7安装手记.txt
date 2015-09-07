@@ -1,0 +1,122 @@
+
+安装依赖
+yum install make apr* autoconf automake curl curl-devel gcc gcc-c++ zlib-devel openssl openssl-devel pcre-devel gd kernel keyutils patch perl kernel-headers compat* mpfr cpp glibc libgomp libstdc++-devel ppl cloog-ppl keyutils-libs-devel libcom_err-devel libsepol-devel libselinux-devel krb5-devel zlib-devel libXpm* freetype libjpeg* libpng* php-common php-gd ncurses* libtool* libxml2 libxml2-devel patch
+
+yum install bison -y
+yum install freetype-devel -y
+yum install mysql mysql-server-devel -y
+检查配置脚本在哪里
+whereis mysql_config
+
+安装libmcrypt2.56以上
+http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fmcrypt%2Ffiles%2FLibmcrypt%2F2.5.8%2F&ts=1441601799&use_mirror=ncu
+
+下载php7
+wget https://downloads.php.net/~ab/php-7.0.0RC1.tar.gz
+
+
+
+./buildconf
+# 配置参数
+./configure --prefix=/usr/local/php7 --with-config-file-path=/usr/local/php7/etc --with-mcrypt=/home/php-7.0.0RC1/ext/mcrypt --with-mysqli=/usr/bin/mysql_config --enable-mysqlnd --with-pdo-mysql=/usr/bin/mysqlnd --with-gd=/usr/lib --with-iconv --with-zlib --enable-xml --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --enable-mbregex --enable-fpm --enable-mbstring --enable-ftp --enable-gd-native-ttf --with-openssl --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear --with-gettext --enable-session --with-curl=/usr/bin/curl --with-jpeg-dir --with-freetype-dir --enable-opcache
+
+用./configure --help 看看有没--with-mysql，这个操作,这可以查询参数
+php -m 初步检查扩展是否安装
+php -i|grep curl
+检查phpinfo中是否包含curl扩展 
+若没有
+cd /php7/ext/curl/
+phpize
+./configure
+make && make install
+编译并安装
+
+再次检查
+[root@localhost curl]# php -i|grep curl
+PWD => /home/php-7.0.0RC1/ext/curl
+$_SERVER['PWD'] => /home/php-7.0.0RC1/ext/curl
+$_ENV['PWD'] => /home/php-7.0.0RC1/ext/curl
+[root@localhost curl]# php -i|grep gd
+[root@localhost curl]# cd /home/php-7.0.0RC1/ext/gd/
+[root@localhost gd]# ls
+config.m4  config.w32  CREDITS  gd.c  gdcache.c  gdcache.h  gd_compat.c  gd_compat.h  gd_ctx.c  libgd  php_gd.h  tests
+[root@localhost gd]# phpize
+Configuring for:
+PHP Api Version:         20131218
+Zend Module Api No:      20141001
+Zend Extension Api No:   320140815
+[root@localhost gd]# ls
+acinclude.m4  autom4te.cache  config.guess  config.m4   configure     config.w32  gd.c       gdcache.h    gd_compat.h  install-sh  ltmain.sh        missing        php_gd.h       tests
+aclocal.m4    build           config.h.in   config.sub  configure.in  CREDITS     gdcache.c  gd_compat.c  gd_ctx.c     libgd       Makefile.global  mkinstalldirs  run-tests.php
+
+./configure
+make && make install
+安装gd扩展库
+
+[root@localhost gd]# php -i |grep pdo
+pdo_sqlite
+只有sqlite扩展,没有pdo_mysql去源码/ext中编译并安装
+phpize
+./configure
+发现提示缺少
+/home/php-7.0.0RC1/ext/pdo_mysql/php_pdo_mysql_int.h:27:34: error: ext/mysqlnd/mysqlnd.h: No such file or directory
+/home/php-7.0.0RC1/ext/pdo_mysql/php_pdo_mysql_int.h:28:50: error: ext/mysqlnd/mysqlnd_libmysql_compat.h: No such file or directory
+/home/php-7.0.0RC1/ext/pdo_mysql/php_pdo_mysql_int.h:69:39: error: ext/mysqlnd/mysqlnd_debug.h: No such file or directory
+In file included from /home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:32:
+/home/php-7.0.0RC1/ext/pdo_mysql/php_pdo_mysql_int.h:105: error: expected specifier-qualifier-list before ‘MYSQL’
+/home/php-7.0.0RC1/ext/pdo_mysql/php_pdo_mysql_int.h:120: error: expected specifier-qualifier-list before ‘MYSQL_FIELD’
+/home/php-7.0.0RC1/ext/pdo_mysql/php_pdo_mysql_int.h:125: error: expected specifier-qualifier-list before ‘MYSQL_RES’
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:64:45: error: ext/mysqlnd/mysqlnd_reverse_api.h: No such file or directory
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:65: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:85: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘pdo_mysql_reverse_api’
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c: In function ‘zm_startup_pdo_mysql’:
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:135: error: ‘pdo_mysql_reverse_api’ undeclared (first use in this function)
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:135: error: (Each undeclared identifier is reported only once
+/home/php-7.0.0RC1/ext/pdo_mysql/pdo_mysql.c:135: error: for each function it appears in.)
+make: *** [pdo_mysql.lo] Error 1
+
+检查一下./configure --help|grep mysql
+[root@localhost pdo_mysql]# ./configure --help|grep mysql
+  --with-pdo-mysql=DIR    PDO: MySQL support. DIR is the MySQL base directory
+                          If no value or mysqlnd is passed as DIR, the
+试试
+./configure --with-pdo-mysql=/usr/bin/mysqlnd
+提示
+checking for mysql_config... not found
+修改
+./configure --with-pdo-mysql=/usr/bin/mysql_config
+再试
+编译成功
+make && make install
+安装
+
+检查
+[root@localhost pdo_mysql]# php -i |grep pdo
+pdo_sqlite
+PWD => /home/php-7.0.0RC1/ext/pdo_mysql
+$_SERVER['PWD'] => /home/php-7.0.0RC1/ext/pdo_mysql
+$_ENV['PWD'] => /home/php-7.0.0RC1/ext/pdo_mysql
+终于有了
+
+写个脚本i.php
+<?php
+phpinfo();
+
+直接架设服务
+php -S 192.168.1.159:80 i.php
+访问检查下phpinfo();
+curl 192.168.1.159 >info.html
+得到phpinfo以后,重点检查
+You are missing the curl extension
+You are missing the gd extension
+You are missing the mcrypt extension
+You are missing the pdo_mysql extension
+检查结果:
+cURL    Sterling Hughes
+GD imaging  Rasmus Lerdorf, Stig Bakken, Jim Winstead, Jouni Ahto, Ilia Alshanetsky, Pierre-Alain Joye, Marcus Boerger
+mcrypt  Sascha Schumann, Derick Rethans
+MySQL driver for PDO    George Schlossnagle, Wez Furlong, Ilia Alshanetsky, Johannes Schlueter
+MySQLi  Zak Greant, Georg Richter, Andrey Hristov, Ulf Wendel
+MySQLnd Andrey Hristov, Ulf Wendel, Georg Richter, Johannes Schl眉ter
+
+都有啦,那就可以放心的把magento放上去啦.
