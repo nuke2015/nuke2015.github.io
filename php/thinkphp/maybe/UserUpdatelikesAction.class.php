@@ -21,7 +21,7 @@ class UserUpdatelikesAction extends BaseAction
         $user_id = intval($_POST['user_id']);
         $ids = trim($_POST['ids']);
         
-        //收藏时,用户id必填
+        //用户id必填
         if (!$user_id || !$ids) $this->result(ERR_WRONG_ARG);
         
         // 数据格式化
@@ -43,6 +43,7 @@ class UserUpdatelikesAction extends BaseAction
         //异步任务
         import("@.Service.CrondService");
         
+        // type[0取消收藏,1添加收藏]
         if ($type == 0) {
             
             // 取交集
