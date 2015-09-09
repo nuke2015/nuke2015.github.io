@@ -74,7 +74,7 @@ class redisModel
     public static function remove($key) {
         $key = self::modify_key($key);
         $redis = self::conn();
-        $redis->delete($key);
+        return $redis->delete($key);
     }
     
     /**
