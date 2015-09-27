@@ -1,0 +1,14 @@
+D:\soft\chrome44\chrome.exe --user-data-dir="D:\Cache\8080" --proxy-server=127.0.0.1:8080
+
+
+--user-agent="Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10"
+
+Chrome浏览器离线安装包官方下载地址，和在线安装一样能自动更新。
+正式版	http://www.google.com/chrome/eula.html?hl=zh-CN&standalone=1
+测试版	http://www.google.com/chrome/eula.html?hl=zh-CN&standalone=1&extra=betachannel
+开发版	http://www.google.com/chrome/eula.html?hl=zh-CN&standalone=1&extra=devchannel
+　　　打开上面链接后，和在线安装一样会出现“许可协议”界面和两个安装选项，点击“接受并安装”即可下载到Chrome浏览器离线安装包，文件名为ChromeStandaloneSetup.exe。
+
+几个实用的参数收集：1  --user-data-dir="[PATH]"            指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区。2  --disk-cache-dir="[PATH]"           指定缓存Cache路径           3  --disk-cache-size=                  指定Cache大小，单位Byte4  --Firstrun                          重置到初始状态5  --incognito                         隐身模式启动6  --disable-javascript                禁用Javascript
+
+
