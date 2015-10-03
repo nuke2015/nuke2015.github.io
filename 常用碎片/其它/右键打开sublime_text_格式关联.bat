@@ -1,7 +1,7 @@
 @echo off
 echo FileExts setting batch with sublime
 rem http://github.com/nuke2015
-set tmp_reg=%temp%\tmp.ini
+set tmp_reg=%tmp%\reg.ini
 set Application=sublime_text.exe
 set Application_command=D:\\working\\Sublime\\sublime_text.exe
 set FileExts=.ini .txt .cnf .conf .css .log .cfg .xml .php .asp .java .js .css .htm .sh .py .go
@@ -19,16 +19,16 @@ echo.>>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\*\shell\%Application%]>>%tmp_reg%
 echo @="open with %Application%">>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\*\shell\%Application%\command]>>%tmp_reg%
-echo @="%Application_command% %1">>%tmp_reg%
+echo @="%Application_command% %%1">>%tmp_reg%
 echo.>>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\Folder\shell\%Application%]>>%tmp_reg%
 echo @="Sublime">>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\Folder\shell\%Application%\command]>>%tmp_reg%
-echo @="%Application_command% %1">>%tmp_reg%
+echo @="%Application_command% %%1">>%tmp_reg%
 echo.>>%tmp_reg%
 echo [HKEY_CURRENT_USER\Software\Classes\Applications\%Application%]>>%tmp_reg%
 echo [HKEY_CURRENT_USER\Software\Classes\Applications\%Application%\shell\open\command]>>%tmp_reg%
-echo @="%Application_command% %1">>%tmp_reg%
+echo @="%Application_command% %%1">>%tmp_reg%
 
 rem FileExts setting;
 for %%i in (%FileExts%) do (
@@ -50,7 +50,5 @@ for %%i in (%FileExts%) do (
 )
 
 regedit /s %tmp_reg%
-taskkill /im explorer.exe /f > nul
-start C:\Windows\explorer.exe
 echo done.
 pause
