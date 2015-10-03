@@ -17,7 +17,7 @@ rem  Application setting;
 echo Windows Registry Editor Version 5.00>%tmp_reg%
 echo.>>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\*\shell\%Application%]>>%tmp_reg%
-echo @="ÓÃSublime´ò¿ª">>%tmp_reg%
+echo @="open with %Application%">>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\*\shell\%Application%\command]>>%tmp_reg%
 echo @="%Application_command% %1">>%tmp_reg%
 echo.>>%tmp_reg%
