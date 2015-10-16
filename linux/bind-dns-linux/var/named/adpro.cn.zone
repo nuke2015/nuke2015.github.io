@@ -1,0 +1,17 @@
+adpro.cn.    IN  SOA   ns1.adpro.cn.  root.adpro.cn. (
+        2007091701         ; Serial
+        30800              ; Refresh
+        7200               ; Retry
+        604800             ; Expire
+        300 )              ; Minimum
+ 
+        IN    NS        ns1.adpro.cn.
+ 
+ns1       IN    A         127.0.0.1
+@       IN    A         127.0.0.1
+*       IN    A         127.0.0.1
+www       IN    A         127.0.0.1
+
+
+
+
