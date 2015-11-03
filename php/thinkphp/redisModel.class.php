@@ -5,6 +5,7 @@
 // redisModel::set('test',$_SERVER);
 // redisModel::set('test',time(),5);
 // $data=redisModel::get('test');
+// $data=redisModel::remove('test');
 // print_r($data);
 // exit;
 
@@ -16,7 +17,7 @@
 // 'DATA_CACHE_PREFIX'=>'API_',
 class redisModel
 {
-    static $redis;
+    public static $redis;
     
     /**
      * 连接数据库
