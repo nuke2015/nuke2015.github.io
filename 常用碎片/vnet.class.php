@@ -118,5 +118,16 @@ class vnet{
 			}
 		}
 	}
-	
+    //去url中的参数字段
+    public static function filter_url($url,$filters=array('page')){
+        $parse = parse_url($url);
+        if(isset($parse['query'])) {
+            parse_str($parse['query'],$querys);
+            foreach ($filters as $tag) {
+                if(isset($querys[$tag]))unset($querys[$tag]);
+            }
+        }
+        $url=$parse['path'].'?'.http_build_query($querys);
+        return $url;
+    }	
 }
