@@ -40,11 +40,12 @@ class FailService {
         if ($data && count($data)) {
             $data['total']+= 1;
             $data['updatetime'] = $timenow;
+            $data['timeline'][] = $timenow;
         } 
         else {
             $data = array('createtime' => $timenow, 'total' => 1, 'updatetime' => $timenow);
+            $data['timeline'] = array();
         }
-        $data['timeline'][] = $timenow;
         redisModel::set($diffkey, $data);
         return $data;
     }
