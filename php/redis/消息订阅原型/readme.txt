@@ -17,3 +17,8 @@ php pub.php abc.tv hello
 解决办法
 php pub.php abc.tv "hello abc,this is feng"
 
+php做为消息的发布者,用nodejs+forever做守护进程,
+做消息的订阅者,一个完美的消息队列服务就有了.
+最重要的是php中全程共享一个redis句柄,
+所以,减少了日志入数据库的连接数.减少了日志直接写文件的io开销.
+
