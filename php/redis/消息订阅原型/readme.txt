@@ -1,24 +1,24 @@
 
 
-Æô¶¯redis×öÎªÍ¨µÀ·þÎñ
+å¯åŠ¨redisåšä¸ºé€šé“æœåŠ¡
 
-È»ºó
+ç„¶åŽ
 php sub.php abc.tv
-¶©ÔÄÕßÒ»
+è®¢é˜…è€…ä¸€
 php sub.php abc.tv
-¶©ÔÄÕß¶þ
+è®¢é˜…è€…äºŒ
 
 php pub.php abc.tv hello
-·¢²¼Õß
-ËùÓÐ¶©ÔÄabc.tvµÄÈË¶¼½«ÊÕµ½hello
+å‘å¸ƒè€…
+æ‰€æœ‰è®¢é˜…abc.tvçš„äººéƒ½å°†æ”¶åˆ°hello
 
-×¢Òâ:
-ÕâÖÖ¼òµ¥µÄ·½Ê½²»ÄÜÓÐ¿Õ¸ñ,ÕâÊÇphp´ÓbatÈ¡²ÎÊýÒýÆðµÄ.
-½â¾ö°ì·¨
+æ³¨æ„:
+è¿™ç§ç®€å•çš„æ–¹å¼ä¸èƒ½æœ‰ç©ºæ ¼,è¿™æ˜¯phpä»Žbatå–å‚æ•°å¼•èµ·çš„.
+è§£å†³åŠžæ³•
 php pub.php abc.tv "hello abc,this is feng"
 
-php×öÎªÏûÏ¢µÄ·¢²¼Õß,ÓÃnodejs+forever×öÊØ»¤½ø³Ì,
-×öÏûÏ¢µÄ¶©ÔÄÕß,Ò»¸öÍêÃÀµÄÏûÏ¢¶ÓÁÐ·þÎñ¾ÍÓÐÁË.
-×îÖØÒªµÄÊÇphpÖÐÈ«³Ì¹²ÏíÒ»¸öredis¾ä±ú,
-ËùÒÔ,¼õÉÙÁËÈÕÖ¾ÈëÊý¾Ý¿âµÄÁ¬½ÓÊý.¼õÉÙÁËÈÕÖ¾Ö±½ÓÐ´ÎÄ¼þµÄio¿ªÏú.
+phpåšä¸ºæ¶ˆæ¯çš„å‘å¸ƒè€…,ç”¨nodejs+foreveråšå®ˆæŠ¤è¿›ç¨‹,
+åšæ¶ˆæ¯çš„è®¢é˜…è€…,ä¸€ä¸ªå®Œç¾Žçš„æ¶ˆæ¯é˜Ÿåˆ—æœåŠ¡å°±æœ‰äº†.
+æœ€é‡è¦çš„æ˜¯phpä¸­å…¨ç¨‹å…±äº«ä¸€ä¸ªrediså¥æŸ„,
+æ‰€ä»¥,å‡å°‘äº†æ—¥å¿—å…¥æ•°æ®åº“çš„è¿žæŽ¥æ•°.å‡å°‘äº†æ—¥å¿—ç›´æŽ¥å†™æ–‡ä»¶çš„ioå¼€é”€.
 
