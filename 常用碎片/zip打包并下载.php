@@ -7,7 +7,15 @@ $path = 'D:\phpStudy\WWW\mqs';
 $zip_name = 'abc.zip';
 $zip = new \ZipArchive;
 $res = $zip->open($zip_name, \ZipArchive::CREATE);
-Fzip::addFileToZip($path, $zip);
+
+//处理打包含有相对路径的问题
+$pathinfo=pathinfo($path);
+chdir($pathinfo['dirname']);
+
+//打包
+Fzip::addFileToZip($pathinfo['basename'], $zip);
+
+//下载
 Fzip::download($zip_name,'hello.zip');
 
 class Fzip {
