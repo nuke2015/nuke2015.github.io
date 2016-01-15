@@ -1,27 +1,41 @@
 <?php
-error_reporting(2047);
 
-$path = 'D:\phpStudy\WWW\mqs';
-
-//打包
-$zip_name = 'abc.zip';
-$zip = new \ZipArchive;
-$res = $zip->open($zip_name, \ZipArchive::CREATE);
-
-//处理打包含有相对路径的问题
-$pathinfo=pathinfo($path);
-chdir($pathinfo['dirname']);
-
-//打包
-Fzip::addFileToZip($pathinfo['basename'], $zip);
-
-//下载
-Fzip::download($zip_name,'hello.zip');
+// // Get real path for our folder
+// $rootPath = realpath('./mqs');
+// Fzip::zip_dir($rootPath,'hello.zip');
+// Fzip::zip_download('hello.zip','a.zip');
+// exit;
 
 class Fzip {
     
+    //打包    
+    public static function zip_dir($rootPath, $zip_name) {
+        
+        // Initialize archive object
+        $zip = new ZipArchive();
+        $zip->open($zip_name, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+        
+        /** @var SplFileInfo[] $files */
+        $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($rootPath), RecursiveIteratorIterator::LEAVES_ONLY);
+        
+        foreach ($files as $name => $file) {
+            
+            // Skip directories (they would be added automatically)
+            if (!$file->isDir()) {
+                
+                // Get real and relative path for current file
+                $filePath = $file->getRealPath();
+                $relativePath = substr($filePath, strlen($rootPath) + 1);
+                
+                // Add current file to archive
+                $zip->addFile($filePath, $relativePath);
+            }
+        }
+        $zip->close();
+    }
+
     //下载
-    public static function download($file_from, $file_to) {
+    public static function zip_download($file_from, $file_to) {
         header("Cache-Control: public");
         header("Content-Description: File Transfer");
         header('Content-disposition: attachment; filename=' . $file_to);
@@ -38,28 +52,5 @@ class Fzip {
         //告诉浏览器，文件大小
         @readfile($file_from);
     }
-    
-    // 打包
-    public static function addFileToZip($path, $zip) {
-        $handler = opendir($path);
-        
-        //打开当前文件夹由$path指定。
-        while (($filename = readdir($handler)) !== false) {
-            if ($filename != "." && $filename != "..") {
-                
-                //文件夹文件名字为'.'和‘..’，不要对他们进行操作
-                if (is_dir($path . "/" . $filename)) {
-                    
-                    // 如果读取的某个对象是文件夹，则递归
-                    self::addFileToZip($path . "/" . $filename, $zip);
-                } 
-                else {
-                    
-                    //将文件加入zip对象
-                    $zip->addFile($path . "/" . $filename);
-                }
-            }
-        }
-        @closedir($path);
-    }
 }
+
