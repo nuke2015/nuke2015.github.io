@@ -24,3 +24,7 @@ SELECT `search_id`,`search_content`,count(user_id) FROM `search_id` WHERE 1 GROU
 从一天之内蛋疼24次,直接变成蛋疼0次.
 虽然数据还是要全表group by查询,但是接口是不会遇到它慢的,
 因为接口访问的时候,数据已经生成好放在redis里了.
+
+最后更新:
+把统计放入spark离线分析,然后把分析结果输出到mysql直接调用查询就好了.
+
