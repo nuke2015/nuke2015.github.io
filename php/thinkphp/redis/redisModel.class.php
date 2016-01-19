@@ -11,29 +11,27 @@
 
 // 配置信息
 // 'DATA_CACHE_TYPE'=>'Redis',
-// 'REDIS_HOST'=>'192.168.1.235',
+// 'REDIS_HOST'=>'192.168.1.219',
 // 'REDIS_PORT'=>'6379',
 // 'DATA_CACHE_TIMEOUT'=>'30',
 // 'DATA_CACHE_PREFIX'=>'API_',
-class redisModel
-{
-    public static $redis;
+class redisModel {
     
     /**
      * 连接数据库
      * @return [type] [description]
      */
     public static function conn() {
-        if (!self::$redis) {
-            self::$redis = new redis();
-            self::$redis->connect(C('REDIS_HOST'), C('REDIS_PORT'));
-            
-            //如果有设置密码
-            if (C('REDIS_PWD')) {
-                self::$redis->auth(C('REDIS_PWD'));
-            }
+        $redis = new redis();
+        
+        //原生长链接,不执行单例模式
+        $redis->pconnect(C('REDIS_HOST'), C('REDIS_PORT'));
+        
+        //如果有设置密码
+        if (C('REDIS_PWD')) {
+            $redis->auth(C('REDIS_PWD'));
         }
-        return self::$redis;
+        return $redis;
     }
     
     /**
@@ -59,12 +57,18 @@ class redisModel
         $redis = self::conn();
         $value = serialize($value);
         if ($expire > 0) {
-            $status=$redis->setex($key, $expire, $value);
+            $status = $redis->setex($key, $expire, $value);
         } 
         else {
-            $status=$redis->set($key, $value);
+            $status = $redis->set($key, $value);
         }
         return $status;
+    }
+    
+    // 单独设置list的过期时间
+    public static function expire($key, $expire = 3600) {
+        $key = self::modify_key($key);
+        return $redis->expire($key, $expire);
     }
     
     /**
