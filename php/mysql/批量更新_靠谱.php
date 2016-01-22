@@ -1,5 +1,5 @@
 <?php
-
+// replace into dishes (dishes_id,collect_count) values (252,2),(255,3);
 // 主键对应收藏数
 $data = array(
     258 => 2,
