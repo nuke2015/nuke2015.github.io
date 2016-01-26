@@ -122,14 +122,14 @@ class Http
         return $opts;
     }
     
-    // 异步
-    public function head($url)
+    // 轻量协议头,半异步
+    public static function head($url)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 1);
-        $result = curl_exec($ch);
+        $result = (curl_getinfo($ch));
         curl_close($ch);
         return $result;
     }
