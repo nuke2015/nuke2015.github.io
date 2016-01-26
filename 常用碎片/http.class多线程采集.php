@@ -121,7 +121,7 @@ class Http
         }
         return $opts;
     }
-    
+
     // 轻量协议头,半异步
     public static function head($url)
     {
@@ -129,8 +129,15 @@ class Http
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 1);
-        $result = (curl_getinfo($ch));
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        $return = array(0, array());
+        curl_exec($ch);
+        if (curl_errno($ch)) {
+            $return = array(-1, curl_error($ch));
+        } else {
+            $return = array(1, curl_getinfo($ch));
+        }
         curl_close($ch);
-        return $result;
+        return $return;
     }
 }
