@@ -1,0 +1,212 @@
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash partition F:\wt
+86047_images_6.1.14_20160107.0000.12_4.4_cn\images\gpt_both0.bin   ||
+target reported max download size of 268435456 bytes
+sending 'partition' (33 KB)...
+OKAY [ -0.000s]
+writing 'partition'...
+OKAY [  0.047s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash tz F:\wt86047_i
+mages_6.1.14_20160107.0000.12_4.4_cn\images\tz.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'tz' (402 KB)...
+OKAY [  0.016s]
+writing 'tz'...
+OKAY [  0.031s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash sbl1 F:\wt86047
+_images_6.1.14_20160107.0000.12_4.4_cn\images\sbl1.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'sbl1' (246 KB)...
+OKAY [  0.016s]
+writing 'sbl1'...
+OKAY [  0.016s]
+finished. total time: 0.031s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash rpm F:\wt86047_
+images_6.1.14_20160107.0000.12_4.4_cn\images\rpm.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'rpm' (145 KB)...
+OKAY [  0.016s]
+writing 'rpm'...
+OKAY [  0.016s]
+finished. total time: 0.031s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash aboot F:\wt8604
+7_images_6.1.14_20160107.0000.12_4.4_cn\images\emmc_appsboot.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'aboot' (495 KB)...
+OKAY [  0.016s]
+writing 'aboot'...
+OKAY [  0.031s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash hyp F:\wt86047_
+images_6.1.14_20160107.0000.12_4.4_cn\images\hyp.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'hyp' (19 KB)...
+OKAY [  0.016s]
+writing 'hyp'...
+OKAY [ -0.000s]
+finished. total time: 0.016s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash tzbak F:\wt8604
+7_images_6.1.14_20160107.0000.12_4.4_cn\images\tz.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'tzbak' (402 KB)...
+OKAY [  0.016s]
+writing 'tzbak'...
+OKAY [  0.031s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash sbl1bak F:\wt86
+047_images_6.1.14_20160107.0000.12_4.4_cn\images\sbl1.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'sbl1bak' (246 KB)...
+OKAY [  0.016s]
+writing 'sbl1bak'...
+OKAY [  0.031s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash rpmbak F:\wt860
+47_images_6.1.14_20160107.0000.12_4.4_cn\images\rpm.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'rpmbak' (145 KB)...
+OKAY [  0.016s]
+writing 'rpmbak'...
+OKAY [  0.016s]
+finished. total time: 0.031s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash abootbak F:\wt8
+6047_images_6.1.14_20160107.0000.12_4.4_cn\images\emmc_appsboot.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'abootbak' (495 KB)...
+OKAY [  0.016s]
+writing 'abootbak'...
+OKAY [  0.031s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash hypbak F:\wt860
+47_images_6.1.14_20160107.0000.12_4.4_cn\images\hyp.mbn   ||
+target reported max download size of 268435456 bytes
+sending 'hypbak' (19 KB)...
+OKAY [  0.016s]
+writing 'hypbak'...
+OKAY [ -0.000s]
+finished. total time: 0.016s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  erase boot
+erasing 'boot'...
+OKAY [  0.047s]
+finished. total time: 0.047s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash modem F:\wt8604
+7_images_6.1.14_20160107.0000.12_4.4_cn\images\NON-HLOS.bin   ||
+target reported max download size of 268435456 bytes
+sending 'modem' (45585 KB)...
+OKAY [  1.437s]
+writing 'modem'...
+OKAY [  1.672s]
+finished. total time: 3.109s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash system F:\wt860
+47_images_6.1.14_20160107.0000.12_4.4_cn\images\system.img   ||
+target reported max download size of 268435456 bytes
+erasing 'system'...
+OKAY [  0.172s]
+sending sparse 'system' (262015 KB)...
+OKAY [  9.375s]
+writing 'system'...
+OKAY [ 12.703s]
+sending sparse 'system' (255833 KB)...
+OKAY [  8.828s]
+writing 'system'...
+OKAY [ 11.000s]
+sending sparse 'system' (54015 KB)...
+OKAY [  1.891s]
+writing 'system'...
+OKAY [  2.562s]
+finished. total time: 46.531s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash cache F:\wt8604
+7_images_6.1.14_20160107.0000.12_4.4_cn\images\cache.img   ||
+target reported max download size of 268435456 bytes
+erasing 'cache'...
+OKAY [  0.047s]
+sending 'cache' (6972 KB)...
+OKAY [  0.234s]
+writing 'cache'...
+OKAY [  0.281s]
+finished. total time: 0.562s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash userdata F:\wt8
+6047_images_6.1.14_20160107.0000.12_4.4_cn\images\userdata.img   ||
+target reported max download size of 268435456 bytes
+erasing 'userdata'...
+OKAY [  0.141s]
+sending sparse 'userdata' (257489 KB)...
+OKAY [  8.672s]
+writing 'userdata'...
+OKAY [  9.531s]
+sending sparse 'userdata' (183033 KB)...
+OKAY [  6.172s]
+writing 'userdata'...
+OKAY [  6.844s]
+finished. total time: 31.359s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash recovery F:\wt8
+6047_images_6.1.14_20160107.0000.12_4.4_cn\images\recovery.img   ||
+target reported max download size of 268435456 bytes
+sending 'recovery' (12192 KB)...
+OKAY [  0.391s]
+writing 'recovery'...
+OKAY [  0.453s]
+finished. total time: 0.844s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash boot F:\wt86047
+_images_6.1.14_20160107.0000.12_4.4_cn\images\boot.img   ||
+target reported max download size of 268435456 bytes
+sending 'boot' (10640 KB)...
+OKAY [  0.344s]
+writing 'boot'...
+OKAY [  0.391s]
+finished. total time: 0.734s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash persist F:\wt86
+047_images_6.1.14_20160107.0000.12_4.4_cn\images\persist.img   ||
+target reported max download size of 268435456 bytes
+sending 'persist' (4696 KB)...
+OKAY [  0.156s]
+writing 'persist'...
+OKAY [  0.203s]
+finished. total time: 0.359s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash sec F:\wt86047_
+images_6.1.14_20160107.0000.12_4.4_cn\images\sec.dat   ||
+target reported max download size of 268435456 bytes
+sending 'sec' (0 KB)...
+OKAY [ -0.000s]
+writing 'sec'...
+OKAY [  0.016s]
+finished. total time: 0.016s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash splash F:\wt860
+47_images_6.1.14_20160107.0000.12_4.4_cn\images\splash.img   ||
+target reported max download size of 268435456 bytes
+sending 'splash' (5401 KB)...
+OKAY [  0.172s]
+writing 'splash'...
+OKAY [  0.203s]
+finished. total time: 0.375s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  reboot
+rebooting...
+
+finished. total time: 0.016s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>pause
+请按任意键继续. . .
+

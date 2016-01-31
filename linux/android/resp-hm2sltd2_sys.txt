@@ -1,0 +1,55 @@
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>echo "Fastboot Tool Ver 7.0"
+"Fastboot Tool Ver 7.0"
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash boot F:\wt8604
+_images_6.1.14_20160107.0000.12_4.4_cn\images\boot.img
+target reported max download size of 268435456 bytes
+sending 'boot' (10640 KB)...
+OKAY [  0.344s]
+writing 'boot'...
+OKAY [  0.391s]
+finished. total time: 0.734s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash cache F:\wt860
+7_images_6.1.14_20160107.0000.12_4.4_cn\images\cache.img
+target reported max download size of 268435456 bytes
+erasing 'cache'...
+OKAY [  0.047s]
+sending 'cache' (6972 KB)...
+OKAY [  0.219s]
+writing 'cache'...
+OKAY [  0.297s]
+finished. total time: 0.562s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>pause
+请按任意键继续. . .
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  flash system F:\wt86
+47_images_6.1.14_20160107.0000.12_4.4_cn\images\system.img
+target reported max download size of 268435456 bytes
+erasing 'system'...
+OKAY [  0.172s]
+sending sparse 'system' (262015 KB)...
+OKAY [ 85.375s]
+writing 'system'...
+OKAY [ 12.687s]
+sending sparse 'system' (255833 KB)...
+OKAY [  8.828s]
+writing 'system'...
+OKAY [ 11.000s]
+sending sparse 'system' (54015 KB)...
+OKAY [  1.891s]
+writing 'system'...
+OKAY [  2.578s]
+finished. total time: 122.531s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>fastboot  reboot
+rebooting...
+
+finished. total time: 0.016s
+
+F:\wt86047_images_6.1.14_20160107.0000.12_4.4_cn>pause
+请按任意键继续. . .
+
+
