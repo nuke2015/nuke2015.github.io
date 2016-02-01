@@ -1,0 +1,51 @@
+
+android list targets
+
+android create avd -n my_android1.5 -t 2
+
+
+android create avd -n <name> -t <targetID> --skin WVGA800
+
+emulator -avd WVGA800 -scale 96dpi -dpi-device 160
+
+
+android create avd -n my_android1.5 -t 2 -p C:
+
+android move avd -n <name> [-<option> <value>] ...
+
+
+The following Android Virtual Devices could not be loaded: 
+Name: foo 
+Path: <path>/.android/avd/foo.avd 
+Error: Invalid value in image.sysdir. Run 'android update avd -n foo' 
+
+android delete avd -n <name> 
+
+缺少配置文件
+PANIC: HOME is defined but could not find WVGA800.ini file in $HOME\.android\avd
+(Note: avd is searched in the order of $ANDROID_AVD_HOME,$ANDROID_SDK_HOME\.andr
+oid\avd and $HOME\.android\avd)
+原因:
+系统找不到默认的avd配置文件夹
+
+
+创建一个新的AVD：android create avd -n GPhone -t 6 -c 52M -p C:\AVD\ -s QVGA
+运行指定的AVD：emulator -avd GPhone
+
+列出可用的版本
+android list targets
+
+创建avd
+android create avd -n GPhone -t 11 -c 52M -p C:\AVD\ -s QVGA
+
+搜索一下,GPhone.ini
+打开内容如下
+avd.ini.encoding=UTF-8
+path=C:\avd
+target=android-10
+
+把它放在%ANDROID_AVD_HOME%/下面就好了.
+
+然后启动模拟器
+emulator -avd GPhone
+
