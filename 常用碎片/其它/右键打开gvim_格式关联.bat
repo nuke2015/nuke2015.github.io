@@ -1,5 +1,5 @@
 @echo off
-echo FileExts setting batch with sublime
+echo FileExts setting batch with gvim
 rem http://github.com/nuke2015
 set tmp_reg=%temp%\reg.ini
 set Application=gvim.exe
@@ -22,7 +22,7 @@ echo [HKEY_CLASSES_ROOT\*\shell\%Application%\command]>>%tmp_reg%
 echo @="%Application_command% %%1">>%tmp_reg%
 echo.>>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\Folder\shell\%Application%]>>%tmp_reg%
-echo @="Sublime">>%tmp_reg%
+echo @="gvim">>%tmp_reg%
 echo [HKEY_CLASSES_ROOT\Folder\shell\%Application%\command]>>%tmp_reg%
 echo @="%Application_command% %%1">>%tmp_reg%
 echo.>>%tmp_reg%
