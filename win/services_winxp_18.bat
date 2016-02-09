@@ -2,14 +2,13 @@ sc config   Alerter start= DEMAND
 sc config   ALG start= DEMAND 
 sc config   AppMgmt start= DEMAND 
 sc config   AudioSrv start= AUTO 
-sc config   BITS start= AUTO 
+sc config   BITS start= DEMAND 
 sc config   Browser start= AUTO 
 sc config   CiSvc start= DEMAND 
 sc config   ClipSrv start= DISABLED 
 sc config   COMSysApp start= DEMAND 
 sc config   CryptSvc start= AUTO 
 sc config   DcomLaunch start= AUTO 
-sc config   DFServ start= AUTO 
 sc config   Dhcp start= AUTO 
 sc config   dmadmin start= DEMAND 
 sc config   dmserver start= AUTO 
@@ -39,7 +38,7 @@ sc config   Netman start= DEMAND
 sc config   Nla start= DEMAND 
 sc config   NtLmSsp start= DEMAND 
 sc config   NtmsSvc start= DEMAND 
-sc config   ose start= DEMAND 
+sc config   nvsvc start= DEMAND 
 sc config   PlugPlay start= AUTO 
 sc config   PolicyAgent start= AUTO 
 sc config   ProtectedStorage start= AUTO 
@@ -83,4 +82,5 @@ sc config   wscsvc start= DEMAND
 sc config   wuauserv start= DISABLED 
 sc config   WZCSVC start= AUTO 
 sc config   xmlprov start= DEMAND 
-over>$overrestore.tmp
+pause
+
