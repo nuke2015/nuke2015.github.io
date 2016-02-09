@@ -1,0 +1,141 @@
+
+地址
+http://127.0.0.100/abc.php?abc=1
+配置
+server {
+    listen       80;
+    server_name  127.0.0.100;
+    root   D:/nmp/WWW/vhost1;
+    index  index.php index.html;
+
+    location ~ \.php$ {
+    	#proxy_pass http://$http_host$uri$is_args$args;	
+    	proxy_pass http://127.0.0.1/index.php?h=$http_host&uri=$uri&is=$is_args&arg=$args;	
+    }
+}
+结果
+Array
+(
+    [h] => 127.0.0.100
+    [uri] => /abc.php
+    [is] => ?
+    [arg] => abc=1
+)
+分析:
+把所有带.php的访问都跳转到127.0.0.1/index.php处理
+
+地址
+http://127.0.0.100/docer/x/sdf/er.php
+配置
+location ~ ^/doc {
+    	#proxy_pass http://$http_host$uri$is_args$args;	
+    	proxy_pass http://127.0.0.1/index.php?h=$http_host&uri=$uri&is=$is_args&arg=$args;	
+    }
+分析以/doc开头的进行跳转.
+说明:正则~是匹配域名的后面一段
+
+地址
+http://127.0.0.100/bak/
+配置
+ 	location ~ ^/bak\/ {
+    	#proxy_pass http://$http_host$uri$is_args$args;	
+    	proxy_pass http://127.0.0.1/index.php?h=$http_host&uri=$uri&is=$is_args&arg=$args;	
+    }
+分析
+所有和/bak/目录相关的请求
+
+地址
+http://127.0.0.100/abc.html?abc=1
+http://127.0.0.100/abc.html/sdf?abc=1
+配置
+	location ~ ^/abc\.html {
+    	#proxy_pass http://$http_host$uri$is_args$args;	
+    	proxy_pass http://127.0.0.1/index.php?h=$http_host&uri=$uri&is=$is_args&arg=$args;	
+    }
+分析
+所有指向abc.html的请求,包括以abc.html为目录的,无论有无参数的.
+
+地址:
+http://127.0.0.100/amf.html?sdf?abc=1
+配置
+location ~ ^/amf\.html$ {
+    	#proxy_pass http://$http_host$uri$is_args$args;	
+    	proxy_pass http://127.0.0.1/index.php?h=$http_host&uri=$uri&is=$is_args&arg=$args;	
+    }
+分析
+所有指向amf.html的请求,不包括以amf.html目录的,无论有无参数的.
+
+
+
+
+
+
+
+
+附录:
+"~" for case sensitive matching
+"~*" for case insensitive matching
+
+/films.htm?fid=123的URI 是/films.htm,不包括问号那一串.
+
+if ($http_user_agent ~ MSIE) {
+    rewrite ^(.*)$ /msie/$1 break;
+} //如果UA包含"MSIE"，rewrite请求到/msid/目录下
+if ($http_cookie ~* "id=([^;]+)(?:;|$)") {
+    set $id $1;
+ } //如果cookie匹配正则，设置变量$id等于正则引用部分
+if ($request_method = POST) {
+    return 405;
+} //如果提交方法为POST，则返回状态405（Method not allowed）。return不能返回301,302
+if ($slow) {
+    limit_rate 10k;
+} //限速，$slow可以通过 set 指令设置
+if (!-f $request_filename){
+    break;
+    proxy_pass  http://127.0.0.1; 
+} //如果请求的文件名不存在，则反向代理到localhost 。这里的break也是停止rewrite检查
+if ($args ~ post=140){
+    rewrite ^ http://example.com/ permanent;
+} //如果query string中包含"post=140"，永久重定向到example.com
+location ~* \.(gif|jpg|png|swf|flv)$ {
+    valid_referers none blocked www.jefflei.com www.leizhenfang.com;
+    if ($invalid_referer) {
+        return 404;
+    } //防盗链
+}
+
+-f和!-f用来判断是否存在文件
+-d和!-d用来判断是否存在目录
+-e和!-e用来判断是否存在文件或目录
+-x和!-x用来判断文件是否可执行
+
+下面是可以用作if判断的全局变量
+$args ： #这个变量等于请求行中的参数，同$query_string
+$content_length ： 请求头中的Content-length字段。
+$content_type ： 请求头中的Content-Type字段。
+$document_root ： 当前请求在root指令中指定的值。
+$host ： 请求主机头字段，否则为服务器名称。
+$http_user_agent ： 客户端agent信息
+$http_cookie ： 客户端cookie信息
+$limit_rate ： 这个变量可以限制连接速率。
+$request_method ： 客户端请求的动作，通常为GET或POST。
+$remote_addr ： 客户端的IP地址。
+$remote_port ： 客户端的端口。
+$remote_user ： 已经经过Auth Basic Module验证的用户名。
+$request_filename ： 当前请求的文件路径，由root或alias指令与URI请求生成。
+$scheme ： HTTP方法（如http，https）。
+$server_protocol ： 请求使用的协议，通常是HTTP/1.0或HTTP/1.1。
+$server_addr ： 服务器地址，在完成一次系统调用后可以确定这个值。
+$server_name ： 服务器名称。
+$server_port ： 请求到达服务器的端口号。
+$request_uri ： 包含请求参数的原始URI，不包含主机名，如：”/foo/bar.php?arg=baz”。
+$uri ： 不带请求参数的当前URI，$uri不包含主机名，如”/foo/bar.html”。
+$document_uri ： 与$uri相同。
+例：http://localhost:88/test1/test2/test.php
+$host：localhost
+$server_port：88
+$request_uri：http://localhost:88/test1/test2/test.php
+$document_uri：/test1/test2/test.php
+$document_root：/var/www/html
+$request_filename：/var/www/html/test1/test2/test.php
+
