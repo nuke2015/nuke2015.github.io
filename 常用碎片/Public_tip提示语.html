@@ -1,0 +1,89 @@
+{__NOLAYOUT__}
+<html>
+    <head>
+        <title>
+            {:($code>0)?'操作成功:)':'操作失败!';}
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv='Refresh' content='1;URL=javascript:history.back(-1);'>
+        <style type="text/css">
+            body{width:100%;margin: 0 auto; background-color:transparent;color: #5d5d5d;height:100%;}
+            html {font-size : 20px;height: 100%;background-color: #eee;font-family:"Microsoft YaHei", Tahoma, Helvetica, Arial, sans-serif;}
+            a{ color: #ff8f5c;}
+            a:hover{color: #ff8f5c;text-decoration: none;}
+            ins,a{text-decoration:none}
+            @media only screen and (min-width: 401px){
+                html {
+                    font-size: 25px !important;;
+                }
+            }
+            @media only screen and (min-width: 428px){
+                html {
+                    font-size: 26.75px !important;;
+                }
+            }
+            @media only screen and (min-width: 481px){
+                html {
+                    font-size: 30px !important;;
+                }
+            }
+            @media only screen and (min-width: 569px){
+                html {
+                    font-size: 35px !important;;
+                }
+            }
+            @media only screen and (min-width: 641px){
+                html {
+                    font-size: 40px !important;;
+                }
+            }
+            #main{width:100%;height:100%;text-align:center;background:rgba(0,0,0,0.2)}
+            #main p.alert_error{width:100%;margin-top:0.5rem;font-size:0.75rem;color:#ff8f5c;}
+            sub{color:#9f6b66;font-size:0.7rem;margin-top:0.5rem;display: block;}
+            #wait{color:#ff8f5c;}
+            #href{margin-top:0.8rem;font-size:0.7rem;display:inline-block;background:#ff8f5c;color:#fff;padding:0.2rem 1rem;border-radius:0.2rem;}
+            .main-wrap{width:10rem;height:6rem;position:absolute;z-index:1;top:50%;margin-top:-3rem;left:50%;margin-left:-5rem;background: #f7ede4;color: #9f6b66;border-radius:0.5rem}
+        </style>
+    </head>
+    
+    <body>
+        <div id="main">
+            <div class="main-wrap">
+                <p class="alert_error">
+                    {$msg}
+                </p>
+                <sub>
+                    系统将在
+                    <span id="wait">1</span>
+                    秒后自动
+                    <a href="javascript:window.close();">
+                        关闭!
+                    </a>
+                    <span width="10px;">&nbsp;</span>
+                    {if $url}
+                    <a id="href" href="{$url}">
+                        立即跳转
+                    </a>
+                    {else}
+                    <a id="href" href="javascript:history.back(-1);">
+                        上一页
+                    </a>
+                    {/if}
+                </sub>
+                <div class="spacer">
+                </div>
+            </div>
+            <!-- <sub>FSCMS[锋速科技] Faster & Suiter!</sub> -->
+        </div>
+        <script type="text/javascript">
+            (function() {
+                var wait = document.getElementById('wait'),
+                href = document.getElementById('href').href;
+                var interval = setInterval(function() {
+                     var time = --wait.innerHTML; (time <= 0) && (location.href = href);
+                },
+                1000);
+            })();
+        </script>
+    </body>
+</html>
