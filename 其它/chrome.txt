@@ -12,3 +12,16 @@ Chrome浏览器离线安装包官方下载地址，和在线安装一样能自�
 几个实用的参数收集：1  --user-data-dir="[PATH]"            指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区。2  --disk-cache-dir="[PATH]"           指定缓存Cache路径           3  --disk-cache-size=                  指定Cache大小，单位Byte4  --Firstrun                          重置到初始状态5  --incognito                         隐身模式启动6  --disable-javascript                禁用Javascript
 
 
+
+常用链接方式:
+
+D:\soft\chrome45\chrome.exe --user-data-dir="E:\cache\c33"
+
+D:\soft\chrome44.0.2403.130\chrome.exe --proxy-server=127.0.0.1:1066 --user-data-dir="E:\cache\G1066"
+
+D:\soft\360Chrome\Chrome\Application\360chrome.exe  --profile-directory=Default --app-id=jldbbncfnemkaicihcggnbffldfeeoef 
+
+D:\soft\chrome44.0.2403.130\chrome.exe --user-agent="zhangchuappforios iPhone"
+
+D:\soft\chrome44.0.2403.130\chrome.exe --user-agent="zhangchuappforandroid Android"
+
