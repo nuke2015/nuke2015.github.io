@@ -8,7 +8,7 @@ class IndexAction extends BaseAction
 
     public function index()
     {
-        // $this->service('jinban-vip','huangmayehaizaonongtangA.mp4');
+        // $this->service('siyoucang','huangmayehaizaonongtangA.mp4');
         // exit;
     }
 
