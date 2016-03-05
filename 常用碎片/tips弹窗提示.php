@@ -58,7 +58,13 @@
                 var wait = document.getElementById('wait'),
                 href = document.getElementById('href').href;
                 var interval = setInterval(function() {
-                    var time = --wait.innerHTML; (time <= 0) && (location.href = href);
+                     var time = --wait.innerHTML; 
+                     if(time <= 0) {
+                        window.location.href = href;
+                        //看这里
+                        clearInterval(interval);
+                        return;
+                     }
                 },
                 1000);
             })();
