@@ -1,6 +1,6 @@
 <?php
 
-// 对于部分远程调用失败以后,只重试一次!
+// 对于部分远程调用失败以后,只重试若干次调用!
 
 test::main();
 
@@ -29,7 +29,6 @@ class test
             if (self::$retry > 10) {
                 break;
             }
-
         }
     }
 }
@@ -39,8 +38,6 @@ class test
 
 // 重试后正常:
 // error
+// error
+// error
 // hello
-
-// 重试一次也不正常:
-// error
-// error
