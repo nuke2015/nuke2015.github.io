@@ -1,0 +1,895 @@
+                   Syscheck检测报告                    
+
+1:当前进程模块情况:
+  第三方进程及模块
+DFServ.exe=DFSERV.EXE
+  [NOMS]DFSERV.EXE
+
+RtHDVCpl.exe=C:\Program Files\Realtek\Audio\HDA\RtHDVCpl.exe
+  [NOMS]C:\Windows\system32\RltkAPO.dll
+  [NOMS]C:\Windows\system32\RTCOM\RtkCfg.dll
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [NOMS]C:\Program Files\Realtek\Audio\HDA\RtHDVCpl.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\SETUPAPI.dll
+  [IsMS]C:\Windows\system32\CFGMGR32.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\OLEAUT32.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\DEVOBJ.dll
+  [IsMS]C:\Windows\system32\WINMM.dll
+  [IsMS]C:\Windows\system32\DSOUND.dll
+  [IsMS]C:\Windows\system32\POWRPROF.dll
+  [IsMS]C:\Windows\system32\VERSION.dll
+  [IsMS]C:\Windows\system32\PROPSYS.dll
+  [IsMS]C:\Windows\system32\UxTheme.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7600.16385_none_72fc7cbf861225ca\gdiplus.dll
+  [IsMS]C:\Windows\system32\IMM32.dll
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\MSIMG32.dll
+  [IsMS]C:\Windows\system32\COMDLG32.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\COMCTL32.dll
+  [IsMS]C:\Windows\system32\SHELL32.dll
+  [IsMS]C:\Windows\system32\WINSPOOL.DRV
+  [IsMS]C:\Windows\system32\oledlg.dll
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+  [IsMS]C:\Windows\system32\WINTRUST.dll
+  [IsMS]C:\Windows\system32\CRYPT32.dll
+  [IsMS]C:\Windows\system32\MSASN1.dll
+  [IsMS]C:\Windows\system32\WindowsCodecs.dll
+  [IsMS]C:\Windows\system32\CLBCatQ.DLL
+  [IsMS]C:\Windows\System32\MMDevApi.dll
+  [IsMS]C:\Windows\system32\AUDIOSES.DLL
+  [IsMS]C:\Windows\system32\AVRT.dll
+  [IsMS]C:\Windows\system32\audioeng.dll
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+
+Launchy.exe=D:\working\Launchy\Launchy.exe
+  [NOMS]C:\Program Files\TortoiseSVN\bin\crshhndl.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsasl32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\intl3_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libaprutil_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libapr_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsvn_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TortoiseSVN32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TortoiseStub32.dll
+  [NOMS]C:\Program Files\Common Files\TortoiseOverlays\TortoiseOverlays.dll
+  [NOMS]D:\working\Launchy\imageformats\qmng4.dll
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [NOMS]D:\working\Launchy\QtNetwork4.dll
+  [NOMS]D:\working\Launchy\QtCore4.dll
+  [NOMS]D:\working\Launchy\QtGui4.dll
+  [NOMS]D:\working\Launchy\Launchy.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\SHELL32.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\USERENV.dll
+  [IsMS]C:\Windows\system32\profapi.dll
+  [IsMS]C:\Windows\system32\NETAPI32.dll
+  [IsMS]C:\Windows\system32\netutils.dll
+  [IsMS]C:\Windows\system32\srvcli.dll
+  [IsMS]C:\Windows\system32\wkscli.dll
+  [IsMS]C:\Windows\system32\BROWCLI.DLL
+  [IsMS]C:\Windows\system32\comdlg32.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\COMCTL32.dll
+  [IsMS]C:\Windows\system32\OLEAUT32.dll
+  [IsMS]C:\Windows\system32\IMM32.dll
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\WINMM.dll
+  [IsMS]C:\Windows\system32\WINSPOOL.DRV
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.6195_none_d09154e044272b9a\MSVCP80.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.6195_none_d09154e044272b9a\MSVCR80.dll
+  [IsMS]C:\Windows\system32\apphelp.dll
+  [IsMS]C:\Windows\AppPatch\AcLayers.DLL
+  [IsMS]C:\Windows\system32\SspiCli.dll
+  [IsMS]C:\Windows\system32\MPR.dll
+  [IsMS]C:\Windows\system32\uxtheme.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+  [IsMS]C:\Windows\system32\CRYPTSP.dll
+  [IsMS]C:\Windows\system32\rsaenh.dll
+  [IsMS]C:\Windows\system32\RpcRtRemote.dll
+  [IsMS]C:\Windows\system32\SETUPAPI.dll
+  [IsMS]C:\Windows\system32\CFGMGR32.dll
+  [IsMS]C:\Windows\system32\DEVOBJ.dll
+  [IsMS]C:\Windows\system32\CLBCatQ.DLL
+  [IsMS]C:\Windows\system32\propsys.dll
+  [IsMS]C:\Windows\system32\ntmarta.dll
+  [IsMS]C:\Windows\system32\WLDAP32.dll
+  [IsMS]C:\Windows\system32\WindowsCodecs.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-synch-l1-2-0.DLL
+  [IsMS]C:\Windows\system32\WININET.dll
+  [IsMS]C:\Windows\system32\Normaliz.dll
+  [IsMS]C:\Windows\system32\urlmon.dll
+  [IsMS]C:\Windows\system32\CRYPT32.dll
+  [IsMS]C:\Windows\system32\MSASN1.dll
+  [IsMS]C:\Windows\system32\iertutil.dll
+  [IsMS]C:\Windows\system32\VERSION.dll
+  [IsMS]C:\Windows\system32\MSWSOCK.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\VCRUNTIME140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-runtime-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\ucrtbase.DLL
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-timezone-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l2-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-localization-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-processthreads-l1-1-1.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-string-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-heap-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-stdio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-convert-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-conio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-utility-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-math-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-environment-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-time-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+  [IsMS]C:\Windows\system32\Secur32.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-locale-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\MSVCP140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+  [IsMS]C:\Windows\system32\EhStorShell.dll
+  [IsMS]C:\Windows\system32\CSCAPI.dll
+  [IsMS]C:\Windows\system32\ntshrui.dll
+  [IsMS]C:\Windows\system32\slc.dll
+  [IsMS]C:\Windows\system32\thumbcache.dll
+  [IsMS]C:\Windows\system32\PSAPI.DLL
+  [IsMS]C:\Windows\system32\DEVRTL.dll
+
+TSVNCache.exe=C:\Program Files\TortoiseSVN\bin\TSVNCache.exe
+  [NOMS]C:\Program Files\TortoiseSVN\bin\crshhndl.dll
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsasl32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\intl3_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libaprutil_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libapr_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsvn_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TSVNCache.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\system32\MSWSOCK.dll
+  [IsMS]C:\Windows\system32\user32.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\SHELL32.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\VCRUNTIME140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-runtime-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\ucrtbase.DLL
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-timezone-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l2-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-localization-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-synch-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-processthreads-l1-1-1.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-string-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-heap-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-stdio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-convert-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-conio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-utility-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-math-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-environment-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-time-l1-1-0.dll
+  [IsMS]C:\Windows\system32\WLDAP32.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\Secur32.dll
+  [IsMS]C:\Windows\system32\SSPICLI.DLL
+  [IsMS]C:\Windows\system32\CRYPT32.dll
+  [IsMS]C:\Windows\system32\MSASN1.dll
+  [IsMS]C:\Windows\system32\VERSION.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-locale-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\MSVCP140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+  [IsMS]C:\Windows\system32\IMM32.DLL
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\profapi.dll
+  [IsMS]C:\Windows\system32\uxtheme.dll
+  [IsMS]C:\Windows\system32\PROPSYS.dll
+  [IsMS]C:\Windows\system32\OLEAUT32.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\CFGMGR32.dll
+
+FrzState2k.exe=C:\Program Files\Faronics\Deep Freeze\Install C-0\_$Df\FrzState2k.exe
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [NOMS]C:\Program Files\Faronics\Deep Freeze\Install C-0\_$Df\FrzState2k.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.DLL
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16385_none_ebf82fc36c758ad5\COMCTL32.DLL
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\COMDLG32.DLL
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\system32\SHELL32.dll
+  [IsMS]C:\Windows\system32\MSIMG32.DLL
+  [IsMS]C:\Windows\system32\OLE32.DLL
+  [IsMS]C:\Windows\system32\OLEAUT32.DLL
+  [IsMS]C:\Windows\system32\VERSION.DLL
+  [IsMS]C:\Windows\system32\WINSPOOL.DRV
+  [IsMS]C:\Windows\system32\WSOCK32.DLL
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\system32\IMM32.DLL
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\WINDOWSCODECS.DLL
+  [IsMS]C:\Windows\system32\DWMAPI.DLL
+  [IsMS]C:\Windows\system32\UXTHEME.DLL
+  [IsMS]C:\Windows\system32\WTSAPI32.DLL
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+  [IsMS]C:\Windows\system32\WINSTA.dll
+  [IsMS]C:\Windows\system32\olepro32.dll
+
+nvvsvc.exe=NVVSVC.EXE
+  [NOMS]NVVSVC.EXE
+
+nvxdsync.exe=NVXDSYNC.EXE
+  [NOMS]NVXDSYNC.EXE
+
+nvvsvc.exe=NVVSVC.EXE
+  [NOMS]NVVSVC.EXE
+
+DimScreen080910.exe=D:\soft\DimScreen080910.exe
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [NOMS]D:\soft\DimScreen080910.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\COMCTL32.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\system32\comdlg32.dll
+  [IsMS]C:\Windows\system32\SHELL32.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\OLEAUT32.dll
+  [IsMS]C:\Windows\system32\VERSION.dll
+  [IsMS]C:\Windows\system32\WINMM.dll
+  [IsMS]C:\Windows\system32\WSOCK32.dll
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\system32\apphelp.dll
+  [IsMS]C:\Windows\AppPatch\AcLayers.DLL
+  [IsMS]C:\Windows\system32\SspiCli.dll
+  [IsMS]C:\Windows\system32\USERENV.dll
+  [IsMS]C:\Windows\system32\profapi.dll
+  [IsMS]C:\Windows\system32\WINSPOOL.DRV
+  [IsMS]C:\Windows\system32\MPR.dll
+  [IsMS]C:\Windows\system32\IMM32.DLL
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\uxtheme.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+
+Syscheck2.exe=D:\working\安全检查SysCheck\Syscheck2.exe
+  [NOMS]C:\Program Files\TortoiseSVN\bin\crshhndl.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsasl32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\intl3_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libaprutil_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libapr_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsvn_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TortoiseSVN32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TortoiseStub32.dll
+  [NOMS]C:\Program Files\Common Files\TortoiseOverlays\TortoiseOverlays.dll
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [NOMS]D:\working\安全检查SysCheck\Syscheck2.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\advapi32.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16385_none_ebf82fc36c758ad5\comctl32.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\mpr.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\oleaut32.dll
+  [IsMS]C:\Windows\system32\shell32.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\system32\version.dll
+  [IsMS]C:\Windows\system32\winspool.drv
+  [IsMS]C:\Windows\system32\IMM32.DLL
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\uxtheme.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\comctl32.DLL
+  [IsMS]C:\Windows\system32\SETUPAPI.dll
+  [IsMS]C:\Windows\system32\CFGMGR32.dll
+  [IsMS]C:\Windows\system32\DEVOBJ.dll
+  [IsMS]C:\Windows\system32\CLBCatQ.DLL
+  [IsMS]C:\Windows\system32\propsys.dll
+  [IsMS]C:\Windows\system32\ntmarta.dll
+  [IsMS]C:\Windows\system32\WLDAP32.dll
+  [IsMS]C:\Windows\system32\WindowsCodecs.dll
+  [IsMS]C:\Windows\system32\apphelp.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-synch-l1-2-0.DLL
+  [IsMS]C:\Windows\system32\WININET.dll
+  [IsMS]C:\Windows\system32\Normaliz.dll
+  [IsMS]C:\Windows\system32\urlmon.dll
+  [IsMS]C:\Windows\system32\CRYPT32.dll
+  [IsMS]C:\Windows\system32\MSASN1.dll
+  [IsMS]C:\Windows\system32\iertutil.dll
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\system32\MSWSOCK.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\VCRUNTIME140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-runtime-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\ucrtbase.DLL
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-timezone-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l2-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-localization-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-processthreads-l1-1-1.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-string-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-heap-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-stdio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-convert-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-conio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-utility-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-math-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-environment-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-time-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+  [IsMS]C:\Windows\system32\Secur32.dll
+  [IsMS]C:\Windows\system32\SSPICLI.DLL
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-locale-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\MSVCP140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+  [IsMS]C:\Windows\system32\EhStorShell.dll
+  [IsMS]C:\Windows\System32\cscui.dll
+  [IsMS]C:\Windows\System32\CSCDLL.dll
+  [IsMS]C:\Windows\system32\CSCAPI.dll
+  [IsMS]C:\Windows\system32\ntshrui.dll
+  [IsMS]C:\Windows\system32\srvcli.dll
+  [IsMS]C:\Windows\system32\slc.dll
+  [IsMS]C:\Windows\system32\profapi.dll
+  [IsMS]C:\Windows\System32\shdocvw.dll
+  [IsMS]C:\Windows\system32\PSAPI.dll
+
+  微软进程及模块
+smss.exe=SMSS.EXE
+  [IsMS]SMSS.EXE
+
+csrss.exe=CSRSS.EXE
+  [IsMS]CSRSS.EXE
+
+csrss.exe=CSRSS.EXE
+  [IsMS]CSRSS.EXE
+
+wininit.exe=WININIT.EXE
+  [IsMS]WININIT.EXE
+
+winlogon.exe=WINLOGON.EXE
+  [IsMS]WINLOGON.EXE
+
+services.exe=SERVICES.EXE
+  [IsMS]SERVICES.EXE
+
+lsass.exe=LSASS.EXE
+  [IsMS]LSASS.EXE
+
+lsm.exe=LSM.EXE
+  [IsMS]LSM.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+audiodg.exe=AUDIODG.EXE
+  [IsMS]AUDIODG.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+dwm.exe=C:\Windows\system32\Dwm.exe
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [IsMS]C:\Windows\system32\Dwm.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\system32\UxTheme.dll
+  [IsMS]C:\Windows\system32\IMM32.dll
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\dwmredir.dll
+  [IsMS]C:\Windows\system32\dwmcore.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\system32\WindowsCodecs.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\d3d10_1.dll
+  [IsMS]C:\Windows\system32\d3d10_1core.dll
+  [IsMS]C:\Windows\system32\dxgi.dll
+  [IsMS]C:\Windows\system32\VERSION.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\WINTRUST.dll
+  [IsMS]C:\Windows\system32\CRYPT32.dll
+  [IsMS]C:\Windows\system32\MSASN1.dll
+  [IsMS]C:\Windows\system32\Shell32.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+
+taskhost.exe=C:\Windows\system32\taskhost.exe
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [IsMS]C:\Windows\system32\taskhost.exe
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\system32\OLEAUT32.dll
+  [IsMS]C:\Windows\system32\IMM32.DLL
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\system32\uxtheme.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\CLBCatQ.DLL
+  [IsMS]C:\Windows\System32\PlaySndSrv.dll
+  [IsMS]C:\Windows\system32\RpcRtRemote.dll
+  [IsMS]C:\Windows\system32\MsCtfMonitor.dll
+  [IsMS]C:\Windows\system32\MSUTB.dll
+  [IsMS]C:\Windows\system32\WINSTA.dll
+  [IsMS]C:\Windows\system32\WTSAPI32.dll
+  [IsMS]C:\Windows\system32\WINMM.dll
+  [IsMS]C:\Windows\system32\dimsjob.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\system32\taskschd.dll
+  [IsMS]C:\Windows\system32\SspiCli.dll
+  [IsMS]C:\Windows\System32\netprofm.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\System32\nlaapi.dll
+  [IsMS]C:\Windows\system32\CRYPTSP.dll
+  [IsMS]C:\Windows\system32\rsaenh.dll
+  [IsMS]C:\Windows\System32\npmproxy.dll
+  [IsMS]C:\Windows\system32\dsrole.dll
+  [IsMS]C:\Windows\system32\MMDevAPI.DLL
+  [IsMS]C:\Windows\system32\PROPSYS.dll
+  [IsMS]C:\Windows\system32\wdmaud.drv
+  [IsMS]C:\Windows\system32\ksuser.dll
+  [IsMS]C:\Windows\system32\AVRT.dll
+  [IsMS]C:\Windows\system32\SETUPAPI.dll
+  [IsMS]C:\Windows\system32\CFGMGR32.dll
+  [IsMS]C:\Windows\system32\DEVOBJ.dll
+  [IsMS]C:\Windows\system32\AUDIOSES.DLL
+  [IsMS]C:\Windows\system32\msacm32.drv
+  [IsMS]C:\Windows\system32\MSACM32.dll
+  [IsMS]C:\Windows\system32\midimap.dll
+
+explorer.exe=C:\Windows\Explorer.EXE
+  [NOMS]D:\soft\Thunder5.6.4.13\ComDlls\xunleiBHO_Now.dll
+  [NOMS]D:\soft\Thunder5.6.4.13\ComDlls\TDAtOnce_Now.dll
+  [NOMS]C:\Windows\system32\nvshext.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\crshhndl.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsasl32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\intl3_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libaprutil_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libapr_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\libsvn_tsvn32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TortoiseSVN32.dll
+  [NOMS]C:\Program Files\TortoiseSVN\bin\TortoiseStub32.dll
+  [NOMS]C:\Program Files\Common Files\TortoiseOverlays\TortoiseOverlays.dll
+  [NOMS]C:\PROGRA~1\Baidu\BAIDUE~1\20201~1.195\BDEFrame.dll
+  [IsMS]C:\Windows\Explorer.EXE
+  [IsMS]C:\Windows\SYSTEM32\ntdll.dll
+  [IsMS]C:\Windows\system32\kernel32.dll
+  [IsMS]C:\Windows\system32\KERNELBASE.dll
+  [IsMS]C:\Windows\system32\ADVAPI32.dll
+  [IsMS]C:\Windows\system32\msvcrt.dll
+  [IsMS]C:\Windows\SYSTEM32\sechost.dll
+  [IsMS]C:\Windows\system32\RPCRT4.dll
+  [IsMS]C:\Windows\system32\GDI32.dll
+  [IsMS]C:\Windows\system32\USER32.dll
+  [IsMS]C:\Windows\system32\LPK.dll
+  [IsMS]C:\Windows\system32\USP10.dll
+  [IsMS]C:\Windows\system32\SHLWAPI.dll
+  [IsMS]C:\Windows\system32\SHELL32.dll
+  [IsMS]C:\Windows\system32\ole32.dll
+  [IsMS]C:\Windows\system32\OLEAUT32.dll
+  [IsMS]C:\Windows\system32\EXPLORERFRAME.dll
+  [IsMS]C:\Windows\system32\DUser.dll
+  [IsMS]C:\Windows\system32\DUI70.dll
+  [IsMS]C:\Windows\system32\IMM32.dll
+  [IsMS]C:\Windows\system32\MSCTF.dll
+  [IsMS]C:\Windows\system32\UxTheme.dll
+  [IsMS]C:\Windows\system32\POWRPROF.dll
+  [IsMS]C:\Windows\system32\SETUPAPI.dll
+  [IsMS]C:\Windows\system32\CFGMGR32.dll
+  [IsMS]C:\Windows\system32\DEVOBJ.dll
+  [IsMS]C:\Windows\system32\dwmapi.dll
+  [IsMS]C:\Windows\system32\slc.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7600.16385_none_72fc7cbf861225ca\gdiplus.dll
+  [IsMS]C:\Windows\system32\Secur32.dll
+  [IsMS]C:\Windows\system32\SSPICLI.DLL
+  [IsMS]C:\Windows\system32\PROPSYS.dll
+  [IsMS]C:\Windows\system32\CRYPTBASE.dll
+  [IsMS]C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\comctl32.dll
+  [IsMS]C:\Windows\system32\WindowsCodecs.dll
+  [IsMS]C:\Windows\system32\profapi.dll
+  [IsMS]C:\Windows\system32\apphelp.dll
+  [IsMS]C:\Windows\system32\CLBCatQ.DLL
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-synch-l1-2-0.DLL
+  [IsMS]C:\Windows\system32\WININET.dll
+  [IsMS]C:\Windows\system32\Normaliz.dll
+  [IsMS]C:\Windows\system32\urlmon.dll
+  [IsMS]C:\Windows\system32\CRYPT32.dll
+  [IsMS]C:\Windows\system32\MSASN1.dll
+  [IsMS]C:\Windows\system32\iertutil.dll
+  [IsMS]C:\Windows\system32\VERSION.dll
+  [IsMS]C:\Windows\system32\WS2_32.dll
+  [IsMS]C:\Windows\system32\NSI.dll
+  [IsMS]C:\Windows\system32\MSWSOCK.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\VCRUNTIME140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-runtime-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\ucrtbase.DLL
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-timezone-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l2-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-localization-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-processthreads-l1-1-1.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-core-file-l1-2-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-string-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-heap-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-stdio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-convert-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-conio-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-utility-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-math-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-environment-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-time-l1-1-0.dll
+  [IsMS]C:\Windows\system32\WLDAP32.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-locale-l1-1-0.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\MSVCP140.dll
+  [IsMS]C:\Program Files\TortoiseSVN\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+  [IsMS]C:\Windows\system32\EhStorShell.dll
+  [IsMS]C:\Windows\System32\cscui.dll
+  [IsMS]C:\Windows\System32\CSCDLL.dll
+  [IsMS]C:\Windows\system32\CSCAPI.dll
+  [IsMS]C:\Windows\system32\ntshrui.dll
+  [IsMS]C:\Windows\system32\srvcli.dll
+  [IsMS]C:\Windows\system32\IconCodecService.dll
+  [IsMS]C:\Windows\system32\CRYPTSP.dll
+  [IsMS]C:\Windows\system32\rsaenh.dll
+  [IsMS]C:\Windows\system32\RpcRtRemote.dll
+  [IsMS]C:\Windows\system32\SndVolSSO.DLL
+  [IsMS]C:\Windows\system32\HID.DLL
+  [IsMS]C:\Windows\System32\MMDevApi.dll
+  [IsMS]C:\Windows\system32\timedate.cpl
+  [IsMS]C:\Windows\system32\ATL.DLL
+  [IsMS]C:\Windows\system32\ntmarta.dll
+  [IsMS]C:\Windows\System32\shdocvw.dll
+  [IsMS]C:\Windows\system32\LINKINFO.dll
+  [IsMS]C:\Windows\system32\msutb.dll
+  [IsMS]C:\Windows\System32\shacct.dll
+  [IsMS]C:\Windows\system32\SAMLIB.dll
+  [IsMS]C:\Windows\system32\samcli.dll
+  [IsMS]C:\Windows\system32\netutils.dll
+  [IsMS]C:\Windows\System32\gameux.dll
+  [IsMS]C:\Windows\System32\XmlLite.dll
+  [IsMS]C:\Windows\System32\wer.dll
+  [IsMS]C:\Windows\system32\MsftEdit.dll
+  [IsMS]C:\Windows\system32\msls31.dll
+  [IsMS]C:\Program Files\Common Files\microsoft shared\ink\tiptsf.dll
+  [IsMS]C:\Windows\system32\authui.dll
+  [IsMS]C:\Windows\system32\CRYPTUI.dll
+  [IsMS]C:\Windows\System32\ieframe.dll
+  [IsMS]C:\Windows\system32\PSAPI.DLL
+  [IsMS]C:\Windows\System32\OLEACC.dll
+  [IsMS]C:\Windows\System32\netshell.dll
+  [IsMS]C:\Windows\System32\IPHLPAPI.DLL
+  [IsMS]C:\Windows\System32\WINNSI.DLL
+  [IsMS]C:\Windows\System32\nlaapi.dll
+  [IsMS]C:\Windows\system32\thumbcache.dll
+  [IsMS]C:\Windows\system32\NetworkExplorer.dll
+  [IsMS]C:\Windows\system32\WINMM.dll
+  [IsMS]C:\Windows\system32\wdmaud.drv
+  [IsMS]C:\Windows\system32\ksuser.dll
+  [IsMS]C:\Windows\system32\AVRT.dll
+  [IsMS]C:\Windows\system32\AUDIOSES.DLL
+  [IsMS]C:\Windows\system32\msacm32.drv
+  [IsMS]C:\Windows\system32\MSACM32.dll
+  [IsMS]C:\Windows\system32\midimap.dll
+  [IsMS]C:\Windows\system32\MLANG.dll
+  [IsMS]C:\Windows\system32\stobject.dll
+  [IsMS]C:\Windows\system32\BatMeter.dll
+  [IsMS]C:\Windows\system32\WINSTA.dll
+  [IsMS]C:\Windows\system32\WTSAPI32.dll
+  [IsMS]C:\Windows\system32\es.dll
+  [IsMS]C:\Windows\system32\prnfldr.dll
+  [IsMS]C:\Windows\system32\WINSPOOL.DRV
+  [IsMS]C:\Windows\system32\dxp.dll
+  [IsMS]C:\Windows\system32\Syncreg.dll
+  [IsMS]C:\Windows\ehome\ehSSO.dll
+  [IsMS]C:\Windows\system32\actxprxy.dll
+  [IsMS]C:\Windows\System32\AltTab.dll
+  [IsMS]C:\Windows\system32\wpdshserviceobj.dll
+  [IsMS]C:\Windows\System32\pnidui.dll
+  [IsMS]C:\Windows\System32\QUtil.dll
+  [IsMS]C:\Windows\System32\wevtapi.dll
+  [IsMS]C:\Windows\system32\PortableDeviceTypes.dll
+  [IsMS]C:\Windows\system32\PortableDeviceApi.dll
+  [IsMS]C:\Windows\System32\srchadmin.dll
+  [IsMS]C:\Windows\System32\USERENV.dll
+  [IsMS]C:\Windows\system32\WINTRUST.dll
+  [IsMS]C:\Windows\system32\dhcpcsvc6.DLL
+  [IsMS]C:\Windows\system32\dhcpcsvc.DLL
+  [IsMS]C:\Windows\System32\npmproxy.dll
+  [IsMS]C:\Windows\System32\SyncCenter.dll
+  [IsMS]C:\Windows\System32\Actioncenter.dll
+  [IsMS]C:\Windows\system32\imapi2.dll
+  [IsMS]C:\Windows\System32\hgcpl.dll
+  [IsMS]C:\Windows\System32\provsvc.dll
+  [IsMS]C:\Windows\system32\SXS.DLL
+  [IsMS]C:\Windows\system32\wkscli.dll
+  [IsMS]C:\Windows\system32\Wlanapi.dll
+  [IsMS]C:\Windows\system32\wlanutil.dll
+  [IsMS]C:\Windows\system32\wwanapi.dll
+  [IsMS]C:\Windows\system32\wwapi.dll
+  [IsMS]C:\Windows\System32\QAgent.dll
+  [IsMS]C:\Windows\System32\bthprops.cpl
+  [IsMS]C:\Program Files\Windows Sidebar\sbdrop.dll
+  [IsMS]C:\Program Files\Internet Explorer\ieproxy.dll
+  [IsMS]C:\Windows\system32\fxsst.dll
+  [IsMS]C:\Windows\system32\FXSAPI.dll
+  [IsMS]C:\Windows\system32\FXSRESM.DLL
+  [IsMS]C:\Windows\System32\netprofm.dll
+  [IsMS]C:\Windows\system32\DEVRTL.dll
+  [IsMS]C:\Windows\system32\MPR.dll
+  [IsMS]C:\Windows\System32\drprov.dll
+  [IsMS]C:\Windows\System32\ntlanman.dll
+  [IsMS]C:\Windows\System32\davclnt.dll
+  [IsMS]C:\Windows\System32\DAVHLPR.dll
+  [IsMS]C:\Windows\system32\wpdshext.dll
+  [IsMS]C:\Windows\system32\audiodev.dll
+  [IsMS]C:\Windows\system32\WMVCore.DLL
+  [IsMS]C:\Windows\system32\WMASF.DLL
+  [IsMS]C:\Windows\system32\EhStorAPI.dll
+  [IsMS]C:\Windows\system32\dsrole.dll
+  [IsMS]C:\Windows\System32\StructuredQuery.dll
+  [IsMS]C:\Windows\System32\SearchFolder.dll
+  [IsMS]C:\Windows\system32\chsbrkr.dll
+
+svchost.exe=SVCHOST.EXE
+  [IsMS]SVCHOST.EXE
+
+taskhost.exe=TASKHOST.EXE
+  [IsMS]TASKHOST.EXE
+
+
+2:当前运行中的服务情况:
+  第三方服务
+  [NOMS]RTL8167  C:\Windows\SYSTEM32\DRIVERS\RT86WIN7.SYS  2015年11月19日
+  [NOMS]nvsvc  C:\Windows\system32\nvvsvc.exe  2015年12月16日
+  [NOMS]nvlddmkm  C:\Windows\SYSTEM32\DRIVERS\NVLDDMKM.SYS  2015年12月17日
+  [NOMS]NVHDA  C:\Windows\SYSTEM32\DRIVERS\NVHDA32V.SYS  2015年11月25日
+  [NOMS]IntcAzAudAddService  C:\Windows\SYSTEM32\DRIVERS\RTKVHDA.SYS  2015年12月10日
+  [NOMS]iaStorF  C:\Windows\SYSTEM32\DRIVERS\IASTORF.SYS  2015年11月12日
+  [NOMS]eventlog    文件丢失
+  [NOMS]DFServ  C:\Program Files\Faronics\Deep Freeze\Install C-0\DFServ.exe  2012年9月4日
+  [NOMS]BDArKit  \??\C:\Windows\System32\Drivers\BDArKit.SYS  2015年8月7日
+  [NOMS]amdxata  C:\Windows\SYSTEM32\DRIVERS\AMDXATA.SYS  2009年7月14日
+  [NOMS]2345WebProtect  C:\Windows\SYSTEM32\DRIVERS\2345WEBPROTECT.SYS  2016年3月24日
+  微软服务
+  [IsMS]atapi  C:\Windows\SYSTEM32\DRIVERS\ATAPI.SYS  2009年7月14日
+  [IsMS]AudioEndpointBuilder  C:\Windows\SYSTEM32\AUDIOSRV.DLL  2009年7月14日
+  [IsMS]Audiosrv  C:\Windows\SYSTEM32\AUDIOSRV.DLL  2009年7月14日
+  [IsMS]BFE  C:\Windows\SYSTEM32\BFE.DLL  2009年7月14日
+  [IsMS]blbdrive  C:\Windows\SYSTEM32\DRIVERS\BLBDRIVE.SYS  2009年7月14日
+  [IsMS]bowser  C:\Windows\SYSTEM32\DRIVERS\BOWSER.SYS  2009年7月14日
+  [IsMS]Browser  C:\Windows\SYSTEM32\BROWSER.DLL  2009年7月14日
+  [IsMS]CNG  C:\Windows\SYSTEM32\DRIVERS\CNG.SYS  2009年7月14日
+  [IsMS]Compbatt  C:\Windows\SYSTEM32\DRIVERS\COMPBATT.SYS  2009年7月14日
+  [IsMS]CryptSvc  C:\Windows\SYSTEM32\CRYPTSVC.DLL  2009年7月14日
+  [IsMS]DcomLaunch  C:\Windows\SYSTEM32\RPCSS.DLL  2009年7月14日
+  [IsMS]DfsC  C:\Windows\SYSTEM32\DRIVERS\DFSC.SYS  2009年7月14日
+  [IsMS]Dhcp  C:\Windows\SYSTEM32\DHCPCORE.DLL  2009年7月14日
+  [IsMS]discache  C:\Windows\SYSTEM32\DRIVERS\DISCACHE.SYS  2009年7月14日
+  [IsMS]Disk  C:\Windows\SYSTEM32\DRIVERS\DISK.SYS  2009年7月14日
+  [IsMS]Dnscache  C:\Windows\SYSTEM32\DNSRSLVR.DLL  2009年7月14日
+  [IsMS]DXGKrnl  C:\Windows\SYSTEM32\DRIVERS\DXGKRNL.SYS  2009年10月2日
+  [IsMS]EventSystem  C:\Windows\SYSTEM32\ES.DLL  2009年7月14日
+  [IsMS]FileInfo  C:\Windows\SYSTEM32\DRIVERS\FILEINFO.SYS  2009年7月14日
+  [IsMS]FltMgr  C:\Windows\SYSTEM32\DRIVERS\FLTMGR.SYS  2009年7月14日
+  [IsMS]FontCache  C:\Windows\SYSTEM32\FNTCACHE.DLL  2009年7月14日
+  [IsMS]fvevol  C:\Windows\SYSTEM32\DRIVERS\FVEVOL.SYS  2009年7月14日
+  [IsMS]gpsvc  C:\Windows\SYSTEM32\GPSVC.DLL  2009年7月14日
+  [IsMS]HidUsb  C:\Windows\SYSTEM32\DRIVERS\HIDUSB.SYS  2009年7月14日
+  [IsMS]hwpolicy  C:\Windows\SYSTEM32\DRIVERS\HWPOLICY.SYS  2009年7月14日
+  [IsMS]KSecDD  C:\Windows\SYSTEM32\DRIVERS\KSECDD.SYS  2009年7月14日
+  [IsMS]KSecPkg  C:\Windows\SYSTEM32\DRIVERS\KSECPKG.SYS  2009年12月11日
+  [IsMS]LanmanServer  C:\Windows\SYSTEM32\SRVSVC.DLL  2009年7月14日
+  [IsMS]LanmanWorkstation  C:\Windows\SYSTEM32\WKSSVC.DLL  2009年7月14日
+  [IsMS]lltdio  C:\Windows\SYSTEM32\DRIVERS\LLTDIO.SYS  2009年7月14日
+  [IsMS]lmhosts  C:\Windows\SYSTEM32\LMHSVC.DLL  2009年7月14日
+  [IsMS]MMCSS  C:\Windows\SYSTEM32\MMCSS.DLL  2009年7月14日
+  [IsMS]mouclass  C:\Windows\SYSTEM32\DRIVERS\MOUCLASS.SYS  2009年7月14日
+  [IsMS]mountmgr  C:\Windows\SYSTEM32\DRIVERS\MOUNTMGR.SYS  2009年7月14日
+  [IsMS]mrxsmb  C:\Windows\SYSTEM32\DRIVERS\MRXSMB.SYS  2010年2月27日
+  [IsMS]mrxsmb10  C:\Windows\SYSTEM32\DRIVERS\MRXSMB10.SYS  2010年2月27日
+  [IsMS]mrxsmb20  C:\Windows\SYSTEM32\DRIVERS\MRXSMB20.SYS  2010年2月27日
+  [IsMS]msahci  C:\Windows\SYSTEM32\DRIVERS\MSAHCI.SYS  2009年7月14日
+  [IsMS]mssmbios  C:\Windows\SYSTEM32\DRIVERS\MSSMBIOS.SYS  2009年7月14日
+  [IsMS]Netman  C:\Windows\SYSTEM32\NETMAN.DLL  2009年7月14日
+  [IsMS]netprofm  C:\Windows\SYSTEM32\NETPROFM.DLL  2009年7月14日
+  [IsMS]NlaSvc  C:\Windows\SYSTEM32\NLASVC.DLL  2009年7月14日
+  [IsMS]nsi  C:\Windows\SYSTEM32\NSISVC.DLL  2009年7月14日
+  [IsMS]nsiproxy  C:\Windows\SYSTEM32\DRIVERS\NSIPROXY.SYS  2009年7月14日
+  [IsMS]Parport  C:\Windows\SYSTEM32\DRIVERS\PARPORT.SYS  2009年7月14日
+  [IsMS]pci  C:\Windows\SYSTEM32\DRIVERS\PCI.SYS  2009年7月14日
+  [IsMS]pcw  C:\Windows\SYSTEM32\DRIVERS\PCW.SYS  2009年7月14日
+  [IsMS]PlugPlay  C:\Windows\SYSTEM32\UMPNPMGR.DLL  2009年7月14日
+  [IsMS]Power  C:\Windows\SYSTEM32\UMPO.DLL  2009年7月14日
+  [IsMS]PptpMiniport  C:\Windows\SYSTEM32\DRIVERS\RASPPTP.SYS  2009年7月14日
+  [IsMS]ProfSvc  C:\Windows\SYSTEM32\PROFSVC.DLL  2009年7月14日
+  [IsMS]RasAgileVpn  C:\Windows\SYSTEM32\DRIVERS\AGILEVPN.SYS  2009年7月14日
+  [IsMS]Rasl2tp  C:\Windows\SYSTEM32\DRIVERS\RASL2TP.SYS  2009年7月14日
+  [IsMS]RasPppoe  C:\Windows\SYSTEM32\DRIVERS\RASPPPOE.SYS  2009年7月14日
+  [IsMS]RasSstp  C:\Windows\SYSTEM32\DRIVERS\RASSSTP.SYS  2009年7月14日
+  [IsMS]rdbss  C:\Windows\SYSTEM32\DRIVERS\RDBSS.SYS  2009年7月14日
+  [IsMS]rdpbus  C:\Windows\SYSTEM32\DRIVERS\RDPBUS.SYS  2009年7月14日
+  [IsMS]RDPCDD  C:\Windows\SYSTEM32\DRIVERS\RDPCDD.SYS  2009年7月14日
+  [IsMS]RDPENCDD  C:\Windows\SYSTEM32\DRIVERS\RDPENCDD.SYS  2009年7月14日
+  [IsMS]RDPREFMP  C:\Windows\SYSTEM32\DRIVERS\RDPREFMP.SYS  2009年7月14日
+  [IsMS]RpcEptMapper  C:\Windows\SYSTEM32\RPCEPMAP.DLL  2009年7月14日
+  [IsMS]RpcSs  C:\Windows\SYSTEM32\RPCSS.DLL  2009年7月14日
+  [IsMS]rspndr  C:\Windows\SYSTEM32\DRIVERS\RSPNDR.SYS  2009年7月14日
+  [IsMS]SamSs  C:\Windows\SYSTEM32\LSASS.EXE  2009年7月14日
+  [IsMS]Schedule  C:\Windows\SYSTEM32\SCHEDSVC.DLL  2009年7月14日
+  [IsMS]SENS  C:\Windows\SYSTEM32\SENS.DLL  2009年7月14日
+  [IsMS]Serenum  C:\Windows\SYSTEM32\DRIVERS\SERENUM.SYS  2009年7月14日
+  [IsMS]Serial  C:\Windows\SYSTEM32\DRIVERS\SERIAL.SYS  2009年7月14日
+  [IsMS]srv  C:\Windows\SYSTEM32\DRIVERS\SRV.SYS  2010年6月22日
+  [IsMS]srv2  C:\Windows\SYSTEM32\DRIVERS\SRV2.SYS  2010年6月22日
+  [IsMS]srvnet  C:\Windows\SYSTEM32\DRIVERS\SRVNET.SYS  2010年6月22日
+  [IsMS]swenum  C:\Windows\SYSTEM32\DRIVERS\SWENUM.SYS  2009年7月14日
+  [IsMS]tcpipreg  C:\Windows\SYSTEM32\DRIVERS\TCPIPREG.SYS  2009年7月14日
+  [IsMS]tdx  C:\Windows\SYSTEM32\DRIVERS\TDX.SYS  2009年7月14日
+  [IsMS]TermDD  C:\Windows\SYSTEM32\DRIVERS\TERMDD.SYS  2009年7月14日
+  [IsMS]Themes  C:\Windows\SYSTEM32\THEMESERVICE.DLL  2009年9月24日
+  [IsMS]tunnel  C:\Windows\SYSTEM32\DRIVERS\TUNNEL.SYS  2009年7月14日
+  [IsMS]usbehci  C:\Windows\SYSTEM32\DRIVERS\USBEHCI.SYS  2009年7月14日
+  [IsMS]usbhub  C:\Windows\SYSTEM32\DRIVERS\USBHUB.SYS  2009年7月14日
+  [IsMS]UxSms  C:\Windows\SYSTEM32\UXSMS.DLL  2009年7月14日
+  [IsMS]VgaSave  C:\Windows\SYSTEM32\DRIVERS\VGA.SYS  2009年7月14日
+  [IsMS]volmgr  C:\Windows\SYSTEM32\DRIVERS\VOLMGR.SYS  2009年7月14日
+  [IsMS]volmgrx  C:\Windows\SYSTEM32\DRIVERS\VOLMGRX.SYS  2009年7月14日
+  [IsMS]volsnap  C:\Windows\SYSTEM32\DRIVERS\VOLSNAP.SYS  2009年7月14日
+  [IsMS]Wanarpv6  C:\Windows\SYSTEM32\DRIVERS\WANARP.SYS  2009年7月14日
+  [IsMS]Winmgmt  C:\Windows\SYSTEM32\WBEM\WMISVC.DLL  2009年7月14日
+
+3:当前活动文件情况:
+Launchy.exe.lnk [启动组] D:\working\Launchy\Launchy.exe
+$RECYCLE.BIN [启动组] \$RECYCLE.BIN
+Documents [启动组] \Documents
+Downloads.lnk [启动组] C:\Users\Administrator\Documents\Downloads
+Favorites [启动组] \Favorites
+pagefile.sys [启动组] \pagefile.sys
+phpfind.bak.7z [启动组] \phpfind.bak.7z
+System Volume Information [启动组] \System Volume Information
+WT-NMP-bak.zip [启动组] \WT-NMP-bak.zip
+firstrun.exe [启动值] %windir%\firstrun.exe
+RtHDVCpl.exe [启动值] C:\Program Files\Realtek\Audio\HDA\RtHDVCpl.exe
+bdeframe.dll, [启动值] c:\progra~1\baidu\baidue~1\20201~1.195\bdeframe.dll,
+logondll.dll [启动项] logondll.dll
+geturl.htm [IE右键] d:\soft\thunder5.6.4.13\program\geturl.htm
+getallurl.htm [IE右键] d:\soft\thunder5.6.4.13\program\getallurl.htm
+tdatonce_now.dll [BHO钩子] d:\soft\thunder5.6.4.13\comdlls\tdatonce_now.dll
+tdatonce_now.dll [BHO钩子] d:\soft\thunder5.6.4.13\comdlls\tdatonce_now.dll
+cmd.exe [目录右键] cmd.exe
+cmd.exe [目录右键] cmd.exe
+ [目录右键] 
+notepad++.exe [目录右键] d:\working\notepad++\notepad++.exe
+ [目录右键] 
+ [目录右键] 
+sublime_text.exe [目录右键] d:\working\sublime\sublime_text.exe
+cmd.exe [盘符右键] cmd.exe
+bitlockerwizard.exe [盘符右键] %systemroot%\system32\bitlockerwizard.exe
+bitlockerwizardelev.exe [盘符右键] %systemroot%\system32\bitlockerwizardelev.exe
+bitlockerwizard.exe [盘符右键] %systemroot%\system32\bitlockerwizard.exe
+bitlockerwizardelev.exe [盘符右键] %systemroot%\system32\bitlockerwizardelev.exe
+bitlockerwizard.exe [盘符右键] %systemroot%\system32\bitlockerwizard.exe
+bitlockerwizardelev.exe [盘符右键] %systemroot%\system32\bitlockerwizardelev.exe
+bdeunlockwizard.exe [盘符右键] %systemroot%\system32\bdeunlockwizard.exe
+haozipext.dll [文件右键] c:\program files\haozip\haozipext.dll
+{85bbd920-42a0-1069-a2e4-08002b30309d} [文件右键] {85bbd920-42a0-1069-a2e4-08002b30309d}
+bcshellex.dll [文件右键] c:\program files\beyond compare 3\bcshellex.dll
+{f81e9010-6ea4-11ce-a7ff-00aa003ca9f6} [文件右键] {f81e9010-6ea4-11ce-a7ff-00aa003ca9f6}
+tortoisestub32.dll [文件右键] c:\program files\tortoisesvn\bin\tortoisestub32.dll
+rarext.dll [文件右键] c:\program files\winrar\rarext.dll
+taskband pin [文件右键] taskband pin
+{f3d06e7c-1e45-4a26-847e-f9fcdee59be0} [文件右键] {f3d06e7c-1e45-4a26-847e-f9fcdee59be0}
+ [文件右键] 
+ [文件右键] 
+haozipext.dll [文件右键] c:\program files\haozip\haozipext.dll
+{85bbd920-42a0-1069-a2e4-08002b30309d} [文件右键] {85bbd920-42a0-1069-a2e4-08002b30309d}
+bcshellex.dll [文件右键] c:\program files\beyond compare 3\bcshellex.dll
+{3dad6c5d-2167-4cae-9914-f99e41c12cfa} [文件右键] {3dad6c5d-2167-4cae-9914-f99e41c12cfa}
+{474c98ee-cf3d-41f5-80e3-4aab0ab04301} [文件右键] {474c98ee-cf3d-41f5-80e3-4aab0ab04301}
+tortoisestub32.dll [文件右键] c:\program files\tortoisesvn\bin\tortoisestub32.dll
+rarext.dll [文件右键] c:\program files\winrar\rarext.dll
+winhlp32.exe [已改关联] %systemroot%\winhlp32.exe
+WScript.exe [已改关联] %SystemRoot%\System32\WScript.exe
+wscript.exe [已改关联] c:\windows\system32\wscript.exe
+
+4:当前敏感键值情况:
+当前IE主页 Software\Microsoft\Internet Explorer\Main [Start Page]=http://www.hao123.com/?tn=82013038_80_hao_pg
+IE起始页 Software\Microsoft\Internet Explorer\Main [Default_Page_URL]=
+IE搜索 Software\Microsoft\Internet Explorer\Search [CustomizeSearch]=
+IE搜索 Software\Microsoft\Internet Explorer\Search [SearchAssistant]=
