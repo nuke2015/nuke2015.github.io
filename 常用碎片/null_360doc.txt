@@ -1,0 +1,1 @@
+javascript:document.body.oncopy=null;void(0);
