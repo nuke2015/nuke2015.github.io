@@ -25,3 +25,6 @@ D:\soft\chrome44.0.2403.130\chrome.exe --user-agent="zhangchuappforios iPhone"
 
 D:\soft\chrome44.0.2403.130\chrome.exe --user-agent="zhangchuappforandroid Android"
 
+sock5完全代理
+D:\soft\chrome44\chrome.exe --user-data-dir="C:\Cache\g1066" --proxy-server="socks5://127.0.0.1:1080"
+
