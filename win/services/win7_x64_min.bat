@@ -1,4 +1,4 @@
-@echo Restore The Service Start State Saved At 22:48:13.87 2016/03/30 周三  
+@echo Restore The Service Start State Saved At 23:50:05.91 2016/04/01 周五  
 @pause 
 sc config   AeLookupSvc start= DISABLED 
 sc config   ALG start= DISABLED 
@@ -9,14 +9,14 @@ sc config   AudioEndpointBuilder start= AUTO
 sc config   Audiosrv start= AUTO 
 sc config   AxInstSV start= DISABLED 
 sc config   BDESVC start= DISABLED 
-sc config   BFE start= DEMAND 
+sc config   BFE start= DISABLED 
 sc config   BITS start= DEMAND 
 sc config   Browser start= AUTO 
 sc config   bthserv start= DISABLED 
 sc config   CertPropSvc start= DISABLED 
 sc config   clr_optimization_v2.0.50727_32 start= DEMAND 
 sc config   COMSysApp start= DEMAND 
-sc config   CryptSvc start= DEMAND 
+sc config   CryptSvc start= DISABLED 
 sc config   CscService start= DISABLED 
 sc config   DcomLaunch start= AUTO 
 sc config   defragsvc start= DEMAND 
@@ -74,7 +74,7 @@ sc config   PNRPAutoReg start= DISABLED
 sc config   PNRPsvc start= DISABLED 
 sc config   PolicyAgent start= DISABLED 
 sc config   Power start= AUTO 
-sc config   ProfSvc start= DEMAND 
+sc config   ProfSvc start= AUTO 
 sc config   ProtectedStorage start= DEMAND 
 sc config   QWAVE start= DISABLED 
 sc config   RasAuto start= DISABLED 
