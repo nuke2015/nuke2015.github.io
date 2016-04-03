@@ -1,0 +1,12 @@
+Protocol 2
+ServerKeyBits 1024
+PermitRootLogin yes
+RSAAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile   /etc/ssh/mykey.pub
+PasswordAuthentication yes
+PermitEmptyPasswords no
+Port 22
+
+#sftp
+Subsystem	sftp	/usr/libexec/openssh/sftp-server
