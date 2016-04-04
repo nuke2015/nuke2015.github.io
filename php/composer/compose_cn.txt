@@ -1,0 +1,2 @@
+rem 注意不要在当前路径运行,要在composer.phar的旁边.
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
