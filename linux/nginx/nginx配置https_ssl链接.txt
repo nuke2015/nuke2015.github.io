@@ -6,8 +6,11 @@ sudo apt-get install libssl0.9.8
 
 # 生成一个RSA密钥 
 openssl genrsa -des3 -out bestphp.key 1024
+openssl genrsa -camellia128 -out bestphp_camellia.key 128
+openssl genrsa -aes128 -out bestphp_ase.key 128
  
 # 拷贝一个不需要输入密码的密钥文件
+openssl genrsa -aes128 -out bestphp.key 1024
 openssl rsa -in bestphp.key -out bestphp_nopass.key
  
 # 生成一个证书请求
@@ -45,12 +48,6 @@ ps -aux|grep nginx
 改成https://bestphp.net:443提示证书不信任.
 点继续,
 然后就能看到welcome了.
-
-
-
-
-
-
 
 
 
