@@ -1,0 +1,38 @@
+
+1.客户端页面采用AJAX技术请求服务器
+js.ajax
+
+2.popen()函数
+pclose(popen("/home/xinchen/backend.php &", 'r')); 
+
+3.CURL扩展
+$ch = curl_init();
+
+$curl_opt = array(CURLOPT_URL, 'http://www.example.com/backend.php', CURLOPT_RETURNTRANSFER, 1, CURLOPT_TIMEOUT, 1,);
+
+curl_setopt_array($ch, $curl_opt);
+
+curl_exec($ch);
+
+curl_close($ch);
+
+
+4.fscokopen()函数
+$fp = fsockopen("www.34ways.com", 80, $errno, $errstr, 30);
+if (!$fp) {
+    echo "$errstr ($errno)<br />\n";
+} else {
+    $out = "GET /index.php  / HTTP/1.1\r\n";
+    $out.= "Host: www.34ways.com\r\n";
+    $out.= "Connection: Close\r\n\r\n";
+    
+    fwrite($fp, $out);
+    
+    /*忽略执行结果
+        while (!feof($fp)) {
+            echo fgets($fp, 128);
+        }*/
+    fclose($fp);
+}
+
+因地制宜,选择其中一种.
