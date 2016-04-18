@@ -1,0 +1,31 @@
+
+
+server {
+	listen       80;
+	server_name  127.0.0.1;
+	index  index.php index.htm index.html;
+	root "D:/WT-NMP/WWW/vhost1";
+	location / {
+      if (!-e $request_filename) {
+          rewrite  ^(.*)$  /index.php?s=$1  last;
+          break;
+      }
+    }
+	location ~ \.php$ {
+	    try_files $uri =404; 
+            fastcgi_pass	php_farm;
+	    include		nginx.fastcgi.conf;
+    }
+    
+    #http://127.0.0.1/bak/xsed?ind=sdf&sfd1=1
+    location ~ ^/bak\/ {
+    	#Array ( [h] => 127.0.0.1 [uri] => /bak/xsed [is] => ? [arg] => ind=sdf [sfd1] => 1 )
+    	proxy_pass http://127.0.0.7/?h=$http_host&uri=$uri&is=$is_args&arg=$args;	
+    }
+
+    #pub.szzhangchu.com
+    location ~ ^/html\/ {
+      proxy_pass http://pub.szzhangchu.com:80;
+    }
+}
+
