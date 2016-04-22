@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 rem »á×Ô¶¯¸´»î
 sc delete CryptSvc
 
@@ -19,8 +18,3 @@ sc delete PcaSvc
 sc delete AMD External Events Utility
 sc delete KeyIso
 
-=======
-rem ×¨É±»á×Ô¶¯´Ó½ûÓÃ×´Ì¬¸´»îµÄ·þÎñ
-sc delete CryptSvc
-
->>>>>>> 45c8add... ä¹Ÿè®¸æ˜¯ä¸ªå¥½åŠžæ³•
