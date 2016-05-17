@@ -1,0 +1,83 @@
+{
+    "code": 0,
+    "msg": "success",
+    "version": "1.0",
+    "timestamp": 1463462252,
+    "data": {
+        "profile": {
+            "name": "孟非",
+            "headphoto": "https://www.baidu.com/img/bd_logo1.png",
+            "credit": 0,
+            "level": 4,
+            "birthday": 1211174252,
+            "province": "湖北",
+            "credential": [
+                "身份证",
+                "催乳师",
+                "健康证",
+                "月嫂证"
+            ],
+            "label": [
+                "责任心强",
+                "精通早教",
+                "经验丰富",
+                "干净勤快",
+                "和蔼可亲",
+                "营养月子餐"
+            ],
+            "introduce": "待顾主如家人,用心服务好每一位顾主!",
+            "price_market": 13800,
+            "price": 11800,
+            "service": 26,
+            "collection_count": 75,
+            "comment_score": 4.8,
+            "nurse": "从事母婴护理行业8年，护理过近一百位宝宝。其中早产儿和双胞胎护理数达十多个。"
+        },
+        "credit": {
+            "period": "36课时",
+            "length": "8年",
+            "honour": "五星月嫂",
+            "count": "70个",
+            "satisfy": "100",
+            "charts": [
+                20,
+                72,
+                62,
+                5,
+                44,
+                32,
+                58,
+                38,
+                91,
+                23,
+                8,
+                2
+            ]
+        },
+        "college": {
+            "name": "乐嘉老师",
+            "headphoto": "https://www.baidu.com/img/bd_logo1.png",
+            "honour": [
+                "商学院高级讲师",
+                "从业十四年",
+                "医科大毕业"
+            ],
+            "detail": "吉老师是护士专业出身,护理技能非常娴熟!",
+            "album": [
+                {
+                    "title": "培训期间照片",
+                    "image": "https://www.baidu.com/img/bd_logo1.png"
+                },
+                {
+                    "title": "优秀月嫂证",
+                    "image": "https://www.baidu.com/img/bd_logo1.png"
+                }
+            ]
+        },
+        "album_work": [
+            "https://www.baidu.com/img/bd_logo1.png",
+            "https://www.baidu.com/img/bd_logo1.png",
+            "https://www.baidu.com/img/bd_logo1.png"
+        ]
+    }
+}

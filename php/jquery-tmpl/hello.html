@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="./jquery.min.js"></script>
+        <script src="./jquery.tmpl.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var param={
+                methodName:"YuesaoView",
+                version:"2.0",
+                yuesao_id:"2",
+            };
+
+            jQuery.ajax({
+                type: "POST",
+                url: 'http://api.dev.ddys168.com',
+                data: param,
+                timeout: 6000,
+                success: function(json) {
+                    console.log(json);
+                    alert(json);
+                },
+                error:function(json){
+                    
+                },
+            });
+        </script>
+    </body>
+</html>

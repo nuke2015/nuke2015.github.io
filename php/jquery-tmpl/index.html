@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="./jquery.min.js"></script>
+        <script src="./jquery.tmpl.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var param={
+                methodName:"YuesaoView",
+                version:"2.0",
+                yuesao_id:"1",
+            };
+
+            jQuery.ajax({
+                type: "POST",
+                url: 'http://api.dev.ddys168.com',
+                data: param,
+                timeout: 6000,
+                success: function(json) {
+                    callback(json);
+                },
+                error:function(json){
+                    
+                },
+            });
+            function callback(json){
+                console.log(json);
+                $("#hellotpl").tmpl(json.data).appendTo("#target");
+            }
+        </script>
+        <script id="hellotpl" type="text/x-jquery-tmpl">
+        <p>姓名:${profile.name}</p>
+        <p>头像:${profile.headphoto}</p>
+        </script>
+        <div id="target"></div>
+    </body>
+</html>
