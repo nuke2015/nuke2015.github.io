@@ -1,0 +1,4 @@
+
+拉官方镜像
+docker run -it ubuntu:trusty /bin/bash
+
