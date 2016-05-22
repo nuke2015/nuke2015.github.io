@@ -32,9 +32,9 @@ iptables -A INPUT -p tcp  -m multiport --dport 20,21  -m state --state NEW -j AC
 service iptables save
 service iptables restart
 
-#ubuntu版本
-sudo apt-get install libdb3-util
-sudo db3_load -T -t hash -f logins.txt /etc/vsftpd/vsftpd_login.db
-sudo chmod 600 /etc/vsftpd/vsftpd_login.db
+#ubuntu14.04 版本
+sudo apt-get install db-util
+sudo db_load -T -t hash -f auth.txt /etc/vsftpd/auth.db
+sudo chmod 600 /etc/vsftpd/auth.db
 # This is not safe, you should delete this file.
 sudo chmod 600 logins.txt
