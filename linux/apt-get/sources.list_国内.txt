@@ -20,10 +20,9 @@ deb-src http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted univer
 
 deb-src http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
 
-deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
 
 #   163源：
-
+deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
 
 deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
