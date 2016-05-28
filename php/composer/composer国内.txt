@@ -9,3 +9,4 @@ php -r "readfile('https://getcomposer.org/installer');" | php
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
+得到composer.phar文件后,再把composer.bat放在相同目录
