@@ -1,0 +1,11 @@
+
+注意事项:
+需要openssl.dll支持
+
+直接php安装
+php -r "readfile('https://getcomposer.org/installer');" | php
+
+用curl命令安装
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
