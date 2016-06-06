@@ -1,0 +1,28 @@
+
+$this->plog('test',array('sql'=>Db::getLastSql(),date("Y-m-d H:i:s",$start_time),date("Y-m-d H:i:s",$end_time),$yuesao_id,$schedule));
+
+查月嫂档期
+SELECT *,from_unixtime(start_time) as start ,from_unixtime(end_time) as end FROM `ddys_caregiver_schedule` WHERE `cid` = '31' LIMIT 50
+
+运算过程
+SELECT * FROM `ddys_caregiver_schedule` WHERE  ( `start_time` BETWEEN '1465142400' AND '1465142400' OR `end_time` BETWEEN '1465142400' AND '1465142400' )  AND `cid` = 31
+
+SELECT * FROM `ddys_caregiver_schedule` WHERE ({$start_time} NOT BETWEEN `start_time` AND `end_time` ) and ({$end_time} NOT BETWEEN `start_time` AND `end_time` )
+
+
+提炼
+1.$start_time not between  history_start and history_end,
+2.$end_time not between  history_start and history_end,
+
+初稿
+$sql="SELECT * FROM `ddys_caregiver_schedule` WHERE (({$start_time} BETWEEN `start_time` AND `end_time` ) or ({$end_time} BETWEEN `start_time` AND `end_time` )) and cid={$yuesao_id}";
+$this->log('sq',$sql);
+$schedule = Db::query($sql);
+return $schedule;
+
+取没有交集
+select * from test_table where (startTime > a AND startTime < b) OR      (startTime < a AND endTime > b) OR      (endTime > a AND endTime < b)
+
+终稿
+select * from ddys_caregiver_schedule where ((start_time > {$start_time} AND start_time < {$end_time}) OR (start_time < {$start_time} AND end_time > {$end_time}) OR (end_time > {$start_time} AND end_time < {$end_time})) and cid={$yuesao_id}
+
