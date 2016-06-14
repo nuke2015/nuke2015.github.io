@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+            <meta charset="utf-8"/>
+            <title>
+                mdater
+            </title>
+            <link href="zepto.mdater.css" rel="stylesheet">
+                <script src="jquery-2.1.1.min.js">
+                </script>
+                <script src="zepto.mdater.js">
+                </script>
+            </link>
+        </meta>
+    </head>
+    <body>
+        <span id="in">
+            点击选择时间
+        </span>
+        <script>
+            $('#in').mdater({
+    minDate : new Date(2015, 2, 10)
+});
+        </script>
+    </body>
+</html>
