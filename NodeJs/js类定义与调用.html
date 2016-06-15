@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            hello:function()
+            {
+                console.log('hello');
+            },
+            world:function(res){
+                console.log(res+'world');
+            },
+            test:function(){
+                obj.hello();
+                obj.future();
+                this.world('say this ');
+            },
+            future:function(){
+                console.log('future');
+            }
+        }
+        obj.test();
+    </script>
+</body>
+</html>
