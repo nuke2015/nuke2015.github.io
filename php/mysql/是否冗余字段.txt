@@ -1,0 +1,60 @@
+
+
+user_coupon存储的是用户的优惠券表.这个表冗余了一个字段,money就是优惠券金额.
+若不冗余,则取的时候,要去coupon表取数据.
+正常来讲,优惠券的展示需要标题+备注+有效期信息,不可能全部冗余,所以,还是要查coupon_item表.
+但是冗余一个money字段,有什么用呢?
+它可以,在输出的时候按money排序.
+此时是不需要做联表的,这是用户体验细节的优化.
+结论:
+少量的字段冗余可以提高数据查询效率,但是一定要避免做不必要的冗余,
+比如,每张表冗余用户的昵称.
+如果用户修改昵称,则旧表展示的还是旧昵称,这非常非常的让用户不爽.
+用户取昵称及其它属性,可以统一做缓存.
+所以,与用户相关的表,只需要 一个字段user_id即可.
+完全没必要冗余用户昵称字段.因为取昵称的场景太常见了,所以,要做统一的缓存读写优化.
+
+
+
+-- Adminer 3.7.1 MySQL dump
+
+SET NAMES utf8;
+SET foreign_key_checks = 0;
+SET time_zone = '+08:00';
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `ddys_coupon_item`;
+CREATE TABLE `ddys_coupon_item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(120) NOT NULL COMMENT '优惠券编码及口令',
+  `status` tinyint(1) NOT NULL COMMENT '状态 0不可用 1可用',
+  `create_at` int(11) NOT NULL COMMENT '生成时间',
+  `coupon_group_id` tinyint(4) NOT NULL COMMENT '优惠券分类归属id',
+  `expire_days` int(10) NOT NULL COMMENT '过期天数',
+  `start_time` int(11) NOT NULL DEFAULT '0' COMMENT '有效开始时间',
+  `end_time` int(11) NOT NULL DEFAULT '0' COMMENT '有效结束时间',
+  `money` decimal(8,2) NOT NULL COMMENT '金额',
+  `coupon_event_id` bigint(20) NOT NULL COMMENT '对应的派发事件/类型',
+  `title` varchar(200) NOT NULL COMMENT '标题',
+  `notes` varchar(250) NOT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code` (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='优惠券实体';
+
+
+DROP TABLE IF EXISTS `ddys_user_coupon`;
+CREATE TABLE `ddys_user_coupon` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `coupon_item_id` bigint(20) NOT NULL COMMENT '优惠券id',
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `start_time` int(11) NOT NULL COMMENT '有效期起始时间',
+  `end_time` int(11) NOT NULL COMMENT '有效期结束时间',
+  `status` tinyint(4) NOT NULL COMMENT '状态[0无效1有效]',
+  `create_at` int(11) NOT NULL COMMENT '添加时间',
+  `money` decimal(8,2) NOT NULL COMMENT '金额',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户拥有的优惠券列表';
+
+
+-- 2016-06-22 02:39:58
+
