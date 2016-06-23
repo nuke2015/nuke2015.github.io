@@ -1,0 +1,30 @@
+内置标签
+变量输出使用普通标签就足够了，但是要完成其他的控制、循环和判断功能，就需要借助模板引擎的标签库功能了，系统内置标签库的所有标签无需引入标签库即可直接使用。
+
+内置标签包括：
+
+标签名 作用  包含属性
+include 包含外部模板文件（闭合）    file
+import  导入资源文件（闭合 包括js css load别名）  file,href,type,value,basepath
+volist  循环数组数据输出    name,id,offset,length,key,mod
+foreach 数组或对象遍历输出   name,item,key
+for For循环数据输出   name,from,to,before,step
+switch  分支判断输出  name
+case    分支判断输出（必须和switch配套使用）   value,break
+default 默认情况输出（闭合 必须和switch配套使用）    无
+compare 比较输出（包括eq neq lt gt egt elt heq nheq等别名）    name,value,type
+range   范围判断输出（包括in notin between notbetween别名） name,value,type
+present 判断是否赋值  name
+notpresent  判断是否尚未赋值    name
+empty   判断数据是否为空    name
+notempty    判断数据是否不为空   name
+defined 判断常量是否定义    name
+notdefined  判断常量是否未定义   name
+define  常量定义（闭合）    name,value
+assign  变量赋值（闭合）    name,value
+if  条件判断输出  condition
+elseif  条件判断输出（闭合 必须和if标签配套使用）  condition
+else    条件不成立输出（闭合 可用于其他标签） 无
+php 使用php代码 无
+
+

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Angular JS ajax</title>
+        <script src="http://www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
+    </head>
+    <body>
+        <h2>AngularJS Sample Application</h2>
+        <div ng-app="" ng-controller="MyController">
+            接口消息{{response.msg}}
+            <br/>
+            姓名:{{data.profile.nickname}}
+            <br/>
+            头像:{{data.profile.headphoto}}
+            <br/>
+        </div>
+        <script>
+            function MyController($scope,$http) {
+                var url="http://api.dev.ddys168.com/index.php";
+                var data={
+                    'methodName' : "YuesaoView",
+                    'version' : "2.0",
+                    'yuesao_id' : "40"
+                };
+                $http({
+                    url:url,
+                    method:'GET',
+                    params:data
+                    }).success( function(response) {
+                        console.log(response.data);
+                        $scope.response=response;
+                        $scope.data=response.data;
+                    });
+            }
+        </script>
+
+    </body>
+</html>

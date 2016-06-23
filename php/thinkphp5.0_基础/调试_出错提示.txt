@@ -1,0 +1,55 @@
+开启调试模式很简单，只需要在入口文件中增加一行常量定义代码：
+
+// 开启调试模式
+define('APP_DEBUG', true);
+在完成开发阶段部署到生产环境后，只需要关闭调试模式或者删除调试模式定义代码即可切换到部署模式。
+
+// 关闭调试模式
+define('APP_DEBUG', false);
+
+// 显示错误信息
+'show_error_msg'        =>  true,   
+
+// 异常处理忽略的错误类型，支持PHP所有的错误级别常量，多个级别可以用|运算法
+// 参考：http://php.net/manual/en/errorfunc.constants.php
+'exception_ignore_type'  => E_WARNING|E_USER_WARNING|E_NOTICE|E_USER_NOTICE,
+
+另外一种方式是配置error_page参数，把所有异常和错误都重定向到一个统一页面，从而避免让用户看到异常信息，通常在部署模式下面使用。error_page参数必须是一个完整的URL地址，例如：
+
+'error_page' =>'/public/error.html'
+
+// 显示页面Trace信息
+'log' =>[
+    'type'       =>  'trace',
+    'trace_tabs' =>  [
+         'base'=>'基本',
+         'file'=>'文件',
+         'info'=>'流程',
+         'error'=>'错误',
+         'sql'=>'SQL',
+         'debug'=>'调试',
+         'user'=>'用户'
+     ]
+]
+
+
+性能调优
+Debug::remark('begin');
+// ...其他代码段
+Debug::remark('end');
+// ...也许这里还有其他代码
+// 进行统计区间
+echo Debug::getRangeTime('begin','end').'s';
+
+
+Db::listen(function($sql,$time,$explain){
+    // 记录SQL
+    echo $sql. ' ['.$time.'s]';
+    // 查看性能分析结果
+    dump($explain);
+});
+
+User::get(1);
+echo User::getLastSql();
+echo User::fetchSql()->find(1);
+
