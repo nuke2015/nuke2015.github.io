@@ -1,0 +1,8 @@
+
+注意:
+在pay.php中需要指定app_id+api_key+private.pem证书
+
+写死alipay_wap和amount=1直接访问pay.php得到
+{ "id": "ch_yr50GSy5WPq98OqbD4fLiXDG", "object": "charge", "created": 1467168435, "livemode": false, "paid": false, "refunded": false, "app": "app_anHu1OG0OSWLP4en", "channel": "alipay_wap", "order_no": "421f84d2668c", "client_ip": "127.0.0.1", "amount": 1, "amount_settle": 1, "currency": "cny", "subject": "Your Subject", "body": "Your Body", "extra": { "success_url": "http://example.com/success", "cancel_url": "http://example.com/cancel" }, "time_paid": null, "time_expire": 1467254835, "time_settle": null, "transaction_no": null, "refunds": { "object": "list", "url": "/v1/charges/ch_yr50GSy5WPq98OqbD4fLiXDG/refunds", "has_more": false, "data": [] }, "amount_refunded": 0, "failure_code": null, "failure_msg": null, "metadata": {}, "credential": { "object": "credential", "alipay_wap": { "channel_url": "https://mapi.alipay.com/gateway.do", "body": "Your Body", "it_b_pay": "2016-06-30 10:47:15", "notify_url": "https%3A%2F%2Fapi.pingxx.com%2Fnotify%2Fcharges%2Fch_yr50GSy5WPq98OqbD4fLiXDG", "out_trade_no": "421f84d2668c", "partner": "2008189724825581", "payment_type": "1", "return_url": "http%3A%2F%2Fexample.com%2Fsuccess", "seller_id": "2008189724825581", "service": "alipay.wap.create.direct.pay.by.user", "subject": "Your Subject", "total_fee": "0.01", "sign": "WfNuHX2JoBWJioIvv5dV2/pbmg+tyvVCAORjiThFNSnD1y1LYirf9/E7S5DCU2Qtn9LGXlQGxqehiMSsTBHjeX/+ekilyz7308r/QEEUGmiewanZZfRtmC7d0n27W0yWt5nM8/+SCAegwuRrPBLOP70VTBPMKin1U6J4vm0prnM=", "sign_type": "RSA" } }, "description": null }
+
+在pay.php中可以指定success和cancel时返回的地址.

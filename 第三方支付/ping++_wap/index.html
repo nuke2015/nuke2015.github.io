@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+            <title>
+                MiniCheckout
+            </title>
+            <link href="/cssjs/styles/pinus.css" rel="stylesheet" type="text/css">
+            </link>
+        </meta>
+    </head>
+    <body>
+        <header>
+            <div class="h_content">
+                <span>
+                </span>
+            </div>
+        </header>
+        <section class="block">
+            <br/>
+            <br/>
+            <br/>
+            <div class="content2">
+                <div class="ch">
+                    <span class="up" onclick="wap_pay('upacp_wap')">
+                        银联 WAP
+                    </span>
+                    <br/>
+                    <span class="up" onclick="wap_pay('alipay_wap')">
+                        支付宝 WAP
+                    </span>
+                    <br/>
+                    <span class="up" onclick="wap_pay('bfb_wap')">
+                        百度钱包 WAP
+                    </span>
+                    <br/>
+                    <span class="up" onclick="wap_pay('jdpay_wap')">
+                        京东支付 WAP
+                    </span>
+                    <br/>
+                    <span class="up" onclick="wap_pay('yeepay_wap')">
+                        易宝支付 WAP
+                    </span>
+                    <br/>
+                    <span class="up" onclick="wap_pay('wx_pub')">
+                        微信浏览器内公众号支付 WAP
+                    </span>
+                </div>
+            </div>
+        </section>
+        <script src="/src/pingpp.js" type="text/javascript">
+        </script>
+        <script>
+            function wap_pay(channel) {
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/pay.php", true);
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.send(JSON.stringify({
+                    channel: 'alipay_wap',
+                    amount: 1
+                }));
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        console.log(xhr.responseText);
+                        pingpp.createPayment(xhr.responseText, function(result, err) {
+                            console.log(result);
+                            console.log(err.msg);
+                            console.log(err.extra);
+                        });
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
