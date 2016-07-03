@@ -1,0 +1,30 @@
+
+#此配置作用是把127.0.0.1/html/index.html,
+#透传到example.com:80/weixin/static/html/index.html目录中
+server {
+    listen       80;
+    server_name  127.0.0.1;
+    index  index.php index.htm index.html;
+    root "D:/WT-NMP/WWW/vhost1";
+
+    #先换目录
+    location / {
+      if (!-e $request_filename) {
+          rewrite  ^(.*)$  /weixin/static$1  last;
+          break;
+      }
+    }
+    
+    #再换域名
+    location ~ ^/weixin\/static\/ {
+        proxy_pass http://example.com:80;   
+    }
+
+    #其它收编
+    location ~ \.php$ {
+        try_files $uri =404; 
+            fastcgi_pass    php_farm;
+        include     nginx.fastcgi.conf;
+    }
+}
+
