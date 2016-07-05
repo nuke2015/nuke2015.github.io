@@ -28,11 +28,18 @@ var handleError = function(err) {
 }
 gulp.task('uglifyjs', function() {
     var combined = combiner.obj([
-        gulp.src(dir_src + '/js/**/*.js'),
+        gulp.src(dir_src + '/js/busi/*.js'),
         sourcemaps.init(),
         uglify(),
         sourcemaps.write('./'),
-        gulp.dest('dist/min/js/')
+        gulp.dest('dist/min/js/busi')
+    ])
+    var combined = combiner.obj([
+        gulp.src(dir_src + '/js/utils/*.js'),
+        sourcemaps.init(),
+        uglify(),
+        sourcemaps.write('./'),
+        gulp.dest('dist/min/js/utils')
     ])
     combined.on('error', handleError)
 });
@@ -74,6 +81,9 @@ gulp.task('revCollector', function() {
 });
 gulp.task('copy', function() {
     gulp.src(dir_src + '/index.html').pipe(gulp.dest('dist/'))
+    gulp.src(dir_src + '/js/lib/*').pipe(gulp.dest('dist/js/lib'))
+    gulp.src(dir_src + '/js/pay/*').pipe(gulp.dest('dist/js/pay'))
+    gulp.src(dir_src + '/js/plugs/*').pipe(gulp.dest('dist/js/plugs'))
 });
 gulp.task('min', ['uglifyjs', 'minifycss', 'image']);
 gulp.task('verctrl', ['rev', 'revCollector']);
