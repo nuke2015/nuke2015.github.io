@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>家家月嫂</title> 
+    <link rel="stylesheet" href="/css/style-050fdf81eb.css">
+    <link rel="stylesheet" href="/css/swiper-3-3a731d5a64.3.1.min.css">
+    <link href="/css/mobiscroll_date-3766cf0e81.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/js/plugs/spinningwheel-didi.css"/>
+    <style>
+        .weui_loading_toast {
+            display: none;
+        }
+        .mask-ctn{
+            position: fixed;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+        }
+    </style>
+    <script src="/js/utils/must-62c9533e4f.js"></script>
+</head>
+<body>
+
+    <section class="wrapper">
+        <!--预产预定-->
+        <section class="register oh">
+            <div class="icon-2 fl">
+                <img alt="" src="/images/icon_2.png"/>
+            </div>
+            <div class="fl tab-area tab-bg js-birth-ctn ">
+                设置宝宝预产期,抢先一步锁定优质月嫂
+            </div>
+            <!--  <div class="icon-3 fr"> <img src="/images/icon_3.png" alt=""></div> -->
+        </section>
+        <!--banner条-->
+        <section class="jm-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper js-swiper-ctn">
+                    <!--<div class="swiper-slide"><a href="javascript:void(0)"><img src="/images/banner_0.jpg" alt=""></a></div>-->
+                    <!--<div class="swiper-slide"><a href="javascript:void(0)"><img src="/images/banner_0.jpg" alt=""></a></div>-->
+                    <!--<div class="swiper-slide"><a href="javascript:void(0)"><img src="/images/banner_0.jpg" alt=""></a></div>-->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="service oh">
+            <!--住家月子服务-->
+            <section class="jm-service1 oh">
+                <div class="title">
+                    住家月子服务
+                </div>
+                <!-- <div class="specialAd js-specialAd">新手体验，立减800</div> -->
+                <div class="part1 js-service-ctn mbs ">
+                    <img alt="" src=" " width="690">
+                    </img>
+                </div>
+                <div class="tiyan">
+                    <img alt="" src="/images/icon_0.png" width="18">
+                        226人体验
+                    </img>
+                </div>
+                <div class="part2 js-home-ctn mts" style="margin-top:15px;">
+                </div>
+            </section>
+            <!--住院月子服务-->
+            <section class="jm-service1 oh">
+                <div class="title">
+                    住院月子服务
+                </div>
+                <div class="part2 js-hospital-ctn">
+                </div>
+            </section>
+            <!--服务保障-->
+            <section class="oh ser">
+                <p>
+                    服务保障
+                </p>
+                <div>
+                    <img alt="" src="/img/index001.png"/>
+                </div>
+            </section>
+            <!--服务流程-->
+            <section class="oh ser">
+                <p>
+                    服务流程
+                </p>
+                <div>
+                    <img alt="" src="/img/index002.png"/>
+                </div>
+            </section>
+        </section>
+    </section>
+    <script id="swipebody" nowith="yes" type="text/html">
+        <%
+            for(var i=0;i<banner.length;i++ ){
+                var item = banner[i];
+        %>
+            <div class="swiper-slide js-link-bytype"  data-item='<%=json2stringify(item)%>'><a href="javascript:void(0)"><img src="<%=item.image%>" alt=""></a></div>
+        <%}
+        %>
+    </script>
+    <script id="hospitalservicebody" nowith="yes" type="text/html">
+        <%
+        for(var i=0;i<hospital.length;i++ ){
+            var item = hospital[i];
+            var float = "fl";
+            if(i%2!=0){
+                float = "fr";
+            }
+        %>
+            <div class="ad <%=float%> js-link2yslist-item"  day="<%=item.day%>" style = "margin-top: 0;" data-item='<%=json2stringify(item)%>'>
+                <img src="<%=item.image%>" alt="" width="330">
+                <div class="text">
+                    <%=item.day%>天 | <%=item.price%>元
+                </div>
+                <div class="subText">
+                    <div class="fl"><img src="/images/icon_0.png"   width="18" alt=""></div>
+                    <div class="fl"><%=item.exp_count%></div>
+                    <div  class="through fr">原价:<%=item.price_market%>元</div>
+                </div>
+            </div>
+        <%}
+        %>
+    </script>
+    <script id="homeservicebody" nowith="yes" type="text/html">
+        <%
+        for(var i=0;i<home.length;i++ ){
+        var item = home[i];
+        var float = "fl";
+        if(i%2!=0){
+        float = "fr";
+        }
+        %>
+        <div class="ad <%=float%> js-link2yslist-item"  day="<%=item.day%>" style = "margin-top: 0;" data-item='<%=json2stringify(item)%>'>
+            <img src="<%=item.image%>" alt="" width="330">
+            <div class="text">
+                <%=item.day%>天 | <%=item.price%>元
+            </div>
+            <div class="subText">
+                <div class="fl"><img src="/images/icon_0.png"   width="18" alt=""></div>
+                <div class="fl"><%=item.exp_count%></div>
+                <div  class="through fr">原价:<%=item.price_market%>元</div>
+            </div>
+        </div>
+        <%}
+        %>
+    </script>
+    <script id="servicebody" nowith="yes" type="text/html">
+        <%
+        for(var i=0;i<service.length;i++ ){
+            var item = service[i];
+        %>
+        <img src="<%=item.image%>" class="js-link2yslist-item" alt="" data-item='<%=json2stringify(item)%>' width="690">
+
+        <%}%>
+    </script>
+
+    <script src="/js/lib/jquery-2-e40ec2161f.1.1.min.js"></script>
+    <script src="/js/lib/fastclick-6e9d3b0da7.js"></script>
+    <script src="/js/utils/template-c499d00a3c.js"></script>
+    <script src="/js/utils/utils-148dce5c26.js"></script>
+    <script src="/js/plugs/spinningwheel-21659f1709.js"></script>
+    <script src="/js/lib/swiper-3-b20771c39a.3.1.jquery.min.js"></script>
+    <script src="/js/busi/index-25730b3f56.js"></script>
+    <div class="mask-ctn js-mask">
+    </div>
+</body>
+</html>

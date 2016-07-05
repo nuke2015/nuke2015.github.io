@@ -1,0 +1,54 @@
+var gulp = require('gulp')
+var gutil = require('gulp-util')
+var uglify = require('gulp-uglify')
+var watchPath = require('gulp-watch-path')
+var combiner = require('stream-combiner2')
+var sourcemaps = require('gulp-sourcemaps')
+var minifycss = require('gulp-minify-css')
+var autoprefixer = require('gulp-autoprefixer')
+var less = require('gulp-less')
+var sass = require('gulp-ruby-sass')
+var imagemin = require('gulp-imagemin')
+var handlebars = require('gulp-handlebars');
+var wrap = require('gulp-wrap');
+var declare = require('gulp-declare');
+var handleError = function(err) {
+    var colors = gutil.colors;
+    console.log('\n')
+    gutil.log(colors.red('Error!'))
+    gutil.log('fileName: ' + colors.red(err.fileName))
+    gutil.log('lineNumber: ' + colors.red(err.lineNumber))
+    gutil.log('message: ' + err.message)
+    gutil.log('plugin: ' + colors.yellow(err.plugin))
+}
+gulp.task('uglifyjs', function() {
+    var combined = combiner.obj([
+        gulp.src('../static/js/**/*.js'),
+        sourcemaps.init(),
+        uglify(),
+        sourcemaps.write('./'),
+        gulp.dest('dist/js/')
+    ])
+    combined.on('error', handleError)
+});
+gulp.task('minifycss', function() {
+    gulp.src('../static/css/**/*.css').pipe(sourcemaps.init()).pipe(autoprefixer({
+        browsers: 'last 2 versions'
+    })).pipe(minifycss()).pipe(sourcemaps.write('./')).pipe(gulp.dest('dist/css/'))
+});
+gulp.task('image', function() {
+    gulp.src('../static/images/**/*').pipe(imagemin({
+        progressive: true
+    })).pipe(gulp.dest('dist/images'))
+    gulp.src('../static/icon/**/*').pipe(imagemin({
+        progressive: true
+    })).pipe(gulp.dest('dist/icon'))
+    gulp.src('../static/img/**/*').pipe(imagemin({
+        progressive: true
+    })).pipe(gulp.dest('dist/img'))
+});
+gulp.task('copy', function() {
+    gulp.src('../static/html/**/*').pipe(gulp.dest('dist/html/'))
+});
+gulp.task('default', ['uglifyjs', 'minifycss', 'image', 'copy']);
+gulp.task('oss', ['uglifyjs', 'minifycss', 'image', 'copy']);
