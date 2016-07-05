@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html id="gz">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>月嫂详情</title>
+    <link rel="stylesheet" href="/css/yuesao_details.css">
+    <script src="/js/utils/must.js"></script>
+</head>
+<body id="tbody">
+<div class="line5_box js-line5_box">
+    <div class="line5">
+        <div class="l5_l2 js-imglist-ctn">
+            <!--<div class="l5l2_1">-->
+                <!--<div class="l5l2_11"><img src="/images/yuesao_details/jibenhuli.png" width="220" height="160"></div>-->
+                <!--<div class="l5l2_12">创建时间</div>-->
+            <!--</div>-->
+            <!--<div class="l5l2_1">-->
+                <!--<div class="l5l2_11"><img src="/images/yuesao_details/kexueweiyang.png" width="220" height="160"></div>-->
+            <!--</div>-->
+            <!--<div class="l5l2_1">-->
+                <!--<div class="l5l2_11"><img src="/images/yuesao_details/baobaozaojiao.png" width="220" height="160"></div>-->
+            <!--</div>-->
+            <!--<div class="l5l2_1">-->
+                <!--<div class="l5l2_11"><img src="/images/yuesao_details/chanhouhuifu.png" width="220" height="160"></div>-->
+            <!--</div>-->
+            <!--<div class="l5l2_1">-->
+                <!--<div class="l5l2_11"><img src="/images/yuesao_details/yuezican.png" width="220" height="160"></div>-->
+            <!--</div>-->
+            <!--<div class="l5l2_1">-->
+                <!--<div class="l5l2_11"><img src="/images/yuesao_details/muyinghuli.png" width="220" height="160"></div>-->
+            <!--</div>-->
+
+
+        </div>
+        <div class="carrousel">
+             
+            <div class="wrapper"> 
+                 <img src="" alt="BINGOO" /> 
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<div class="tipsnone">暂无相关数据</div>
+
+<script id="imgItem" type="text/html" nowith="yes">
+
+<!-- <div class="portrait"></div> -->
+
+    <%for(var i=0;i<data.length;i++){
+        var item = data[i];
+    %>
+    <div class="l5l2_1 portrait" onclick="portrait()">
+        <div class="l5l2_11"><img  class="pic" src="<%=item.url%>" data-src-wide="<%=item.url%>" width="220" height="160"></div>
+        <!--<div class="l5l2_12"><%=timeStampToDate(item.create_at)%></div>-->
+    </div>
+    <%}%>
+   
+</script>
+<script src="/js/lib/jquery-2.1.1.min.js"></script>
+<script src="/js/lib/fastclick.js"></script>
+<script src="/js/utils/template.js"></script>
+<script src="/js/utils/utils.js"></script>
+<script src="/js/busi/gzfc.js"></script>
+<script type="text/javascript">  
+    function portrait(){
+        var carrousel = $( ".carrousel" );  
+        $( ".portrait" ).bind('click',function(e){
+              var src = $(this).find(".l5l2_11").find(".pic").attr( "data-src-wide" );
+              carrousel.find("img").attr( "src", src );
+              carrousel.fadeIn(200);
+              carrousel.bind('click',function(){
+                 carrousel.fadeOut(200);
+              })
+        });
+        
+    }    
+</script>
+</body>
+</html>

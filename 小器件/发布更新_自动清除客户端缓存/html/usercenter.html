@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=""/>
+    <meta name="keyword" content=""/>
+    <meta name="robots" content="none"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="format-detection" content="telephone=no,address=no,email=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/css/gb.css"/>
+    <link rel="stylesheet" href="/css/sprite.css"/>
+    <link rel="stylesheet" href="/css/weui.css"/>
+    <script src="/js/utils/must.js"></script>
+</head>
+<body class="backwhite">
+<div class="detail-header">
+    <div class="w750 backff72ae">
+        <div class="service-info-detail w690 backff72ae h350 js-userinfo-ctn">
+            <div class="fl mt55 ml26">
+                <div class="jjys jjys-outer-tx relative star-img-info">
+                    <div class="usercenter-img-info"><img src="/images/tx001.png" alt="" width="200" height="200"/></div>
+                </div>
+            </div>
+            <div class="fl ml30 mt120 ys-base-info-ctn w400">
+                <div class="ys-base-info w400 h54">
+                    <div class="fl cwhite f34">家家月嫂</div>
+                </div>
+                <div class="ys-fee-info cb w400 mt44 cwhite">
+                    <div class="f28">  宝妈预产期：<span class="f28">2017-01-04</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="detail-ctn mt120 border-top">
+    <div class="w750 backwhite border-bottom js-menu-item" d-link="1">
+        <div class="w690 h88">
+            <div class="fl jjys jjys-myorder mt26 mll"></div>
+            <div class="fl h88 t ml30">我的订单</div>
+            <div class="fr h88 i jjys jjys-right-icon mt28"></div>
+        </div>
+    </div>
+    <div class="w750 backwhite border-bottom cb js-menu-item" d-link="2">
+        <div class="w690 h88">
+            <div class="fl jjys-myfav jjys mt26 mll"></div>
+            <div class="fl h88 t ml30">我的关注</div>
+            <div class="fr h88 i jjys jjys-right-icon mt28"></div>
+        </div>
+    </div>
+    <div class="w750 backwhite border-bottom cb js-menu-item" d-link="3">
+        <div class="w690 h88">
+            <div class="fl coupon-bg mt26 mll"></div>
+            <div class="fl h88 t ml30">我的优惠劵</div>
+            <div class="fr h88 i jjys jjys-right-icon mt28"></div>
+        </div>
+    </div>
+    <div class="w750 backwhite border-bottom cb js-mykf">
+        <div class="w690 h88 relative">
+            <div class="fl jjys-mykf jjys mt26 mll"></div>
+            <div class="fl h88 t ml30">专属客服</div>
+            <!--<div class="fr h88 i jjys jjys-right-icon mt28"></div>-->
+            <!--<div class="usercenter-number">4</div>-->
+        </div>
+    </div>
+    <div class="w750 backwhite border-bottom cb js-menu-item" d-link="4">
+        <div class="w690 h88">
+            <div class="fl jjys-aboatjj jjys mt26 mll"></div>
+            <div class="fl h88 t ml30">关于家家</div>
+            <div class="fr h88 i jjys jjys-right-icon mt28"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="weui_mask js-pop-wind-mask hide"></div>
+<div class="pop-wind w690  backwhite js-pop-wind hide">
+    <div class="w690 relative">
+        <div class="w490">
+            <div><img  class="mt70" src="/images/kftx.png" alt="" width="142" height="142"/></div>
+            <div class="c3 f34">小丽</div>
+            <div class="f28 cb2">您的满意是我们最大的幸福</div>
+            <div class="f28 cb2">在线时间：9:00-21:00</div>
+            <div class="mtm"><a class="f45 c3" href="tel:400-060-9953">400-060-9953</a></div>
+            <div class="contactme-btn mt40"><a  class="" href="tel:400-060-9953">立刻联系</a> </div>
+        </div>
+        <div class="close-kf"></div>
+    </div>
+</div>
+
+<script id="usercenterinfobody" type="text/html" nowith="yes">
+<div class="fl mt55 ml26">
+    <div class="jjys jjys-outer-tx relative star-img-info">
+        <div class="usercenter-img-info"><img src="<%=headphoto%>" alt="" width="200" height="200"/></div>
+    </div>
+</div>
+<div class="fl ml30 mt120 ys-base-info-ctn w400">
+    <div class="ys-base-info w400 h54">
+        <div class="fl cwhite f34"><%=nickname%></div>
+    </div>
+    <div class="ys-fee-info cb w400 mt44 cwhite">
+        <div class="f28">  宝妈预产期：<span class="f28"><%=timeStampToDate(predict_day)%></span></div>
+    </div>
+</div>
+</script>
+
+<script src="/js/lib/jquery-2.1.1.min.js"></script>
+<script src="/js/lib/fastclick.js"></script>
+<script src="/js/utils/template.js"></script>
+<script src="/js/utils/utils.js"></script>
+<script>
+    if(!helper.isLogin()){helper.gotoLogin();}
+</script>
+
+<script src="/js/busi/usercenter.js"></script>
+<script type="text/javascript">
+    helper.setTitle("个人中心");
+</script>
+
+</body>
+</html>

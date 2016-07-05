@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>收入说明</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=""/>
+    <meta name="keyword" content=""/>
+    <meta name="robots" content="none"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="format-detection" content="telephone=no,address=no,email=no"/>
+    <script src="/js/utils/must.js"></script>
+    <link rel="stylesheet" href="/css/gb.css"/>
+    <style type="text/css">
+        #income{background: #f8f8f8;}
+        .section{
+            box-sizing: border-box;
+            width:750px;
+            margin-top:34px;    
+            background:#fff;
+            padding:0 35px 15px 35px;
+        }
+        .section ul li{
+            line-height:60px;
+            color:#858585;
+            font-size:25px;
+         }
+        .section ul li.ulTitle{
+            box-sizing: border-box;
+            font-size:36px;
+            height:97px;
+            line-height:97px;
+            list-style:none;
+            margin-bottom:10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .section ul li:before{
+            content:'●';
+            font-size:12px;
+            color:#9556bf;
+            margin-right:5px;
+        }
+        .section ul li.ulTitle:before{
+            content:'';
+            font-size:0;
+        }
+        .section ul li.ulTitle span{
+            color:#ea8b01;
+            font-size:40px;
+            margin-right:17px;
+        }
+        table{
+            width:581px;
+            height:431px;
+            display: block;
+            margin:37px auto 20px auto;  
+            border-collapse: collapse;
+            border:1px solid #9556bf;
+            line-height: 72px;
+        }
+        table.short{
+            height:367px;
+        }
+        table tr td{
+            width:290px;
+            text-align: center;
+            border-bottom:1px solid #9556bf;
+        }
+        table tr td:nth-child(1){
+            border-right:1px solid #9556bf;
+        }
+        #noBorder td{
+            border-bottom:none;
+        }
+        table .thead{
+            font-size:30px;
+            color:#9556bf;
+        }
+        table tbody{
+            font-size:28px;
+            color:#858585;
+                }
+        .incomeTips{
+            color:#ab8ebf;
+            line-height:60px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body id="income">
+    <section class="section">
+        <ul>
+            <li class="ulTitle">月嫂服务收入</li>
+            <li>每笔订单收入=订单金额-平台服务费</li>
+            <li>平台服务费为订单金额的15%</li>
+            <li>活动优惠卷由平台承担</li>
+            <li>1天月嫂服务免收平台服务费</li>
+        </ul>
+    </section>
+    <section class="section">
+        <ul>
+            <li class="ulTitle">私单免收佣，额外奖励<span>500元</span> </li>
+            <li>私单是指月嫂自主开发的客户上线平台交易，服务完成后，公司给予每单：500元奖励</li>
+            <li>私单不收取平台服务费标准如下：</li>
+        </ul>
+         
+        <p class="incomeTips">*短单（1天、3天、5天）不计奖励</p>
+        <p class="incomeTips">*有效期：2016年7月1日至2016年7月31日</p>
+    </section>
+    <section class="section">
+        <ul>
+            <li class="ulTitle"><span>100元</span>服务品质奖</li>
+            <li>每笔订单在手机App或网站上获得客户的5星好评（包含真是文字+图片评价）即可获得100元奖励</li>
+            <li>1年内若获得多个5星好评，还有额外奖励，奖励标准如下：</li>
+        </ul>
+         <table class="short">            
+            <tr class="thead"><td>好评数量</td><td>奖励金额</td></tr>
+            
+            <tr><td>3-4个</td><td>500元</td></tr>
+            <tr><td>5-7个</td><td>1000元</td></tr>
+            <tr><td>8-9个</td><td>3000元</td></tr>
+            <tr id="noBorder"><td>10个以上</td><td>5000元</td></tr>
+           
+            
+        </table>
+        <p class="incomeTips">*1天体验不计服务品质奖</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keyword" content=""/>
+    <meta name="robots" content="none"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="format-detection" content="telephone=no,address=no,email=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/css/gb.css"/>
+    <link rel="stylesheet" href="/css/sprite.css"/>
+    <link rel="stylesheet" href="/css/weui.css"/>
+    <script src="/js/utils/must.js"></script>
+</head>
+<body >
+<div class="w750 js-content-body">
+
+</div>
+
+<div class="pm100"></div>
+<div class="w750 cb  h100 fixed-bottom">
+    <div class="h100 confirmpay-btn js-confirmpay-btn">确认支付</div>
+</div>
+
+
+<script id="contentbody" type="text/html" nowith="yes">
+    <div class="w750">
+        <div class="w750 border-bottom">
+            <div class="statustype backf8 w690">
+                <h2 class="c8 f28">费用合计</h2>
+            </div>
+        </div>
+        <div class="confirmpay">
+            <div class="w750 backwhite border-bottom">
+                <div class="w690 h88">
+                    <div class="fl h88 t"><%=info_product.name%></div>
+                    <div class="fr h88 t">￥<%=info_order.product_price%>元</div>
+                </div>
+            </div>
+            <div class="w750 backwhite border-bottom">
+                <div class="w690 h88">
+                    <div class="fl h88 t">优惠券</div>
+                    <div class="fr h88 i">-￥<%=info_order.coupon_momey%>元</div>
+                </div>
+            </div>
+            <div class="w750 backwhite border-bottom">
+                <div class="w690 h88">
+                    <div class="fl h88 t">待支付</div>
+                    <div class="fr h88 i cef">￥<%=(info_order.total_money-info_order.pay_money)%>元</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w750">
+        <div class="w750 border-bottom">
+            <div class="statustype backf8 w690">
+                <h2 class="c8 f28">支付金额</h2>
+            </div>
+        </div>
+        <div class="confirmpay backwhite js-paymoney-ctn">
+            <%if(info_order.pay_money>0){%>
+                <div class="w750 backwhite border-bottom cb">
+                    <div class="w690 h88 js-line-check">
+                        <div class="fl jjys jjys-check js-jjys-check mt24 mr22 jjys-check-focus" type="2"></div>
+                        <div class="fl h88 t">支付尾款</div>
+                        <div class="fr h88 i">￥<%=(info_order.total_money-info_order.pay_money)%>元</div>
+                    </div>
+                </div>
+            <%}else if(info_order.pay_money==0){%>
+                <%if(getDayBuy()>10){%>
+                <div class="w750 backwhite border-bottom">
+                    <div class="w690 h88 js-line-check">
+                        <div class="fl jjys jjys-check js-jjys-check mt24 mr22 jjys-check-focus" type="1"></div>
+                        <div class="fl h88 t">支付定金（20%）</div>
+                        <div class="fr h88 i">￥<%=(info_order.total_money*0.2)%>元</div>
+                    </div>
+                </div>
+                <%}%>
+
+                <div class="w750 backwhite border-bottom cb">
+                    <div class="w690 h88 js-line-check">
+                        <div class="fl jjys jjys-check js-jjys-check mt24 mr22 <%if(getDayBuy()<10){%>jjys-check-focus<%}%>" type="3"></div>
+                        <div class="fl h88 t">支付全款</div>
+                        <div class="fr h88 i">￥<%=info_order.total_money%>元</div>
+                    </div>
+                </div>
+
+            <%}%>
+        </div>
+    </div>
+
+    <div class="w750">
+        <div class="w750 border-bottom">
+            <div class="statustype backf8 w690">
+                <h2 class="c8 f28">支付方式</h2>
+            </div>
+        </div>
+        <div class="confirmpay backwhite js-paytype-ctn">
+            <div class="w750 backwhite border-bottom">
+                <div class="w690 h88 pbt30">
+                    <div class="fl jjys jjys-check mt24 mr22 js-jjys-check jjys-check-focus"></div>
+                    <div class="fl h88 jjys jjys-weixin"></div>
+                    <div class="fl i ml26">
+                        <div class="zftitle mts">微信支付</div>
+                        <div class="zftips">推荐安装微信5.0及以上版本的用户使用</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="w750 cb backwhite border-bottom cb">-->
+            <!--<div class="w690 h88 pbt30">-->
+            <!--<div class="fl jjys jjys-check mt24 mr22"></div>-->
+            <!--<div class="fl h88 jjys jjys-zfb"></div>-->
+            <!--<div class="fl i ml26">-->
+            <!--<div class="zftitle mts">支付宝支付</div>-->
+            <!--<div class="zftips">推荐安装支付宝客户端的用户使用</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</script>
+
+<script src="/js/lib/jquery-2.1.1.min.js"></script>
+<script src="/js/lib/fastclick.js"></script>
+<script src="/js/utils/template.js"></script>
+<script src="/js/utils/utils.js"></script>
+<script src="/js/utils/pingpp.js"></script>
+<script src="/js/busi/confirmpay.js"></script>
+<script type="text/javascript">
+    helper.setTitle("确认支付");
+</script>
+</body>
+</html>

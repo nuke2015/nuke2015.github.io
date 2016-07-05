@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=""/>
+    <meta name="keyword" content=""/>
+    <meta name="robots" content="none"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="format-detection" content="telephone=no,address=no,email=no"/>    
+    <link rel="stylesheet" href="/css/gb.css"/>
+    <script src="/js/utils/must.js"></script>
+</head>
+<body class="backf8">
+
+<div class="w750">
+    <div class="w690">
+        <div class="jjys jjys-paysuc m-auto mtb81"></div>
+        <div id="pay_result" class="tac f40 c3">支付失败</div>
+        <div class="tac mt31 c8 f28">您已购买<span class="js-pro-name"></span>，请在服务结束后进行评价。</div>
+        <div id="return-home" class="return-home tac mt58 js-return-home">返回首页</div>
+        <div id="refresh" class="return-home tac mt58 js-return-home">点击刷新</div>
+        <div class="vieworder-btn tac mtxl js-vieworder-btn">查看订单</div>
+    </div>
+</div>
+
+<script src="/js/lib/jquery-2.1.1.min.js"></script>
+<script src="/js/lib/fastclick.js"></script>
+<script src="/js/utils/template.js"></script>
+<script src="/js/utils/utils.js"></script>
+<script src="/js/busi/wap_result.js"></script>
+<script>
+    $(function(){
+        $("#js-return-home").bind("click",function(){
+            window.location.href="/html/index.html";
+        });
+        
+        $("#refresh").bind("click",function(){
+            window.location.reload();
+        });
+
+        $(".js-vieworder-btn").bind("click",function(){
+            window.location.href="/html/orderdetail.html?order_id="+g_params["order_id"];
+        });
+        
+        $(".js-pro-name").text(g_params["pro_name"]);
+    })
+</script>
+</body>
+</html>
