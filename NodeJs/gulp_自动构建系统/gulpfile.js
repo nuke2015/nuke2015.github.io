@@ -29,14 +29,14 @@ gulp.task('uglifyjs', function() {
         sourcemaps.init(),
         uglify(),
         sourcemaps.write('./'),
-        gulp.dest('dist/js/')
+        gulp.dest('dist/min/js/')
     ])
     combined.on('error', handleError)
 });
 gulp.task('minifycss', function() {
     gulp.src('../static/css/**/*.css').pipe(sourcemaps.init()).pipe(autoprefixer({
         browsers: 'last 2 versions'
-    })).pipe(minifycss()).pipe(sourcemaps.write('./')).pipe(gulp.dest('dist/css/'))
+    })).pipe(minifycss()).pipe(sourcemaps.write('./')).pipe(gulp.dest('dist/min/css/'))
 });
 gulp.task('image', function() {
     // images
@@ -53,21 +53,22 @@ gulp.task('image', function() {
     })).pipe(gulp.dest('dist/img'))
 });
 gulp.task('rev', function() {
-    // js变换
-    gulp.src('../static/js/**/*.js').pipe(rev()).pipe(gulp.dest('./dist/js/')).pipe(rev.manifest({
+    // js变换,取后置文件
+    gulp.src('dist/min/js/**/*.js').pipe(rev()).pipe(gulp.dest('dist/js/')).pipe(rev.manifest({
         path: 'rev-manifest-js.json',
         merge: true,
-    })).pipe(gulp.dest('./dist/rev/'));
-    // css变换
-    gulp.src('../static/css/**/*.css').pipe(rev()).pipe(gulp.dest('./dist/css/')).pipe(rev.manifest({
-        path: 'rev-manifest-cs.json',
+    })).pipe(gulp.dest('dist/rev/'));
+    // css变换,取后置文件
+    gulp.src('dist/min/css/**/*.css').pipe(rev()).pipe(gulp.dest('dist/css/')).pipe(rev.manifest({
+        path: 'rev-manifest-css.json',
         merge: true,
-    })).pipe(gulp.dest('./dist/rev/'));
+    })).pipe(gulp.dest('dist/rev/'));
 });
 gulp.task('revCollector', function() {
     gulp.src(['./dist/rev/*.json', '../static/html/*.html']) //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
         .pipe(revCollector()) //- 执行文件内css名的替换
         .pipe(gulp.dest('dist/html/')); //- 替换后的文件输出的目录
 });
+gulp.task('min', ['uglifyjs', 'minifycss', 'image']);
 gulp.task('verctrl', ['rev', 'revCollector']);
-gulp.task('default', ['uglifyjs', 'minifycss', 'image', 'verctrl']);
+gulp.task('default', ['min', 'verctrl']);
