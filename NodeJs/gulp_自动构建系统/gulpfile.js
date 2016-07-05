@@ -1,3 +1,5 @@
+// 项目路径
+var dir_src = '../online/api.jjys168.com/public/weixin/static';
 var gulp = require('gulp')
 var gutil = require('gulp-util')
 var uglify = require('gulp-uglify')
@@ -14,6 +16,7 @@ var wrap = require('gulp-wrap');
 var declare = require('gulp-declare');
 var rev = require('gulp-rev'); //- 对文件名加MD5后缀
 var revCollector = require('gulp-rev-collector'); //- 路径替换
+// 统一报错
 var handleError = function(err) {
     var colors = gutil.colors;
     console.log('\n')
@@ -25,7 +28,7 @@ var handleError = function(err) {
 }
 gulp.task('uglifyjs', function() {
     var combined = combiner.obj([
-        gulp.src('../static/js/**/*.js'),
+        gulp.src(dir_src + '/js/**/*.js'),
         sourcemaps.init(),
         uglify(),
         sourcemaps.write('./'),
@@ -34,21 +37,21 @@ gulp.task('uglifyjs', function() {
     combined.on('error', handleError)
 });
 gulp.task('minifycss', function() {
-    gulp.src('../static/css/**/*.css').pipe(sourcemaps.init()).pipe(autoprefixer({
+    gulp.src(dir_src + '/css/**/*.css').pipe(sourcemaps.init()).pipe(autoprefixer({
         browsers: 'last 2 versions'
     })).pipe(minifycss()).pipe(sourcemaps.write('./')).pipe(gulp.dest('dist/min/css/'))
 });
 gulp.task('image', function() {
     // images
-    gulp.src('../static/images/**/*').pipe(imagemin({
+    gulp.src(dir_src + '/images/**/*').pipe(imagemin({
             progressive: true
         })).pipe(gulp.dest('dist/images'))
         // icon
-    gulp.src('../static/icon/**/*').pipe(imagemin({
+    gulp.src(dir_src + '/icon/**/*').pipe(imagemin({
             progressive: true
         })).pipe(gulp.dest('dist/icon'))
         // img
-    gulp.src('../static/img/**/*').pipe(imagemin({
+    gulp.src(dir_src + '/img/**/*').pipe(imagemin({
         progressive: true
     })).pipe(gulp.dest('dist/img'))
 });
@@ -65,10 +68,13 @@ gulp.task('rev', function() {
     })).pipe(gulp.dest('dist/rev/'));
 });
 gulp.task('revCollector', function() {
-    gulp.src(['./dist/rev/*.json', '../static/html/*.html']) //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
+    gulp.src(['./dist/rev/*.json', dir_src + '/html/*.html']) //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
         .pipe(revCollector()) //- 执行文件内css名的替换
         .pipe(gulp.dest('dist/html/')); //- 替换后的文件输出的目录
 });
+gulp.task('copy', function() {
+    gulp.src(dir_src + '/index.html').pipe(gulp.dest('dist/'))
+});
 gulp.task('min', ['uglifyjs', 'minifycss', 'image']);
 gulp.task('verctrl', ['rev', 'revCollector']);
-gulp.task('default', ['min', 'verctrl']);
+gulp.task('default', ['min', 'verctrl', 'copy']);
