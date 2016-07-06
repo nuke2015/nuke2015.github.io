@@ -1,0 +1,88 @@
+Nginx内嵌变量
+ 
+ngx_http_core_module模块支持内嵌变量，变量名与Apache服务器对应。 首先，这些变量可以表示客户端的请求头字段，诸如$http_user_agent、$http_cookie等等。 nginx也支持其他变量：
+
+$arg_name
+请求行中的name参数。
+$args
+请求行中参数字符串。
+$binary_remote_addr
+客户端IP地址的二进制形式，值的长度总是4字节。
+$body_bytes_sent
+nginx返回给客户端的字节数，不含响应头。
+$bytes_sent
+nginx返回给客户端的字节数(1.3.8, 1.2.5)。
+$connection
+连接的序列号(1.3.8, 1.2.5)。
+$content_length
+“Content-Length”请求头的值。
+$content_type
+“Content-Type”请求头的值。
+$cookie_name
+名为name的cookie。
+$document_root
+当前请求的root指令或alias指令的配置值。
+$document_uri
+与$uri相同。
+$host
+“Host”请求头的值，如果没有该请求头，则为与请求对应的虚拟主机的首要主机名。
+$hostname
+机器名称。
+$http_name
+任意请求头的值；变量名的后半部为转化为小写并且用下划线替代横线后的请求头名称。
+$https
+如果连接是SSL模块，返回“on”，否则返回空字符串。
+$is_args
+如果请求行带有参数，返回“?”，否则返回空字符串。
+$limit_rate
+允许设置此值来限制连接的传输速率。
+$msec
+当前时间，单位是秒，精度是毫秒。(1.3.9, 1.2.6)
+$nginx_version
+nginx版本号。
+$pid
+worker进程的PID。
+$query_string
+与$args相同。
+$realpath_root
+按root指令或alias指令算出的当前请求的绝对路径。其中的符号链接都会解析成真是文件路径。
+$remote_addr
+客户端IP地址。
+$remote_port
+客户端端口。
+$remote_user
+为基本用户认证提供的用户名。
+$request
+完整的原始请求行。
+$request_body
+请求正文。在由proxy_pass指令和 fastcgi_pass指令处理的路径中， 这个变量值可用。
+$request_body_file
+请求正文的临时文件名。处理完成时，临时文件将被删除。 如果希望总是将请求正文写入文件，需要开启client_body_in_file_only。 如果在被代理的请求或FastCGI请求中传递临时文件名，就应该禁止传递请求正文本身。 使用proxy_pass_request_body off指令 和fastcgi_pass_request_body off指令 分别禁止在代理和FastCGI中传递请求正文。
+$request_completion
+请求完成时返回“OK”，否则返回空字符串。
+$request_filename
+基于root指令或alias指令，以及请求URI，得到的当前请求的文件路径。
+$request_method
+HTTP方法，通常为“GET”或者“POST”。
+$request_time
+请求处理的时间，单位为秒，精度是毫秒(1.3.9, 1.2.6)；请求处理时间从由客户端接收到第一个字节开始计算。
+$request_uri
+完整的原始请求行（带参数）。
+$scheme
+请求协议类型，为“http”或“https”。
+$sent_http_name
+任意的响应头字段的值。 变量名的后半部为转化为小写并且用下划线替代横线后的响应头名称。
+$server_addr
+接受请求的服务器地址。为计算这个值，通常需要进行一次系统调用。为了避免系统调用，必须指定listen指令 的地址，并且使用bind参数。
+$server_name
+接受请求的虚拟主机的首要主机名。
+$server_port
+接受请求的虚拟主机的端口。
+$server_protocol
+请求协议，通常为“HTTP/1.0”或“HTTP/1.1”。
+$status
+响应状态码。
+$tcpinfo_rtt, $tcpinfo_rttvar, $tcpinfo_snd_cwnd, $tcpinfo_rcv_space
+客户端TCP连接的信息，在支持套接字选项TCP_INFO的系统中可用。
+$uri
+当前请求规范化以后的URI。变量$uri的值可能随请求的处理过程而改变。 比如，当进行内部跳转时，或者使用默认页文件。
