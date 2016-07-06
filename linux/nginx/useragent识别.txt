@@ -1,0 +1,10 @@
+在nginx中的站点配置中,做useragent自动识别
+if ($http_user_agent ~* '(Android|webOS|iPhone|iPod|BlackBerry)') {
+    set $mobile_request '1';
+}
+if ($http_cookie ~ 'mobile_request=full') {
+    set $mobile_request '';
+}
+if ($mobile_request != '1') {
+    rewrite ^.+ http://www.2345.com$uri;
+}
