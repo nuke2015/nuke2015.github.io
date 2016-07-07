@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+        </meta>
+    </head>
+    <body>
+    <script>
+    var BirthDay={
+        done:function(){
+            alert('x');
+        },
+    };
+    
+    // 类的方法重载
+    BirthDay.done = function() {
+        alert('new BirthDay done!');
+    }
+
+    BirthDay.done();
+    </script>
+    </body>
+</html>
