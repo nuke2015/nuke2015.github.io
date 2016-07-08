@@ -1,0 +1,31 @@
+
+//此条校0和空都过不了,但是字符串可以.但是字符串到了数据库里强制为整型就是0.
+ if(!intval($topics[0]['topic_id']))$this->result(ERR_WRONG_ARG);
+
+hhvm连接redis,执行的是原生的连接池,不能使用单例模式.否则会产生大量的time_wait链接无法释放.
+
+// 这条语句在开发环境是没问题的,但在线上就有问题了,因为不同的排序标准影响了分页的效果
+SELECT sp.id,sp.create_time,sp.user_id,sp.image FROM `shequ_post_topic` spt right join shequ_post sp on spt.post_id=sp.id and sp.is_delete=0 WHERE spt.topic_id = '1' order by sp.create_time DESC LIMIT 12
+SELECT sp.id,sp.create_time,sp.user_id,sp.image FROM `shequ_post_topic` spt right join shequ_post sp on spt.post_id=sp.id and sp.is_delete=0 WHERE spt.topic_id = '1' order by sp.create_time DESC LIMIT 0,12
+
+php的sleep本身是不占用内存,不占用cpu的,但是它会占用nginx的连接数.
+
+如果mysql查询的时候,字段类型与表结构一致,比如,字段是int型的,查询的时候也用int型.如果用字符串也能查出来,但是比较慢.
+
+保持一致的开发环境,能省很多事,比如,workman在本地正常,发线上就不正常了,以后要大量使用docker,保持环境一致.
+
+非正常卸载,导致apt各种更新不正常,最后解决办法,换个官方源就好了.
+
+update老是写错成udp,于是就以为函数不生效,又不报错.郁闷着呢.
+
+时间戳有负数,因为要表达1970之前的日期.
+
+一个web不应该有两个或以上的端口提供等同服务,因为,它在某些页面,可能会端口飘移,然后cookie就失效了.最简单的办法就是统一用80端口服务.或者修改cookie作用域.
+
+$a=$b['msg']||'';这是错误的写法,正确是 $a=($b['msg'])?$b['msg']:'';这是三元运算符的正确用法,但是前面这种写法不会报错.
+
+
+
+
+
+
