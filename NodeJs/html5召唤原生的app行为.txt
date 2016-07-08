@@ -1,0 +1,66 @@
+
+基本结构json:
+{"func":"jump","param":{"uri":"index","title":"App\u9996\u9875"}}
+
+展开状态:
+
+Array
+(
+    [func] => jump
+    [param] => Array
+        (
+            [uri] => index
+            [title] => App首页
+        )
+
+)
+其中func表示行为方式,是跳转,发消息,分享,设置参数等.具体的再定义.
+其中param表示参数,一般是某种行为需要使用到的参数.
+比如,跳转到app的原生首页,需要的参数就是uri=index,表示跳转到首页,另一个title只是做为可读性提示而已.
+
+传递参数:
+通过url传递http://jjys#base64编码后的数据直接传送.
+
+比如:
+http://jjys#eyJmdW5jIjoianVtcCIsInBhcmFtIjp7InVyaSI6ImluZGV4IiwidGl0bGUiOiJBcHBcdTk5OTZcdTk4NzUifX0=
+基中http://jjys#是固定的前缀,后面是base64编码.经过base64_decode以后,会得到json数据.
+json数据的结构:就是{"func":"jump","param":{"uri":"index","title":"App\u9996\u9875"}}
+
+客户端监听:
+客户端(android+ios),通过监听访问网页的地址变化,来识别是否是http://jjys#开头的,如果是.
+则进行接收后面的字符串,进行base64反编码,然后得到json结构的数据.
+对应不同的结构进行行为响应.
+
+
+
+----->>>>比如:
+这个jump的方法,主要是处理跳转行为.其中param参数,是不同的行为 所需要的扩展参数.
+比如,
+跳转到首页uri=index
+跳转到订单列表uri=myorder
+跳转到关注列表uri=myfocus
+Array
+(
+    [func] => jump
+    [param] => Array
+        (
+            [uri] => index
+            [title] => App首页
+        )
+
+)
+
+----->>>>比如:
+这个userlogin的方法,主要是处理用户登陆(原生)的行为,是跳转到原生的用户登陆页板.
+暂且定义两个参数,refer_url登陆后跳转回来的地址,_spm是个推广码,有就传过来.
+Array
+(
+    [func] => userlogin
+    [param] => Array
+        (
+            [refer_url] => 'xxxx/huodong.html?abc=1&platform=1',
+            [_spm] => c35
+        )
+
+)
+
