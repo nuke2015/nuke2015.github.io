@@ -13,9 +13,9 @@
     <span>
     </span>
 </div>
-<!-- 这段脚本如果用kefu.js外部引入,会导致反复加载 -->
+<!-- 这段脚本如果用引入,会导致反复加载 -->
 <script>
-// 弹窗
+    // 弹窗
 var baidu_qiao_url = 'http://p.qiao.baidu.com//im/index?siteid=8234256&ucid=19330420';
 var baidu_qiao_obj = {
     bind_click: function() {
@@ -44,8 +44,9 @@ var baidu_qiao_obj = {
         };
     },
 };
-// 异步加载
-var kefu_baidu_qiao = (function() {
+
+// 这个文件需要jQuery支持
+var kefu=(function () {
     // 默认隐藏
     jQuery('.js-kefu-bigMask').hide();
     // 强制绑定
@@ -54,5 +55,5 @@ var kefu_baidu_qiao = (function() {
     });
     // 定时弹出
     baidu_qiao_obj.show_by_timeout();
-})(kefu_baidu_qiao);
+})(kefu);
 </script>
