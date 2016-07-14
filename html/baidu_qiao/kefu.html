@@ -1,0 +1,58 @@
+<div class="bigMask js-kefu-bigMask">
+    <div class="winBox">
+        <img class="winImg js-kefu-winImg" src="/images/tanchuan.png">
+            <div class="close js-kefu-close">
+                <img src="/images/winClose.png">
+                </img>
+            </div>
+        </img>
+    </div>
+</div>
+<div class="freeConsult js-kefu-freeConsult">
+    免费咨询
+    <span>
+    </span>
+</div>
+<!-- 这段脚本如果用kefu.js外部引入,会导致反复加载 -->
+<script>
+// 弹窗
+var baidu_qiao_url = 'http://p.qiao.baidu.com//im/index?siteid=8234256&ucid=19330420';
+var baidu_qiao_obj = {
+    bind_click: function() {
+        jQuery('.js-kefu-close').bind('click', function() {
+            baidu_qiao_obj.hide_forever();
+        });
+        jQuery('.js-kefu-winImg').bind('click', function() {
+            window.open(baidu_qiao_url);
+        });
+    },
+    hide_forever: function() {
+        // 隐藏存储
+        jQuery('.js-kefu-bigMask').remove();
+        helper._store('baidu_qiao_cache', {
+            bigMask_hide: 1
+        });
+    },
+    show_by_timeout: function() {
+        // 定时弹出
+        var baidu_qiao_cache = helper._store("baidu_qiao_cache");
+        if (!baidu_qiao_cache || !baidu_qiao_cache.bigMask_hide) {
+            window.setTimeout(function() {
+                jQuery('.js-kefu-bigMask').show();
+                baidu_qiao_obj.bind_click();
+            }, 3000);
+        };
+    },
+};
+// 异步加载
+var kefu_baidu_qiao = (function() {
+    // 默认隐藏
+    jQuery('.js-kefu-bigMask').hide();
+    // 强制绑定
+    jQuery('.js-kefu-freeConsult').bind('click', function() {
+        window.open(baidu_qiao_url);
+    });
+    // 定时弹出
+    baidu_qiao_obj.show_by_timeout();
+})(kefu_baidu_qiao);
+</script>
