@@ -12,13 +12,13 @@
     <body>
         <script>
             var alert = function(txt) {
-                jQuery('#jjys168_alert .alert_message').text(txt);
-                jQuery('#jjys168_alert .alert_wrap').show();
-                jQuery('#jjys168_alert .alert_div').show();
+                jQuery('#alert_diy .alert_message').text(txt);
+                jQuery('#alert_diy .alert_wrap').show();
+                jQuery('#alert_diy .alert_div').show();
                 setTimeout(fadeOut, 1000);
                 function fadeOut() {
-                    jQuery("#jjys168_alert .alert_div").fadeOut(500);
-                    jQuery('#jjys168_alert .alert_wrap').fadeOut(200);
+                    jQuery("#alert_diy .alert_div").fadeOut(500);
+                    jQuery('#alert_diy .alert_wrap').fadeOut(200);
                 }
             }
             // //自动执行
@@ -26,15 +26,15 @@
             //     alert('hello babay');
             // })
         </script>
-        <div id="jjys168_alert">
+        <div id="alert_diy">
             <div class="alert_wrap" style="width:100%; height:100%; position:fixed; z-index:10; top:0px;
-            left:0px; display:none; background:#000; filter:alpha(opacity:50); opacity:0.5;">
+            left:0px; display:none; background:rgba(0,0,0,0);">
             </div>
             <div class="alert_div" style="position:fixed; top:45%; left:0; width:95%; text-align:center;
             margin-left:2.5%; height:1em; z-index:30; display:none; border-radius:4px;
             -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;">
-                <span class="alert_message" style="font-size:3.0em; line-height:2em; color:#9556bf;
-            display:inline-block; padding:0 15px; background:#FFF; height:2em; -moz-border-radius:4px;
+                <span class="alert_message" style="font-size:3.0em; line-height:3em; color:#fff;
+            display:inline-block; padding:0 15px; background:rgba(0,0,0,.7); height:3em; -moz-border-radius:4px;
             -webkit-boreder-radius:4px; border-radius:4px; ">
                 </span>
             </div>
