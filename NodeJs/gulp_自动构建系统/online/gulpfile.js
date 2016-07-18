@@ -1,5 +1,5 @@
 // 项目路径
-var dir_src = '../online/api.jjys168.com/public/weixin/static';
+var dir_src = 'F:/svn_php/online/api.jjys168.com/public/weixin/static';
 var gulp = require('gulp')
 var gutil = require('gulp-util')
 var uglify = require('gulp-uglify')
@@ -81,9 +81,8 @@ gulp.task('revCollector', function() {
 });
 gulp.task('copy', function() {
     gulp.src(dir_src + '/index.html').pipe(gulp.dest('dist/'))
-    gulp.src(dir_src + '/js/lib/*').pipe(gulp.dest('dist/js/lib'))
-    gulp.src(dir_src + '/js/pay/*').pipe(gulp.dest('dist/js/pay'))
-    gulp.src(dir_src + '/js/plugs/*').pipe(gulp.dest('dist/js/plugs'))
+    gulp.src(dir_src + '/fav.ico').pipe(gulp.dest('dist/'))
+    gulp.src(dir_src + '/js/lib/**/*').pipe(gulp.dest('dist/js/lib'))
 });
 gulp.task('min', ['uglifyjs', 'minifycss', 'image']);
 gulp.task('verctrl', ['rev', 'revCollector']);

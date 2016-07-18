@@ -1,5 +1,8 @@
 
-2016��7��5�� 12:26:38
-��װnodejs+gulp
-ʹ������gulp oss,Ȼ��������ļ���staticĿ¼�����ɵ�distĿ¼��.
+2016年7月5日 12:26:38
+安装nodejs+gulp
+使用命令gulp oss,然后它会把文件从static目录中生成到dist目录中.
+
+2016年7月6日 13:28:55
+引入多环境支持
 
