@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+        </meta>
+    </head>
+    <body>
+        <pre>
+        alert('console.log pls!');
+        var obj=function(){
+            console.log('hello obj');
+        }
+        var tmp=(function(){
+            console.log('hello tmp');
+        })(tmp);
+        console.info(obj);
+        console.info(tmp);
+        <br/>
+        若函数定义的时候,加了自执行,则执行以后,函数会被自动销毁.
+        </pre>
+        <script>
+        alert('console.log pls!');
+        var obj=function(){
+            console.log('hello obj');
+        }
+        var tmp=(function(){
+            console.log('hello tmp');
+        })(tmp);
+        console.info(obj);
+        console.info(tmp);
+        </script>
+    </body>
+</html>
