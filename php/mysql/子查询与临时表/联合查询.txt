@@ -1,0 +1,8 @@
+
+联合查询,条数
+select co.id,co.refer_id from ddys_collection as co left join ddys_caregiver as ca on ca.id=co.refer_id and co.type=1 where ca.online!=1
+抽象视图,结果一样
+select co.id,co.refer_id from ddys_caregiver as ca,ddys_collection as co where ca.id=co.refer_id and co.type=1 and ca.online!=1
+联合查询.大删除
+delete co from ddys_collection as co left join ddys_caregiver as ca on ca.id=co.refer_id and co.type=1 where ca.online!=1
+
