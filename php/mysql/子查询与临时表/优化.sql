@@ -11,3 +11,5 @@ id,user_id,pid,content,update_at,user_id,count_view,count_comment,is_buy,price
 93,37,90,没吃过.,1470388521,37,0,0,0,0.00
 97,37,96,"不会都要钱吧,这是什么情况.",1470395297,37,0,0,0,0.00
 
+-- 延伸需求.每组各取三条,排序可自定义
+
