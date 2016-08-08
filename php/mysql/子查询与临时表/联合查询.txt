@@ -1,4 +1,8 @@
 
+2016年8月8日 13:55:09
+需求:
+数据清洗,收藏表中的相应商品,但在商品表中已下架的,无效数据.
+
 联合查询,条数
 select co.id,co.refer_id from ddys_collection as co left join ddys_caregiver as ca on ca.id=co.refer_id and co.type=1 where ca.online!=1
 抽象视图,结果一样
