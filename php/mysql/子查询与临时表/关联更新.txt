@@ -1,0 +1,13 @@
+
+
+需求:
+数据修复,把数据表2的其中一个字段的值移动到数据表1,全部
+
+大表关联更新
+update ddys_advert_experience,ddys_advert_scene_visit 
+set ddys_advert_experience.scene_id = ddys_advert_scene_visit.scene_id  
+where ddys_advert_scene_visit.id=ddys_advert_experience.scene_visit_id 
+
+关联语句更新
+UPDATE ddys_advert_experience AS E left JOIN ddys_advert_scene_visit AS V ON E.scene_visit_id=V.id SET E.scene_id = V.scene_id
+
