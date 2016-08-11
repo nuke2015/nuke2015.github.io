@@ -1,10 +1,6 @@
 var ws = require("nodejs-websocket");
 console.log("开始建立连接...")
 console.log("0.0.0.0:8001")
-var game1 = null,
-    game2 = null,
-    game1Ready = false,
-    game2Ready = false;
 var myDate=new Date();
 var server = ws.createServer(function(conn) {
     conn.on("text", function(str) {
