@@ -16,6 +16,7 @@ var wrap = require('gulp-wrap');
 var declare = require('gulp-declare');
 var rev = require('gulp-rev'); //- 对文件名加MD5后缀
 var revCollector = require('gulp-rev-collector'); //- 路径替换
+var htmlminify = require("gulp-html-minify");
 // 统一报错
 var handleError = function(err) {
     var colors = gutil.colors;
@@ -83,6 +84,9 @@ gulp.task('copy', function() {
     gulp.src(dir_src + '/index.html').pipe(gulp.dest('dist/'))
     gulp.src(dir_src + '/fav.ico').pipe(gulp.dest('dist/'))
     gulp.src(dir_src + '/js/lib/**/*').pipe(gulp.dest('dist/js/lib'))
+});
+gulp.task('html', function() {
+    return gulp.src("dist/html/*.html").pipe(htmlminify()).pipe(gulp.dest("dist/html/"))
 });
 gulp.task('min', ['uglifyjs', 'minifycss', 'image']);
 gulp.task('verctrl', ['rev', 'revCollector']);
