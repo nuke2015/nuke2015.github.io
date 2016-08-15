@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    问题分析:
+    多个元素的active效果 往往不是在元素本身实现,
+    也就是说,如果在元素本身实现,则它们是等宽高的.
+    这容易导致整体棋盘不对齐的问题.
+    所以,第二种写法比较灵活,可以在100*100的父元素中,
+    制造出200*200的大圆圈.
+    但是第一种实现实现不了,因为它只有一个元素,
+    所以,它的宽高是同时校准的.
+    
+    <!-- 写法一 -->
+    <div class="day active">1</div>
+    <div class="day">2</div>
+    <div class="day">3</div>
+    
+    <!-- 写法二 -->
+    <div class="day">
+        <div class="active">1</div>
+    </div>
+
+</body>
+</html>
