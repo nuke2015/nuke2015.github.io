@@ -1,21 +1,8 @@
 /**
- * Created by Administrator on 2016/5/30.
+ * 月嫂工作排期展示组件,
+ * by loop同学亲手打造,
+ * 锋子同学在此基础上进行改造.
  */
-var api = {
-    getSchedule: function(req) { //evaluation   service
-        doRequestwithnoheader(req, function(res) {
-            //success
-            //$(".js-yslist-ctn").html(template('ysitembody',res.data));
-            var arr = res.data.schedule;
-            var obj = changToArr(arr);
-            calendar.data = obj;
-            calendar.init();
-        }, function(res) {
-            //error
-            tip(res.msg);
-        });
-    }
-};
 var calendar = {
     monthDom: '.js-month',
     dayDom: '.day',
@@ -75,7 +62,7 @@ var calendar = {
         this.showDays(this.ynow, this.mnow);
     },
     showMonth: function(y, m) {
-        var month=y + '年' + (m + 1) + '月';
+        var month = y + '年' + (m + 1) + '月';
         console.log(month);
         $(this.monthDom).html(month);
     },
@@ -93,31 +80,31 @@ var calendar = {
                 }
             }
         }
+    },
+    changToArr: function(arr) {
+        // 时间戳数组转为日期数组
+        var obj = {};
+        var oneDay = 86400000;
+        for (var i = 0; i < arr.length; i++) {
+            var itemObj = arr[i];
+            var start = new Date(itemObj.start_time * 1000 - itemObj.start_time * 1000 % oneDay),
+                end = new Date(itemObj.end_time * 1000 - itemObj.end_time * 1000 % oneDay);
+            var tmpObj = null;
+            tmpObj = start;
+            while (tmpObj.getTime() <= end.getTime()) {
+                if (!obj[tmpObj.getFullYear() + ""]) { //若是存在直接Push
+                    obj[tmpObj.getFullYear() + ""] = {};
+                }
+                if (!obj[tmpObj.getFullYear() + ""][tmpObj.getMonth() + ""]) {
+                    obj[tmpObj.getFullYear() + ""][tmpObj.getMonth() + ""] = [];
+                }
+                obj[tmpObj.getFullYear() + ""][tmpObj.getMonth() + ""].push(tmpObj.getDate());
+                tmpObj = new Date(tmpObj.getTime() + oneDay);
+            }
+        }
+        return obj;
     }
 };
-
-function changToArr(arr) {
-    var obj = {};
-    var oneDay = 86400000;
-    for (var i = 0; i < arr.length; i++) {
-        var itemObj = arr[i];
-        var start = new Date(itemObj.start_time * 1000 - itemObj.start_time * 1000 % oneDay),
-            end = new Date(itemObj.end_time * 1000 - itemObj.end_time * 1000 % oneDay);
-        var tmpObj = null;
-        tmpObj = start;
-        while (tmpObj.getTime() <= end.getTime()) {
-            if (!obj[tmpObj.getFullYear() + ""]) { //若是存在直接Push
-                obj[tmpObj.getFullYear() + ""] = {};
-            }
-            if (!obj[tmpObj.getFullYear() + ""][tmpObj.getMonth() + ""]) {
-                obj[tmpObj.getFullYear() + ""][tmpObj.getMonth() + ""] = [];
-            }
-            obj[tmpObj.getFullYear() + ""][tmpObj.getMonth() + ""].push(tmpObj.getDate());
-            tmpObj = new Date(tmpObj.getTime() + oneDay);
-        }
-    }
-    return obj;
-}
 $(function() {
     var dataJson = {
         "code": 0,
@@ -142,7 +129,7 @@ $(function() {
     };
     console.info(dataJson);
     var arr = dataJson.data.Schedule;
-    var obj = changToArr(arr);
+    var obj = calendar.changToArr(arr);
     calendar.data = obj;
     calendar.init();
     $(".leftArrow").on("click", function() {
@@ -150,5 +137,5 @@ $(function() {
     });
     $(".rightArrow").on("click", function() {
         calendar.getNextMonth();
-    })
+    });
 });
