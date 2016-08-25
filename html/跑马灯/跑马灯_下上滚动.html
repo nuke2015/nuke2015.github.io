@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+            <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js">
+            </script>
+        </meta>
+    </head>
+    <style>
+        .banner{
+            border:1px solid blue;
+            width:100px;
+            height: 40px;
+            /*overflow: hidden;*/
+        }
+        .item{
+            width:100px;
+            height: 40px;
+            padding-left: 0px;
+        }
+        .item li{
+            border: 1px solid red;
+            padding:10px 0px;
+            list-style-type: none;
+            font-size: 18px;
+        }
+    </style>
+    <body>
+        <div class="banner">
+            <ul class="item">
+                <li>
+                    你好1世界
+                </li>
+                <li>
+                    你好2世界
+                </li>
+                <li>
+                    你好3世界
+                </li>
+                <li>
+                    你好4世界
+                </li>
+            </ul>
+        </div>
+        <script>
+            $(document).ready(function(){
+            move_left();
+            setInterval(function(){
+                move_left();
+            },4000);
+            function move_left(){
+                $(".item").animate({"margin-top":"-500"},4000).animate({"margin-top":"0px"},0);
+            }
+        });
+        </script>
+    </body>
+</html>
