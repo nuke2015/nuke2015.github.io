@@ -2,3 +2,6 @@
 应用宝下载地址
 http://a.app.qq.com/o/simple.jsp?pkgname=com.kw.ddys
 
+oss有个自动回源策略,所以,
+upload插件不用进行二次开发,直接配置回源策略就好了.
+
