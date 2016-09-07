@@ -1,0 +1,10 @@
+
+stringtime="2016-9-7"时会失败,应该修改为2016-09-07.
+stringtime="2016-9-7 10:01:88"时会失败
+
+苹果6机器上
+Date.parse(new Date(stringTime))
+
+总结一句:
+苹果机子上,new date简单是恶梦.
+
