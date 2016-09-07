@@ -1,0 +1,11 @@
+联表查询
+
+错误写法
+SELECT count(*) as count FROM `ddys_account_receive_record` as rd right join ddys_order as od on rd.order_id=od.id and od.process<=2 where rd.receive_user={$receive_user} and od.status<3
+
+正确写法
+SELECT count(*) as count FROM `ddys_account_receive_record` as rd right join ddys_order as od on rd.order_id=od.id where rd.receive_user={$receive_user} and od.status<3 and od.process<=2
+
+方法一也能得到数据,但是不能扩张.
+正确的理解:
+on是连接点,where是条件控制.
