@@ -8,6 +8,11 @@ docker run -it ubuntu:trusty /bin/bash
 vi /etc/apt/source.list中,加入ubuntu官方的更新源
 再执行上述命令,则会开始拉取映像.
 
+执行成功后,会进入子容器运行态,要注意exit;
+在宿主机检查
+root@iZ94koy4svpZ:/etc/apt# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+ubuntu              trusty              ae60f6d00fe1        12 days ago         188 MB
 
 镜像导出与导入
 docker save -o ubuntu.tar 8693db7e8a00
