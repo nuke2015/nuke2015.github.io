@@ -1,0 +1,28 @@
+server {
+    listen       80;
+    server_name  127.0.0.144;
+    root "F:/svn_php/dev/api.dev.ddys168.com/public/weixin/static/";
+    index paysystem/index.html;
+    location / {
+      index index.html
+      if (!-e $request_filename) {
+          rewrite  ^(.*)$  /static/$1  last;
+          break;
+      }
+    }
+    location ~ \.php$ {
+        try_files $uri =404; 
+        fastcgi_pass    php_farm;
+        include     nginx.fastcgi.conf;
+    }
+}
+
+
+这一段配置的经典之处:
+域名选用paysystem/index.html作为首页展示.
+然后到了目录页比如访问/paysystem/
+则选用index.html为默认页.
+当然,
+前面一个root也可以设置为根目录下的pay.html
+后面则设置为子目录的index.html
+
