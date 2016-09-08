@@ -2,6 +2,13 @@
 拉官方镜像
 docker run -it ubuntu:trusty /bin/bash
 
+若报,
+更新不成功,则ping它,
+在能ping通的情况下,就是更新源的问题了.
+vi /etc/apt/source.list中,加入ubuntu官方的更新源
+再执行上述命令,则会开始拉取映像.
+
+
 镜像导出与导入
 docker save -o ubuntu.tar 8693db7e8a00
 docker load < ubuntu.tar
