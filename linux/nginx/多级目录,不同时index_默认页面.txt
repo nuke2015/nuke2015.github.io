@@ -26,3 +26,23 @@ server {
 前面一个root也可以设置为根目录下的pay.html
 后面则设置为子目录的index.html
 
+比如:
+server {
+    listen       80;
+    server_name  127.0.0.144;
+    root "F:/svn_php/dev/api.dev.ddys168.com/public/weixin/static/";
+    index pay.html;
+    location / {
+      index index.html;
+      if (!-e $request_filename) {
+          rewrite  ^(.*)$  /static/$1  last;
+          break;
+      }
+    }
+    location ~ \.php$ {
+        try_files $uri =404; 
+        fastcgi_pass    php_farm;
+        include     nginx.fastcgi.conf;
+    }
+}
+
