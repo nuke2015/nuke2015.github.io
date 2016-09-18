@@ -1,0 +1,64 @@
+
+通过余弦定理以及弧度计算方法，最终推导出来的算式A为：
+
+$s = acos(cos($radLat1)*cos($radLat2)*cos($radLng1-$radLng2)+sin($radLat1)*sin($radLat2))*$R;
+
+
+目前网上大多使用Google公开的距离计算公司，推导算式B为：
+
+$s = 2*asin(sqrt(pow(sin(($radLat1-$radLat2)/2),2)+cos($radLat1)*cos($radLat2)*pow(sin(($radLng1-$radLng2)/2),2)))*$R;
+
+
+使用存储过程查询
+SELECT *,latitude,longitude,GETDISTANCE(latitude,longitude,30.663262,104.071619) AS distance FROM  mb_shop_ext where 1 HAVING distance<1000 ORDER BY distance ASC LIMIT 0,10
+
+
+数据库存储过程:
+
+DELIMITER $$
+ 
+CREATE DEFINER=`root`@`%` FUNCTION `GETDISTANCE`(lat1 DOUBLE, lng1 DOUBLE, lat2 DOUBLE, lng2 DOUBLE) RETURNS double
+ 
+READS SQL DATA
+ 
+DETERMINISTIC
+ 
+BEGIN
+ 
+DECLARE RAD DOUBLE;
+ 
+DECLARE EARTH_RADIUS DOUBLE DEFAULT 6378137;
+ 
+DECLARE radLat1 DOUBLE;
+ 
+DECLARE radLat2 DOUBLE;
+ 
+DECLARE radLng1 DOUBLE;
+ 
+DECLARE radLng2 DOUBLE;
+ 
+DECLARE s DOUBLE;
+ 
+SET RAD = PI() / 180.0;
+ 
+SET radLat1 = lat1 * RAD;
+ 
+SET radLat2 = lat2 * RAD;
+ 
+SET radLng1 = lng1 * RAD;
+ 
+SET radLng2 = lng2 * RAD;
+ 
+SET s = ACOS(COS(radLat1)*COS(radLat2)*COS(radLng1-radLng2)+SIN(radLat1)*SIN(radLat2))*EARTH_RADIUS;
+ 
+SET s = ROUND(s * 10000) / 10000;
+ 
+RETURN s;
+ 
+END$$
+ 
+DELIMITER ;
+
+
+
+
