@@ -1,4 +1,7 @@
 
+来源:
+http://www.php101.cn/2014/12/17/%E6%9F%A5%E6%89%BE%E9%99%84%E8%BF%91%E7%9A%84xxx-%E7%90%83%E9%9D%A2%E8%B7%9D%E7%A6%BB%E4%BB%A5%E5%8F%8AGeohash%E6%96%B9%E6%A1%88%E6%8E%A2%E8%AE%A8/
+
 通过余弦定理以及弧度计算方法，最终推导出来的算式A为：
 
 $s = acos(cos($radLat1)*cos($radLat2)*cos($radLng1-$radLng2)+sin($radLat1)*sin($radLat2))*$R;
