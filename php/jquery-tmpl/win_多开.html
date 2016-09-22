@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+            <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js">
+            </script>
+        </meta>
+    </head>
+    <body>
+        <span id="act">
+            点击启动
+        </span>
+        <script>
+            $("#act").click(function(){
+                setInterval(function(){
+                    var r=Math.floor(Math.random()*10);
+                    var u='http://127.0.0.109/a/AdminArticleDaojiaCnt?password=515400&r='+r;
+                    window.open(u, 'newwindow_'+r);
+                },3000);
+            });
+        </script>
+    </body>
+</html>
