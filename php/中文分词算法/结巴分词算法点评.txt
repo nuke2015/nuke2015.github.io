@@ -1,0 +1,105 @@
+
+因为 要用到中文分词,所以上网找方案.
+结果大都 是java的,其它nodejs的暂时没发现有.
+之前 发现搜狗有一个api接口有提供分词功能比较方便,于是就先它了,
+但是问题来了,它有压力限制,而且说关 就关,毕竟没人维护,像是学生的试验品.
+
+最后,还是回归下php,哪天玩熟了,就能自己写一个了.
+于是选择了 结巴中文分词.
+
+
+它有个好处就是,php写的同时提供了各种词典.
+有个不好的地方,就是内存利用率.
+
+它的算法过程是:
+文本段拆分为单词,把字典以数组形式,加载到内存里面,
+然后对目标句子拆出来的每一个词与字典进行比对.
+然后统计得分高的优先构成单词.
+算法如:官方的getDAG过程所示.
+
+操作简单,方法粗暴
+两个问题:
+词典质量好不好,内存利用率是否不高.
+
+解决方案:
+一.词典的质量.
+大家用的都是清华的那个1998年的,质量是一样的,不一样的地方在于,
+我们可以用自己的方式来训练词典.
+也就是计算不同的词语,包括手动录新词,大数据统计它的出境率,然后得到新的词典.
+
+二.内存利用率的问题.
+目标词典只是个大数组而已,把它全部存到内存里,是比较笨的方法,要学会利用现代科技.
+比如,哈唏链表?其实就是redis啦.
+我们离线跑脚本,把所有的词语都录到redis里面去,然后在取一个词的信息的时候,直接连redis操作.
+然后得到词语,统计率,根据统计率选词.
+
+
+\fukuball\jieba-php\src\class\jieba.php
+<?php
+  /**
+     * Static method getDAG
+     *
+     * @param string $sentence # input sentence
+     * @param array  $options  # other options
+     *
+     * @return array $DAG
+     */
+    public static function getDAG($sentence, $options = array())
+    {
+
+        $defaults = array(
+            'mode'=>'default'
+        );
+
+        $options = array_merge($defaults, $options);
+
+        $N = mb_strlen($sentence, 'UTF-8');
+        $i = 0;
+        $j = 0;
+        $DAG = array();
+        $word_c = array();
+// var_dump($N);exit;
+        while ($i < $N) {
+            $c = mb_substr($sentence, $j, 1, 'UTF-8');
+            if (count($word_c)==0) {
+                $next_word_key = $c;
+            } else {
+                $next_word_key = implode('.', $word_c).'.'.$c;
+            }
+            var_dump($next_word_key);exit;
+// var_dump(self::$trie);exit;
+            if (self::$trie->exists($next_word_key)) {
+                array_push($word_c, $c);
+                $next_word_key_value = self::$trie->get($next_word_key);
+                if ($next_word_key_value == array("end"=>"")
+                 || isset($next_word_key_value["end"])
+                 || isset($next_word_key_value[0]["end"])
+                ) {
+                    if (!isset($DAG[$i])) {
+                        $DAG[$i] = array();
+                    }
+                    array_push($DAG[$i], $j);
+                }
+                $j += 1;
+                if ($j >= $N) {
+                    $word_c = array();
+                    $i += 1;
+                    $j = $i;
+                }
+            } else {
+                $word_c = array();
+                $i += 1;
+                $j = $i;
+            }
+        }
+
+        for ($i=0; $i<$N; $i++) {
+            if (!isset($DAG[$i])) {
+                $DAG[$i] = array($i);
+            }
+        }
+
+        return $DAG;
+
+    }// end function getDAG
+
