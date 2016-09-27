@@ -1,3 +1,0 @@
-
-关闭uac权限提示
-C:\Windows\System32\UserAccountControlSettings.exe
