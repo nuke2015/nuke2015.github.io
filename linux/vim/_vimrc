@@ -244,8 +244,6 @@ endif
 " 设置代码配色方案
 if g:isGUI
     colorscheme Tomorrow-Night-Eighties               "Gvim配色方案
-else
-    colorscheme Tomorrow-Night-Eighties               "终端配色方案
 endif
 
 " 显示/隐藏菜单栏、工具栏、滚动条，可用 Ctrl + F11 切换
@@ -958,3 +956,7 @@ au BufRead,BufNewFile,BufEnter * cd %:p:h
 " 下面的设置取消注释，并修改双引号中的键为你想要的，如修改为逗号键。
 
 " let mapleader = ","
+
+
+
+
