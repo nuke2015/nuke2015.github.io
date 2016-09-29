@@ -19,5 +19,5 @@
 就是:
 // 要么A踩线,要么B踩线.只要一只脚踏进去了,就算.
 // 否则a<线起点并且b>线终点.
-// SELECT `title`,`date`,`days`,`end_date`,`num` FROM `ddys_holiday` WHERE `status` = '1' and ('b' >= `date` and 'b' <= `end_date`) or ('a' >= `date` and 'a' <= `end_date`) LIMIT 1
+// SELECT `title`,`date`,`days`,`end_date`,`num` FROM `ddys_holiday` WHERE `status` = '1' and ('b' >= `date` and 'b' <= `end_date`) or ('a' >= `date` and 'a' <= `end_date`) or ('a'<=`date` and 'b'>=`date_end`) LIMIT 1
 
