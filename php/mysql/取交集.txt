@@ -1,0 +1,22 @@
+
+需求:
+数据库存储的是时间段,有起点与终点
+查询的也是时间段,有起点与终点
+要求查询,与查询有次的数据库集合.
+
+数据库:
+     -----     
+模拟试探:
+  -----
+        -----
+      ---     
+--x
+                 --x      
+
+
+如上图,若考虑线段的话,不好写.但是只考虑终点的话,
+就是:
+// 要么A踩线,要么B踩线.只要一只脚踏进去了,就算.
+// SELECT `title`,`date`,`days`,`end_date`,`num` FROM `ddys_holiday` WHERE `status` = '1' and ('b' >= `date` and 'b' <= `end_date`) or ('a' >= `date` and 'a' <= `end_date`) LIMIT 1
+
+             
