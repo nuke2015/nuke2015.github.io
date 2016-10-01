@@ -1,4 +1,7 @@
 
+下载
+git clone --recursive git://github.com/isaacs/npm.git  
+
 安装npm
 node cli.js install npm -gf  
 
