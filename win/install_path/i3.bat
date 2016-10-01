@@ -26,6 +26,6 @@ setx GOROOT %GOROOT%
 set GOPATH=%ROOT_PATH%\go\gopath\
 setx GOPATH %GOPATH%
 
-setx path %NODE_HOME%;%GOROOT%\bin;%NODE_HOME%\node_modules\.bin;%ANT_HOME%\bin;%ANDROID_SDK%\tools;%ANDROID_SDK%\platform-tools;%JAVA_HOME%\bin;%PHP_HOME%\;%GIT_HOME%\bin;%path%;
+setx path %NODE_HOME%;%GOROOT%\bin;%GOPATH%\bin;%NODE_HOME%\node_modules\.bin;%ANT_HOME%\bin;%ANDROID_SDK%\tools;%ANDROID_SDK%\platform-tools;%JAVA_HOME%\bin;%PHP_HOME%\;%GIT_HOME%\bin;%path%;
 
 pause
