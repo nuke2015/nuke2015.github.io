@@ -23,7 +23,6 @@ setx ANT_HOME %ANT_HOME%
 rem golang
 set GOROOT=%ROOT_PATH%\go\golang\
 setx GOROOT %GOROOT%
-
 set GOPATH=%ROOT_PATH%\go\gopath\
 setx GOPATH %GOPATH%
 
