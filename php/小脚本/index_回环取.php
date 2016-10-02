@@ -1,14 +1,12 @@
 <?php
 
-$a = range(1, 10);
-
 // 回环取
 function array_circle($arr, $pos, $len)
 {
     $total = count($arr);
-    if ($pos + $len < $total && $pos + $len > $len) {
+    if ($pos + $len >= $len && $pos + $len < $total) {
         $result = array_slice($arr, $pos, $len);
-    } elseif ($pos + $len >= $total) {
+    } elseif ($pos + $len >= $len && $pos + $len >= $total) {
         $result_a = array_slice($arr, $pos, $len);
         $pos + $len - $total;
         $result_b = array_slice($arr, 0, $pos + $len - $total);
@@ -21,13 +19,12 @@ function array_circle($arr, $pos, $len)
     return $result;
 }
 
+$a = range(1, 10);
 print_r($a);
 print_r(array_circle($a, 2, 4));
 print_r(array_circle($a, 8, 4));
 print_r(array_circle($a, 10, 4));
 print_r(array_circle($a, -2, 4));
-
-
 
 // Array
 // (
