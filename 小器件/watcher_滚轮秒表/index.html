@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            滚轮秒表
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=0" />
+        <link href="./spinningwheel/spinningwheel-didi.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <style>
+        #watcher {
+            font-size: 30px;
+        }
+        #watcher input{
+            width: 450px;
+            font-size: 30px;
+        }
+        #watcher span{
+            font-size: 30px;
+        }
+        </style>
+        <p id="watcher">
+            时间:
+            <input type="text" value=""/>
+            <span>
+                开始
+            </span>
+        </p>
+        
+        <script src="./spinningwheel/spinningwheel.js">
+        </script>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js">
+        </script>
+        <script src="./watcher.js">
+        </script>
+        <script src="./index.js">
+        </script>
+    </body>
+</html>
