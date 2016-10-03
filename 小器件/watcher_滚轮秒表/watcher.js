@@ -1,5 +1,5 @@
-// 回调式秒表
-// watcher.start(param, function(res) {
+// 回调式秒表,这是移动端组件,所以,请在移动端查看
+// watcher.start(mydate, function(res) {
 //     console.log(res);
 // }, null);
 var watcher = {
@@ -43,22 +43,22 @@ var watcher = {
         // 释放
         watcher.instantiated = 0;
     },
-    start: function(param, callback, cancel) {
+    start: function(mydate, callback, cancel) {
         // 伪单例模式
         if (watcher.instantiated) {
             return;
         } else {
             watcher.instantiated = 1;
         }
-        // console.log('time-start',param);
+        // console.log('time-start',mydate);
         var years = this.years();
         var months = this.months();
         var days = this.days();
         // 初始化,避免单层累积
         SpinningWheel.slotData = [];
-        SpinningWheel.addSlot(years, 'center', param.year);
-        SpinningWheel.addSlot(months, 'center', param.month);
-        SpinningWheel.addSlot(days, 'center', param.day);
+        SpinningWheel.addSlot(years, 'center', mydate.getFullYear());
+        SpinningWheel.addSlot(months, 'center', mydate.getMonth());
+        SpinningWheel.addSlot(days, 'center', mydate.getDate());
         SpinningWheel.setCancelAction(function() {
             watcher.hide();
         });
