@@ -22,3 +22,9 @@ server {
     }
 }
 
+
+// rewrite明跳转,proxy_pass暗跳转
+location ~ ^/news {
+    rewrite  ^/news\/(.*)$ http://news.loc.jjys168.com/a/$1 last;
+}
+
