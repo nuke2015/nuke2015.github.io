@@ -6,3 +6,11 @@ json_encode(): Invalid UTF-8 sequence in argument
 mongo此配置:
 集群复制,成从库了,不能写入.
 replSet=shard1
+
+2016年10月9日 12:22:55
+google那边提交robots.txt总是失败.
+原因:
+robots.txt引用了sitemap.xml,
+如果robots.txt和sitemap.xml都没有格式问题.
+那就是sitemap体积太大导致被读取失败,因此,google认为当前robots.txt是有问题的.
+
