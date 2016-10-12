@@ -1,3 +1,4 @@
+
 在nginx中的站点配置中,做useragent自动识别
 if ($http_user_agent ~* '(Android|webOS|iPhone|iPod|BlackBerry)') {
     set $mobile_request '1';
@@ -8,3 +9,6 @@ if ($http_cookie ~ 'mobile_request=full') {
 if ($mobile_request != '1') {
     rewrite ^.+ http://www.2345.com$uri;
 }
+
+百度爬虫,
+抓取UA：   Mozilla/5.0 (Linux;u;Android 4.2.2;zh-cn;) AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html）
