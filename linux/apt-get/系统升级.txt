@@ -1,0 +1,18 @@
+
+#修改源
+vi /etc/apt-get/sources.list
+
+#升级
+apt-get update
+apt-get upgrade
+sudo apt-get dist-upgrade
+sudo update-manager -d
+
+#其它
+sudo apt-get install update-manager-core
+sudo apt-get update && sudo apt-get dist-upgrade
+sudo reboot
+sudo apt-get install screen
+screen
+sudo do-release-upgrade -d
+
