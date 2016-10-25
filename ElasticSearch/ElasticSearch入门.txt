@@ -1,0 +1,50 @@
+
+一.安装
+wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.0.deb
+
+版本：
+ElasticSearch: 1.7.0
+elasticsearch-jdbc: 1.7.0.1
+
+1、下载 ElasticSearch 1.7.0
+
+wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.0.deb
+
+2、安装 ElasticSearch 1.7.0
+
+dpkg -i elasticsearch-1.7.0.deb
+
+3、配置 ElasticSearch 1.7.0
+
+vim /etc/elasticsearch/elasticsearch.yml
+
+之后修改 network.host: localhost
+
+4、启动 ElasticSearch 1.7.0,需要安装java
+
+// 安装java
+apt-get install openjdk-7-jre
+
+// 启动全文索引
+service elasticsearch start
+
+5、下载 elasticsearch-jdbc 1.7.0.1,准备导入数据
+
+wget http://xbib.org/repository/org/xbib/elasticsearch/importer/elasticsearch-jdbc/1.7.0.1/elasticsearch-jdbc-1.7.0.1-dist.zip
+
+6、解压 elasticsearch-jdbc 1.7.0.1
+
+unzip elasticsearch-jdbc-1.7.0.1-dist.zip
+
+7、配置 elasticsearch-jdbc 1.7.0.1
+
+新建一个.sh文件: vim import.sh
+之后 chmod +x import.sh,用bash执行
+
+8、执行导入
+./import.sh
+
+9、测试导入结果
+测试
+curl -XGET 'localhost:9200/art/cms/_search?pretty&q=*'
+
