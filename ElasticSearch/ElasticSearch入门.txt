@@ -48,3 +48,18 @@ unzip elasticsearch-jdbc-1.7.0.1-dist.zip
 测试
 curl -XGET 'localhost:9200/art/cms/_search?pretty&q=*'
 
+10全文索引服务
+进程
+root@27601594c582:/# ps -aux|grep elastic
+elastic+  9623  3.0  4.6 3566832 753732 ?      Sl   03:23   6:34 /usr/lib/jvm/java-7-openjdk-amd64//bin/java -Xms256m -Xmx1g -Djava.awt.headless=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -Dfile.encoding=UTF-8 -Delasticsearch -Des.pidfile=/var/run/elasticsearch/elasticsearch.pid -Des.path.home=/usr/share/elasticsearch -cp :/usr/share/elasticsearch/lib/elasticsearch-1.7.0.jar:/usr/share/elasticsearch/lib/*:/usr/share/elasticsearch/lib/sigar/* -Des.default.config=/etc/elasticsearch/elasticsearch.yml -Des.default.path.home=/usr/share/elasticsearch -Des.default.path.logs=/var/log/elasticsearch -Des.default.path.data=/var/lib/elasticsearch -Des.default.path.work=/tmp/elasticsearch -Des.default.path.conf=/etc/elasticsearch org.elasticsearch.bootstrap.Elasticsearch
+root     13585  0.0  0.0   8868   780 ?        S+   06:58   0:00 grep --color=auto elastic
+端口
+root@27601594c582:/# netstat -anp|grep ela
+root@27601594c582:/# netstat -ntlp        
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp6       0      0 127.0.0.1:9200          :::*                    LISTEN      -               
+tcp6       0      0 127.0.0.1:9300          :::*                    LISTEN      -               
+root@27601594c582:/# 
+
+
