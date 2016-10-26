@@ -5,7 +5,7 @@ curl -XPOST 'http://localhost:9200/hello/world/2' -d'{"a":"avalue2","b":"bvalue2
 curl -XPOST 'http://localhost:9200/hello/world/3' -d'{"a":"avalue3","b":"bvalue3"}'
 
 搜索
-curl -XGET 'http://localhost:9200/hello/world/_search' -d '{
+curl -XGET 'http://localhost:9200/hello/world/_search?pretty' -d '{
     "query": {
         "match_all": {}
     },
@@ -14,7 +14,7 @@ curl -XGET 'http://localhost:9200/hello/world/_search' -d '{
 }'
 
 过滤
-curl -XGET 'http://localhost:9200/hello/world/_search' -d '{
+curl -XGET 'http://localhost:9200/hello/world/_search?pretty' -d '{
     "filter": {
         "and": {
             "filters": [
