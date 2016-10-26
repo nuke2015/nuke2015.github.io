@@ -1,46 +1,15 @@
 
 建立索引
-curl -XPOST 'http://localhost:9200/hello/world/1' -d'{"a":"avalue","b":"bvalue"}'
-curl -XPOST 'http://localhost:9200/hello/world/2' -d'{"a":"avalue2","b":"bvalue2"}'
-curl -XPOST 'http://localhost:9200/hello/world/3' -d'{"a":"avalue3","b":"bvalue3"}'
+curl -XPOST 'http://192.168.1.248:9200/hello/world/1' -d'{"a":"avalue","b":"bvalue"}'
+curl -XPOST 'http://192.168.1.248:9200/hello/world/2' -d'{"a":"avalue2","b":"bvalue2"}'
+curl -XPOST 'http://192.168.1.248:9200/hello/world/3' -d'{"a":"avalue3","b":"bvalue3"}'
 
 搜索
-curl -XGET 'http://localhost:9200/hello/world/_search?pretty' -d '{
-    "query": {
-        "match_all": {}
-    },
-    "from": 0,
-    "size": 100
-}'
+curl -XGET 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"query": {"match_all": {} }, "from": 0, "size": 100 }'
 
 过滤
-curl -XGET 'http://localhost:9200/hello/world/_search?pretty' -d '{
-    "filter": {
-        "and": {
-            "filters": [
-                {
-                    "term": {
-                        "a": "avalue"
-                    }
-                },
-                {
-                    "term": {
-                        "b": "bvalue"
-                    }
-                }
-            ]
-        }
-    },
-    "sort": [
-        {
-            "a": {
-                "order": "asc"
-            }
-        },
-        {
-            "b": "desc"
-        }
-    ],
-    "from": 0,
-    "size": 100
-}'
+curl -XPOST 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"filter":{"and":{"filters":[{"term":{"a":"avalue3"}}]}},"from":0,"size":20}'
+
+// 查找
+curl -XPOST 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"query":{"match":{"a":{"query":"avalue"}}}}}'
+
