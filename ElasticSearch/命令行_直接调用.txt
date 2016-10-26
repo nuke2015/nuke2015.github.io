@@ -13,23 +13,8 @@ curl -XPOST 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"filter"
 // 查找
 curl -XPOST 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"query":{"match":{"a":{"query":"avalue"}}}}}'
 
-
 // 通配符
-GET /my_index/address/_search
-{
-    "query": {
-        "wildcard": {
-            "postcode": "W?F*HW" 
-        }
-    }
-}
+curl -XPOST 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"query":{"wildcard":{"a":"*value*"}}}'
 
-// 正则
-GET /my_index/address/_search
-{
-    "query": {
-        "regexp": {
-            "postcode": "W[0-9].+" 
-        }
-    }
-}
+// 正则查询
+curl -XPOST 'http://192.168.1.248:9200/hello/world/_search?pretty' -d '{"query":{"regexp":{"a":"value[0-9].*"}}}'
