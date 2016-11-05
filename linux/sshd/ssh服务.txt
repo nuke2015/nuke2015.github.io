@@ -1,0 +1,22 @@
+
+安装ssh服务
+apt-get install openssh-server
+cd /etc/ssh
+vi sshd_config
+
+修改两处
+PermitRootLogin yes
+PasswordAuthentication yes
+
+保存，重启ssh服务
+
+测试
+ssh root@127.0.0.1
+能正常连接
+
+设置开机启动
+update-rc.d ssh defaults
+
+
+
+

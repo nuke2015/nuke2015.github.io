@@ -1,6 +1,8 @@
 
 拉官方镜像
-docker run -it ubuntu:trusty /bin/bash
+docker run -itd ubuntu:trusty /bin/bash
+docker run -itd ubuntu:latest /bin/bash
+
 
 若报,
 更新不成功,则ping它,

@@ -1,0 +1,16 @@
+
+
+docker pull ubuntu
+cat /etc/issue
+#ubuntu 16.01
+
+apt update
+apt search vim
+apt install vim
+
+vim /etc/apt/sources.list
+改成国内源，继续
+
+apt update
+
+
