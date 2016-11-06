@@ -1,0 +1,26 @@
+﻿
+
+登陆服务器.
+运行ssh-keygen -t rsa
+提示保存路径.直接确定.
+提示输入密钥密码.输入后记住就行了.
+生成密钥对.
+在/root/.ssh/文件夹里.
+下载私钥,把公钥换个目录避免被覆盖.
+
+vi /etc/ssh/sshd_config
+
+PermitRootLogin without-password
+PermitEmptyPasswords no
+PasswordAuthentication no
+AuthorizedKeysFile  /etc/ssh/id_rsa.pub
+
+设置/etc/ssh/id_rsa.pub为chmod 400 权限
+
+注意
+service ssh restart
+重启服务才生效.
+
+用客户端测试一下是否连接正常.
+
+
