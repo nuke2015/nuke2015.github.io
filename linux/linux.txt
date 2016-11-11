@@ -9,6 +9,3 @@ https://github.com/rehorn/livepool
 2016年10月27日 17:05:36
 ubuntu映像下载
 http://cdimage.ubuntu.com/releases/
-全球镜像
-http://ftp.cn.debian.org/
-
