@@ -1,4 +1,7 @@
 
+百度全部开源cdn
+http://cdn.code.baidu.com/
+
 Angular.js
 <script src="http://apps.bdimg.com/libs/angular.js/1.2.15/angular.min.js"></script>
 <script src="http://www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
@@ -12,9 +15,6 @@ http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js
 http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js
 http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js
 http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js
-
-http://cdn.code.baidu.com/
-
 
 composer国内镜像
 curl -sS http://install.phpcomposer.com/installer | php
