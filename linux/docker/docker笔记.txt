@@ -46,7 +46,10 @@ docker run -itd mynode
 docker stop abbca0f3cb58a318a01b795548c8d32448f29164e0a4dd35a56256b4fd7b9d3c
 
 提交到总仓
-docker commit 866cfb7217a6b6f737d1e06088f2ffd165be98a96fd7aec0218a4600d689c381 
+docker commit 866cfb7217a6b6f737d1e06088f2ffd165be98a96fd7aec0218a4600d689c381
+
+把容器快速存为本地镜像 
+docker commit cc ubuntu_vim
 
 镜像导出
 docker save mynode > mynode.tar
