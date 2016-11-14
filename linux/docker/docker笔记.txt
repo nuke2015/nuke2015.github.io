@@ -1,3 +1,12 @@
+
+docker search ubuntu
+docker pull ubuntu 
+下载映像
+docker images
+ubuntu              latest              56465e1e45d2        4 weeks ago         127.2 MB
+
+
+
 系统centos6.5_x86_64的64位版本
 
 yum install -y docker-io
@@ -10,12 +19,6 @@ setenforce 0
 
 service docker start
 启动服务
-
-docker search lamp
-找出官方的lamp映像.centos映像有中文问题
-
-docker pull dockerfiles/centos-lamp  
-下载映像
 
 根据dockerfile构建镜像
 docker build -t fengsunode /home
