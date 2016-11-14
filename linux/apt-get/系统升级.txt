@@ -13,6 +13,8 @@ sudo apt-get install update-manager-core
 sudo apt-get update && sudo apt-get dist-upgrade
 sudo reboot
 sudo apt-get install screen
+
+
 screen
 sudo do-release-upgrade -d
 
