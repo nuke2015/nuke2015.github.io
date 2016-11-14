@@ -1,16 +1,31 @@
 
-
-docker pull ubuntu
+关于ubuntu16
 cat /etc/issue
-#ubuntu 16.01
 
 apt update
-apt search vim
-apt install vim
+apt install vim net-tools
+netstat -anp
 
-vim /etc/apt/sources.list
-改成国内源，继续
+安装hhvm
+apt-get install hhvm
+service --status-all|grep hhvm
+history
+service hhvm restart
+ps -aux|grep hhvm
+netstat -anp|grep hhvm
 
-apt update
+安装mysql-server
+apt-get install mysql-server mysql-client
+查服务
+service mysql status
+q退出
+
+开机启动
+update-rc.d mysql defaults
+/home/ddys_run/log# update-rc.d hhvm defaults
+定时任务
+/home/ddys_run/log# ps -aux|grep cron
+定时任务列表
+crontab -l
 
 
