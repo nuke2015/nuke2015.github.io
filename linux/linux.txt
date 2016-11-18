@@ -11,4 +11,6 @@ ubuntu映像下载
 http://cdimage.ubuntu.com/releases/
 全球镜像
 http://ftp.cn.debian.org/
+阿里开源
+http://cn.archive.ubuntu.com/
 
