@@ -1,0 +1,187 @@
+
+
+## 东北大学
+deb-src http://mirror.neu.edu.cn/ubuntu/ xenial main restricted #Added by software-properties
+deb http://mirror.neu.edu.cn/ubuntu/ xenial main restricted
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted
+deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+deb http://mirror.neu.edu.cn/ubuntu/ xenial universe
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates universe
+deb http://mirror.neu.edu.cn/ubuntu/ xenial multiverse
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates multiverse
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted
+deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-security universe
+deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse
+
+## 清华大学
+# deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse
+
+## 阿里云
+# deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+
+
+# Lupa完整源，据说2-3天与官方数据同步一次，浙江杭州双线服务器
+
+deb http://mirror.lupaworld.com/ubuntu intrepid main restricted universe multiverse
+deb http://mirror.lupaworld.com/ubuntu intrepid-security main restricted universe multiverse
+deb http://mirror.lupaworld.com/ubuntu intrepid-updates main restricted universe multiverse
+deb http://mirror.lupaworld.com/ubuntu intrepid-backports main restricted universe multiverse
+deb http://mirror.lupaworld.com/ubuntu/ubuntu-cn intrepid main restricted universe multiverse
+deb-src http://mirror.lupaworld.com/ubuntu intrepid main restricted universe multiverse
+deb-src http://mirror.lupaworld.com/ubuntu intrepid-security main restricted universe multiverse
+deb-src http://mirror.lupaworld.com/ubuntu intrepid-updates main restricted universe multiverse
+deb-src http://mirror.lupaworld.com/ubuntu intrepid-backports main restricted universe multiverse
+
+
+# 网易新开的更新源，欢迎国内其它门户继承与发扬
+
+deb http://mirrors.163.com/ubuntu/ intrepid main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ intrepid-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ intrepid-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ intrepid-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ intrepid-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ intrepid main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ intrepid-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ intrepid-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ intrepid-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ intrepid-backports main restricted universe multiverse
+
+
+# cn99 又回来了！该源服务器线路为江苏常州电信
+
+deb http://ubuntu.cn99.com/ubuntu/ edgy main restricted universe multiverse 
+deb http://ubuntu.cn99.com/ubuntu/ edgy-security main restricted universe multiverse
+deb http://ubuntu.cn99.com/ubuntu/ edgy-updates main restricted universe multiverse
+deb http://ubuntu.cn99.com/ubuntu/ edgy-proposed main restricted universe multiverse
+deb http://ubuntu.cn99.com/ubuntu/ edgy-backports main restricted universe multiverse
+deb-src http://ubuntu.cn99.com/ubuntu/ edgy main restricted universe multiverse
+deb-src http://ubuntu.cn99.com/ubuntu/ edgy-security main restricted universe multiverse
+deb-src http://ubuntu.cn99.com/ubuntu/ edgy-updates main restricted universe multiverse 
+deb-src http://ubuntu.cn99.com/ubuntu/ edgy-proposed main restricted universe multiverse
+deb-src http://ubuntu.cn99.com/ubuntu/ edgy-backports main restricted universe multiverse
+deb http://ubuntu.cn99.com/ubuntu-cn/ edgy main restricted universe multiverse
+
+
+# 台湾的官方源，速度也相当不错，有时甚至快于内地的
+
+deb http://tw.archive.ubuntu.com/ubuntu intrepid main restricted universe multiverse
+deb http://tw.archive.ubuntu.com/ubuntu intrepid-security main restricted universe multiverse
+deb http://tw.archive.ubuntu.com/ubuntu intrepid-updates main restricted universe multiverse
+deb http://tw.archive.ubuntu.com/ubuntu intrepid-backports main restricted universe multiverse
+deb http://tw.archive.ubuntu.com/ubuntu intrepid-proposed main restricted universe multiverse
+deb-src http://tw.archive.ubuntu.com/ubuntu intrepid main restricted universe multiverse
+deb-src http://tw.archive.ubuntu.com/ubuntu intrepid-security main restricted universe multiverse
+deb-src http://tw.archive.ubuntu.com/ubuntu intrepid-updates main restricted universe multiverse
+deb-src http://tw.archive.ubuntu.com/ubuntu intrepid-backports main restricted universe multiverse
+deb-src http://tw.archive.ubuntu.com/ubuntu intrepid-proposed main restricted universe multiverse
+
+
+#香港
+deb http://hk.archive.ubuntu.com/ubuntu intrepid main restricted universe multiverse
+deb http://hk.archive.ubuntu.com/ubuntu intrepid-security main restricted universe multiverse
+deb http://hk.archive.ubuntu.com/ubuntu intrepid-updates main restricted universe multiverse
+deb http://hk.archive.ubuntu.com/ubuntu intrepid-backports main restricted universe multiverse
+deb http://hk.archive.ubuntu.com/ubuntu intrepid-proposed main restricted universe multiverse
+deb-src http://hk.archive.ubuntu.com/ubuntu intrepid main restricted universe multiverse
+deb-src http://hk.archive.ubuntu.com/ubuntu intrepid-security main restricted universe multiverse
+deb-src http://hk.archive.ubuntu.com/ubuntu intrepid-updates main restricted universe multiverse
+deb-src http://hk.archive.ubuntu.com/ubuntu intrepid-backports main restricted universe multiverse
+deb-src http://hk.archive.ubuntu.com/ubuntu intrepid-proposed main restricted universe multiverse
+
+
+#国内
+deb http://cn.archive.ubuntu.com/ubuntu intrepid main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu intrepid-security main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu intrepid-updates main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu intrepid-backports main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu intrepid-proposed main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu intrepid main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu intrepid-security main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu intrepid-updates main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu intrepid-backports main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu intrepid-proposed main restricted universe multiverse
+
+
+##Mirror.vmmatrix.net更新服务器（上海市电信，推荐电信网通用户使用）：
+deb http://mirror.vmmatrix.net/ubuntu/ hardy main restricted universe multiverse
+deb-src http://mirror.vmmatrix.net/ubuntu/ hardy main restricted universe multiverse
+deb http://mirror.vmmatrix.net/ubuntu/ hardy-updates main restricted universe multiverse
+deb-src http://mirror.vmmatrix.net/ubuntu/ hardy-updates main restricted universe multiverse
+deb http://mirror.vmmatrix.net/ubuntu/ hardy-backports main restricted universe multiverse
+deb-src http://mirror.vmmatrix.net/ubuntu/ hardy-backports main restricted universe multiverse
+deb http://mirror.vmmatrix.net/ubuntu/ hardy-security main restricted universe multiverse
+deb-src http://mirror.vmmatrix.net/ubuntu/ hardy-security main restricted universe multiverse
+deb http://mirror.vmmatrix.net/ubuntu/ hardy-proposed main multiverse restricted universe
+deb-src http://mirror.vmmatrix.net/ubuntu/ hardy-proposed main restricted universe multiverse
+
+
+
+## 原生
+# See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
+# newer versions of the distribution.
+
+deb http://archive.ubuntu.com/ubuntu/ xenial main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted
+
+## Major bug fix updates produced after the final release of the
+## distribution.
+deb http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+
+## Uncomment the following two lines to add software from the 'universe'
+## repository.
+## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
+## team. Also, please note that software in universe WILL NOT receive any
+## review or updates from the Ubuntu security team.
+deb http://archive.ubuntu.com/ubuntu/ xenial universe
+deb-src http://archive.ubuntu.com/ubuntu/ xenial universe
+deb http://archive.ubuntu.com/ubuntu/ xenial-updates universe
+deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates universe
+
+## N.B. software from this repository may not have been tested as
+## extensively as that contained in the main release, although it includes
+## newer versions of some applications which may provide useful features.
+## Also, please note that software in backports WILL NOT receive any review
+## or updates from the Ubuntu security team.
+# deb http://archive.ubuntu.com/ubuntu/ xenial-backports main restricted
+# deb-src http://archive.ubuntu.com/ubuntu/ xenial-backports main restricted
+
+deb http://archive.ubuntu.com/ubuntu/ xenial-security main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ xenial-security main restricted
+deb http://archive.ubuntu.com/ubuntu/ xenial-security universe
+deb-src http://archive.ubuntu.com/ubuntu/ xenial-security universe
+# deb http://archive.ubuntu.com/ubuntu/ xenial-security multiverse
+# deb-src http://archive.ubuntu.com/ubuntu/ xenial-security multiverse
+
+
+
+
