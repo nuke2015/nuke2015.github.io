@@ -1,0 +1,35 @@
+
+系统映像处理
+
+2016年11月19日 22:50:57
+映像备份,加载,修改
+
+检查分区信息
+root@FengFeng:/media/vikeyxp/wd2t2# fdisk -l ./org.read 
+Disk ./org.read: 7948 MB, 7948206080 bytes
+255 heads, 63 sectors/track, 966 cylinders, total 15523840 sectors
+Units = 扇区 of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x2b1c25d6
+
+     设备 启动      起点          终点     块数   Id  系统
+./org.read1           40960      124927       41984   83  Linux
+./org.read2          124928     7167999     3521536   83  Linux
+
+
+开始位置
+=124928*512=63963136
+创建空目录
+mkdir orangepi
+挂载
+sudo mount -o loop,offset=63963136 org.read /mnt/orangepi
+检查
+ls /mnt/orangepi
+里面有大量的文件
+修改，然后 备份
+dd if=/mnt/orangepi of=/home/bak.img
+卸载,这里木有n
+umount /mnt/orangepi
+
+
