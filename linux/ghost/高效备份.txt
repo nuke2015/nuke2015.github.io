@@ -1,0 +1,27 @@
+
+
+备份
+dd bs=512 count=7168000 if=/dev/sdc | gzip -6 > /ghost.img.gz
+还原
+gzip -dc /ghost.img.gz.gz | dd of=/dev/sdc
+参考
+http://blog.jobbole.com/90978/
+
+
+直接备份
+dd if=/dev/sda of=/home/backup.img bs=512k &
+压缩备份
+dd if=/mnt/org2 ibs=512k | gzip > /home/backup.gz
+恢复压缩备份
+gzip -dc /home/backup.gz | dd of=/mnt/org_new obs=512k &
+
+填充
+dd if=/dev/zero of=/mnt/org2/zerofile bs＝512k &
+
+我们有没有办法提高压缩效率呢？有。答案还是能在dd指令中找到。那就是，先用dd指令把硬盘所有未用空间写成0，这样已被删文件的空间就重新被0占据。这个指令是：
+dd if=/dev/zero of=/media/sda1/zerofile bs＝512k &
+
+它会建立一个命名为zerofile的文件（你可以给任何文件名），dd会用0写这个文件，直到这个文件占据逻辑硬盘sda1中所有的剩余空间，无法再写为止。之后，删除这个zerofile，你就把所有未用空间重新归0了。归0之后再作硬盘的镜像压缩备份，那么备份就会小很多。
+
+阅读详情: http://www.backchina.com/blog/179872/article-94114.html#ixzz4QTBchGlJ
+
