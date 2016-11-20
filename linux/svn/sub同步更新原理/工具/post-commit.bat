@@ -1,0 +1,5 @@
+fslog %*
+echo 'abc'
+pause
+
+

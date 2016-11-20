@@ -1,0 +1,267 @@
+Array
+(
+    [0] => Array
+        (
+            [0] => A
+            [1] => 新建 WinRAR ZIP 压缩文件.zip
+        )
+
+    [1] => Array
+        (
+            [0] => A
+            [1] => 新建 文本文档.txt
+        )
+
+    [2] => Array
+        (
+            [0] => D
+            [1] => 新建 文本文档.txt
+        )
+
+    [3] => Array
+        (
+            [0] => A
+            [1] => 新建 Microsoft Word 文档.doc
+        )
+
+    [4] => Array
+        (
+            [0] => A
+            [1] => 新建 WinRAR 压缩文件.rar
+        )
+
+    [5] => Array
+        (
+            [0] => A
+            [1] => readme.txt
+        )
+
+    [6] => Array
+        (
+            [0] => D
+            [1] => 新建 Microsoft Word 文档.doc
+        )
+
+    [7] => Array
+        (
+            [0] => D
+            [1] => 新建 WinRAR ZIP 压缩文件.zip
+        )
+
+    [8] => Array
+        (
+            [0] => D
+            [1] => 新建 WinRAR 压缩文件.rar
+        )
+
+    [9] => Array
+        (
+            [0] => A
+            [1] => abc.txt
+        )
+
+    [10] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [11] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [12] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [13] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [14] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [15] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [16] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [17] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [18] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [19] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [20] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [21] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [22] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [23] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [24] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [25] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [26] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [27] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [28] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [29] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [30] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [31] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [32] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [33] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [34] => Array
+        (
+            [0] => U
+            [1] => abc.txt
+        )
+
+    [35] => Array
+        (
+            [0] => A
+            [1] => 新建 文本文档.txt
+        )
+
+    [36] => Array
+        (
+            [0] => D
+            [1] => 新建 文本文档.txt
+        )
+
+    [37] => Array
+        (
+            [0] => A
+            [1] => abc/
+        )
+
+    [38] => Array
+        (
+            [0] => A
+            [1] => abc/abc.zip
+        )
+
+    [39] => Array
+        (
+            [0] => A
+            [1] => abc/新建 文本文档.txt
+        )
+
+    [40] => Array
+        (
+            [0] => A
+            [1] => 新建文件夹/
+        )
+
+    [41] => Array
+        (
+            [0] => A
+            [1] => 新建文件夹/abc
+        )
+
+    [42] => Array
+        (
+            [0] => A
+            [1] => 新建文件夹/x.rar
+        )
+
+    [43] => Array
+        (
+            [0] => A
+            [1] => 新建文件夹/新建 WinRAR ZIP 压缩文件.zip
+        )
+
+)
