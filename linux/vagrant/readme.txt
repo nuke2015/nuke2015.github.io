@@ -19,3 +19,9 @@ service ssh restart
 ssh root@127.0.0.1
 测试一下
 
+2016年11月21日 18:23:13
+升级定制
+vagrant package --base your-vm-name
+会生成新的package.box镜像
+把修改Vagrantfile_empty文件即可.
+
