@@ -1,15 +1,12 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 VAGRANTFILE_API_VERSION = "2"
-
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu14"
-  config.vm.box_url = "trusty-server-cloudimg-amd64-vagrant-disk.box"
-
-  config.vm.network :forwarded_port, guest: 8090, host: 80
-  config.vm.network :forwarded_port, guest: 8000, host: 8100
-  config.vm.network :private_network, ip: "192.168.66.66"
+    config.vm.box = "ubuntu 16.04"
+    config.vm.box_url = "xenial-server-cloudimg-i386-vagrant.box"
+    config.vm.box_check_update = false
+    config.vm.network "forwarded_port", guest: 80, host: 8080  
+    config.vm.network "private_network", ip: "192.168.33.10" 
+    config.ssh.forward_agent = true
+    config.vm.synced_folder "./", "/vagrant"
 
   config.vm.provider :virtualbox do |vb|
     vb.name = "ubuntu14"

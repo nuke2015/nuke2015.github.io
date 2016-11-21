@@ -1,7 +1,21 @@
 
 安装virtualbox+vagrant启动虚拟机
-然后vagrant/vagrant进入虚拟机安装相关运行环境.
-然后用virtualbox添加文件夹共享,
-然后就能照顾用windows的同学进行开发了.
 
+启动
+vagrant up
+
+进入虚拟机领空
+vagrant ssh
+ 
+修改密码
+sudo passwd root
+su
+vi /etc/ssh/sshd_config
+把登陆
+PermitRootLogin prohibit-password
+改成
+PermitRootLogin yes
+service ssh restart
+ssh root@127.0.0.1
+测试一下
 
