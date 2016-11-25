@@ -22,3 +22,6 @@ composer国内镜像
 curl -sS http://install.phpcomposer.com/installer | php
 php -r "readfile('http://install.phpcomposer.com/installer');" | php
 
+各种php扩展下载
+http://pecl.php.net/packages.php
+
