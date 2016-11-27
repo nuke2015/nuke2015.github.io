@@ -3,5 +3,8 @@
 Total Uninstall 6
 
 安装包制作
-Smart Install Maker
+Smart Install Maker5
+
+绿化包制作
+ThinApp_4.7
 
