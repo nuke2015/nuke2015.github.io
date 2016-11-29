@@ -1,0 +1,44 @@
+{
+    "name": {
+        "message": "jjys168_家家月嫂客户端"
+    },
+    "description": {
+        "message": "Test chrome extension by fengzi,enjoy you client now!"
+    },
+    "request": {
+        "message": "Request"
+    },
+    "debuglink": {
+        "message": "Debug link"
+    },
+    "url": {
+        "message": "URL"
+    },
+    "method": {
+        "message": "Method"
+    },
+    "headers": {
+        "message": "Headers"
+    },
+    "data": {
+        "message": "Data"
+    },
+    "send": {
+        "message": "Send"
+    },
+    "clear": {
+        "message": "Clear"
+    },
+    "response": {
+        "message": "Response"
+    },
+    "processing": {
+        "message": "Processing"
+    },
+    "status": {
+        "message": "Status"
+    },
+    "bad_request": {
+        "message": "Bad request"
+    }
+}
