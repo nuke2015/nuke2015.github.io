@@ -40,4 +40,7 @@ win+x>p
 不使用win10的metro相关菜单
 方法:删除programs/xxxx*apps
 
+msi安装时提示2052,2053问题
+一般是当前登陆的用户对window/temp文件没有操作权限导致.
+去右键>编辑>完全控制>搞定.
 
