@@ -9,3 +9,6 @@ chrome://extensions/
 
 chrome://apps>可以访问导入成功的postman了.
 右键>创建快捷方式即可.
+
+用hexium这个开源的chromium版本加载比较简单.
+
