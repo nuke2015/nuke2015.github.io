@@ -37,3 +37,7 @@ win+x>p
 
 任务栏自动合并的处理>喜欢哪个放出来,直接拖动.
 
+不使用win10的metro相关菜单
+方法:删除programs/xxxx*apps
+
+
