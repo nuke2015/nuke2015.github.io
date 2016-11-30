@@ -1,5 +1,11 @@
 
+
+下载列表
+http://www.vagrantbox.es/
+
+
 64位
 https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box
 32位
 https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-i386-vagrant.box
+
