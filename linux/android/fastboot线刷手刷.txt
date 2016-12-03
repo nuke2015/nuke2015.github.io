@@ -20,3 +20,7 @@ C:\fastboot>fastboot boot recovery.img
 htc需要重写boot引导
 C:\fastboot>fastboot flash boot boot.img
 
+安装了twrp以后在recovery模式时，直接
+adb shell就是root用户带busybox的版本了。
+测试下grep,cp,ls等都能用了。
+whoami显示root
