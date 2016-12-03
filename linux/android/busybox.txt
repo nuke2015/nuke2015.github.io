@@ -1,0 +1,109 @@
+
+adb devices
+adb shell
+su
+cd /sbin
+ls
+发现文件比较少.
+cd /sbin
+busybox --install .
+得到:跨设备链接错误
+busybox: ./vconfig: Cross-device link
+busybox: ./vi: Cross-device link
+busybox: ./volname: Cross-device link
+busybox: ./watch: Cross-device link
+busybox: ./watchdog: Cross-device link
+busybox: ./wc: Cross-device link
+busybox: ./wget: Cross-device link
+busybox: ./which: Cross-device link
+busybox: ./whoami: Cross-device link
+busybox: ./whois: Cross-device link
+busybox: ./xargs: Cross-device link
+busybox: ./xz: Cross-device link
+busybox: ./xzcat: Cross-device link
+busybox: ./yes: Cross-device link
+改成
+busybox --install -s /sbin
+得到:只读系统不准写.
+busybox: /sbin/usleep: Read-only file system
+busybox: /sbin/uudecode: Read-only file system
+busybox: /sbin/uuencode: Read-only file system
+busybox: /sbin/vconfig: Read-only file system
+busybox: /sbin/vi: Read-only file system
+busybox: /sbin/volname: Read-only file system
+busybox: /sbin/watch: Read-only file system
+busybox: /sbin/watchdog: Read-only file system
+busybox: /sbin/wc: Read-only file system
+busybox: /sbin/wget: Read-only file system
+busybox: /sbin/which: Read-only file system
+busybox: /sbin/whoami: Read-only file system
+busybox: /sbin/whois: Read-only file system
+busybox: /sbin/xargs: Read-only file system
+直接mount
+得到
+rootfs / rootfs ro,relatime 0 0
+tmpfs /dev tmpfs rw,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+tmpfs /mnt/asec tmpfs rw,relatime,mode=755,gid=1000 0 0
+tmpfs /mnt/obb tmpfs rw,relatime,mode=755,gid=1000 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,relatime,data=or
+red 0 0
+/dev/block/platform/msm_sdcc.1/by-name/userdata /data ext4 rw,nosuid,nodev,rel
+ime,journal_checksum,noauto_da_alloc,data=ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/persist /persist ext4 rw,nosuid,nodev,r
+atime,data=ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw,nosuid,nodev,relat
+e,journal_checksum,noauto_da_alloc,data=ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/modem /firmware vfat ro,relatime,uid=10
+,gid=1000,fmask=0337,dmask=0227,codepage=cp437,iocharset=iso8859-1,shortname=l
+er,errors=remount-ro 0 0
+/dev/block/vold/179:33 /storage/sdcard0 vfat rw,dirsync,nosuid,nodev,noexec,re
+time,uid=1000,gid=1015,fmask=0202,dmask=0202,allow_utime=0020,codepage=cp437,i
+harset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0
+/dev/block/vold/179:33 /mnt/secure/asec vfat rw,dirsync,nosuid,nodev,noexec,re
+time,uid=1000,gid=1015,fmask=0202,dmask=0202,allow_utime=0020,codepage=cp437,i
+harset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0
+tmpfs /storage/sdcard0/.android_secure tmpfs ro,relatime,size=0k,mode=000 0 0
+发现rootfs是ro的不让写
+mount -o remount,rw /
+切换rootfs为rw的.
+然后
+mkdir /bin
+chmod 777 /bin
+用软链
+/system/xbin/busybox --install -s /bin
+如果系统里没有busybox,
+可以用adb push c:\busybox /sdcard推一个进去.
+
+再锁回去
+mount -o remount,ro /
+试试
+ls|grep 报grep没找到.
+把/bin目录加入$PATH中.
+export PATH=$PATH:/bin
+测试
+ls|grep -ri dd
+which busybox
+得到
+/system/xbin/busybox
+
+复制
+用cp -rf /data/data/ /sdcard/datasd/
+复制过程有点慢,
+检查
+ls /sdcard/datasd/
+发现打偏了.多了一个/data文件夹.
+那就将错就错吧.
+rm -rf /data/data/
+ln -s /sdcard/datasd/data/ /data/data/
+
+重启
+reboot
+
+fastboot reboot
+fastboot reboot-bootloader
+
