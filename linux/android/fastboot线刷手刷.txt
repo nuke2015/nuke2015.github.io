@@ -1,0 +1,22 @@
+
+查连接
+fastboot devices
+
+刷入
+fastboot flash recovery TWRP2.6.0.0_mione_plus_multilanguage.img
+
+恢复模式
+fastboot reboot-bootloader
+
+重启
+fastboot reboot
+
+重启 
+C:\fastboot>adb reboot bootloader
+
+试引导但并不安装
+C:\fastboot>fastboot boot recovery.img
+
+htc需要重写boot引导
+C:\fastboot>fastboot flash boot boot.img
+
