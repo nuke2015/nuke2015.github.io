@@ -24,3 +24,7 @@ C:\fastboot>fastboot flash boot boot.img
 adb shell就是root用户带busybox的版本了。
 测试下grep,cp,ls等都能用了。
 whoami显示root
+在外面的时候，默认是没有加载/data目录的，有个抽象的/data目录但是没有内容。
+需要手动点mount菜单加载.
+然后才有/data的全部内容。
+
