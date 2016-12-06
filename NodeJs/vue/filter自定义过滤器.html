@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>
+                菜鸟教程(runoob.com)
+            </title>
+            <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js">
+            </script>
+        </meta>
+    </head>
+    <body>
+        <div id="app">
+            <p>
+                {{message}}
+            </p>
+            <p>
+                {{message | uppercase}}
+            </p>
+            <p>
+                {{message | reverse | uppercase}}
+            </p>
+        </div>
+        <script>
+            Vue.filter('reverse', function (value) {
+                return value.split('').reverse().join('')
+            })
+            new Vue({
+              el: '#app',
+              data: {
+                  message:'www.runoob.com'
+              }
+            })
+        </script>
+    </body>
+</html>

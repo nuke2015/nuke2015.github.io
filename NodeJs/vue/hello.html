@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  {{ message }}
+</div>
+<!-- JavaScript 代码需要放在尾部（指定的HTML元素之后） -->
+<script>
+new Vue({
+    el:'#app',
+    data: {
+        message:'Hello World!'
+    }
+});
+</script>
+</body>
+</html>

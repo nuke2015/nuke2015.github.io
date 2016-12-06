@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>
+                菜鸟教程(runoob.com)
+            </title>
+            <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js">
+            </script>
+        </meta>
+    </head>
+    <body>
+        <p>
+            修改输入框的值，查看效果：
+        </p>
+        <div id="app">
+            <p>
+                {{ message }}
+            </p>
+            <input v-model="message">
+            </input>
+        </div>
+        <script src="http://static.runoob.com/code/js/vueapp.js">
+            new Vue({
+              el: '#app',
+              data: {
+                message: '菜鸟教程!'
+              }
+            })
+        </script>
+    </body>
+</html>
