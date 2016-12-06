@@ -237,12 +237,6 @@ reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Main\En
 reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" /v Enable /d "" /t reg_sz /f
 echo 完成
  
-:admin1
-ECHO 启用Administrator账户
-net user administrator /active:yes
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v FilterAdministratorToken /d 1 /t REG_DWORD /f
-echo 完成
- 
 ECHO 鼠标指向右上角不显示超级按钮
 reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI" /v DisableCharms /d 1 /t REG_DWORD /f
 echo 完成
