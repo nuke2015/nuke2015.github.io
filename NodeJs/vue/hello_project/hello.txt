@@ -1,0 +1,18 @@
+
+淘宝镜像
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+安装webpack vue-cli
+cnpm install webpack vue-cli -g
+
+查看可用的模板列表
+vue list
+
+初始化
+vue init webpack-simple hello
+
+启动
+cd hello
+cnpm install
+npm run dev
+
