@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "jugglingdb-mysql": "^0.2.3"
+  }
+}
