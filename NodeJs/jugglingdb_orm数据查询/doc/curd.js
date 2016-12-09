@@ -27,3 +27,26 @@ for (var i = 5; i >= 0; i--) {
         console.log(res);
     });
 }
+// 全部数据
+model.all({
+    id: {
+        gt: 0
+    }
+}, function(err, res) {
+    console.log(err);
+    console.log(res);
+});
+// 分页查询
+model.all({
+    where:{
+        id: {
+            gt: 0
+        }
+    },
+    order:"id desc",
+    skip:1,
+    limit:3,
+}, function(err, res) {
+    console.log(err);
+    console.log(res);
+});
