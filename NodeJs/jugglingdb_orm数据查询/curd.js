@@ -8,7 +8,14 @@ var db = new Schema('mysql', {
 // 清除数据库
 // 一个指向就够了,不用详细定义
 var model = db.define('hello');
-console.log(model);
+// 条件删除
+// console.log(model);
+// model.find(109,function(err,res){
+//     这个destroy比较奇怪,它不是model的直接方法,而是属性值.
+//     if(res)res.destroy();
+// });
+// return;
+// return;
 model.destroyAll(function(err) {
     console.log(err);
 });
