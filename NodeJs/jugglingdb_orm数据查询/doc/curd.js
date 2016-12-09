@@ -38,15 +38,48 @@ model.all({
 });
 // 分页查询
 model.all({
-    where:{
+    where: {
         id: {
             gt: 0
         }
     },
-    order:"id desc",
-    skip:1,
-    limit:3,
+    order: "id desc",
+    skip: 1,
+    limit: 3,
 }, function(err, res) {
     console.log(err);
     console.log(res);
 });
+// 添加或更新update and insert
+// Model.upsert(data, callback);
+// 更新update
+// Model.update({
+//     where: {
+//         id: inst.id
+//     },
+//     update: {
+//         field: 'data'
+//     }
+// });
+// 游标查询
+// Model.iterate(options, iterator, callback)
+// 单条查询
+// Model.find(id, callback);
+// 条数查询
+// Model.count([query, ]callback);
+// 关联入库
+// Book.create(function(err, book) {
+//     // using 'chapters' scope for build:
+//     var c = book.chapters.build({name: 'Chapter 1'});
+//     // same as:
+//     c = new Chapter({name: 'Chapter 1', bookId: book.id});
+//     // using 'chapters' scope for create:
+//     book.chapters.create();
+//     // same as:
+//     Chapter.create({bookId: book.id});
+//     // using scope for querying:
+//     book.chapters(function() {/* all chapters with bookId = book.id */ });
+//     book.chapters({where: {name: 'test'}, function(err, chapters) {
+//         // all chapters with bookId = book.id and name = 'test'
+//     });
+// });
