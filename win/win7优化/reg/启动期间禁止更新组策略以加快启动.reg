@@ -1,0 +1,5 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"SynchronousUserGroupPolicy"=dword:00000000
+"SynchronousMachineGroupPolicy"=dword:00000000
