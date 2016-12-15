@@ -5,8 +5,8 @@ np1
 enter
 enter
 :wq
-mkfs.ext3 /dev/sdb1
-echo '/dev/sdb1  /mnt ext3    defaults    0  0' >> /etc/fstab
+mkfs.ext4 /dev/sdb1
+echo '/dev/sdb1  /mnt ext4    defaults    0  0' >> /etc/fstab
 
 格式化
 mkfs.ext4 /dev/sdb1
