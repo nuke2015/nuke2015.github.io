@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <style>
+	.number{
+		color:red;
+	}
+    </style>
+    <body>
+        <span id="btn_click">点击</span>
+        <br/>
+        <span id="result">[目标上会出现模拟点击]</span>
+        <script>
+        $("#result").click(function(){
+            alert('you click me,i am result!');
+        });
+        $("#btn_click").click(function(){
+            $("#result").trigger("click");
+        });
+        </script>
+    </body>
+</html>
