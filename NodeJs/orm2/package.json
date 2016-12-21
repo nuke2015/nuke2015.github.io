@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "jugglingdb": "^2.0.0-rc8",
-    "jugglingdb-mysql": "^0.2.3"
+    "orm": "^3.2.2"
   }
 }
