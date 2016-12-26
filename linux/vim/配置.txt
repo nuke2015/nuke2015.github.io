@@ -1,0 +1,29 @@
+apt-get install git
+安装bundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+vi ~/.vimrc
+粘上
+
+
+" For vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+" vim-scripts repos
+Bundle 'bash-support.vim'
+Bundle 'perl-support.vim'
+filetype plugin indent on "
+
+
+复制vimfiles到/root/.vim文件夹
+复制vimrc到/etc/vim/vimrc文件中
+
+然后 打开vim
+执行:BundleInstall
+它会自动安装相关插件
+
+
+
