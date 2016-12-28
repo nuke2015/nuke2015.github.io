@@ -126,17 +126,7 @@ echo 完成
 ECHO 桌面显示“这台电脑”
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /d 0 /t REG_DWORD /f
 echo 完成
- 
-ECHO 启用IE增强保护模式
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Isolation" /d "PMEM" /t REG_SZ /f
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Isolation64Bit" /d 1 /t REG_DWORD /f
-echo 完成
- 
-ECHO 将临时文件夹移动E盘
-reg add "HKEY_CURRENT_USER\Environment" /v "TMP" /d "E:\userdata\temp" /t REG_EXPAND_SZ /f
-reg add "HKEY_CURRENT_USER\Environment" /v "TEMP" /d "E:\userdata\temp" /t REG_EXPAND_SZ /f
-echo 完成
- 
+  
 ECHO 关闭家庭组
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup" /v "DisableHomeGroup" /d 1 /t REG_DWORD /f
 echo 完成
