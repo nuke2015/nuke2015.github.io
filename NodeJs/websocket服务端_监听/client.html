@@ -1,0 +1,46 @@
+<!DOCTYPE doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            Document
+        </title>
+        <style>
+            .kuang{text-align: center;margin-top:200px;}
+        #mess{text-align: center}
+        .value{width: 200px;height:200px;border:1px solid;text-align: center;line-height: 200px;display: inline-block;}
+        </style>
+    </head>
+    <body>
+        <div class="kuang">
+            <div class="value" id="value1">
+                小明小明
+            </div>
+            <div class="value" id="value2">
+                大胸大胸
+            </div>
+            <div class="value" id="value3">
+                小张小张
+            </div>
+        </div>
+        <script>
+            var conf='ws://127.0.0.1:8092';
+            var ws = new WebSocket(conf);
+            document.querySelector(".kuang").onclick = function(e){
+                console.log(ws);
+                if(ws.readyState==1){
+                    // 监听中
+                    var time = new Date();
+                    // ws.send(time.toLocaleString() + "  game1点击了“" + e.target.innerHTML+"”");
+                    ws.send(JSON.stringify(document));
+                }else if(ws.readyState==3){
+                    // 断线重连
+                    ws=new WebSocket(conf);
+                }else{
+                    // 连接中
+                    console.log('connectting...');
+                }
+            }
+        </script>
+    </body>
+</html>
