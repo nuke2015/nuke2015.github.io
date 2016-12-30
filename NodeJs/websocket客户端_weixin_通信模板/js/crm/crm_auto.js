@@ -1,4 +1,14 @@
 var app = this;
+/*全局拦截A事件*/
+app.bind = function() {
+    // todo:如果是外链要开新窗口承载.
+    $("a").click(function(e) {
+        console.log('a good');
+        e.preventDefault();
+        var turl = $(this).attr('href');
+        gohref(turl);
+    });
+};
 /**websocket握手**/
 // 单例模式
 if (!app.ws) {
@@ -59,7 +69,10 @@ var gohref = function(turl) {
     }
     $(document).ready(function() {
         console.log(turl);
-        $('body').load(turl);
+        $('body').load(turl, function(res) {
+            // 事件绑定
+            app.bind();
+        });
     });
 }
 gohref();
