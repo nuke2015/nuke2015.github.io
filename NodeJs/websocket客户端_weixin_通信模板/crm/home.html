@@ -1,0 +1,23 @@
+<h1>
+    welcome to websocket,这是首页(测试)
+</h1>
+<style>
+    /*test*/
+</style>
+<script>
+    // test
+</script>
+<script src="/js/crm/crm_home.js">
+</script>
+<span id="test">
+    test测试
+</span>
+<hr/>
+<div class="result_yslist"></div>
+<script id="template_yslist" type="text/html">
+<ul>
+{{each data as v k}}
+    <li>第{{k}}条: ID {{v.id}}, 姓名:{{v.nickname}} ,头像{{v.headphoto}}</li>
+{{/each}}
+</ul>
+</script>
