@@ -3,7 +3,13 @@
 cat /etc/issue
 
 apt update
+
+没有netstat时
 apt install vim net-tools
+
+没有ping时
+apt-get install iputils-ping
+
 netstat -anp
 
 安装hhvm
