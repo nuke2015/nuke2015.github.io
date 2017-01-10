@@ -3,6 +3,8 @@
 http://cdn.code.baidu.com/
 新浪库
 http://lib.sinaapp.com/
+新浪sae本地开发环境
+http://lib.sinaapp.com/saelocal/SAE_Local_Environment-windows-1.3.0.zip
 
 Angular.js
 <script src="http://apps.bdimg.com/libs/angular.js/1.2.15/angular.min.js"></script>
