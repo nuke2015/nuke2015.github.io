@@ -22,6 +22,7 @@ var socket_ws = {
     init: function() {
         var that = this;
         this.conn();
+        // 断线重连
         setInterval(function() {
             wx.onSocketOpen(function(res) {
                 that.is_open = 1;
@@ -45,6 +46,7 @@ var socket_ws = {
             data: JSON.stringify(req)
         });
         var that = this;
+        // 这里是个异步的过程,放这里只是象征性的触发.
         wx.onSocketMessage(function(resp) {
             var obj = JSON.parse(resp.data);
             var act = obj.act;
