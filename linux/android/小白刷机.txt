@@ -1,0 +1,7 @@
+
+对于部分按键不好的手机,可以软操作.
+
+取得root权限kingroot/su等,安装刷机助手,
+菜单>进入recover模式或fastboot模式.
+然后就可以命令刷或者用adb,fastboot安装第三方工具了.
+
