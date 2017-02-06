@@ -5,3 +5,5 @@
 菜单>进入recover模式或fastboot模式.
 然后就可以命令刷或者用adb,fastboot安装第三方工具了.
 
+
+酷比魔方>下+开机>工厂模式>刷机大师>进入recovery.
