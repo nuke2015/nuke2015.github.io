@@ -1,5 +1,11 @@
 
-开放远程访问
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
-FLUSH RIVILEGES
+安装 mysql-server-5.7
+
+开放数据库远程访问:
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '50EF0B369CE8D3' WITH GRANT OPTION;
+FLUSH RIVILEGES;
+
+修改配置
+etc/mysql/mysql.conf.d/mysqld.cnf
+bind=127.0.0.1
 
