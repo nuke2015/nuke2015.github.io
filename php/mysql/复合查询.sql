@@ -22,4 +22,6 @@ SELECT i.id as coupon_id,s.service_group_id FROM `ddys_coupon_item` as i left jo
 //时间戳格式化
 SELECT id,process,status,product_days,from_unixtime(service_start),from_unixtime(service_end),from_unixtime(schedule_date) FROM `ddys_order` WHERE `caregiver_id` = '99' LIMIT 50
 
+// group二次排序+分页
+select * from (select * from ddys_comment_yuesao where yuesao_id=116 and role=1 order by id DESC)_ group by user_id order by id DESC limit 0,20
 
