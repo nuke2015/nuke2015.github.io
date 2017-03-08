@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="bingtu"  width="224" height="130" ></canvas>
+    <script>
+        var color = ["#999999","#333333","#336799"];
+var data = [25,35,50];
+ 
+function drawCircle(){
+        var canvas = document.getElementById("bingtu");
+        var ctx = canvas.getContext("2d");
+        var startPoint= 1.5 * Math.PI;
+        for(var i=0;i<data.length;i++){
+                ctx.fillStyle = color[i];
+                ctx.strokeStyle = color[i];
+                ctx.beginPath();
+                ctx.moveTo(112,65);
+                ctx.arc(112,65,65,startPoint,startPoint-Math.PI*2*(data[i]/100),true);
+                ctx.fill();
+                ctx.stroke();
+                startPoint -= Math.PI*2*(data[i]/100);
+        }
+}
+drawCircle();
+
+    </script>
+</body>
+</html>
