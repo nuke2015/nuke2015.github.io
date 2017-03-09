@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas绘制饼状图</title>
+</head>
+<body style="padding: 100px;">
+  <canvas id="canvas" width="900" height="600" style="border:1px solid #000"></canvas>
+
+<script>
+     // 1. 获取标签
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    // 2. 数据
+    var data = [
+        {name: '上海', color: '#9556bf', value: 1/31},
+        {name: '北京', color: '#ffffff', value: 1/31},
+        {name: '广州', color: '#9556bf', value: 1/31},
+        {name: '深圳', color: '#ffffff', value: 1/31},
+        {name: '东莞', color: '#ffffff', value: 1/31},
+        {name: '惠州', color: '#9556bf', value: 1/31},
+        {name: '珠海', color: '#9556bf', value: 1/31},
+        {name: '香港', color: '#ffffff', value: 1/31},
+        {name: '澳门', color: '#9556bf', value: 1/31}
+    ];
+
+    // 3. 绘制
+    // 3.1 常量
+    var x0 = canvas.width * 0.5,
+        y0 = canvas.height * 0.5;
+    var radius = 150;
+    var beginAngle = -90 * Math.PI / 180;
+
+    for(var i=0; i<data.length; i++){
+        // 结束角度
+        var tempAngle = 360 * data[i].value * Math.PI / 180,
+            endAngle = beginAngle + tempAngle;
+
+        // 1. 绘制扇区
+        ctx.beginPath();
+        // 设置起点
+        ctx.moveTo(x0, y0);
+        ctx.arc(x0, y0, radius, beginAngle, endAngle);
+        ctx.fillStyle = data[i].color;
+        ctx.fill();
+
+        // 2. 绘制文字
+        // 2.1 初始的量
+         var textAngle = beginAngle + 0.5 * tempAngle; // 弧度
+         var text = data[i].name;
+//         console.log(text);
+
+        // 2.2 计算文本的x和y
+        var textX = x0 + (radius + 20) * Math.cos(textAngle),
+            textY = y0 + (radius + 20) * Math.sin(textAngle);
+
+        // 2.3 特殊情况处理
+        if(textAngle > 90 * Math.PI / 180 && textAngle < 270 * Math.PI / 180){
+            ctx.textAlign = 'end';
+        }
+
+        // 2.4 绘制
+        ctx.fillText(text, textX, textY);
+
+        // 更新起始角度
+        beginAngle = endAngle;
+    }
+
+</script>
+</body>
+</html>
