@@ -33,3 +33,6 @@ D:\soft\chrome44.0.2403.130\chrome.exe --user-agent="zhangchuappforandroid Andro
 sock5完全代理
 D:\soft\chrome44\chrome.exe --user-data-dir="C:\Cache\g1066" --proxy-server="socks5://127.0.0.1:1080"
 
+安装flashplayer扩展
+https://get2.adobe.com/cn/flashplayer/?no_redirect
+
