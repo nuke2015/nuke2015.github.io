@@ -1,0 +1,40 @@
+
+
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>fastboot devices
+cdded3d9        fastboot
+
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>ls
+AdbWinApi.dll     NOTICE.txt  fastboot.exe       system.img
+AdbWinUsbApi.dll  adb.exe     source.properties  x.bat
+
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>fastboot flash system system.img
+target reported max download size of 268435456 bytes
+erasing 'system'...
+OKAY [  0.156s]
+sending sparse 'system' (262015 KB)...
+OKAY [  9.344s]
+writing 'system'...
+OKAY [ 12.656s]
+sending sparse 'system' (259237 KB)...
+OKAY [  8.984s]
+writing 'system'...
+OKAY [ 11.141s]
+sending sparse 'system' (55743 KB)...
+OKAY [  1.953s]
+writing 'system'...
+OKAY [  2.594s]
+finished. total time: 46.828s
+
+D:\tdd\wt86047_images_5.12.10_20151126.0000.5_4.4_cn_b8a97dea65\wt86047_images_
+.12.10_20151126.0000.5_4.4_cn\Android>fastboot reboot
+
+
