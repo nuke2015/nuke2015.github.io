@@ -53,6 +53,8 @@ var init = (function() {
     $('#pca_province').change(function() {
         var province = $("#pca_province :selected").val();
         api.AddressArea_set('#pca_city', province);
+        // 归零
+        $('#pca_area').html('<option>区县</option>');
     });
     // 城市响应
     $('#pca_city').change(function() {
