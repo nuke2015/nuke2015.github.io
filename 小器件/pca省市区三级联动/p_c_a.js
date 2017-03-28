@@ -55,9 +55,12 @@ var api_pca = {
         // 默认城市
         if (api_pca.default_city) {
             api_pca.AddressArea_set('#pca_city', api_pca.default_province, api_pca.default_city);
-        }
-        if (api_pca.default_area) {
-            api_pca.AddressArea_set('#pca_area', api_pca.default_city, api_pca.default_area);
+            // 关联层级
+            if (api_pca.default_area) {
+                api_pca.AddressArea_set('#pca_area', api_pca.default_city, api_pca.default_area);
+            } else {
+                api_pca.AddressArea_set('#pca_area', api_pca.default_city, 0);
+            }
         }
         // 省事件响应
         $('#pca_province').change(function() {
@@ -73,4 +76,3 @@ var api_pca = {
         });
     }
 };
-api_pca.init(103198, 103212, 103214);
