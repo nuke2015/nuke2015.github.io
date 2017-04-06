@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+        </meta>
+    </head>
+    <body>
+        <button id="btn">
+            获取信息
+        </button>
+        <div id="result">
+        </div>
+        <script>
+            btn.onclick = function(){
+    //创建xhr对象
+    var xhr;
+    if(window.XMLHttpRequest){
+        xhr = new XMLHttpRequest();
+    }else{
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+    //异步接受响应
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+            if(xhr.status == 200){
+                //实际操作
+                result.innerHTML += xhr.responseText;
+            }
+        }
+    }
+    //发送请求
+    xhr.open('get','message.xml',true);
+    xhr.send();
+}
+        </script>
+    </body>
+</html>
