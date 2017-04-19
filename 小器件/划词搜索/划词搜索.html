@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="box">
+        是客户端javascript最高层对象之一，只要打开浏览器窗口，不管该窗口中是否有打开的网页，当遇到BODY、FRAMESET或FRAME元素时，都会自动建立window对象的实例。另外，该对象的实例也可由window.open()方法创建。由于window对象是其它大部分对象的共同祖先，在调用window对象的方法和属性时，可以省略window对象的引用。例如：window.document.write()可以简写成： document.write()。
+    </div>
+</body>
+</html>
+<script>
+ 
+//兼容函数
+function getText()
+{
+    if (document.selection) {
+        //兼容ie
+        return document.selection.createRange().text;
+    }else{
+        //W3C
+        return window.getSelection().toString();
+    }
+}
+ 
+var $ = function(id){
+    return document.getElementById(id);
+}
+ 
+//在box元素中,鼠标抬起的时候，那么就可以获取到文字
+$('box').onmouseup=function(){
+    alert(getText());
+}
+ 
+</script>
