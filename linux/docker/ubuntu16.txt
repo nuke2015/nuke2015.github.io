@@ -5,10 +5,7 @@ cat /etc/issue
 apt update
 
 没有netstat时
-apt install vim net-tools
-
-没有ping时
-apt-get install iputils-ping
+apt install vim net-tools iputils-ping
 
 netstat -anp
 
