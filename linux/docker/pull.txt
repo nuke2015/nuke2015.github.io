@@ -1,0 +1,11 @@
+
+pull映像源
+
+网易
+sudo echo "DOCKER_OPTS=\"--registry-mirror=http://hub-mirror.c.163.com\"" >> /etc/default/docker
+service docker restart
+
+ustc的
+sudo echo "DOCKER_OPTS=\"--registry-mirror=https://docker.mirrors.ustc.edu.cn\"" >> /etc/default/docker
+sudo service docker restart
+
