@@ -22,3 +22,6 @@ ctrl+j合并成一行
 
 ctrl+ku大写
 ctrl+kl小写
+ctrl+k,ctrl+w关闭全部标签
+
+
