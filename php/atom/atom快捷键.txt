@@ -1,0 +1,13 @@
+
+
+基于浏览器技术的编辑器
+ctrl++放大
+ctrl--缩小
+ctrl+d,同步编辑
+ctrl+g,到第几行
+ctrl+f查找
+ctrl+shift+f在文件中查找
+ctrl+w关闭
+ctrl+shift+w退出
+关闭所有标签页的快捷键可定制
+
