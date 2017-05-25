@@ -11,3 +11,14 @@ ctrl+w关闭
 ctrl+shift+w退出
 关闭所有标签页的快捷键可定制
 
+ctrl+箭头,移动单行
+ctrl+alt+箭头,垂直选中
+ctrl+shift+d复制一行
+ctrl+shift+k删除一行
+ctrl+d选中一个词ctrl+左右,跳过一个词
+ctrl+\目录树
+ctrl+/注释
+ctrl+j合并成一行 
+
+ctrl+ku大写
+ctrl+kl小写
