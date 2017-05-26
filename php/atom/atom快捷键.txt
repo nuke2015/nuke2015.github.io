@@ -35,3 +35,6 @@ ctrl+m,在html标签对跳转
 ctrl+shift+m预览网页
 
 
+emmet快捷键
+ctrl+e,展开tab
+ctrl+shift+e,选中标签对

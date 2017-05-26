@@ -1,0 +1,15 @@
+
+在官网搜索模块名
+https://atom.io/packages/
+命令行安装,类似于nodejs的npm操作
+apm install atom-beautify
+
+
+设置>install>
+
+1.Emmet — 用过都说好,神器;有个别快捷键会和 Markdown preview 快捷键冲突，改下就好了
+
+2.autoprefixer — 用来补充 css 前缀的，会自动生成多个浏览器的前缀
+
+3.autocomplete-plus — 完善自带 autocomplete,有二度设置，接下来列出的一些有二度设置
+
