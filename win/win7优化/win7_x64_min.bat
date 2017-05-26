@@ -154,6 +154,13 @@ sc config   wudfsvc start= DEMAND
 sc config   WwanSvc start= DEMAND 
 
 sc config   PolicyAgent start= DISABLED
+sc config   wscsvc start= DISABLED
 sc config   RpcSs start= DISABLED
+sc config   LanmanWorkstation start= DEMAND
+sc config   LanmanServer start= DEMAND
+sc config   PcaSvc start= DISABLED
+sc config   MMCSS start= DISABLED
+sc config   igfxCUIService2.0.0.0 start= DISABLED
  
 @pause 
+
