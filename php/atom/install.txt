@@ -1,7 +1,15 @@
 
 编辑器atom下载官网
 https://github.com/atom/atom/releases/tag/v1.17.2
+1.7版本似乎有点性能问题,就是有很多的node进程
 
+常用模块列表
+1.Emmet — 用过都说好,神器;有个别快捷键会和 Markdown preview 快捷键冲突，改下就好了
+2.autoprefixer — 用来补充 css 前缀的，会自动生成多个浏览器的前缀
+3.autocomplete-plus — 完善自带 autocomplete,有二度设置，接下来列出的一些有二度设置
+atom-beautify代码排版与格式化
+php-fmt,最新标准的php排版工具
+sftp-deployment远程编辑
 
 在官网搜索模块名
 https://atom.io/packages/
@@ -22,11 +30,3 @@ cd ~/.atom/packages
 git clone https://github.com/emmetio/emmet-atom
 cd emmet-atom
 npm install
-
-
-设置>install>
-
-1.Emmet — 用过都说好,神器;有个别快捷键会和 Markdown preview 快捷键冲突，改下就好了
-2.autoprefixer — 用来补充 css 前缀的，会自动生成多个浏览器的前缀
-3.autocomplete-plus — 完善自带 autocomplete,有二度设置，接下来列出的一些有二度设置
-
