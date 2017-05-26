@@ -19,6 +19,7 @@ ctrl+d选中一个词ctrl+左右,跳过一个词
 ctrl+\目录树
 ctrl+/注释
 ctrl+j合并成一行 
+ctrl+,设置
 
 ctrl+ku大写
 ctrl+kl小写
