@@ -152,4 +152,8 @@ sc config   WSearch start= DISABLED
 sc config   wuauserv start= DISABLED 
 sc config   wudfsvc start= DEMAND 
 sc config   WwanSvc start= DEMAND 
+
+sc config   PolicyAgent start= DISABLED
+sc config   RpcSs start= DISABLED
+ 
 @pause 
