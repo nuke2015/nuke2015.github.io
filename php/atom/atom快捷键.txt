@@ -23,5 +23,14 @@ ctrl+j合并成一行
 ctrl+ku大写
 ctrl+kl小写
 ctrl+k,ctrl+w关闭全部标签
+ctrl+n新建
+ctrl+l选中一行
+ctrl+shift+u切换编码
+ctrl+k+箭头,分屏
+
+
+html相关
+ctrl+m,在html标签对跳转
+ctrl+shift+m预览网页
 
 
