@@ -1,4 +1,8 @@
 
+编辑器atom下载官网
+https://github.com/atom/atom/releases/tag/v1.17.2
+
+
 在官网搜索模块名
 https://atom.io/packages/
 命令行安装,类似于nodejs的npm操作
