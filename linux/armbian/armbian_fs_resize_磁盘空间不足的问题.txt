@@ -1,0 +1,59 @@
+
+
+  ___                               ____  _    ___             
+ / _ \ _ __ __ _ _ __   __ _  ___  |  _ \(_)  / _ \ _ __   ___ 
+| | | | '__/ _` | '_ \ / _` |/ _ \ | |_) | | | | | | '_ \ / _ \
+| |_| | | | (_| | | | | (_| |  __/ |  __/| | | |_| | | | |  __/
+ \___/|_|  \__,_|_| |_|\__, |\___| |_|   |_|  \___/|_| |_|\___|
+                       |___/                                   
+
+Welcome to ARMBIAN 5.25 stable Ubuntu 16.04.1 LTS 3.4.113-sun8i   
+System load:   1.05             Up time:       1 min        
+Memory usage:  6 % of 494Mb     IP:            192.168.1.103
+CPU temp:      44°C             
+Usage of /:    86% of 1.4G      
+
+
+2017年5月28日 16:11:09
+初始化时,总容量只有1.4G这是有问题的.
+armbian默认的连接密码是1234,在修改密码,创建用户之后
+执行reboot操作
+会看到新的磁盘占用空间.
+  ___                               ____  _    ___             
+ / _ \ _ __ __ _ _ __   __ _  ___  |  _ \(_)  / _ \ _ __   ___ 
+| | | | '__/ _` | '_ \ / _` |/ _ \ | |_) | | | | | | '_ \ / _ \
+| |_| | | | (_| | | | | (_| |  __/ |  __/| | | |_| | | | |  __/
+ \___/|_|  \__,_|_| |_|\__, |\___| |_|   |_|  \___/|_| |_|\___|
+                       |___/                                   
+
+Welcome to ARMBIAN 5.25 stable Ubuntu 16.04.1 LTS 3.4.113-sun8i   
+System load:   1.10             Up time:       31 sec       
+Memory usage:  7 % of 494Mb     IP:            192.168.1.103
+CPU temp:      45°C             
+Usage of /:    16% of 7.2G      
+
+
+[ 5 updates to install: apt-get upgrade ]
+
+root@orangepione:~# fdisk -l
+Disk /dev/mmcblk0: 7.4 GiB, 7948206080 bytes, 15523840 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x11a72f0f
+
+Device         Boot Start      End  Sectors  Size Id Type
+/dev/mmcblk0p1       2048 15213343 15211296  7.3G 83 Linux
+
+root@orangepione:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            165M     0  165M   0% /dev
+tmpfs            50M  1.2M   49M   3% /run
+/dev/mmcblk0p1  7.2G  1.2G  6.0G  17% /
+tmpfs           248M     0  248M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           248M     0  248M   0% /sys/fs/cgroup
+tmpfs           248M     0  248M   0% /tmp
+log2ram          50M  752K   50M   2% /var/log
+tmpfs            50M     0   50M   0% /run/user/0
