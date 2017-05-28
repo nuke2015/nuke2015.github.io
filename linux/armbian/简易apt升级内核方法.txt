@@ -1,0 +1,14 @@
+
+查找 
+apt search linux-generic
+
+结果
+linux-image-4.10.0-14-generic/xenial-security,xenial-updates 4.10.0-14.16~16.04.1 armhf
+  Linux kernel image for version 4.10.0 on ARM (hard float) SMP
+
+linux-image-4.10.0-14-generic-lpae/xenial-security,xenial-updates 4.10.0-14.16~16.04.1 armhf
+  Linux kernel image for version 4.10.0 on ARM (hard float) SMP
+
+
+安装
+apt install  linux-image-4.10.0-14-generic linux-image-4.10.0-14-generic-lpae
