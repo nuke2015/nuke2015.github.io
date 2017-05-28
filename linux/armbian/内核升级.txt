@@ -1,9 +1,0 @@
-
-root@orangepione:~# cat /etc/issue
-Ubuntu 16.04.1 LTS \n \l
-
-root@orangepione:~# uname -a
-Linux orangepione 3.4.113-sun8i #28 SMP PREEMPT Thu Feb 2 02:01:28 CET 2017 armv7l armv7l armv7l GNU/Linux
-
-修改/etc/apt/souece.list为国内源
-
