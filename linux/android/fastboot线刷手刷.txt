@@ -7,6 +7,10 @@ fastboot flash recovery TWRP2.6.0.0_mione_plus_multilanguage.img
 
 恢复模式
 fastboot reboot-bootloader
+去fastboot界面
+adb reboot-bootloader
+去恢复工具界面
+adb reboot recovery
 
 重启
 fastboot reboot
