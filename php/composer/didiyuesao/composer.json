@@ -1,34 +1,30 @@
 {
+    "name": "didiyuesao/www",
+    "description": "didiyuesao and jiajiayuesao api competons for all service",
+    "keywords": ["jiajiayuesao.com", "jjys168.com", "ddys168.com", "jiajiamuying.com"],
+    "homepage": "https://www.didiyuesao.com",
+    "type": "library",
+    "license": "Apache-2.0",
+    "minimum-stability": "beta",
     "require": {
-        "topthink/think": "5.0.9",
+        "didiyuesao/api": "*@dev",
+        "didiyuesao/app": "*@dev",
+        "topthink/framework": "5.0.9",
+        "topthink/thinkphp": "3.2.3",
         "pingplusplus/pingpp-php": "dev-master",
         "overtrue/wechat": "~3.1",
         "cboden/ratchet": "^0.3.6",
         "krok/phpquery": "0.9.5.3",
         "Facebook/WebDriver": "^1.4",
-        "nuke2015/api": "^2017.06",
-        "didiyuesao/api": "*@dev"
+        "nuke2015/api": "2017.06.05"
     },
-    "config": {
-        "preferred-install": "dist",
-        "secure-http": false
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        },
-        {
-            "packagist": false
-        },
-        {
-            "type": "path",
-            "url": "packages/*/*"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "didiyuesao\\api\\base": "vender/nuke2015/api/base"
-        }
-    }
+    "repositories": [{
+        "type": "composer",
+        "url": "https://packagist.phpcomposer.com"
+    }, {
+        "packagist": false
+    }, {
+        "type": "path",
+        "url": "didiyuesao/*"
+    }]
 }
