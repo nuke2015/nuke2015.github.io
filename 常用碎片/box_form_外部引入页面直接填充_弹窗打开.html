@@ -1,0 +1,27 @@
+
+<style>
+    #modifyModal{
+        background: rgba(0,0,0,.5);
+    }
+    .modal-content{
+        margin-top: 30%;
+    }
+</style>
+<div class="modal fade in" id="modifyModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+              这是引用页面的填充位置
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var init = (function() {
+        $(".js_box_show").click(function() {
+            var id = $(this).attr('data-id');
+            $('.modal-content').load('/a/FoodPhoto/' + id + ".html");
+            $('#modifyModal').show();
+        });
+    })(init);
+</script>
