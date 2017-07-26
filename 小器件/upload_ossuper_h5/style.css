@@ -1,0 +1,75 @@
+.img-item {
+    width: 200px;
+    height: 130px;
+    margin: 10px 10px;
+}
+
+.oss_btn_upper {
+    display: inline-block;
+    background: url(/img/admin_uploadbnt.png) no-repeat center;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.oss_btn_upper>input {
+    opacity: 0;
+}
+
+#page_shop {
+    margin: 10px 10px;
+}
+
+#page_shop a {
+    width: 65px;
+    height: 26px;
+    margin: 5px 5px;
+    padding: 2px 2px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#page_shop .a1 {
+    width: 100px;
+}
+
+#page_shop span {
+    color: red;
+    width: 26px;
+    height: 26px;
+    margin: 5px 5px;
+    padding: 2px 2px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+}
+
+.img_jjys_big {
+    width: 150px;
+    height: 150px;
+    margin: 10px 10px;
+}
+
+.img_jjys_min {
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px;
+}
+
+.img_rect_big {
+    width: 250px;
+    height: 150px;
+    margin: 10px 10px;
+}
+
+.img_rect_min {
+    width: 150px;
+    height: 80px;
+    margin: 10px 10px;
+}
+
+.uplistd {
+    margin: 10px 10px;
+}

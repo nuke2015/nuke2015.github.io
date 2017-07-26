@@ -1,0 +1,61 @@
+<td>
+    <script src="/js/lib/localResizeIMG/lrz.all.bundle.js">
+    </script>
+    <script src="/js/lib/upload_form.js">
+    </script>
+    <div class="oss_res_pics_env">
+        <div class="res_item">
+            <img alt="" class="img-item" src="http://upload.ddys168.com//union/images/ffc1c058d7bd461b4f8d5387c2ddabbf1038090.jpg">
+                <input name="pics_env[]" size="70" type="text" value="/union/images/ffc1c058d7bd461b4f8d5387c2ddabbf1038090.jpg">
+                    <span class="btn btn-xs js_img_remove">
+                        移除
+                    </span>
+                </input>
+            </img>
+        </div>
+        <div class="res_item">
+            <img alt="" class="img-item" src="http://upload.ddys168.com//union/images/644c615be1c65a2d9f77dca0f1bfb9741175670.jpg">
+                <input name="pics_env[]" size="70" type="text" value="/union/images/644c615be1c65a2d9f77dca0f1bfb9741175670.jpg">
+                    <span class="btn btn-xs js_img_remove">
+                        移除
+                    </span>
+                </input>
+            </img>
+        </div>
+        <div class="res_item">
+            <img alt="" class="img-item" src="http://upload.ddys168.com//union/images/76622a852a1f41fa2fa78316166147491155582.jpg">
+                <input name="pics_env[]" size="70" type="text" value="/union/images/76622a852a1f41fa2fa78316166147491155582.jpg">
+                    <span class="btn btn-xs js_img_remove">
+                        移除
+                    </span>
+                </input>
+            </img>
+        </div>
+        <div class="res_item">
+            <img alt="" class="img-item" src="http://upload.ddys168.com//union/images/17f5437c5a74c11faed57e1daea8be27881058.jpg">
+                <input name="pics_env[]" size="70" type="text" value="/union/images/17f5437c5a74c11faed57e1daea8be27881058.jpg">
+                    <span class="btn btn-xs js_img_remove">
+                        移除
+                    </span>
+                </input>
+            </img>
+        </div>
+        <div class="res_item">
+            <img alt="" class="img-item" src="http://upload.ddys168.com//union/images/853cfa00462fdf4664fd669f17a838b51131466.jpg">
+                <input name="pics_env[]" size="70" type="text" value="/union/images/853cfa00462fdf4664fd669f17a838b51131466.jpg">
+                    <span class="btn btn-xs js_img_remove">
+                        移除
+                    </span>
+                </input>
+            </img>
+        </div>
+    </div>
+    <div id="tip_pics_env">
+    </div>
+    <a class="oss_btn_upper" href="" id="img_pics_env">
+        <input accept="image/*" class="btn btn-xs" multiple="multiple" type="file"/>
+    </a>
+    <script>
+        var res_host = oss_uper.res_host; oss_uper.upload_image('#img_pics_env>input', '#tip_pics_env', function(res) { console.log('fileupload', res.data); var html='<div class="res_item">'; html+="<img src="+res_host+res.data.path+' alt="" class="img-item" />'; html+='<input type="text" name="pics_env[]" value="'+res.data.path+'" size="70"/>'; html+='<span class="btn btn-xs js_img_remove">移除</span>'; html+='</div>'; $('.oss_res_pics_env').append(html); $('#tip_pics_env').html(''); }); $('.js_img_remove').click(function() { $(this).parent().html(''); });
+    </script>
+</td>

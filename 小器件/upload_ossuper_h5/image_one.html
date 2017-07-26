@@ -1,0 +1,23 @@
+<td>
+    <script src="/js/lib/localResizeIMG/lrz.all.bundle.js">
+    </script>
+    <script src="/js/lib/upload_form.js">
+    </script>
+    <div class="oss_res_logo">
+        <img alt="" class="img-item" src="http://upload.ddys168.com//union/logo/2092d68e031d6af8bbb744b27d70f7e5171000.jpg">
+            <input name="logo" size="70" type="text" value="/union/logo/2092d68e031d6af8bbb744b27d70f7e5171000.jpg">
+                <span class="btn btn-xs js_img_remove">
+                    移除
+                </span>
+            </input>
+        </img>
+    </div>
+    <div id="tip_logo">
+    </div>
+    <a class="oss_btn_upper" href="" id="img_logo">
+        <input accept="image/*" class="btn btn-xs" multiple="multiple" type="file"/>
+    </a>
+    <script>
+        var res_host = oss_uper.res_host; oss_uper.upload_image('#img_logo>input', '#tip_logo', function(res) { console.log('fileupload', res.data); var html ='<img alt="" class="img-item" src="'+res_host+res.data.path+'"><input name="logo" type="text" value="'+res.data.path+'" size="70">&nbsp;<span class="btn btn-xs js_img_remove">移除</span>'; $('.oss_res_logo').html(html); $('#tip_logo').html(''); }); $('.js_img_remove').click(function() { $(this).parent().html(''); });
+    </script>
+</td>
