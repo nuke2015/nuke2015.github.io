@@ -1,0 +1,14 @@
+
+##用nginx 配置给网站整体加内容,比如.替换一行字.
+location / {
+    sub_filter  page 'nanjishidu.me';
+    sub_filter_once on;
+    sub_filter_types *;
+    add_before_body /header.html;
+    add_after_body /footer.html;
+    sub_filter      </head> '</head>+++++$server_name.';
+    addition_types *;
+    root   html;
+    index  index.html index.htm;
+}
+
