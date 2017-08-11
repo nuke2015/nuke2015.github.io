@@ -1,0 +1,11 @@
+
+
+为了给搜索用户更好的体验、对站点实现更好地索引和呈现，百度搜索需要访问网站的CSS、Javascript和图片信息，以便更精准地理解页面内容，实现搜索结果最优排名，百度搜索会全面启用最新UA来访问站点的上述资源。从3月24日（2017）开始，百度搜索抽取了部分优质站点进行抓取内测，可能会对站点服务器造成一定压力影响，请尽量不要对UA进行封禁，以免造成不可逆转的损失。
+
+最新UA如下：
+
+PC：Mozilla/5.0 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)
+
+移动：Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)
+
+
