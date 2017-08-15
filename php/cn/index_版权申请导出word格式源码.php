@@ -7,13 +7,12 @@ $i      = 0;
 $result = '';
 if ($files && count($files)) {
     foreach ($files as $key => $value) {
-        if (stripos($value, '.php') && stripos($value, 'Conf') !== -1) {
+        if (stripos($value, '.php') !== false && stripos($value, 'Conf') !== false) {
             $result .= file_get_contents($value);
             $i++;
             if ($i >= $leng) {
                 break;
             }
-
         }
     }
 }
