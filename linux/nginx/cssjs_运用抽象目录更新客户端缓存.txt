@@ -1,0 +1,52 @@
+
+server {
+    listen       80;
+    server_name  m.loc.jjys168.com;
+    root "F:/svn_php/dev/cube/public/weixin/";
+    include ddys_cube_listen.inc;
+    location / {
+        if (!-e $request_filename) {
+          rewrite  ^(.*)$  /static/$1;
+          break;
+        }
+    }
+    #抽象目录,更新缓存
+    location ~ ^/static_v {
+        rewrite  ^/static_v(\d+)/(.*)$  /static/$2;
+        break;
+    }
+    location ~ ^/html\/ {
+        rewrite  ^(.*)$  /index.php?methodName=Html&ref=$1  last;
+        break;
+    }
+    location ~ ^/school\/ {
+        rewrite  ^(.*)$  /index.php?methodName=Html&di=1&ref=$1  last;
+        break;
+    }
+    #news action
+    location ~ ^/a\/ {
+        proxy_set_header indoor m;
+        # 这是穿透流量不处理
+        proxy_pass   http://news.loc.jjys168.com; 
+    }
+    #news-search
+    location ~ ^/s\/ {
+        proxy_set_header indoor m;
+        # 这是穿透流量不处理
+        proxy_pass   http://news.loc.jjys168.com; 
+    }
+    #news-static
+    location ~ ^/cssjs\/ {
+        proxy_set_header indoor m;
+        # 这是穿透流量不处理
+        proxy_pass   http://news.loc.jjys168.com; 
+    }
+    #api-action
+    location ~ ^/api\/ {
+        proxy_set_header indoor m;
+        # 这是穿透流量不处理
+        proxy_pass   http://api.loc.jjys168.com;   
+    }
+
+}
+
