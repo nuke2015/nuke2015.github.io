@@ -1,0 +1,11 @@
+# /bin/bash
+DB_HOST="127.0.0.1";
+DB_USER="root";
+DB_PWD='te*st';
+BACK_DIR="/backup"
+DATE="`date +'%Y%m%d_%H%M%S'`"
+LogFile="$BACK_DIR"/bk.log #日志记录保存的目录
+
+mysqldump -h$DB_HOST -u$DB_USER -p$DB_PWD bestphp banner>banner.sql;
+echo bestphp backup ok>>$LogFile
+
