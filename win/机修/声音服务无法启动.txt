@@ -1,0 +1,10 @@
+
+
+2017年11月18日 16:27:38
+和声音有关的主要服务
+window audio service>服务>属性>依赖关系
+可以看到它和三个服务有关联.
+window audio endpoint和multimedia class和rpc等有关.
+所以,启动不了的原因就是
+multimidia class这个服务可能被禁用了.
+
