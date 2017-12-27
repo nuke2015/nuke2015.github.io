@@ -1,0 +1,20 @@
+方法二、修改镜像和容器的存放路径
+
+指定镜像和容器存放路径的参数是--graph=/var/lib/docker，我们只需要修改配置文件指定启动参数即可。
+
+Docker 的配置文件可以设置大部分的后台进程参数，在各个操作系统中的存放位置不一致，在 Ubuntu 中的位置是：/etc/default/docker，在 CentOS 中的位置是：/etc/sysconfig/docker。
+
+如果是 CentOS 则添加下面这行：
+
+OPTIONS=--graph="/root/docker_data" --selinux-enabled -H fd://
+如果是 Ubuntu 则添加下面这行（因为 Ubuntu 默认没开启 selinux）：
+
+OPTIONS=--graph="/root/docker_data" -H fd://
+# 或者
+DOCKER_OPTS="-g /root/docker_data"
+最后重新启动，Docker 的路径就改成 /root/docker_data 了。
+
+作者：左蓝
+链接：https://www.jianshu.com/p/e98ef6d6cfb4
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
