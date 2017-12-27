@@ -1,4 +1,12 @@
 
+
+
+一键体验
+vagrant init minimal/xenial64
+vagrant up
+
+
+
 安装virtualbox+vagrant启动虚拟机
 
 启动
