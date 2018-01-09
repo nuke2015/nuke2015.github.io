@@ -1,0 +1,6 @@
+
+
+2018年1月9日 14:32:06
+smartgit破解:
+删除smartgit安装目录/.settings/setting.xml即可.
+
