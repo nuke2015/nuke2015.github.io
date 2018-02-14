@@ -63,6 +63,22 @@ where t.id in (331,334,236,167)
 // 此sql特别完美能定义各自的字段,同时查询也符合人类的思维模式
 
 
+// 评论初筛表
+select dc.id,dc.order_id,dc.user_id,dc.yuesao_id,dc.role,do.username,do.product_days,du.nickname,du.headphoto from ddys_comment_yuesao as dc left join ddys_order as do on dc.order_id=do.id left join ddys_user_info du on dc.user_id=du.id where dc.id in (334,236,331)
+// 最终整合版
+select
+    t.*,
+    details.*
+from
+    (select dc.id,dc.order_id,dc.user_id,dc.yuesao_id,dc.role,do.username,do.product_days,du.nickname,du.headphoto from ddys_comment_yuesao as dc left join ddys_order as do on dc.order_id=do.id left join ddys_user_info du on dc.user_id=du.id where dc.id in (334,236,331)
+    ) as t
+    inner join(
+        (select ys.id as detail_id,ys.icon,ys.name from ddys_caregiver as ys)
+        union
+        (select yy.id as detail_id,yy.icon,yy.name from ddys_skiller_yuying as yy)
+    ) as details on details.detail_id=t.yuesao_id
+
+
 #原理伪代码
 SELECT
   users.*,
@@ -74,21 +90,5 @@ FROM
     UNION
     SELECT user_id, info FROM company
   ) AS details ON details.user_id = users.id
-
-
-// 最终整合版
-select
-    t.*,
-    details.*
-from
-    (
-select dc.id,dc.order_id,dc.user_id,dc.yuesao_id,dc.role,do.username,do.product_days,du.nickname,du.headphoto from ddys_comment_yuesao as dc left join ddys_order as do on dc.order_id=do.id left join ddys_user_info du on dc.user_id=du.id where dc.id in (334,236,331)
-    )
-    as t
-    inner join(
-        (select ys.id as detail_id,ys.icon,ys.name from ddys_caregiver as ys)
-        union
-        (select yy.id as detail_id,yy.icon,yy.name from ddys_skiller_yuying as yy)
-    ) as details on details.detail_id=t.yuesao_id
 
 
