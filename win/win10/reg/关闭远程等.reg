@@ -1,0 +1,63 @@
+Windows Registry Editor Version 5.00
+
+
+; 系统属性远程关闭
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Remote Assistance] 
+"fAllowToGetHelp"=dword:00000000 
+; 不写入日志 
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl] 
+"LogEvent"=dword:00000000 
+; 不转储
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl] 
+"CrashDumpEnabled"=dword:00000000 
+; 硬件图标不更新
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+; 桌面显示此电电脑
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+; 删除" - 快捷方式" 后缀
+[HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"Link"=hex:00,00,00,00
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"Link"=hex:00,00,00,00
+;桌面右键控制面板
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\amz]
+@="控制面板"
+"Icon"="C:\\windows\\system32\\control.exe "
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\amz\command]
+@="C:\\windows\\system32\\control.exe "
+;为右键加上“管理员取得所有权菜单”
+[HKEY_CLASSES_ROOT\*\shell\runas]
+@="管理员取得所有权"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\*\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+[HKEY_CLASSES_ROOT\exefile\shell\runas2]
+@="管理员取得所有权"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\exefile\shell\runas2\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="管理员取得所有权"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+; win+x不切换PowerShell
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced] 
+"DontUsePowerShellOnWinX"=dword:00000001
+
+;开启记事本的自动换行
+[HKEY_CURRENT_USER\Software\Microsoft\Notepad]
+"fWrap"=dword:00000001
+
+;Windows Media Player设置
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsMediaPlayer]
+"GroupPrivacyAcceptance"=dword:00000001 ;不显示首次使用对话框
+"DisableAutoUpdate"=dword:00000001      ;防止WMP自动更新
+"EnableScreenSaver"=dword:00000001      ;播放WMP时关闭屏保
+"PreventLibrarySharing"=dword:00000001  ;防止媒体共享
+
