@@ -1,4 +1,4 @@
-
+﻿
 系统映像处理
 
 2016年11月19日 22:50:57
@@ -32,4 +32,12 @@ dd if=/mnt/orangepi of=/home/bak.img
 卸载,这里木有n
 umount /mnt/orangepi
 
+
+
+
+备份到sdcard
+dd bs=512 count=7609856 if=/dev/block/mmcblk0 | gzip -6 > /storage/sdcard1/android_ghost_redmi2s.img.gz
+
+恢复
+gzip -dc /storage/sdcard1/android_ghost_redmi2s.img.gz | dd of=/dev/block/mmcblk0
 
