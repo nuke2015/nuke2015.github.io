@@ -92,3 +92,19 @@ FROM
   ) AS details ON details.user_id = users.id
 
 
+#发现问题,分开联表时,t.role的数据交叉有问题,因为t.role=1时只联月嫂,不联育婴师.但是以上语句同时联表,月嫂+育婴师.
+select dc.id,dc.order_id,dc.user_id,dc.yuesao_id,dc.role,do.username,do.product_days,du.nickname,du.headphoto from ddys_comment_yuesao as dc left join ddys_order as do on dc.order_id=do.id left join ddys_user_info du on dc.user_id=du.id where dc.id in (334,236,331)
+// 最终整合版
+select
+    t.*,
+    details.*
+from
+    (select dc.id,dc.order_id,dc.user_id,dc.yuesao_id,dc.role,do.username,do.product_days,du.nickname,du.headphoto from ddys_comment_yuesao as dc left join ddys_order as do on dc.order_id=do.id left join ddys_user_info du on dc.user_id=du.id where dc.id in (334,236,331)
+    ) as t
+    inner join(
+        (select ys.id as detail_id,IF(1,1,0) as detail_role,ys.icon,ys.name from ddys_caregiver as ys)
+        union
+        (select yy.id as detail_id,IF(1,2,0) as detail_role,yy.icon,yy.name from ddys_skiller_yuying as yy)
+    ) as details on details.detail_id=t.yuesao_id and details.detail_role=t.role
+#它的奥秒在于子查询中多了一个模拟的变量.detail_role.
+
