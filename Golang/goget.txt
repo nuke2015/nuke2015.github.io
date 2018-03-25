@@ -1,0 +1,5 @@
+
+让go get用上http代理:
+
+windows: go get前设置代理： 执行 set http_proxy=http://localhost:8118/ set https_proxy=http://localhost:8118,然后go get就会走代理了
+linux: go get前设置代理: 执行 export http_proxy=http://localhost:8118/,export https_proxy=http://localhost:8118/ 然后go get就会走代理了
