@@ -1,0 +1,77 @@
+
+常见的搜索引擎蜘蛛名称，做SEO的最需要知道大部分主流的搜索引擎蜘蛛名称，毕竟在分析日志的时候知道是谁在爬行你的网站，哪个搜索引擎蜘蛛爬行了你的哪些页面，整理如下：
+360Spider
+Sosospider
+SogouNewsSpider
+Sogouwebspider
+Sogouinstspider
+Sogouspider2
+Sogoublog
+SogouOrionspider
+sogouspider
+Sogou web spider
+YodaoBot
+Googlebot
+Bingbot
+Slurp
+Teoma
+ia_archiver
+twiceler
+MSNBot
+Scrubby
+Robozilla
+Gigabot
+googlebot-image
+googlebot-mobile
+yahoo-mmcrawler
+yahoo-blogs/v3.9
+psbot
+Nutch
+naverbot
+yeti
+asterias
+AhrefsBot
+BLEXBot
+MJ12bot
+bingbot
+netEstate
+YisouSpider
+Yahoo!SlurpChina
+YoudaoBot
+msnbot
+msnbot-media
+EasouSpider
+JikeSpider
+EtaoSpider
+YandexBot
+Google-Test
+MegaIndex.ru
+
+1、百度蜘蛛：Baiduspider
+网上的资料百度蜘蛛名称有BaiduSpider、baiduspider等，都洗洗睡吧，那是旧黄历了。百度蜘蛛最新名称为Baiduspider。日志中还发现了Baiduspider-image这个百度旗下蜘蛛，查了下资料（其实直接看名字就可以了……），是抓取图片的蜘蛛。
+常见百度旗下同类型蜘蛛还有下面这些：Baiduspider-mobile（抓取wap）、Baiduspider-image（抓取图片）、Baiduspider-video（抓取视频）、Baiduspider-news（抓取新闻）。
+注：以上百度蜘蛛目前常见的是Baiduspider和Baiduspider-image两种。
+2、谷歌蜘蛛：Googlebot
+这个争议较少，但也有说是GoogleBot的。谷歌蜘蛛最新名称为“compatible; Googlebot/2.1;”。还发现了Googlebot-Mobile，看名字是抓取wap内容的。
+3、360蜘蛛：360Spider，它是一个很“勤奋抓爬”的蜘蛛。好搜蜘蛛：HaoSouSpider
+4、SOSO蜘蛛：Sosospider，也可为它颁一个“勤奋抓爬”奖的蜘蛛。
+5、雅虎蜘蛛：“Yahoo! Slurp China”或者Yahoo! 
+名称中带“Slurp”和空格，名称有空格robots里名称可以使用“Slurp”或者“Yahoo”单词描述，不知道有效无效。
+6、有道蜘蛛：YoudaoBot，YodaoBot（两个名字都有，中文拼音少了个U字母读音差别很大嘎，这都会少？）
+7、搜狗蜘蛛：Sogou News Spider
+搜狗蜘蛛还包括如下这些：Sogou web spider、Sogou inst spider、Sogou spider2、Sogou blog、Sogou News Spider、Sogou Orion spider，
+（参考一些网站的robots文件，搜狗蜘蛛名称可以用Sogou概括，无法验证不知道有没有效）
+看看最权威的百度的robots.txt ，http://www.baidu.com/robots.txt 就为Sogou搜狗蜘蛛费了不少字节，占了一大块领地。
+“Sogou web spider；Sogou inst spider；Sogou spider2；Sogou blog；Sogou News Spider；Sogou Orion spider”目前6个，名称都带空格。
+线上常见"Sogou web spider/4.0" ；"Sogou News Spider/4.0" ；"Sogou inst spider/4.0" 可以为它颁个“占名为王”奖。
+8、MSN蜘蛛：msnbot，msnbot-media（只见到msnbot-media在狂爬……）
+9、必应蜘蛛：bingbot 
+线上(compatible; bingbot/2.0;)
+10、一搜蜘蛛：YisouSpider
+11、Alexa蜘蛛：ia_archiver
+12、宜sou蜘蛛：EasouSpider
+13、即刻蜘蛛：JikeSpider
+14、一淘网蜘蛛：EtaoSpider
+"Mozilla/5.0 (compatible; EtaoSpider/1.0; http://省略/EtaoSpider)"
+根据上述蜘蛛中选择几个常用的允许抓取，其余的都可以通过robots屏蔽抓取。如果你暂时空间流量还足够使用，等流量紧张了就保留几个常用的屏蔽掉其它蜘蛛以节省流量。至于那些蜘蛛抓取对网站能带来有利用的价值，网站的管理者眼睛是雪亮的。
+
