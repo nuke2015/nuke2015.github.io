@@ -1,0 +1,29 @@
+#
+# curl 支持 http、https、socks4、socks5
+# wget 支持 http、https
+#
+
+
+# http代理格式         http_proxy=http://IP:Port
+# https代理格式         https_proxy=http://IP:Port
+
+{'http': 'http://120.77.176.179:8888'}
+curl -m 30 --retry 3 -x http://120.77.176.179:8888 http://proxy.mimvp.com/exist.php                    # http_proxy
+wget -T 30 --tries 3 -e "http_proxy=http://120.77.176.179:8888" http://proxy.mimvp.com/exist.php          # http_proxy
+
+{'https': 'http://46.105.214.133:3128'}
+curl -m 30 --retry 3 --proxy-insecure -x http://46.105.214.133:3128 -k https://proxy.mimvp.com/exist.php                    # https_proxy
+wget -T 30 --tries 3 --no-check-certificate -e "https_proxy=http://46.105.214.133:3128" https://proxy.mimvp.com/exist.php    # https_proxy
+
+
+# curl  支持socks
+{'socks4': '101.255.17.145:1080'}
+curl -m 30 --retry 3 --socks4 101.255.17.145:1080 http://proxy.mimvp.com/exist.php
+
+{'socks5': '82.164.233.227:45454'}
+curl -m 30 --retry 3 --socks5 82.164.233.227:45454 http://proxy.mimvp.com/exist.php
+
+
+# wget 不支持socks
+
+
