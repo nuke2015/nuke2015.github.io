@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            title
+        </title>
+    </head>
+    <body>
+        <script>
+            var link=document.createElement("a");
+            link.appendChild(document.createTextNode("Link"));
+            link.href = '#';
+            link.onclick = loadScript;
+            document.body.appendChild(link);
+            link.click();
+            function loadScript(){
+             alert('Hi')
+            }
+        </script>
+    </body>
+</html>
