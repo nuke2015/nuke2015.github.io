@@ -12,6 +12,10 @@ Chrome浏览器离线安装包官方下载地址，和在线安装一样能自�
 几个实用的参数收集：1  --user-data-dir="[PATH]"            指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区。2  --disk-cache-dir="[PATH]"           指定缓存Cache路径           3  --disk-cache-size=                  指定Cache大小，单位Byte4  --Firstrun                          重置到初始状态5  --incognito                         隐身模式启动6  --disable-javascript                禁用Javascript
 
 
+默认手机模拟器模式打开
+"--user-agent=iPhone 6 Plus"
+
+
 手动更新插件:
 chrome://components/
 手动禁用插件:
