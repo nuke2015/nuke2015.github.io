@@ -1,0 +1,44 @@
+
+
+加样式
+$('#content_left>h2').css('border','1px solid red;')
+
+直接输出
+
+一号广告
+$('#content_left div h2').html()
+
+二号广告
+$('#content_left div h3').html()
+
+顶部为你推荐
+$('#content_left div:nth-child(1)').html()
+
+底部广告
+$('#content_left div:nth-child(14) h3').html()
+
+属性过滤
+$('div[data-pos="13"]').html()
+
+网页广告位
+头部广告
+<div id="3001" class="agQAEh mTUfkL zYNtpW" data-click="
+<div id="3002" class="agQAEh mTUfkL zYNtpW" data-click="
+<div id="3003" class="agQAEh mTUfkL zYNtpW" data-click="
+<div id="3004" class="agQAEh mTUfkL zYNtpW" data-click="
+底部广告
+<div id="5001" class="agQAEh mTUfkL zYNtpW" data-click="
+<div id="5002" class="agQAEh mTUfkL zYNtpW" data-click="
+<div id="5003" class="agQAEh mTUfkL zYNtpW" data-click="
+
+艺术学院>
+$('div#5002').html()
+命中
+【58同城】艺术学校_艺术美学培训、超轻粘
+
+存在性判断
+if ($("#mydiv").length > 0){
+  // do something here
+}
+
+
