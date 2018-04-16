@@ -1,0 +1,12 @@
+
+
+定位列表
+var ifeng=document.getElementsByTagName("h3");
+定位元素
+console.log(ifeng[0]);
+定位子元素
+console.log(ifeng[0].children[0]);
+点击
+ifeng[0].children[0].click();
+
+
