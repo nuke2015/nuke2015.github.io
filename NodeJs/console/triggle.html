@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+        </meta>
+    </head>
+    <body>
+        <div id="test" onclick="javascript:alert('click');">
+            测试点击
+        </div>
+        <script>
+            var triggerEvent=(function(el, type){
+   if ('createEvent' in document) {
+        // modern browsers, IE9+
+        var e = document.createEvent('HTMLEvents');
+        e.initEvent(type, false, true);
+        el.dispatchEvent(e);
+    } else {
+        // IE 8
+        var e = document.createEventObject();
+        e.eventType = type;
+        el.fireEvent('on'+e.eventType, e);
+    }
+});
+
+var el = document.querySelector('#test');   
+triggerEvent(el, 'mouse');
+// 点击
+triggerEvent(el, 'click');
+        </script>
+    </body>
+</html>
