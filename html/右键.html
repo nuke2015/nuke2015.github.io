@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+        <link href="css/page/index.css" rel="stylesheet"/>
+        <title>
+            javascript实现右键菜单效果
+        </title>
+        <style>
+            *{padding:0;margin:0;}
+        .menu{display:none;position:fixed;width:125px;}
+        .menu ul li{
+            height:30px;
+            width:120px;
+            margin-top:-1px ;
+            line-height:30px;
+            border:1px solid #eee; 
+            text-align:center;
+            list-style:none;
+        }
+        .menu ul li:hover{
+            background:#ccc;
+            cursor:default;
+            user-select: none;
+        }
+        </style>
+    </head>
+</html>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                导航菜单1
+            </li>
+            <li>
+                导航菜单2
+            </li>
+            <li>
+                导航菜单3
+            </li>
+            <li>
+                导航菜单4
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    function $(selector){
+        return document.querySelectorAll(selector);
+    }
+
+    var li = $(".menu ul li");
+    var menu = $(".menu")[0];
+
+    //右键菜单单击
+    document.oncontextmenu = function(event){
+        var ev = event || window.event;
+        var mX = event.clientX;
+        var mY = event.clientY;
+        menu.style.display = "block";
+        menu.style.left = mX + "px";
+        menu.style.top = mY + "px";
+        return false;   //取消window自带的菜单弹出来
+    }
+
+    //点击页面菜单消失
+    document.onclick = function(){
+        menu.style.display = "none";
+    }
+
+    //阻止点击li冒泡
+    for(var i = 0, len = li.length; i < len; i++ ){
+        li.item(i).onclick = function(event){
+            var ev = event || window.event;
+            console.log(this.innerText);
+            if(ev.stopPropagation()){
+                ev.stopPropagation();
+            }else{
+                ev.cancelBubble = false;
+            }
+        }
+    }
+</script>
