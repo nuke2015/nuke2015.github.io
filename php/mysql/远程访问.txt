@@ -1,0 +1,6 @@
+
+#打开远程访问
+use mysql;
+update user set host='%' where user='root';
+flush privileges;
+
