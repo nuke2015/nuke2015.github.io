@@ -10,3 +10,19 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 得到composer.phar文件后,再把composer.bat放在相同目录
+
+
+全局指定国内镜像:
+composer config repo.packagist composer https://packagist.phpcomposer.com
+
+
+
+手动指定国内镜像
+"repositories": {
+    "packagist": {
+        "type": "composer",
+        "url": "https://packagist.phpcomposer.com"
+    }
+}
+
+
