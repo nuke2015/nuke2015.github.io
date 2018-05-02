@@ -9,3 +9,6 @@ composer install
 ln -s `pwd`/bin/ppm /usr/local/bin/ppm
 ppm --help
 
+安装后,依赖php7.0/cli/PCNTL扩展才能运行
+
+
