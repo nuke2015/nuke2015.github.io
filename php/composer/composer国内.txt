@@ -13,7 +13,7 @@ curl -sS https://getcomposer.org/installer | php
 
 
 全局指定国内镜像:
-composer config repo.packagist composer https://packagist.phpcomposer.com
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
 
 
