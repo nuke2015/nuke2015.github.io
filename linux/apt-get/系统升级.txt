@@ -25,3 +25,8 @@ armbian内核
 sudo apt-get update
 sudo apt-get dist-upgrade
 
+
+
+修复系统级别漏洞
+apt-get update && sudo apt-get dist-upgrade
+
