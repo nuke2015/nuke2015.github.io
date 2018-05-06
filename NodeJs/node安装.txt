@@ -12,3 +12,14 @@ npm config set registry " https://registry.npm.taobao.org "
 直接远程仓库安装
 npm install https://github.com/GoogleChrome/puppeteer/
 
+
+
+
+linux环境设置
+#SET PATH FOR NODEJS
+export NODE_HOME=/home/node8
+export PATH=$NODE_HOME/bin:$PATH
+
+
+source /etc/profile;
+
