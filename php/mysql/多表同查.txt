@@ -1,0 +1,27 @@
+
+
+SELECT
+bestphp_account_in.id,
+bestphp_account_in.create_at,
+bestphp_account_in.status,
+bestphp_account_in.type as ,
+bestphp_account_in.paytype,
+bestphp_account_in.money,
+bestphp_account_in.remark,
+bestphp_account_in.user_id,
+bestphp_account_in.club_id
+bestphp_account_out.id,
+bestphp_account_out.paytype,
+bestphp_account_out.paytime,
+bestphp_account_out.create_at,
+bestphp_account_out.admin_id,
+bestphp_account_out.user_id,
+bestphp_account_out.club_id,
+FROM
+bestphp_account_in ,
+bestphp_account_out
+WHERE
+bestphp_account_in.user_id =  '1' OR
+bestphp_account_out.user_id =  '1'
+
+
