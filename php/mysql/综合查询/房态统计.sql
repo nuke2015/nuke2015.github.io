@@ -3,8 +3,8 @@
 
 
 当前房间总数:
-select count(ri.id) as room_count,rt.id,rt.name from zhihu_room_info as ri
-left join zhihu_room_type as rt
+select count(ri.id) as room_count,rt.id,rt.name from bestphp_room_info as ri
+left join bestphp_room_type as rt
 on ri.room_type=rt.id
 group by rt.id
 
@@ -22,9 +22,9 @@ count(ri.id) as room_count,
 rt.id as room_type,rt.name as room_type_name,
 count(us.room_id) as room_schedule
 
-from zhihu_room_info as ri
+from bestphp_room_info as ri
 
-left join zhihu_room_type as rt
+left join bestphp_room_type as rt
 on ri.room_type=rt.id
 
 left join view_room_useable_now as us
@@ -50,9 +50,9 @@ rt.id as room_type,rt.name as room_type_name,
 count(sc.room_id) as room_schedule,
 count(li.room_id) as room_live
 
-from zhihu_room_info as ri
+from bestphp_room_info as ri
 
-left join zhihu_room_type as rt
+left join bestphp_room_type as rt
 on ri.room_type=rt.id
 
 left join view_room_useable_now as sc
@@ -83,9 +83,9 @@ count(sc.room_id) as room_schedule,
 count(li.room_id) as room_live,
 count(fr.room_id) as room_free
 
-from zhihu_room_info as ri
+from bestphp_room_info as ri
 
-left join zhihu_room_type as rt
+left join bestphp_room_type as rt
 on ri.room_type=rt.id
 
 left join view_room_useable_now as sc
@@ -118,9 +118,9 @@ count(li.room_id) as room_live,
 count(fr.room_id) as room_free,
 count(rp.room_id) as room_repair
 
-from zhihu_room_info as ri
+from bestphp_room_info as ri
 
-left join zhihu_room_type as rt
+left join bestphp_room_type as rt
 on ri.room_type=rt.id
 
 left join view_room_useable_now as sc
@@ -145,6 +145,41 @@ room_count  room_type   room_type_name  room_schedule   room_live   room_free   
 6   7   豪华套房    1   1   4   0
 3   8   套房  0   0   3   0
 2   9   360度无死角海景房  0   0   1   0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 房态统计多商户版,之前的版本缺少club_id,有性能压力!
+SELECT `rt`.`id` AS `room_type`, `rt`.`club_id` AS `club_id`, `rt`.`name` AS `room_type_name`, COUNT(`ri`.`id`) AS `room_count`
+    , COUNT(`sc`.`room_id`) AS `room_schedule`, COUNT(`li`.`room_id`) AS `room_live`
+    , COUNT(`fr`.`room_id`) AS `room_free`, COUNT(`rp`.`room_id`) AS `room_repair`
+FROM `bestphp_room_info` `ri`
+    LEFT JOIN `bestphp_room_type` `rt` ON `ri`.`room_type` = `rt`.`id`
+    LEFT JOIN `view_room_useable_now` `sc`
+    ON `ri`.`id` = `sc`.`room_id`
+        AND `sc`.`status` = 1
+    LEFT JOIN `view_room_useable_now` `li`
+    ON `ri`.`id` = `li`.`room_id`
+        AND `li`.`status` = 2
+    LEFT JOIN `view_room_useable_now` `fr`
+    ON `ri`.`id` = `fr`.`room_id`
+        AND `fr`.`status` = 0
+    LEFT JOIN `view_room_useable_now` `rp`
+    ON `ri`.`id` = `rp`.`room_id`
+        AND `rp`.`status` = -1
+WHERE `ri`.`status` <> 0
+GROUP BY `rt`.`id`
+
 
 
 
