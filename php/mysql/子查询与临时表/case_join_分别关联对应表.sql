@@ -106,5 +106,53 @@ from
         union
         (select yy.id as detail_id,IF(1,2,0) as detail_role,yy.icon,yy.name from ddys_skiller_yuying as yy)
     ) as details on details.detail_id=t.yuesao_id and details.detail_role=t.role
-#它的奥秒在于子查询中多了一个模拟的变量.detail_role.
+#它的奥秒在于子查询中多了一个模拟的变量.detail_role.而这个变量很关键,如果没有这个变量,则查询结果 完全是错的.
+
+
+
+-- 改进,初筛
+SELECT dc.id, dc.order_id, dc.user_id, dc.yuesao_id, dc.role
+    , do.username, do.product_days, du.nickname, du.headphoto
+FROM ddys_comment_yuesao dc
+    LEFT JOIN ddys_order do ON dc.order_id = do.id
+    LEFT JOIN ddys_user_info du ON dc.user_id = du.id
+WHERE dc.id IN (334, 236, 331)
+
+
+-- id  order_id    user_id yuesao_id   role    username    product_days    nickname    headphoto
+-- 236 1349    65  121 1   第11单    26  唐艳  1470969134099P6da5U
+-- 331 1395    65  35  1   测试广州    27  唐艳  1470969134099P6da5U
+-- 334 1583    37  4   2   dfgdf   26      1465986801973I1505Z
+
+
+
+-- 完全不烧脑的视图抽象思维
+select * from
+(
+    SELECT 'yuesao' as role_name,dc.id, dc.order_id, dc.user_id, dc.yuesao_id, dc.role
+        , do.username, do.product_days, du.nickname, du.headphoto
+    FROM ddys_comment_yuesao dc
+        LEFT JOIN ddys_order do ON dc.order_id = do.id
+        LEFT JOIN ddys_user_info du ON dc.user_id = du.id
+    left join ddys_caregiver as sk on dc.yuesao_id=sk.id
+    where dc.role=1
+    UNION
+    SELECT 'yuying' as role_name,dc.id, dc.order_id, dc.user_id, dc.yuesao_id, dc.role
+        , do.username, do.product_days, du.nickname, du.headphoto
+    FROM ddys_comment_yuesao dc
+        LEFT JOIN ddys_order do ON dc.order_id = do.id
+        LEFT JOIN ddys_user_info du ON dc.user_id = du.id
+    left join ddys_skiller_yuying as sk on dc.yuesao_id=sk.id
+    where dc.role=2
+)_
+WHERE id IN (334, 236, 331)
+
+
+-- role_name   id  order_id    user_id yuesao_id   role    username    product_days    nickname    headphoto
+-- yuesao  236 1349    65  121 1   第11单    26  唐艳  1470969134099P6da5U
+-- yuesao  331 1395    65  35  1   测试广州    27  唐艳  1470969134099P6da5U
+-- yuying  334 1583    37  4   2   dfgdf   26      1465986801973I1505Z
+
+
+
 
