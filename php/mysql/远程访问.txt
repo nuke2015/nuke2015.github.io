@@ -1,6 +1,19 @@
 
+
 #打开远程访问
 use mysql;
 update user set host='%' where user='root';
 flush privileges;
+
+
+#增加数据库授权
+#create user root identified by 'root';
+grant all privileges on test_database.* to root@'%';
+flush  privileges;
+
+
+#修改用户密码
+grant usage on *.* to 'root'@'%' identified by '946633a=3b300fec2e';  
+flush  privileges;
+
 
