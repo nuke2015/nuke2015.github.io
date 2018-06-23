@@ -1,0 +1,5 @@
+
+
+以svn仓库为准,实施单向同步
+rsync -av --delete /home/chrome/ /home/c2/
+
