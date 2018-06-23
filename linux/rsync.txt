@@ -3,3 +3,8 @@
 以svn仓库为准,实施单向同步
 rsync -av --delete /home/chrome/ /home/c2/
 
+命令等待
+command1 & command2 & wait
+
+
+
