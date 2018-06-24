@@ -9,3 +9,10 @@ No.2 在新的服务器上创建心的仓库 命令： svnadmin create SVNROOT
 No.3 导入刚导出的文件svn_dump 命令： svnadmin load SVNROOT < svn_dump
 
 
+
+
+svn relocate 只有相当的版本,同一仓库标记才能进行reloate
+如果是新开的仓库,版本号不一致时,不能进行relocate.
+
+
+
