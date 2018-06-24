@@ -1,0 +1,11 @@
+
+
+2018年6月25日 03:46:13
+
+No.1 将准备要迁移的仓库导出 命令： svnadmin dump 仓库名 > svn_dump
+
+No.2 在新的服务器上创建心的仓库 命令： svnadmin create SVNROOT
+
+No.3 导入刚导出的文件svn_dump 命令： svnadmin load SVNROOT < svn_dump
+
+
