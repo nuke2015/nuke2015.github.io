@@ -8,3 +8,8 @@ win7_x64的引导是没有问题的,但是因为有多个磁盘存在所以,
 可能会加载的时候有些不对板.
 win7_x64的引导是boormgr.
 
+2018年7月4日 09:28:08
+增加开机启动
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+
+
