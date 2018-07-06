@@ -15,3 +15,9 @@ crontab -l
 cd /home
 ls
 
+
+#导出
+crontab -l>cronfile.txt
+#自动导入定时任务脚本
+crontab cronfile
+
