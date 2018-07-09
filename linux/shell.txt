@@ -1,6 +1,13 @@
 
 2018年4月13日 05:35:09
-按顺序进行50次
+#按顺序进行50次
 seq 50|xargs -i cmd 
+
+2018年7月9日 09:59:36
+#限制条数
+grep -m 10 PATTERN [FILE] 
+grep "api" -m 10
+#排序,按第5列
+ls -al | sort -n -k5
 
 
