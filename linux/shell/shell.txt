@@ -10,4 +10,3 @@ grep "api" -m 10
 #排序,按第5列
 ls -al | sort -n -k5
 
-
