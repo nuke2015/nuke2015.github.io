@@ -41,6 +41,10 @@
             location.href=myurl;
         })
     }
+    // 无需翻页时,隐藏
+    if(total<=size){
+        $('#pager').hide();
+    }
     if(page*size>=total){
         $('#pager .next').addClass('disabled');
     }else{
