@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pager</title>
+</head>
+<body>
+    <div class="pager clear" id="pager" page="{$data.page}" size="{$data.size}" total="{$data.total}">
+    <ul class="page-con">
+        <li class="prev">
+            <a href="javascript:void(0);">
+                上一页
+            </a>
+        </li>
+        <li class="current">
+            {$data.page}
+        </li>
+        <li class="next">
+            <a href="javascript:void(0);">
+                下一页
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    var page=Number($('#pager').attr('page'));
+    var size=Number($('#pager').attr('size'));
+    var total=Number($('#pager').attr('total'));
+    console.log(page,size,total);
+    myurl=location.href;
+    if(page==1){
+        $('#pager .prev').addClass("disabled");
+    }else{
+        $('#pager .prev').click(function(){
+            page-=1
+            if(myurl.indexOf('?')>0){
+                myurl+="&page="+page;
+            }else{
+                myurl+="?page="+page;
+            }
+            location.href=myurl;
+        })
+    }
+    if(page*size>=total){
+        $('#pager .next').addClass('disabled');
+    }else{
+        $('#pager .next').click(function(){
+            page+=1;
+            if(myurl.indexOf('?')>0){
+                myurl+="&page="+page;
+            }else{
+                myurl+="?page="+page;
+            }
+            location.href=myurl;
+        })
+    }
+</script>
+</body>
+</html>
