@@ -1,0 +1,26 @@
+
+
+架构说明:
+linux服务器,ubuntu负责pppoe拔号上网,在ubuntu能正常使用外网.
+同时外网线接交换机,ubuntu也接交换机,其它的同学机器也接交换机.
+其它同学通过ubuntu架设的nat(ics)服务进行上网.
+
+在服务器开启ip转发
+# echo "1" > /proc/sys/net/ipv4/ip_forward
+
+#打开NAT转发服务
+iptables -F 
+iptables -P INPUT ACCEPT 
+iptables -P FORWARD ACCEPT 
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+#注意此处的eth0必须是外网能上网的interface设备.
+
+在客户机上设置网关为
+ubuntu的内网ip(如192.168.1.5)
+
+注意事项,大家都连接在同个交换机上,所以,网段必须一致.
+比如,在192.168.1.x段.
+
+所有其它同学的网关设置为192.168.1.5,主要dns设置成114.114.114.114,只要ubuntu本身能够上网,其它同学就能正常上网.
+
+
