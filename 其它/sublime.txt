@@ -125,6 +125,8 @@ alt+shift+1取消分屏
 Ctrl+Shift+T可以打开之前关闭的tab页
 
 
+folder to project,在左侧有根目录依据
+ctrl+p代码快速查找>didiyuesao\com\model\user
 
 
 
