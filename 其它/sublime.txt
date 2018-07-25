@@ -21,7 +21,12 @@ PHP代码格式化工具CodeFormatter
 格式损坏太严重的无法处理,
 就是通篇挤成一行的无法处理!
 
+ctrl+shift+p>install package>ctags
+检查preference>package setting>CTags已经安装好了
 ctags代码追踪插件.
+
+二进制下载
+https://sourceforge.net/projects/ctags/files/ctags/5.8/ctags58.zip/download?use_mirror=excellmedia
 需要在windows安装ctags.exe
 然后到项目目标文件夹中,执行命令:
 ctags -R -f .tags
@@ -114,9 +119,10 @@ ctrl+M 跳符号,
 ctrl+alt+j 跳标签
 ctrl+j 合并成行
 选中:然后ctrl+k,ctrl+u转大写,ctrl+k,ctrl+l转为小写.
+
 shift+alt+1~5分屏
 alt+shift+1取消分屏
-
+Ctrl+Shift+T可以打开之前关闭的tab页
 
 
 
