@@ -114,6 +114,8 @@ ctrl+M 跳符号,
 ctrl+alt+j 跳标签
 ctrl+j 合并成行
 选中:然后ctrl+k,ctrl+u转大写,ctrl+k,ctrl+l转为小写.
+shift+alt+1~5分屏
+alt+shift+1取消分屏
 
 
 
