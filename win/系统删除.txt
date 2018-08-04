@@ -1,0 +1,15 @@
+
+深度完美win7_x64
+sppsvc.exe
+spreview.exe
+spinstall.exe
+yycheckup.exe
+C:\Users\Administrator\AppData\Roaming\LightningZip\
+
+//命令行不能删除
+conhost.exe
+
+
+放win10赠送内置的各种app
+C:\Windows\SystemApps
+
