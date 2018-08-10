@@ -1,0 +1,34 @@
+
+
+2018年8月11日 05:43:56
+http协议中的head操作用来上报日志,简直完美.
+http://bestphp.net/logc?r=base64
+
+// Array
+// (
+//     [0] => -1
+//     [1] => Resolving timed out after 1606 milliseconds
+// )
+public static function head($url, $proxy = '')
+{
+    $opts = [CURLOPT_NOBODY => true];
+    if ($proxy) {
+        $opts[CURLOPT_PROXY] = $proxy;
+    }
+    self::curl($url, 'get', [], [], $opts);
+    return self::header();
+}
+
+// 异步提取
+public static function header()
+{
+    // 提取返回值
+    if (curl_errno(self::$ch)) {
+        $return = array(-1, curl_error(self::$ch));
+    } else {
+        $return = array(1, curl_getinfo(self::$ch));
+    }
+    return $return;
+}
+
+
