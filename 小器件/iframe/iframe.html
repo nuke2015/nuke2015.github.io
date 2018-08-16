@@ -1,0 +1,25 @@
+
+<iframe frameborder="0" height="100%" id="main" name="main" onload="Javascript:SetCwinHeight()" src="index_main.php" width="100%">
+</iframe>
+<script type="text/javascript">
+function madeCwin(obj) {
+    if (document.getElementById) {
+        if (obj && !window.opera) {
+            if (obj.contentDocument && obj.contentDocument.body.offsetHeight) {
+                obj.height = obj.contentDocument.body.offsetHeight;
+            } else if (obj.Document && obj.Document.body.scrollHeight) {
+                obj.height = obj.Document.body.scrollHeight;
+            }
+        }
+    }
+}
+
+function SetCwinHeight() {
+    var iframeid = document.getElementById("main"); //iframe id
+    var left_menu = document.getElementById("left_menu");
+    madeCwin(iframeid);
+    madeCwin(left_menu);
+}
+</script>
+
+
