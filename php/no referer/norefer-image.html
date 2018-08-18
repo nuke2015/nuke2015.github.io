@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>norefer</title>
+</head>
+<body>
+    <h1>No referer testing</h1>
+    <img src='#' id="test" alt="" />
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+    <script>
+    function go(main_url){
+        var referrer = "http://www.qq.com";
+        $.ajax({
+            url: main_url,
+            dataType: "json",
+            headers: {
+                'X-Alt-Referer': referrer
+            },
+            success: function(data) {
+                console.log(data)
+                return data;
+            }
+        });
+    }
+    $('#test').attr('src',go("https://www.baidu.com/img/bd_logo1.png"));
+    </script>
+</body>
+</html>
