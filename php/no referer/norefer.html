@@ -1,0 +1,23 @@
+<script>
+var request = new XMLHttpRequest();
+var path = "http://www.yahoo.com";
+// request.onreadystatechange = state_change;
+request.open("GET", path, true);
+request.setRequestHeader("Referer", "http://www.google.com");
+//request.setRequestHeader("User-Agent", "Mozilla/5.0");
+request.setRequestHeader("Accept", "text/plain");
+request.setRequestHeader("Content-Type", "text/plain");
+request.setRequestHeader("X-Alt-Referer", "http://www.google.com");
+request.send(null);
+
+function state_change() {
+    if (request.readyState == 4) { // 4 = "loaded"
+        if (request.status == 200) { // 200 = OK
+            // ...our code here...
+            alert('ok');
+        } else {
+            alert("Problem retrieving XML data");
+        }
+    }
+}
+</script>

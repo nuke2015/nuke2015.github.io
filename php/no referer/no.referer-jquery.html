@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>norefer</title>
+</head>
+<body>
+    <h1>No referer testing</h1>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+    <script>
+        var main_url = "http://www.example.com";
+        var referrer = "http://www.baidu.com";
+        $.ajax({
+            url: main_url,
+            dataType: "json",
+            headers: {
+                'X-Alt-Referer': referrer
+            },
+            success: function(data) {
+                console.log(data);
+            }
+        });
+    </script>
+</body>
+</html>
