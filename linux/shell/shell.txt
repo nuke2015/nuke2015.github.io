@@ -10,3 +10,7 @@ grep "api" -m 10
 #排序,按第5列
 ls -al | sort -n -k5
 
+
+查找/run中>100M的文件
+find /run -size +100M -exec ls -lh {} \;
+
