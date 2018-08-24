@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .my-div{
+            background-color: antiquewhite;
+        }
+    </style>
+    <script type="application/javascript" src="html2canvas.min.js"></script>
+</head>
+<body>
+<div class="my-div">
+    this is source
+    <img src="yuan.png"/>
+</div>
+<div class="content">
+    <span>next node is a img tag</span>
+    <img id="img"/>
+</div>
+<script>
+
+    //要转换为图片的dom对象
+    var element = document.querySelector('.my-div');
+    //要显示图片的img标签
+    var image = document.querySelector('#img');
+    //调用html2image方法
+    html2image(element,image);
+
+    /**
+     * create by lrj
+     * @param source    要转换为图片的dom对象
+     * @param image     要显示图片的img标签
+     */
+    function html2image(source,image) {
+        html2canvas(source).then(function(canvas) {
+            var imageData = canvas.toDataURL(1);
+            image.src = imageData;
+    });
+    }
+</script>
+</body>
+</html>
