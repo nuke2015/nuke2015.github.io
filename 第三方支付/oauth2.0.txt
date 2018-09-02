@@ -1,0 +1,13 @@
+
+
+oauth2.0通信过程,
+虽然技术不复杂,但做笔记,可以避免忘记.
+
+appid+随机code,发腾迅请求授权.
+->腾迅问用户是否同意.
+->腾迅回调给网关.
+->网关拿到一次性code
+->用code+secret,请求腾迅换access_token
+->腾迅同步返回access_token+openid
+
+
