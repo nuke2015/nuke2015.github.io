@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    Document
+  </title>
+  </meta>
+</head>
+
+<body>
+  <a class="phone" href="#">
+            13800138000
+        </a>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js">
+  </script>
+  <script>
+    new ClipboardJS('.phone', {
+      text: function(trigger) {
+        console.log(trigger);
+        var phone = trigger.innerText + "#" + Math.random();
+        console.log(phone);
+        return phone;
+      }
+    });
+  </script>
+</body>
+
+</html>
