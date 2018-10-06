@@ -1,0 +1,2 @@
+
+curl -x socks5://fengsu:100@127.0.0.1:11690 http://news.ifeng.com
