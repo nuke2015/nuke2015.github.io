@@ -1,5 +1,4 @@
-@echo Restore The Service Start State Saved At 23:11:36.10 2018/02/20/ÖÜ¶þ  
-@pause 
+
 sc config   AJRouter start= DEMAND 
 sc config   ALG start= DEMAND 
 sc config   AppIDSvc start= DEMAND 
