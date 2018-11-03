@@ -13,3 +13,7 @@ conhost.exe
 放win10赠送内置的各种app
 C:\Windows\SystemApps
 
+rem 快速删除大量文件
+del /f/s/q dirname> nul
+rmdir /s/q dirname
+
