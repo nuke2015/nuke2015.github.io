@@ -1,18 +1,21 @@
 <?php
 
-$files = dir_list('./x/');
-
+$files  = dir_list('./x/');
 $leng   = 30;
 $i      = 0;
 $result = '';
 if ($files && count($files)) {
     foreach ($files as $key => $value) {
-        if (stripos($value, '.php') !== false && stripos($value, 'Conf') !== false) {
-            $result .= file_get_contents($value);
-            $i++;
-            if ($i >= $leng) {
-                break;
-            }
+        $result .= "#####" . basename($value) . '#####@start ' . "\r\n";
+        $result .= "\r\n\r\n";
+        $result .= file_get_contents($value);
+        $result .= "\r\n\r\n";
+        $result .= "#####" . basename($value) . '#####@end ' . "\r\n";
+        $result .= "\r\n\r\n";
+        $result .= "\r\n\r\n";
+        $i++;
+        if ($i >= $leng) {
+            break;
         }
     }
 }
