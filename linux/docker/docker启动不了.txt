@@ -1,0 +1,54 @@
+
+2018年11月21日 16:46:50
+今天 发现docker 启动不了.
+root@ubuntu-1-248:~# systemctl status docker.service
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: failed (Result: start-limit-hit) since 三 2018-11-21 16:42:41 CST; 7s ago
+     Docs: https://docs.docker.com
+  Process: 1792 ExecStart=/usr/bin/dockerd -H fd:// (code=exited, status=1/FAILURE)
+ Main PID: 1792 (code=exited, status=1/FAILURE)
+
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: Failed to start Docker Application Container Engine.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: docker.service: Unit entered failed state.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: docker.service: Failed with result 'exit-code'.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: docker.service: Service hold-off time over, scheduling restart.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: Stopped Docker Application Container Engine.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: docker.service: Start request repeated too quickly.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: Failed to start Docker Application Container Engine.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: docker.service: Unit entered failed state.
+11月 21 16:42:41 ubuntu-1-248 systemd[1]: docker.service: Failed with result 'start-limit-hit'.
+
+原来是镜像加速器影响了.
+cd /etc/docker/
+rm *.json
+然后就能正常启动了.
+root@ubuntu-1-248:/etc/docker# service docker start
+root@ubuntu-1-248:/etc/docker# service docker status
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: active (running) since 三 2018-11-21 16:45:57 CST; 2s ago
+     Docs: https://docs.docker.com
+ Main PID: 1980 (dockerd)
+    Tasks: 46
+   Memory: 96.9M
+      CPU: 382ms
+   CGroup: /system.slice/docker.service
+           ├─1980 /usr/bin/dockerd -H fd://
+           ├─1989 docker-containerd --config /var/run/docker/containerd/containerd.toml
+           ├─2257 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3666 -container-ip 172.18.0.2 -container-port 80
+           └─2266 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/b98fb00f9dd4760faa7abcc79f00523fdcba
+
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.321493479+08:00" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420518f80, READY" mo
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.321503561+08:00" level=info msg="Loading containers: start."
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.442143898+08:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/1
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/b98fb00f9d
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.805483592+08:00" level=info msg="Loading containers: done."
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.809554669+08:00" level=warning msg="failed to retrieve docker-runc version: unknown output format: ru
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.814768426+08:00" level=info msg="Docker daemon" commit=e68fc7a graphdriver(s)=aufs version=18.06.1-ce
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.815005254+08:00" level=info msg="Daemon has completed initialization"
+11月 21 16:45:57 ubuntu-1-248 dockerd[1980]: time="2018-11-21T16:45:57.837393471+08:00" level=info msg="API listen on /var/run/docker.sock"
+11月 21 16:45:57 ubuntu-1-248 systemd[1]: Started Docker Application Container Engine.
+
+
+
