@@ -5,15 +5,14 @@ use mysql;
 update user set host='%' where user='root';
 flush privileges;
 
+#修改用户密码
+grant usage on *.* to 'root'@'%' identified by 'root';  
+flush  privileges;
+
 
 #增加数据库授权
 #create user root identified by 'root';
 grant all privileges on test_database.* to root@'%';
-flush  privileges;
-
-
-#修改用户密码
-grant usage on *.* to 'root'@'%' identified by 'root';  
 flush  privileges;
 
 
@@ -26,7 +25,6 @@ skip-grant-tables
 use mysql
 update user set authentication_string=PASSWORD('root') where User='root';
 flush  privileges;
-
 
 
 MySQL 5.7.5 或更早之前的版本r:
