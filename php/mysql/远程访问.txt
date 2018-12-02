@@ -13,7 +13,24 @@ flush  privileges;
 
 
 #修改用户密码
-grant usage on *.* to 'root'@'%' identified by '946633a=3b300fec2e';  
+grant usage on *.* to 'root'@'%' identified by 'root';  
 flush  privileges;
 
+
+vim
+/etc/mysql/mysql.conf.d/mysqld.cnf
+skip-grant-tables
+
+
+最新版本修改密码
+use mysql
+update user set authentication_string=PASSWORD('root') where User='root';
+flush  privileges;
+
+
+
+MySQL 5.7.5 或更早之前的版本r:
+use mysql
+update user set password=PASSWORD('root') where User='root'
+flush  privileges;
 
