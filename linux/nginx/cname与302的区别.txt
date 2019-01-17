@@ -6,3 +6,30 @@ cname与302跳转都能实现网页的代理服务.
 但是302是两条独立的通信,各自用各自的证书,所以,浏览器校验证书不受影响.
 
 
+
+
+
+#302
+server {
+    listen 80;
+    server_name admin.t.bestphp.net;
+    rewrite ^/(.*) http://erp.t.qinqinyuesao.com/static/admin/html/index.html$1 redirect;
+    access_log off;
+}
+
+#proxy
+server {
+    listen       80;
+    server_name  admin.loc.bestphp.net;
+    root "F:/zhihukeji/dev/php/zhihu/public";
+    location  = / {
+        rewrite  ^/(.*)$ /static/admin/html/index.html$1 last;
+    }
+    location / {
+        proxy_pass http://erp.loc.bestphp.net;
+        proxy_set_header X-Real-IP $remote_addr; 
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Content-Type $content_type; 
+    }
+}
+
