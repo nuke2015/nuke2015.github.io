@@ -1,0 +1,11 @@
+
+location ~ ^/static/weixin/ {
+    if ($uri ~* .html){
+       set $flag 'html';
+    }
+    if ($flag != 'html' ){
+        rewrite  ^/static/weixin/(.*)$  http://127.0.0.2/$1 permanent;
+    }
+    break;
+}
+
