@@ -86,7 +86,7 @@ WHERE (
   WHERE p1.sys_cat_id = p2.sys_cat_id
     AND p1.id < p2.id
 ) < 3
-ORDER BY is_groupon DESC, sys_cat_id ASC
+ORDER BY is_groupon DESC, id DESC
 
 -- id  title sys_cat_id  is_groupon
 -- 101 隔尿垫 16  6
