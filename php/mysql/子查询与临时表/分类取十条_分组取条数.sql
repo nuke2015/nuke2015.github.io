@@ -68,3 +68,47 @@ ORDER BY sys_cat_id ASC
 -- 357 单人专业小儿全身推拿  20
 
 
+-- 做活动的商品排在前面
+SELECT p1.id, p1.title, p1.sys_cat_id
+  , (
+    SELECT COUNT(product_id)
+    FROM zhihu_groupon_timelimit_product
+    WHERE product_id = p1.id
+    UNION
+    SELECT product_id
+    FROM zhihu_groupon_product
+    WHERE product_id = p1.id
+  ) AS is_groupon
+FROM zhihu_product p1
+WHERE (
+  SELECT COUNT(*)
+  FROM zhihu_product p2
+  WHERE p1.sys_cat_id = p2.sys_cat_id
+    AND p1.id < p2.id
+) < 3
+ORDER BY is_groupon DESC, sys_cat_id ASC
+
+-- id  title sys_cat_id  is_groupon
+-- 101 隔尿垫 16  6
+-- 184 第1集 3 1
+-- 161 xgw3  14  1
+-- 194 月嫂等级  2 0
+-- 192 泰式按摩super-plus  2 0
+-- 193 2323  2 0
+-- 183 第1集1  3 0
+-- 350 月子服 3 0
+-- 326 推拿SPA 7 0
+-- 349 26天月子服务 7 0
+-- 103 满月中药熏蒸  7 0
+-- 354 尿你一脸  8 0
+-- 352 宝宝游泳  14  0
+-- 355 爱他美（Aptamil） 婴儿配方奶粉(0–6月龄，1段) 800g  15  0
+-- 314 荷兰牛栏  15  0
+-- 186 新西兰爱他美  15  0
+-- 353 月子服 17  0
+-- 351 月子鞋 17  0
+-- 185 月子服纽扣 17  0
+-- 356 嘉宝Gerber婴幼儿辅食 甜薯玉米混合蔬菜泥 二段 6个月以上 113g*2 美国进口  18  0
+-- 357 单人专业小儿全身推拿  20  0
+
+
