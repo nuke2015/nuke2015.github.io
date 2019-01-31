@@ -38,7 +38,7 @@ WHERE (
     WHERE p1.sys_cat_id = p2.sys_cat_id
         AND p1.id < p2.id
 ) < 3
-ORDER BY sys_cat_id ASC
+ORDER BY pr.id DESC
 
 
 
