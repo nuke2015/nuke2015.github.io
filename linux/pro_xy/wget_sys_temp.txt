@@ -1,0 +1,8 @@
+
+
+系统临时使用代理
+http_proxy=http://用户名:密码@代理地址:代理端口
+http_proxy=http://10.0.0.130:1016
+export http_proxy
+
+
