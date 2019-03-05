@@ -12,4 +12,8 @@ win7_x64的引导是boormgr.
 增加开机启动
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
 
+发送到.
+C:\Users\19697\AppData\Roaming\Microsoft\Windows\SendTo
+
+
 
