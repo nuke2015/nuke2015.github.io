@@ -1,0 +1,7 @@
+
+
+
+export http_proxy=10.0.17.103:16061
+curl myip.ipip.net
+#香港
+
