@@ -1,6 +1,9 @@
 
 
 
+#查目录大小
+du -sh
+
 
 root@ubuntu:~# dd if=/dev/zero of=./largefile bs=1M count=1024
 1024+0 records in
