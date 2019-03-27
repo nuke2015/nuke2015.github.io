@@ -1,0 +1,25 @@
+
+nginx 日志按天存储
+
+
+注意层次关系，这段脚本一定要加到server配置内部，且if要在access_log前面，否则set的变量将无法引用
+
+
+server{
+...
+if ($time_iso8601 ~ '(\d{4}-\d{2}-\d{2})') {
+                set $tttt $1;
+        }
+
+        access_log  logs/access-$tttt.log  main;
+...
+}
+
+
+
+
+按yyyy-mm-dd格式截取字符串，写入指定日志文件中
+
+
+执行 nginx -s reload 后则配置生效
+
