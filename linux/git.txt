@@ -6,11 +6,17 @@ git config --global user.name "nuke2015"
 git config --global user.email "youremail@example.com"
 
 拉代码
-git clone git@code.aliyun.com:69996-jiajiamuying/package.git
+git clone git@code.aliyun.com:group/depo.git
 
 生成公私钥
 ssh-keygen -t rsa -C "youremail@example.com"
 
 存放位置
 C:\Users\19697\.ssh\id_rsa
+
+
+#拉代码+submodule
+git clone git@code.aliyun.com:group/depo.git
+git submodule init
+git submodule update
 
