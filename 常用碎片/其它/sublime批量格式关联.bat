@@ -3,7 +3,7 @@ echo FileExts setting batch with sublime
 rem http://github.com/nuke2015
 set tmp_reg=%temp%\tmp.ini
 set Application=sublime_text.exe
-set FileExts=.ini .txt .cnf .conf .css .log .cfg .xml .php .asp .java .js .css .htm .sh .py .go
+set FileExts=.ini .txt .cnf .conf .css .log .cfg .xml .php .asp .java .js .css .htm .py .go .json
 
 
 

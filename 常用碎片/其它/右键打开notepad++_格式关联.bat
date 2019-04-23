@@ -4,7 +4,7 @@ rem http://github.com/nuke2015
 set tmp_reg=%temp%\reg.ini
 set Application=notepad++.exe
 set Application_command=D:\\working\\Notepad++\\notepad++.exe
-set FileExts=.ini .txt .cnf .conf .css .log .cfg .xml .php .asp .java .js .css .htm .sh .py .go
+set FileExts=.ini .txt .cnf .conf .css .log .cfg .xml .php .asp .java .js .css .htm .py .go .json
 
 
 rem do it now!
