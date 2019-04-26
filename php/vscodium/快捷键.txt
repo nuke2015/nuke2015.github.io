@@ -1,0 +1,17 @@
+
+调整快捷键
+#killall
+close editor in group 
+ctrl+k+o
+
+原生快捷键
+ctrl+下 移动
+ctrl+shift+下,复制
+shift+方向,选中多行
+ctrl+d,同步编辑多个单词
+alt+shift+f,格式化
+f12跳转到定义
+alt+f12,查看定义
+esc,取消
+
+

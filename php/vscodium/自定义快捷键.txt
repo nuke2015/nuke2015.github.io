@@ -1,6 +1,0 @@
-
-
-#killall
-close editor in group 
-ctrl+k+o
-
