@@ -26,6 +26,10 @@ ctrl+/,单行注释
 默认快捷键
 Ctrl+Shift+N,新编辑器
 Ctrl+Shift+W,最小化
-
+ctrl+j切换外观小面板
+alt键,准备召唤菜单
+f11,全屏
+f8,看问题
+f5,调试下断点
 
 
