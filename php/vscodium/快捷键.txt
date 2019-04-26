@@ -13,5 +13,9 @@ alt+shift+f,格式化
 f12跳转到定义
 alt+f12,查看定义
 esc,取消
-
+ctrl+b,收放边栏
+ctrl+shift+p,命令召唤
+ctrl+p打开文件
+ctrl+shift+f,查找全部
+ctrl+f,页内查找
 
