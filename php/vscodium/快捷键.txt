@@ -15,7 +15,17 @@ alt+f12,查看定义
 esc,取消
 ctrl+b,收放边栏
 ctrl+shift+p,命令召唤
-ctrl+p打开文件
+ctrl+p打开文件(zhihu*api*controller*material)
 ctrl+shift+f,查找全部
 ctrl+f,页内查找
+ctrl+-,放大缩小
+ctrl+/,单行注释
+/**多行注释
+
+
+默认快捷键
+Ctrl+Shift+N,新编辑器
+Ctrl+Shift+W,最小化
+
+
 
