@@ -1,0 +1,14 @@
+
+常用插件
+auto close tag
+beautify
+中文简体
+debug for chrome
+eslint
+git history
+gitlens
+markdown all in one
+npm
+php debug
+php intelephense
+php intellisense
