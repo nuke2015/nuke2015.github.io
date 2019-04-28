@@ -1,4 +1,4 @@
-﻿
+
 
 登陆服务器.
 运行ssh-keygen -t rsa

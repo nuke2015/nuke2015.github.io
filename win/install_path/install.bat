@@ -1,4 +1,4 @@
-﻿rem 一键安装java,ant,android,nodejs
+rem 一键安装java,ant,android,nodejs
 
 set ROOT_PATH=%CD%
 set JAVA_HOME=%ROOT_PATH%\jdk1.8.0_20
