@@ -50,7 +50,7 @@ find . -type f -exec dos2unix {} \;
 
 
 #线上放弃修改
-git reset --hard
+git reset --hard HEAD
 git pull origin
 
 
