@@ -1,2 +1,17 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text eol=lf
+*.png   -text
+*.bin   -text
+*.dll   -text
+*.exe   -text
+*.wps   -text
+*.doc   -text
+*.docx   -text
+*.xls   -text
+*.ppt   -text
+*.pptx   -text
+*.zip   -text
+*.rar   -text
+*.tar.gz   -text
+*.7z   -text
+*.pdf   -text
