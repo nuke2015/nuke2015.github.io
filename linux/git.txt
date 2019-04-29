@@ -46,3 +46,12 @@ git reset --hard HEAD
 find . -type f -exec dos2unix {} \;
 
 
+
+
+
+线上放弃修改
+git reset --hard
+git pull origin
+
+
+
