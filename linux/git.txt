@@ -20,3 +20,29 @@ git clone git@code.aliyun.com:group/depo.git
 git submodule init
 git submodule update
 
+
+
+
+
+
+
+
+
+
+重置
+git config --global core.eol lf
+git config --global core.autocrlf false
+git config --global core.safecrlf true
+git init
+git add .
+git commit -m "init"
+rm -rf *
+git reset --hard HEAD
+
+
+
+
+用bash批量转换to_unix,解决crlf的问题
+find . -type f -exec dos2unix {} \;
+
+
