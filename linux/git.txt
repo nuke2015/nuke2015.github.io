@@ -42,14 +42,14 @@ git reset --hard HEAD
 
 
 
-用bash批量转换to_unix,解决crlf的问题
+#用bash批量转换to_unix,解决crlf的问题
 find . -type f -exec dos2unix {} \;
 
 
 
 
 
-线上放弃修改
+#线上放弃修改
 git reset --hard
 git pull origin
 
