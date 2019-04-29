@@ -1,6 +1,9 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text eol=lf
 *.png   -text
+*.jpg   -text
+*.jpeg   -text
+*.gif   -text
 *.bin   -text
 *.dll   -text
 *.exe   -text
@@ -8,6 +11,7 @@
 *.doc   -text
 *.docx   -text
 *.xls   -text
+*.xlsx   -text
 *.ppt   -text
 *.pptx   -text
 *.zip   -text
