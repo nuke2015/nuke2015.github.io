@@ -4,6 +4,21 @@
 close editor in group 
 ctrl+k+o
 
+
+补充快捷键
+{
+    "key": "ctrl+shift+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+},
+{
+    "key": "ctrl+shift+l",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+}
+
+
+
 原生快捷键
 ctrl+下 移动
 ctrl+shift+下,复制
@@ -31,5 +46,7 @@ alt键,准备召唤菜单
 f11,全屏
 f8,看问题
 f5,调试下断点
+alt+z自动换行
+
 
 
