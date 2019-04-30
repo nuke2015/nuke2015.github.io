@@ -55,3 +55,13 @@ git pull origin
 
 
 
+
+
+
+同映像换仓库
+git clone -–bare git@code.aliyun.com:demo/hello.git
+cd hello
+git push -–mirror git@code.aliyun.com:demo/hello_new.git
+
+
+
