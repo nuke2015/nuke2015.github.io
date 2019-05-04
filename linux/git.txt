@@ -22,7 +22,7 @@ git submodule update
 
 
 子模块更新
-git submodule update --recursive --remote
+git submodule update --remote --recursive
 
 
 
