@@ -21,9 +21,9 @@ git submodule init
 git submodule update
 
 
-
-
-
+子模块更新
+git pull --recurse-submodules
+git submodule update --recursive --remote
 
 
 
