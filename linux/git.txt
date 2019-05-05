@@ -53,8 +53,9 @@ git reset --hard HEAD
 git pull origin
 
 
-
-
+#放弃本地修改,强拉master最新
+git fetch origin master
+git reset --hard origin/master
 
 
 同映像换仓库
