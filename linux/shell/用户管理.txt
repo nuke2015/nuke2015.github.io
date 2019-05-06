@@ -1,0 +1,5 @@
+
+# 添加一个admin的帐号，密码为123456
+# echo '123456'| passwd --stdin admin
+
+
