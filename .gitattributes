@@ -19,7 +19,13 @@
 *.tar.gz   -text
 *.7z   -text
 *.pdf   -text
-*.swf   -text
 *.ttf   -text
 *.eot   -text
 *.woff   -text
+*.mp3   -text
+*.mp4   -text
+*.flv   -text
+*.swf   -text
+*.ico   -text
+*.woff   -text
+*.otf   -text
