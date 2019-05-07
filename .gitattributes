@@ -29,3 +29,6 @@
 *.ico   -text
 *.woff   -text
 *.otf   -text
+*.z   -text
+*.bz   -text
+*.tar   -text
