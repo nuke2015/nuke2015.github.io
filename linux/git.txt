@@ -64,4 +64,6 @@ cd hello
 git push -–mirror git@code.aliyun.com:demo/hello_new.git
 
 
+远程仓库地址
+git remote -v
 
