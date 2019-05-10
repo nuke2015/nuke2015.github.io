@@ -7,7 +7,6 @@ debug for chrome
 eslint
 git history
 gitlens
-markdown all in one
 npm
 php debug
 php intelephense
