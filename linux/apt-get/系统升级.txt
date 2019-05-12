@@ -5,7 +5,7 @@ vi /etc/apt-get/sources.list
 #升级
 apt-get update
 apt-get upgrade
-sudo apt-get dist-upgrade
+sudo apt-get -y dist-upgrade
 sudo update-manager -d
 
 #其它
