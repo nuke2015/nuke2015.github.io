@@ -18,6 +18,8 @@ sudo apt-get install screen
 
 
 screen
+
+#有用
 sudo do-release-upgrade -d
 
 
