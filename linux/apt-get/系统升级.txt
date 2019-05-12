@@ -17,7 +17,11 @@ sudo reboot
 sudo apt-get install screen
 
 
+#新窗口
 screen
+
+#检查新版本
+do-release-upgrade -c
 
 #有用
 sudo do-release-upgrade -d
