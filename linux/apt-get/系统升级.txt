@@ -4,7 +4,7 @@ vi /etc/apt-get/sources.list
 
 #升级
 apt-get update
-apt-get -y autoremove
+apt-get autoremove
 
 apt-get -y upgrade
 sudo apt-get -y dist-upgrade
