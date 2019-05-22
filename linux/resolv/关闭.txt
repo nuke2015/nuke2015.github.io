@@ -1,0 +1,20 @@
+
+
+如何在Ubuntu中禁用systemd-resolved？
+
+禁用systemd-resolved服务并将其停止：
+
+sudo systemctl disable systemd-resolved.service
+sudo service systemd-resolved stop
+
+
+将以下行放在[main]的/etc/NetworkManager/NetworkManager.conf部分：
+
+dns=default
+
+删除符号链接/etc/resolv.conf
+
+dns=default
+重新启动网络管理器
+
+rm /etc/resolv.conf
