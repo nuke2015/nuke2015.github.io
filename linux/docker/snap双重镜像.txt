@@ -1,0 +1,26 @@
+
+
+修复docker提示,只读文件系统
+dk run --rm -v /nfs/runtime/dev/:/home/ddys_run/ -it jjmy/any
+
+
+mkdir /storage: read-only file system
+
+
+
+I had same issue, but removed docker from snap and reinstall on following the official docker steps.
+
+Remove docker from snap
+
+snap remove docker
+then remove the docker directory, and old version
+
+rm -R /var/lib/docker
+
+sudo apt-get remove docker docker-engine docker.io
+install official docker: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+I hope this help for you!
+
+shareimprove this answer
+
