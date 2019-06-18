@@ -1,0 +1,33 @@
+
+
+
+
+http://pecl.php.net/package/PDO_MYSQL
+
+php7.2安装redis
+
+wget http://pecl.php.net/get/PDO_MYSQL-1.0.2.tgz
+
+tar -xzvf PDO_MYSQL-1.0.2.tgz 
+
+phpize
+
+./configure
+
+make && make install
+
+#生成后到
+/usr/lib/php/20170718/
+
+增加一个配置文件
+root@33218f71c908:/etc/php/7.2/fpm/conf.d# ll|grep redis
+-rw-r--r-- 1 root root   37 Jun 18 01:38 20-redis.ini
+
+#内容/etc/php/7.2/fpm/conf.d# cat 20-redis.ini 
+/etc/php/7.2/mods-available/redis.ini
+
+#内容2
+root@33218f71c908:/etc/php/7.2/fpm/conf.d# cat /etc/php/7.2/mods-available/redis.ini
+extension=redis.so
+
+
