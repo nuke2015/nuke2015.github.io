@@ -1,0 +1,33 @@
+
+国际标准
+vscode-php-cs-fixer
+
+格式化
+phpfmt
+
+括号闭合
+auto close tag
+
+js/json格式化
+beautify
+
+中文菜单
+chinese language pack
+
+html闭合
+close html/xml tag
+
+eslint
+
+注释者
+php docblocker
+
+大包集
+php extension pack
+
+自动完成
+php intellisense
+
+模拟sublime快捷键
+sublime text keymap and setting
+
