@@ -1,9 +1,6 @@
 
-国际标准
+代码格式国际标准
 vscode-php-cs-fixer
-
-格式化
-phpfmt
 
 括号闭合
 auto close tag
