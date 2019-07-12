@@ -1,0 +1,8 @@
+
+
+#泛域名证书 ,可用
+acme.sh --issue -d "*.bestphp.net" --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please
+acme.sh --renew -d "*.bestphp.net" --force --yes-I-know-dns-manual-mode-enough-go-ahead-please
+acme.sh  --installcert  -d "*.bestphp.net" --key-file /root/ssl/any.bestphp.net.key --fullchain-file /root/ssl/any.bestphp.net.cer --yes-I-know-dns-manual-mode-enough-go-ahead-please
+
+
