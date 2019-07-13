@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"/>
+        <title>
+            Document
+        </title>
+        <script src="jquery-2.1.1.min.js">
+        </script>
+        <script src="swiper-3.3.1.jquery.min.js">
+        </script>
+        <script src="pie.js">
+        </script>
+        <script src="schedule_pie.js">
+        </script>
+    </head>
+</html>
+<body>
+    <div class="swiper-container pieSwiper">
+        <div class="swiper-wrapper schedule_pie">
+        </div>
+        <div class="swiper-pagination piePagination">
+        </div>
+    </div>
+    <div class="square_tips">
+        <span class="square_tips1">
+            <i class="square1">
+            </i>
+            可预约
+        </span>
+        <span class="square_tips2">
+            <i class="square2">
+            </i>
+            已占用
+        </span>
+    </div>
+    <script>
+        var obj = JSON.parse('{ "act": "YuesaoSchedulePie", "city_server": "sz", "code": 0, "msg": "success", "version": "1.0", "timestamp": 1563043592, "data": { "2019": { "07": { "01": 0, "02": 0, "03": 0, "04": 0, "05": 0, "06": 0, "07": 0, "08": 0, "09": 0, "10": 0, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "17": 1, "18": 1, "19": 1, "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 1, "26": 1, "27": 1, "28": 1, "29": 1, "30": 1, "31": 1 }, "08": { "01": 1, "02": 1, "03": 1, "04": 1, "05": 1, "06": 1, "07": 0, "08": 0, "09": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0, "22": 0, "23": 0, "24": 0, "25": 0, "26": 0, "27": 0, "28": 0, "29": 0, "30": 0, "31": 0 } } } }');
+            console.log(obj);
+          schedulePie(obj.data);
+    </script>
+</body>
