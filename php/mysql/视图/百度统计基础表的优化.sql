@@ -74,3 +74,11 @@ id	select_type	table	type	possible_keys	key	key_len	ref	rows	Extra
 虽然对hour_create_at有index索引,但是全表数据4.9万条.
 每次查询也是4.9万条,这不科学.
 
+
+explain SELECT * FROM `tongji_view_pageview_count` LIMIT 100
+
+id	select_type	table	type	possible_keys	key	key_len	ref	rows	Extra
+1	PRIMARY	<derived2>	ALL	NULL	NULL	NULL	NULL	48653	NULL
+2	DERIVED	tongji_pageview	index	hour_create_at	hour_create_at	4	NULL	48653	NULL
+
+
