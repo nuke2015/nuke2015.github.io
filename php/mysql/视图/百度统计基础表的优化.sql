@@ -1,4 +1,43 @@
 
+-- 基础结构
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `tongji_pageview`;
+CREATE TABLE `tongji_pageview` (
+  `id` int(20) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
+  `uuid` char(32) NOT NULL COMMENT 'uuid',
+  `sess_id` char(26) NOT NULL DEFAULT '' COMMENT '会话id,用户',
+  `url` varchar(250) NOT NULL COMMENT '当前页面',
+  `url_md5` char(32) NOT NULL COMMENT '当前页面',
+  `url_refer` varchar(250) DEFAULT NULL COMMENT '来路页面',
+  `url_refer_md5` char(32) NOT NULL COMMENT '来路页面',
+  `create_at` int(11) NOT NULL COMMENT '创建时间',
+  `sys` varchar(20) NOT NULL COMMENT '系统',
+  `browser` varchar(20) NOT NULL COMMENT '浏览器',
+  `is_mobile` tinyint(1) NOT NULL COMMENT '是否移动端',
+  `ipv4` char(16) NOT NULL COMMENT 'ipv4',
+  `display` varchar(20) NOT NULL COMMENT '分辨率',
+  `title` varchar(50) NOT NULL COMMENT '页面标题',
+  `club_id` int(11) NOT NULL COMMENT '会所id',
+  `hour_create_at` int(11) NOT NULL DEFAULT '0' COMMENT '小时段',
+  `t_create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '每小时间优化',
+  PRIMARY KEY (`id`),
+  KEY `url_md5` (`url_md5`),
+  KEY `url_refer_md5` (`url_refer_md5`),
+  KEY `ipv4` (`ipv4`),
+  KEY `sess_id` (`sess_id`),
+  KEY `uuid` (`uuid`),
+  KEY `club_id` (`club_id`),
+  KEY `hour_create_at` (`hour_create_at`),
+  KEY `t_create_at` (`t_create_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf16 COMMENT='会所页面访问表';
+
+
+-- 2019-07-15 15:25:47
+
 
 explain 
 SELECT 
