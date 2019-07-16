@@ -82,3 +82,10 @@ id	select_type	table	type	possible_keys	key	key_len	ref	rows	Extra
 2	DERIVED	tongji_pageview	index	hour_create_at	hour_create_at	4	NULL	48653	NULL
 
 
+最终解决的办法是减少表格扫描行数,把视图做在代码里,通过start_at收缩查询的范围,然后才是group by,此时并不数据库里排序order by.
+而是在代码里,再对最终输出的数组结构进行排序.
+成功优化到56毫秒.
+
+
+
+
