@@ -160,3 +160,8 @@ id	select_type	table	type	possible_keys	key	key_len	ref	rows	Extra
 -- 也许是因为目前的业务发展情况,第二种积累的数据量比较少.
 
 
+这个视图已经优化到极限了,
+如果进一步优化,只有把视图删除,把提数据的sql语句放到代码里,在查询的时候,进行where控制,这样就能减少表格扫描的行数.
+另一个解决的办法是:删除视图,把thumb做到基础表结构里面去.
+
+
