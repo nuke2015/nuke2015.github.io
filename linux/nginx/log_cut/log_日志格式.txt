@@ -1,0 +1,13 @@
+
+
+
+    #格式
+    log_format json_log escape=json '{"realip":"$remote_addr","@timestamp":"$time_iso8601","host":"$http_host","request":"$request","req_body":"$request_body","status":"$status","size":$body_bytes_sent,"ua":"$http_user_agent","cookie":"$http_cookie","req_time":"$request_time","uri":"$uri","referer":"$http_referer","xff":"$http_x_forwarded_for","ups_status":"$upstream_status","ups_addr":"$upstream_addr","ups_time":"$upstream_response_time"}';
+
+    #访问日志
+    access_log  logs/access.log  json_log;
+    #出错日志
+    error_log  logs/error.log;
+
+
+
