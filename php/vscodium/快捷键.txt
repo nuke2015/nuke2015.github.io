@@ -55,3 +55,6 @@ codiumm的大小写转换,本身没有设置快捷键.
 如ctrl+shift+p然后输入touper+确定.就是转为大写.
 命令+tolower+确认就是转为小写.
 
+
+文件树导航home/end/pageup/pageend
+
