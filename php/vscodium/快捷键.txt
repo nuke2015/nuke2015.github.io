@@ -59,3 +59,5 @@ codiumm的大小写转换,本身没有设置快捷键.
 文件树导航home/end/pageup/pageend
 
 ctrl+shift+[或],折叠/收缩函数.
+alt+shift+r,在资源管理器中显示
+
