@@ -1,5 +1,5 @@
 
-
+安装
 apt-get install libmosquitto1
 apt install libmosquitto-dev
 pecl install Mosquitto-alpha
