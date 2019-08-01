@@ -4,6 +4,13 @@ apt install -y libmosquitto1 libmosquitto-dev
 pecl install Mosquitto-alpha
 
 
+Build process completed successfully
+Installing '/usr/lib/php/20151012/mosquitto.so'
+install ok: channel://pecl.php.net/Mosquitto-0.4.0
+configuration option "php_ini" is not set to php.ini location
+You should add "extension=mosquitto.so" to php.ini
+
+
 phpize
 ./configure --with-mosquitto=/path/to/libmosquitto
 make
