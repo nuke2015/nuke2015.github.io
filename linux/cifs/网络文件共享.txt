@@ -1,0 +1,18 @@
+ubuntu通过cifs-utils访问Windows共享目录
+ubuntu旧一点的版本如：12.0x是用smbclient访问window共享的，但比较新的版本如：16.04是通过cifs-utils访问Windows共享目录
+
+同样道理先安装：
+
+apt-get install cifs-utils
+
+mount：
+
+sudo mount -t cifs -o username=windows用户名,password=windows密码,vers=2.0 //windows IP/文件夹名 /Ubuntu目录
+
+sudo mount -t cifs //192.168.138.1/share /home/share -o username=xxx,password=xxx,vers=2.0
+
+访问：
+
+如果希望重启系统的时候自动mount, 可以将下面命令行添加到/etc/fstab里面
+
+//windows IP/windows共享文件夹 /Ubuntu目录 cifs defaults,username=windows用户名,password=windows密码,vers=2.0
