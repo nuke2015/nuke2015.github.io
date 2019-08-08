@@ -1,0 +1,7 @@
+
+查询+分页
+cat d:/home/ddys_run/mqtt_logcenter/didiyuesao_api_HeartBeat_2019_08_07|sed -n 1,100p
+
+搜索
+cat d:/home/ddys_run/mqtt_logcenter/didiyuesao_api_HeartBeat_2019_08_07 |grep 'hello'|sed -n 1,100p
+
