@@ -25,6 +25,7 @@
 *.woff2   -text
 *.mp3   -text
 *.mp4   -text
+*.webm   -text
 *.flv   -text
 *.swf   -text
 *.ico   -text
