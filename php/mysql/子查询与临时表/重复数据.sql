@@ -30,4 +30,5 @@ where id in
 -- 查询出错 (1093): You can't specify target table 'zhihu_rbac_role_member' for update in FROM clause
 
 
+-- 先用导出,csv,然后根据id形成新的sql,手动删除解决.
 
