@@ -1,4 +1,12 @@
 
+最新php版本库
+https://windows.php.net/downloads/releases/archives/
+
+各种php扩展下载
+http://pecl.php.net/packages.php
+
+
+
 百度全部开源cdn
 http://cdn.code.baidu.com/
 新浪库
@@ -24,6 +32,4 @@ composer国内镜像
 curl -sS http://install.phpcomposer.com/installer | php
 php -r "readfile('http://install.phpcomposer.com/installer');" | php
 
-各种php扩展下载
-http://pecl.php.net/packages.php
 
