@@ -33,3 +33,6 @@ curl -sS http://install.phpcomposer.com/installer | php
 php -r "readfile('http://install.phpcomposer.com/installer');" | php
 
 
+golang
+https://mirrors.nju.edu.cn/golang/
+
