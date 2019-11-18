@@ -1,0 +1,5 @@
+
+setx GOOGLE_API_KEY AIzaSyDCNWofwOkYgeS3aBnd901sIJqSS4p3nKc 
+setx GOOGLE_DEFAULT_CLIENT_ID 752805503192-gigd4quq46757vjupq4rv5oga3sougnp.apps.googleusercontent.com 
+setx GOOGLE_DEFAULT_CLIENT_SECRET bEbljK3NYvuRBe-zn7UyS4Zy
+pause
