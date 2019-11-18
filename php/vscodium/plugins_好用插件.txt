@@ -31,3 +31,12 @@ sublime text keymap and setting
 sftp上传工具
 sftp(liximomo)
 
+其它
+eslint
+npm
+go
+go outliner
+path autocomlete
+markdown all in one
+
+
