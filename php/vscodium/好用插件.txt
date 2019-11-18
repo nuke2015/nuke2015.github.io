@@ -28,9 +28,6 @@ php intellisense
 模拟sublime快捷键
 sublime text keymap and setting
 
-代码格式化(好用)
-vscode-php-cs-fixer
-
 sftp上传工具
 sftp(liximomo)
 
