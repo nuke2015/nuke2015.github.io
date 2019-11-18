@@ -32,7 +32,6 @@ sftp上传工具
 sftp(liximomo)
 
 其它
-eslint
 npm
 go
 go outliner
