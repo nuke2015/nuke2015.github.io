@@ -31,6 +31,10 @@ sublime text keymap and setting
 sftp上传工具
 sftp(liximomo)
 
+vetur
+vue tool for vscode
+
+
 其它
 npm
 go
