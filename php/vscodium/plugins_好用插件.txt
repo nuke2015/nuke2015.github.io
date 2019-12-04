@@ -41,5 +41,5 @@ go
 go outliner
 path autocomlete
 markdown all in one
-
+prettier-code formatter(vue格式化)
 
