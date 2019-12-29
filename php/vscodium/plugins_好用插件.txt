@@ -31,11 +31,15 @@ sublime text keymap and setting
 sftp上传工具
 sftp(liximomo)
 
+vetur
+vue tool for vscode
+
+
 其它
 npm
 go
 go outliner
 path autocomlete
 markdown all in one
-
+prettier-code formatter(vue格式化)
 
