@@ -21,3 +21,10 @@ dns-nameservers 202.96.134.133
 dns-nameservers 114.114.114.114
 
 
+加载新设置 
+sudo netplan apply
+如果没有报错就是成功了
+ifconfig
+查看下,静态ip有没有设置成功.
+
+
