@@ -10,11 +10,25 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Chrome\ChromeDriver;
 
-// https://www.kancloud.cn/wangking/selenium/234398
 
-// 甚好.
-putenv('webdriver.chrome.driver=D:/advance/sbin/chromedriver.exe');
-$driver = ChromeDriver::start();
+// This is where ChromeDriver is listening
+$host = "http://127.0.0.1:9515";
+$capabilities =  DesiredCapabilities::chrome();
+
+$capabilities->setCapability("chromeOptions", array(
+    "args" => array(
+        "--window-size=1366,768",
+        "--no-proxy-server",
+        "--no-default-browser-check",
+        "--no-first-run",
+        "--disable-boot-animation",
+        "--disable-default-apps",
+        "--disable-extensions",
+        "--disable-translate"
+    ),
+));
+
+$driver = RemoteWebDriver::create($host, $capabilities);
 
 
 $driver->get('https://so.bestphp.net/');
@@ -35,4 +49,4 @@ if ($arr && count($arr)) {
     }
 }
 //关闭浏览器
-$driver->quit();
+$driver->quit(); 

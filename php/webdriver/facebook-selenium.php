@@ -18,7 +18,7 @@ $options->addArguments(["user-agent={$useragent}", "no-sandbox","handless", "bli
 $capabilities->setCapability(ChromeOptions::CAPABILITY, $options);
 $driver = RemoteWebDriver::create($host, $capabilities, 5000);
 
-$driver->get('https://so.bestphp.com/');
+$driver->get('https://so.bestphp.net/');
 $driver->findElement(WebDriverBy::id('kw'))->sendKeys('测试')->submit();
 
 // 等待新的页面加载完成....
