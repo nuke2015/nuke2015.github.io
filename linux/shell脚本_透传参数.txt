@@ -1,0 +1,3 @@
+
+exec -a "$0" "/opt/google/chrome/google-chrome-base" --user-data-dir --no-sandbox "$@"
+
