@@ -1,0 +1,5 @@
+
+
+#恢复如初,放弃所有本地修改
+git checkout . && git clean -xdf
+
