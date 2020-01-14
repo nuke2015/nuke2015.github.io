@@ -1,0 +1,50 @@
+CODE SETTINGS SYNC UPLOAD SUMMARY
+Version: 3.4.3
+--------------------
+GitHub Token: 1b2c**********
+GitHub Gist: 5ae785a36bafd118381431083d3d5b29
+GitHub Gist Type: Secret
+
+Restarting Visual Studio Code may be required to apply color and file icon theme.
+--------------------
+Files Uploaded:
+  extensions.json > extensions.json
+  settings.json > settings.json
+
+Extensions Ignored:
+  No extensions ignored.
+
+Extensions Removed:
+  No extensions removed.
+
+Extensions Added:
+  auto-close-tag v0.5.6
+  beautify v1.5.0
+  better-comments v2.0.5
+  code-settings-sync v3.4.3
+  composer v0.7.1
+  compulim-vscode-closetag v1.2.0
+  EditorConfig v0.14.4
+  generic-extension-pack v0.0.6
+  Go v0.12.0
+  go-outliner v0.1.20
+  jenkinsfile-support v0.1.0
+  markdown-all-in-one v2.7.0
+  markdown-toc v1.5.6
+  mustache v1.1.1
+  php-debug v1.13.0
+  php-docblocker v2.1.0
+  php-extension-pack v0.0.6
+  php-intellisense v2.3.14
+  php-pack v1.0.2
+  phpunit-snippets v1.0.0
+  prettier-vscode v3.18.0
+  RunOnSave v0.2.0
+  sublime-keybindings v4.0.6
+  vetur v0.23.0
+  vscode-eslint v2.0.14
+  vscode-intelephense-client v1.3.7
+  vscode-language-pack-zh-hans v1.41.2
+  vscode-php-cs-fixer v0.3.0
+--------------------
+Done.
