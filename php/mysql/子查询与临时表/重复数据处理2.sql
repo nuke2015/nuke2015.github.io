@@ -24,3 +24,25 @@ group by m
     )_
 )
 
+
+
+
+
+
+-- # 场景二
+--总数
+select id,member_id as m from jiazhen_member_role_map
+
+-- 去重
+select id,member_id from jiazhen_member_role_map
+group by member_id
+
+-- 捉虫
+select id,member_id as m from jiazhen_member_role_map where id not in (
+    select id from (
+        select id,member_id from jiazhen_member_role_map
+        group by member_id
+    )_
+)
+
+
