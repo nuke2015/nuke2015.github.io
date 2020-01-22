@@ -61,6 +61,8 @@ adb shell pm uninstall --user 0 com.miui.gamecenter
 adb shell pm uninstall --user 0 com.miui.fm
 #26 小米天气
 adb shell pm uninstall --user 0 com.miui.weather2
+#27智能助理
+adb shell pm uninstall --user 0 com.miui.personalas.sistant
 
 
 
