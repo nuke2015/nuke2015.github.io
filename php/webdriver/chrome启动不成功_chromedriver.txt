@@ -1,0 +1,10 @@
+
+
+#win
+chrome --remote-debugging-port=9222 --disable-gpu --no-sandbox --disable-setuid-sandbox
+
+#linux
+/usr/bin/chromium-browser --enable-plugins --enable-extensions --enable-user-scripts --enable-printing --enable-gpu-rasterization --enable-sync --auto-ssl-client-auth --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-web-resources --enable-automation --enable-logging --force-fieldtrials=SiteIsolationExtensions/Control --headless --ignore-certificate-errors --load-extension=/tmp/.org.chromium.Chromium.dteWvh/internal --log-level=0 --metrics-recording-only --no-first-run --no-sandbox --password-store=basic --remote-debugging-port=9222 --test-type=webdriver --use-mock-keychain 
+
+#webdriver
+chromedriver --verbose
