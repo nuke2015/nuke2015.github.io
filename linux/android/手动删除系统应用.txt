@@ -59,10 +59,34 @@ adb shell pm uninstall --user 0 com.miui.bugreport
 adb shell pm uninstall --user 0 com.miui.gamecenter
 #25 小米收音机
 adb shell pm uninstall --user 0 com.miui.fm
+#换机
+adb shell pm uninstall --user 0 com.miui.huanji
 #26 小米天气
 adb shell pm uninstall --user 0 com.miui.weather2
 #27智能助理
 adb shell pm uninstall --user 0 com.miui.personalas.sistant
+#服务与反馈
+adb shell pm uninstall --user 0 com.miui.miservice
+#社区 
+adb shell pm uninstall --user 0 com.xiaomi.vipaccount
+#商城
+adb shell pm uninstall --user 0 com.xiaomi.shop
+#卡包
+adb shell pm uninstall --user 0 com.xiaomi.pass
+#有品
+adb shell pm uninstall --user 0 com.xiaomi.youpin
+#阅读
+adb shell pm uninstall --user 0 com.duokan.reader
+#游戏中心
+adb shell pm uninstall --user 0 com.xiaomi.gamecenter
+#一点资讯
+adb shell pm uninstall --user 0 com.yidian.xiaomi
+#用户手册 
+adb shell pm uninstall --user 0 com.miui.userguide
+#画报
+adb shell pm uninstall --user 0 com.mfashiongallery.emag
+#百度
+adb shell pm uninstall --user 0 com.baidu.searchbox
 
 
 
