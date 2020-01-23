@@ -29,10 +29,6 @@ adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi （我喜欢�
 adb shell pm uninstall --user 0 com.miui.player
 #10. 删除应用商店
 adb shell pm uninstall --user 0 com.miui.market
-#11. 删除便签
-#adb shell pm uninstall --user 0 com.miui.notes 
-#12. 删除系统自带电子邮件
-#adb shell pm uninstall --user 0 com.android.email
 #13. 删除系统自带浏览器
 adb shell pm uninstall --user 0 com.android.browser
 #14. 删除米币支付
@@ -61,8 +57,6 @@ adb shell pm uninstall --user 0 com.miui.gamecenter
 adb shell pm uninstall --user 0 com.miui.fm
 #换机
 adb shell pm uninstall --user 0 com.miui.huanji
-#26 小米天气
-#adb shell pm uninstall --user 0 com.miui.weather2
 #27智能助理
 adb shell pm uninstall --user 0 com.miui.personalas.sistant
 #服务与反馈
@@ -71,25 +65,35 @@ adb shell pm uninstall --user 0 com.miui.miservice
 adb shell pm uninstall --user 0 com.xiaomi.vipaccount
 #商城
 adb shell pm uninstall --user 0 com.xiaomi.shop
-#卡包
-#adb shell pm uninstall --user 0 com.xiaomi.pass
 #有品
 adb shell pm uninstall --user 0 com.xiaomi.youpin
-#阅读
-#adb shell pm uninstall --user 0 com.duokan.reader
-#游戏中心
-#adb shell pm uninstall --user 0 com.xiaomi.gamecenter
+
 #一点资讯
 adb shell pm uninstall --user 0 com.yidian.xiaomi
 #用户手册 
 adb shell pm uninstall --user 0 com.miui.userguide
-#画报
-#adb shell pm uninstall --user 0 com.mfashiongallery.emag
 #百度
 adb shell pm uninstall --user 0 com.baidu.searchbox
 
 
 
 
+
+
+#11. 删除便签
+adb shell pm uninstall --user 0 com.miui.notes 
+#12. 删除系统自带电子邮件
+adb shell pm uninstall --user 0 com.android.email
+#游戏中心
+adb shell pm uninstall --user 0 com.xiaomi.gamecenter
+#阅读
+#adb shell pm uninstall --user 0 com.duokan.reader
+#卡包
+adb shell pm uninstall --user 0 com.xiaomi.pass
+#26 小米天气
+adb shell pm uninstall --user 0 com.miui.weather2
+
+#画报
+#adb shell pm uninstall --user 0 com.mfashiongallery.emag
 
 
