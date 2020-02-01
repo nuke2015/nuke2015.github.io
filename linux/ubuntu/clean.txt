@@ -1,0 +1,12 @@
+
+
+
+
+
+-- 清除snap服务
+apt autoremove --purge snapd
+
+-- 清理docker
+dk system prune
+
+
