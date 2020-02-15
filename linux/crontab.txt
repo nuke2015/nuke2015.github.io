@@ -3,3 +3,6 @@
 ubuntu 使用命令  select-editor 更改默认编辑器
 
 
+#remove the log 2d before,每天2:00自动删除时间戳为2天前的日志.
+0 2 * * * find /run/log -mtime +2 -name "*.log" -exec rm -rf {} \;
+
