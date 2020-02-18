@@ -17,8 +17,8 @@ adb shell pm uninstall --user 0 com.android.thememanager
 
 
 
-
-
+#1  系统级别广告
+pm uninstall --user 0 com.miui.systemAdSolution
 #6.   删除快应用
 adb shell pm uninstall --user 0 com.miui.hybrid
 #7.   删除米家: 
