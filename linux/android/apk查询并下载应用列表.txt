@@ -1,0 +1,8 @@
+
+adb shell pm list packages
+
+adb shell pm path com.tencent.tmgp.sdgs.sdgszycj.yyb
+
+adb pull path+package
+
+
