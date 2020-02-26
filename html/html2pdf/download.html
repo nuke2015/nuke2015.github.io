@@ -47,6 +47,7 @@
                     <h1>
                         服务协议
                     </h1>
+                    <div id="append"></div>
                     <br>
                         <p>
                             深圳市滴滴新家政服务有限公司（以下简称丙方）是为用户提供母婴护理服务的在线平台，用户通过其家家月嫂平台，达成与月嫂（以下简称乙方）间的服务协议，以满足产妇（以下简称甲方）产后的母婴照护需求，为了明确三方的权利义务，约定如下协议内容，本协议未约定的，依有关法律、法规确定。
@@ -324,6 +325,10 @@
                 </br>
             </div>
         </div>
+        <script>
+            var element = document.getElementById("append");
+            element.innerHTML="ajax测试!";
+        </script>
         <script>
             var element = document.getElementById("pdf");
             html2pdf(element, {
