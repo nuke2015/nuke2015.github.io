@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "phantom": "^6.3.0"
+  }
+}
