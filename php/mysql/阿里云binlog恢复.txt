@@ -1,0 +1,22 @@
+
+
+下载hins4577021_data_20181203163125.tar物理备份
+
+解压缩
+mkdir -p ~/Downloads/data
+cd ~/Downloads
+tar -xvf hins4577021_data_20181203163125.tar -C ./data
+
+#装载
+docker run --name some-mysql -v "$PWD/data":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=go -p 3307:3306 -d mysql:5.7
+
+#检查
+dk ps -a|grep 3307
+
+连接(要用原来的用户名+密码):
+mysql -h 127.0.0.1:3307 -u root -p
+
+show database;
+use test;
+select * from test limit 10;
+
