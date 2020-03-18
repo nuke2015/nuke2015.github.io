@@ -1,0 +1,34 @@
+
+<iframe frameborder="0" height="100%" id="main" name="main" onload="Javascript:SetCwinHeight()" src="https://720yun.com/t/0evku72bOrm" width="100%">
+</iframe>
+
+<script type="text/javascript">
+function madeCwin(obj) {
+    if (document.getElementById) {
+        if (obj && !window.opera) {
+            if (obj.contentDocument && obj.contentDocument.body.offsetHeight) {
+                obj.height = obj.contentDocument.body.offsetHeight;
+            } else if (obj.Document && obj.Document.body.scrollHeight) {
+                obj.height = obj.Document.body.scrollHeight;
+            }
+        }
+    }
+}
+
+var iwindow = document.getElementById('main').contentWindow;
+var idocument = iwindow.document;
+var el = idocument.createElement('script');
+el.text = 'console.log("fengzi")';
+idocument.body.appendChild(el);
+
+// var e2 = idocument.createElement('script');
+// e2.src = 'http://127.0.0.4/index.js';
+// idocument.body.appendChild(e2);
+
+function SetCwinHeight() {
+    var iframeid = document.getElementById("main"); //iframe id
+    madeCwin(iframeid);
+}
+</script>
+
+
