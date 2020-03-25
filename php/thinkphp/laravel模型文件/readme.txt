@@ -8,8 +8,8 @@
 把demo下面的  Model与Action移动到Lib目录下.
 
 详细的查询方法见laravel官方文档.
-http://www.golaravel.com/laravel/docs/4.0/queries/
-http://www.golaravel.com/laravel/docs/4.2/eloquent/
+https://docs.golaravel.com/docs/4.0/queries/
+https://docs.golaravel.com/docs/4.2/eloquent
 
 锋子
 2015年8月21日 12:03:54
