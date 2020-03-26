@@ -13,6 +13,7 @@ set GOROOT=%ROOT_PATH%\go
 set GOPATH=D:\gopath
 set FASTBOOT_PATH=%ROOT_PATH%\fastboot\
 set CHROME_PATH=D:\soft\chrome\
+set CYGWIN64_PATH=%ROOT_PATH%\cygwin64\
 set PHANTOMJS=%ROOT_PATH%\phantomjs
 set SVN_PATH=%ROOT_PATH%\Apache-Subversion
 
@@ -22,6 +23,6 @@ setx ANT_HOME %ANT_HOME%
 setx GOROOT %GOROOT%
 setx GOPATH %GOPATH%
 
-setx path %ROOT_PATH%\sbin;%GRADLE_HOME\bin%;%REDIS_HOME%;%PHANTOMJS%\bin;%GOPATH%\bin;%GOROOT%\bin;%PHP_HOME%;%GIT_HOME%\bin;%NODE_HOME%;%NODE_HOME%\node_modules\.bin;%ANT_HOME%\bin;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;%JAVA_HOME%\bin;%FASTBOOT_PATH%;%CHROME_PATH%;%SVN_PATH%\bin;%path%;
+setx path D:\git\composer\vendor\bin\;%CYGWIN64_PATH%\bin;%ROOT_PATH%\sbin;%GRADLE_HOME\bin%;%REDIS_HOME%;%PHANTOMJS%\bin;%GOPATH%\bin;%GOROOT%\bin;%PHP_HOME%;%GIT_HOME%\bin;%NODE_HOME%;%NODE_HOME%\node_modules\.bin;%ANT_HOME%\bin;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;%JAVA_HOME%\bin;%FASTBOOT_PATH%;%CHROME_PATH%;%SVN_PATH%\bin;%path%;
 
 pause
