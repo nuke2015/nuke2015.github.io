@@ -10,6 +10,7 @@
 详细的查询方法见laravel官方文档.
 https://docs.golaravel.com/docs/4.0/queries/
 https://docs.golaravel.com/docs/4.2/eloquent
+https://learnku.com/docs/laravel/7.x/queries/7494
 
 锋子
 2015年8月21日 12:03:54
