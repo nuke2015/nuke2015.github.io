@@ -1,4 +1,5 @@
 
+#docker的密码存储是不安全的,要及时退出
 
 sudo apt install gnupg2 pass 
 gpg2 --full-generate-key
