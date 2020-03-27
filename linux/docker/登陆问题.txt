@@ -1,0 +1,9 @@
+
+
+sudo apt install gnupg2 pass 
+gpg2 --full-generate-key
+
+gpg2 -k
+
+pass init "whatever key id you have      "
+
