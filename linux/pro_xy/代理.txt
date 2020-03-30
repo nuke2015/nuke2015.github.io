@@ -1,0 +1,6 @@
+
+#当前终端,启用代理连接
+export HTTP_PROXY=http://10.0.0.132:1016/
+export HTTPS_PROXY=https://10.0.0.132:1016/
+export ALL_PROXY=http://10.0.0.132:1016/
+
