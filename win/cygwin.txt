@@ -1,0 +1,4 @@
+
+官方下载慢,国内用163网关
+http://mirrors.163.com/cygwin/
+
