@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="origin" name="referrer">
+    <meta content="npm install报错问题解决 问题： E:\CodeSpace\GitlabTest\desktop&gt;npm install&gt; lifeccp-desktop@1.1.9 posti"
+        property="og:description">
+    <meta content="no-transform" http-equiv="Cache-Control">
+    <meta content="no-siteapp" http-equiv="Cache-Control">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>
+        npm install 报错:node-pre-gyp ERR! 问题解决 - 念槐聚 - 博客园
+    </title>
+  
+</head>
+
+<body>
+    <a name="top">
+    </a>
+    <div id="page_begin_html">
+        <!--           ___                     ___           ___       ___           ___     
+　　　　　    /\__\                   /\  \         /\__\     /\  \         /\  \    
+  　　　　   /:/  /                  /::\  \       /:/  /    /::\  \       /::\  \   
+            /:/__/                  /:/\:\  \     /:/  /    /:/\:\  \     /:/\:\  \  
+           /::\  \ ____            /::\~\:\__\   /:/  /    /:/  \:\  \   /:/  \:\  \ 
+          /:/\:\  /\___\          /:/\:\ \:|__| /:/__/    /:/__/ \:\__\ /:/__/_\:\__\
+        　 \/__\:\/:/  /           \:\~\:\/:/  / \:\  \    \:\  \ /:/  / \:\  /\ \/__/
+        　      \::/  /             \:\ \::/  /   \:\  \    \:\  /:/  /   \:\ \:\__\  
+        　      /:/  /               \:\/:/  /     \:\  \    \:\/:/  /     \:\/:/  /  
+        　     /:/  /                 \::/__/       \:\__\    \::/  /       \::/  /   
+        　     \/__/                   ~~            \/__/     \/__/         \/__/    
+
+   ┌───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐  ┌───┬───┬───┐
+   │ Esc  │   │  F1  │  F2  │  F3  │  F4  │   │  F5  │  F6  │  F7  │  F8  │   │  F9  │ F10  │ F11  │ F12  │  │ P/S  │ S L  │ P/B  │
+   └───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘  └───┴───┴───┘
+   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐ ┌───┬───┬───┐
+   │ ~ `  │ ! 1  │ @ 2  │ # 3  │ $ 4  │ % 5  │ ^ 6  │ & 7  │ * 8  │ ( 9  │ ) 0  │ _ -  │ + =  │    BacSp     │ │ Ins  │ Hom  │ PUp  │
+   ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤ ├───┼───┼───┤
+   │   Tab    │  Q   │  W   │  E   │  R   │  T   │  Y   │  U   │  I   │  O   │  P   │ { [  │ } ]  │   | \    │ │ Del  │ End  │ PDn  │
+   ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤ └───┴───┴───┘
+   │    Caps    │  A   │  S   │  D   │  F   │  G   │  H   │  J   │  K   │  L   │ : ;  │ " '  │     Enter      │
+   ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤         ┌───┐
+   │     Shift      │  Z   │  X   │  C   │  V   │  B   │  N   │  M   │ < ,  │ > .  │ ? /  │       Shift        │         │  ↑  │
+   ├─────┬──┴─┬─┴──┬┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤ ┌───┼───┼───┐
+   │   Ctrl   │        │  Alt   │                     Space                    │   Alt  │   Fn   │   ＝   │  Ctrl  │ │  ←  │  ↓  │  →  │
+   └─────┴────┴────┴───────────────────────┴────┴────┴────┴────┘ └───┴───┴───┘
+
+              写字楼里写字间，写字间里程序员；程序人员写程序，又拿程序换酒钱。酒醒只在网上坐，酒醉还来网下眠；酒醉酒醒日复日，网上网下年复年。
+              但愿老死电脑间，不愿鞠躬老板前；奔驰宝马贵者趣，公交自行程序员。别人笑我忒疯癫，我笑自己命太贱；不见满街漂亮妹，哪个归得程序员？
+-->
+        <!--部分css参考https://www.itrhx.com/-->
+        <a name="top">
+        </a>
+        <!-- 代码雨start-->
+        <div id="page_begin_html">
+            <!--<a onclick="show()" style="font-size:20px,color:white">打开or关闭</a>//canvas的id为canvas背景图、c代码雨-->
+            <div id="top">
+                <canvas height="489" id="c" width="920">
+                </canvas>
+            </div>
+            <style>
+                #top {
+                    margin: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    cursor: none;
+                    background: black;
+                    background: linear-gradient(to bottom, #000000 0%, #5788fe 100%);
+                }
+
+                .filter {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #fe5757;
+                    animation: colorChange 30s ease-in-out infinite;
+                    animation-fill-mode: both;
+                    mix-blend-mode: overlay;
+                }
+
+                @keyframes colorChange {
+
+                    0%,
+                    100% {
+                        opacity: 0;
+                    }
+
+                    50% {
+                        opacity: .9;
+                    }
+                }
+
+                .landscape {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    /*background-image:url(https://openclipart.org/image/2400px/svg_to_png/250847/Trees-Landscape-Silhouette.png);
+    */
+                    background-image: url('http://www.jq22.com/css/img/xkbg.png');
+                    background-size: 1000px 250px;
+                    background-repeat: repeat-x;
+                    background-position: center bottom;
+                }
+            </style>
+            <script>
+                function Star(id, x, y) {
+                    this.id = id;
+                    this.x = x;
+                    this.y = y;
+                    this.r = Math.floor(Math.random() * 2) + 1;
+                    var alpha = (Math.floor(Math.random() * 10) + 1) / 10 / 2;
+                    this.color = "rgba(255,255,255," + alpha + ")";
+                }
+
+                Star.prototype.draw = function () {
+                    ctx.fillStyle = this.color;
+                    ctx.shadowBlur = this.r * 2;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+                    ctx.closePath();
+                    ctx.fill();
+                }
+
+                Star.prototype.move = function () {
+                    this.y -= .15;
+                    if (this.y <= -10) this.y = HEIGHT + 10;
+                    this.draw();
+                }
+
+                Star.prototype.die = function () {
+                    stars[this.id] = null;
+                    delete stars[this.id];
+                }
+
+
+                function Dot(id, x, y, r) {
+                    this.id = id;
+                    this.x = x;
+                    this.y = y;
+                    this.r = Math.floor(Math.random() * 5) + 1;
+                    this.maxLinks = 2;
+                    this.speed = .5;
+                    this.a = .5;
+                    this.aReduction = .005;
+                    this.color = "rgba(255,255,255," + this.a + ")";
+                    this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+
+                    this.dir = Math.floor(Math.random() * 140) + 200;
+                }
+
+                Dot.prototype.draw = function () {
+                    ctx.fillStyle = this.color;
+                    ctx.shadowBlur = this.r * 2;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+                    ctx.closePath();
+                    ctx.fill();
+                }
+
+                Dot.prototype.link = function () {
+                    if (this.id == 0) return;
+                    var previousDot1 = getPreviousDot(this.id, 1);
+                    var previousDot2 = getPreviousDot(this.id, 2);
+                    var previousDot3 = getPreviousDot(this.id, 3);
+                    if (!previousDot1) return;
+                    ctx.strokeStyle = this.linkColor;
+                    ctx.moveTo(previousDot1.x, previousDot1.y);
+                    ctx.beginPath();
+                    ctx.lineTo(this.x, this.y);
+                    if (previousDot2 != false) ctx.lineTo(previousDot2.x, previousDot2.y);
+                    if (previousDot3 != false) ctx.lineTo(previousDot3.x, previousDot3.y);
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+
+                function getPreviousDot(id, stepback) {
+                    if (id == 0 || id - stepback < 0) return false;
+                    if (typeof dots[id - stepback] != "undefined") return dots[id - stepback];
+                    else return false;//getPreviousDot(id - stepback);
+                }
+
+                Dot.prototype.move = function () {
+                    this.a -= this.aReduction;
+                    if (this.a <= 0) {
+                        this.die();
+                        return
+                    }
+                    this.color = "rgba(255,255,255," + this.a + ")";
+                    this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+                    this.x = this.x + Math.cos(degToRad(this.dir)) * this.speed,
+                        this.y = this.y + Math.sin(degToRad(this.dir)) * this.speed;
+
+                    this.draw();
+                    this.link();
+                }
+
+                Dot.prototype.die = function () {
+                    dots[this.id] = null;
+                    delete dots[this.id];
+                }
+
+
+                var canvas = document.getElementById('canvas'),
+                    ctx = canvas.getContext('2d'),
+                    WIDTH,
+                    HEIGHT,
+                    mouseMoving = false,
+                    mouseMoveChecker,
+                    mouseX,
+                    mouseY,
+                    stars = [],
+                    initStarsPopulation = 80,
+                    dots = [],
+                    dotsMinDist = 2,
+                    maxDistFromCursor = 50;
+
+                setCanvasSize();
+                init();
+
+                function setCanvasSize() {
+                    WIDTH = document.documentElement.clientWidth,
+                        HEIGHT = document.documentElement.clientHeight;
+
+                    canvas.setAttribute("width", WIDTH);
+                    canvas.setAttribute("height", HEIGHT);
+                }
+
+                function init() {
+                    ctx.strokeStyle = "white";
+                    ctx.shadowColor = "white";
+                    for (var i = 0; i < initStarsPopulation; i++) {
+                        stars[i] = new Star(i, Math.floor(Math.random() * WIDTH), Math.floor(Math.random() * HEIGHT));
+                        //stars[i].draw();
+                    }
+                    ctx.shadowBlur = 0;
+                    animate();
+                }
+
+                function animate() {
+                    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+                    for (var i in stars) {
+                        stars[i].move();
+                    }
+                    for (var i in dots) {
+                        dots[i].move();
+                    }
+                    drawIfMouseMoving();
+                    requestAnimationFrame(animate);
+                }
+
+                window.onmousemove = function (e) {
+                    mouseMoving = true;
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    clearInterval(mouseMoveChecker);
+                    mouseMoveChecker = setTimeout(function () {
+                        mouseMoving = false;
+                    }, 100);
+                }
+
+
+                function drawIfMouseMoving() {
+                    if (!mouseMoving) return;
+
+                    if (dots.length == 0) {
+                        dots[0] = new Dot(0, mouseX, mouseY);
+                        dots[0].draw();
+                        return;
+                    }
+
+                    var previousDot = getPreviousDot(dots.length, 1);
+                    var prevX = previousDot.x;
+                    var prevY = previousDot.y;
+
+                    var diffX = Math.abs(prevX - mouseX);
+                    var diffY = Math.abs(prevY - mouseY);
+
+                    if (diffX < dotsMinDist || diffY < dotsMinDist) return;
+
+                    var xVariation = Math.random() > .5 ? -1 : 1;
+                    xVariation = xVariation * Math.floor(Math.random() * maxDistFromCursor) + 1;
+                    var yVariation = Math.random() > .5 ? -1 : 1;
+                    yVariation = yVariation * Math.floor(Math.random() * maxDistFromCursor) + 1;
+                    dots[dots.length] = new Dot(dots.length, mouseX + xVariation, mouseY + yVariation);
+                    dots[dots.length - 1].draw();
+                    dots[dots.length - 1].link();
+                }
+                //setInterval(drawIfMouseMoving, 17);
+
+                function degToRad(deg) {
+                    return deg * (Math.PI / 180);
+                }
+            </script>
+            <script>
+                var c = document.getElementById("c");
+                var ctx = c.getContext("2d");
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+                //              ctx.fillRect(0,0,100,100);
+                //              a,b,c,d分别代表x方向偏移,y方向偏移,宽，高
+                //var string1 = "%u6CA1%u6709%u7279%u522B%u5E78%u8FD0%uFF0C%u90A3%u4E48%u8BF7%u5148%u7279%u522B%u52AA%u529B%uFF0C%u522B%u56E0%u4E3A%u61D2%u60F0%u800C%u5931%u8D25%uFF0C%u8FD8%u77EB%u60C5%u5730%u5C06%u539F%u56E0%u5F52%u4E8E%u81EA%u5DF1%u5012%u9709%u3002%u4F60%u5FC5%u987B%u7279%u522B%u52AA%u529B%uFF0C%u624D%u80FD%u663E%u5F97%u6BEB%u4E0D%u8D39%u529B";//abcdefghijklmnopqrstuvwxyz
+                var string1 = "010101010101010101010010101abcdefghijklmnopqrstuvwxyz";
+                // var string1="abcdefghijklmnopqrstuvwxyz";
+                string1 = unescape(string1)
+                string1.split("");
+                var fontsize = 20;
+                columns = c.width / fontsize;
+                var drop = [];
+                for (var x = 0; x < columns; x++) {
+                    drop[x] = 0;
+                }
+                function drap() {
+                    ctx.fillStyle = "rgba(0,0,0,0.07)";
+                    ctx.fillRect(0, 0, c.width, c.height);
+                    ctx.fillStyle = "#0F0";
+                    ctx.font = fontsize + "px arial";
+                    for (var i = 0; i < drop.length; i++) {
+                        var text1 = string1[Math.floor(Math.random() * string1.length)];
+                        ctx.fillText(text1, i * fontsize, drop[i] * fontsize);
+                        drop[i]++;
+                        if (drop[i] * fontsize > c.height && Math.random() > 0.9) {//90%的几率掉落
+                            drop[i] = 0;
+                        }
+                    }
+                }
+                setInterval(drap, 20);
+            </script>
+        </div>
+        <!-- 代码雨end-->
+        <!--- -代码雨css参考https://www.cnblogs.com/lbonet/p/7383119.html -->
+        <!--PageEndHtml Block Begin-->
+        <script type="text/javascript">
+            /* 鼠标特效 */
+            var a_idx = 0;
+            jQuery(document).ready(function ($) {
+                $("body").click(function (e) {
+                    var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+                    var $i = $("<span/>").text(a[a_idx]);
+                    a_idx = (a_idx + 1) % a.length;
+                    var x = e.pageX,
+                        y = e.pageY;
+                    $i.css({
+                        "z-index": 9999999999999999999999999999999999999999,
+                        "top": y - 20,
+                        "left": x,
+                        "position": "absolute",
+                        "font-weight": "bold",
+                        "color": "#ff6651"
+                    });
+                    $("body").append($i);
+                    $i.animate({
+                        "top": y - 180,
+                        "opacity": 0
+                    },
+                        1500,
+                        function () {
+                            $i.remove();
+                        });
+                });
+            });
+        </script>
+        <!--PageEndHtml Block End-->
+    </div>
+    <!--done-->
+    <!--end: home 自定义的最大容器 -->
+    <link href="./cssjs/myRewards.css" rel="stylesheet" type="text/css">
+    </link>
+</body>
+
+</html>
