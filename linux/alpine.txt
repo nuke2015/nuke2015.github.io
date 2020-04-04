@@ -1,0 +1,20 @@
+
+
+/etc/apk # cat repositories 
+http://dl-cdn.alpinelinux.org/alpine/v3.11/main
+http://dl-cdn.alpinelinux.org/alpine/v3.11/community
+
+
+
+a. 编辑 /etc/apk/repositories
+b. 将里面 dl-cdn.alpinelinux.org 的 改成 mirrors.aliyun.com ; 保存退出即可
+
+
+
+
+
+
+http://mirrors.aliyun.com/alpine/v3.11/main
+http://mirrors.aliyun.com/alpine/v3.11/community
+
+
