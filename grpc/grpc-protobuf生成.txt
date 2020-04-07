@@ -1,0 +1,36 @@
+
+
+两种生成中间件的形式:
+Rebuild the generated Go code
+
+
+#用golang根据proto配置文件,生成中间件
+go get -u github.com/golang/protobuf/protoc-gen-go
+#安装后有protoc-gen-go命令可用
+
+
+go generate google.golang.org/grpc/examples/helloworld/helloworld/
+
+
+或者用protoc命令生成中间件
+protoc -I helloworld/ helloworld/helloworld.proto --go_out=plugins=grpc:helloworld
+
+
+安装protobuf,在ubuntu中.
+snap search protobuf
+
+#有风险提示,强制安装
+snap install protobuf --classic
+#安装后有这几个.
+root@v248:/snap/bin# ls
+protobuf.protoc  protobuf.protoc-gen-go  protoc  protoc-gen-go
+
+
+
+测试下效果
+造个hello目录,把proto配置放进去.
+protoc -I hello/ hello/helloworld.proto --go_out=plugins=grpc:hello
+结果它会生成helloworld.pb.go
+root@v248:/snap/bin/hello# ls
+helloworld.pb.go  helloworld.proto
+
