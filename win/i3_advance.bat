@@ -21,8 +21,8 @@ setx GOROOT %GOROOT%
 setx GOPATH %GOPATH%
 
 rem goproxy
-setx export GOPROXY="https://mirrors.aliyun.com/goproxy/"
-setx export GO111MODULE=on 
+setx GOPROXY "https://mirrors.aliyun.com/goproxy/"
+setx GO111MODULE on 
 
 setx path %CYGWIN_HOME%\bin;%MINGW_HOME%\bin;%COMPOSER_PATH%\bin;%ROOT_PATH%\sbin;%PHANTOMJS%\bin;%GOPATH%\bin;%GOROOT%\bin;%PHP_HOME%;%GIT_HOME%\bin;%NODE_HOME%;%NODE_HOME%\node_modules\.bin;%ANT_HOME%\bin;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;%JAVA_HOME%\bin;%FASTBOOT_PATH%;%CHROME_PATH%;%path%;
 
