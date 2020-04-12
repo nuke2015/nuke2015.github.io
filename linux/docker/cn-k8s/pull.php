@@ -25,6 +25,6 @@ foreach ($list as $key => $value) {
 echo "\r\n";
 echo "\r\n";
 foreach ($list as $key => $value) {
-    echo "dk load ".md5($value).".tar>$value\r\n";
+    echo "dk load < ./".md5($value).".tar\r\n";
 }
 

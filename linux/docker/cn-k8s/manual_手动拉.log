@@ -16,10 +16,10 @@ dk save k8s.gcr.io/heapster-influxdb-amd64:v1.3.3 >b1282eeded95d6f97918cdfff206f
 dk save k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1 >07613f2688ccc32724fcee38f99d8f4b.tar
 
 
-dk load b20f64fab18cfe0e6c0223949a31abb1.tar>cdkbot/hostpath-provisioner-amd64:latest
-dk load 09368630c5a92064b76fdc4999910e8b.tar>coredns/coredns:1.5.0
-dk load 2f16b50cc9d3398976608dfb6367047e.tar>k8s.gcr.io/heapster-amd64:v1.5.2
-dk load 0d5d2a00e4ad586cfafc3ad68bd485db.tar>cdkbot/addon-resizer-amd64:1.8.1
-dk load dc2d57025fedbef243562be4fde7dce1.tar>k8s.gcr.io/heapster-grafana-amd64:v4.4.3
-dk load b1282eeded95d6f97918cdfff206f59c.tar>k8s.gcr.io/heapster-influxdb-amd64:v1.3.3
-dk load 07613f2688ccc32724fcee38f99d8f4b.tar>k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1
+dk load < ./b20f64fab18cfe0e6c0223949a31abb1.tar
+dk load < ./09368630c5a92064b76fdc4999910e8b.tar
+dk load < ./2f16b50cc9d3398976608dfb6367047e.tar
+dk load < ./0d5d2a00e4ad586cfafc3ad68bd485db.tar
+dk load < ./dc2d57025fedbef243562be4fde7dce1.tar
+dk load < ./b1282eeded95d6f97918cdfff206f59c.tar
+dk load < ./07613f2688ccc32724fcee38f99d8f4b.tar
