@@ -26,4 +26,7 @@ replicaset.apps/mywp-wordpress-58c45f668b   1         1         1       62s
 NAME                            READY   AGE
 statefulset.apps/mywp-mariadb   1/1     62s
 
+访问
+curl 127.0.0.1:30501
+得到wordpress首页
 
