@@ -1,0 +1,144 @@
+
+#安装
+#sudo snap install microk8s --classic --channel=1.16/stable 
+snap install helm --classic
+
+
+#检查
+root@xihei:~# helm version
+version.BuildInfo{Version:"v3.1.2", GitCommit:"d878d4d45863e42fd5cff6743294a11d28a9abce", GitTreeState:"clean", GoVersion:"go1.13.8"}
+
+
+微软也提供了helm 仓库的镜像, 找到这儿的朋友推荐使用微软的镜像：
+stable: http://mirror.azure.cn/kubernetes/charts/
+incubator: http://mirror.azure.cn/kubernetes/charts-incubator/
+
+#代理镜像
+helm repo add aliyun https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
+helm repo add stable http://mirror.azure.cn/kubernetes/charts-incubator/
+
+helm repo ls
+helm repo remove bitnami
+
+
+#玩下
+helm create k8sdemo
+helm search repo stable
+
+加入kubectl命令行
+alias kb=/snap/bin/microk8s.kubectl
+
+查版本
+root@xihei:/snap/bin# kubectl config current-context
+microk8s
+
+#测试
+helm -n test install harbor goharbor/harbor --set persistence.enabled=false --set expose.type=nodePort --set expose.tls.enabled=false --set externalURL=http://192.168.10.196:30002
+参数说明：
+persistence.enabled=false 关闭存储，为了方便操作，真实使用时需要挂在存储
+expose.type=nodePort 使用 NodePort 访问
+expose.tls.enabled=false 关闭tls
+externalURL=http://192.168.10.196:30002 设置登录 harbor 的外部链接
+
+
+#查下k8s状态
+root@xihei:/snap/bin# microk8s.status
+microk8s is running
+addons:
+cilium: disabled
+dashboard: disabled
+dns: disabled
+fluentd: disabled
+gpu: disabled
+helm: disabled
+helm3: disabled
+ingress: disabled
+istio: disabled
+jaeger: disabled
+knative: disabled
+kubeflow: disabled
+linkerd: disabled
+metallb: disabled
+metrics-server: disabled
+prometheus: disabled
+rbac: disabled
+registry: disabled
+storage: disabled
+
+#先行打开部分特性
+microk8s.enable dns dashboard storage ingress istio kubeflow fluent 
+
+#居然,开了一大堆的端口
+root@xihei:/snap/bin# netstat -ntlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1106/sshd           
+tcp        0      0 127.0.0.1:1338          0.0.0.0:*               LISTEN      4507/containerd     
+tcp        0      0 127.0.0.1:10248         0.0.0.0:*               LISTEN      4844/kubelet        
+tcp        0      0 0.0.0.0:25000           0.0.0.0:*               LISTEN      1604/python3        
+tcp        0      0 127.0.0.1:10249         0.0.0.0:*               LISTEN      4796/kube-proxy     
+tcp        0      0 127.0.0.1:10251         0.0.0.0:*               LISTEN      929/kube-scheduler  
+tcp        0      0 127.0.0.1:2380          0.0.0.0:*               LISTEN      4486/etcd           
+tcp        0      0 127.0.0.1:10252         0.0.0.0:*               LISTEN      931/kube-controller 
+tcp        0      0 127.0.0.1:39663         0.0.0.0:*               LISTEN      1114/containerd     
+tcp        0      0 127.0.0.1:10256         0.0.0.0:*               LISTEN      4796/kube-proxy     
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1124/nginx: master  
+tcp        0      0 127.0.0.1:41589         0.0.0.0:*               LISTEN      4507/containerd     
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      754/systemd-resolve 
+tcp6       0      0 :::16443                :::*                    LISTEN      4780/kube-apiserver 
+tcp6       0      0 :::12379                :::*                    LISTEN      4486/etcd           
+tcp6       0      0 :::2377                 :::*                    LISTEN      2629/dockerd        
+tcp6       0      0 :::10250                :::*                    LISTEN      4844/kubelet        
+tcp6       0      0 :::3306                 :::*                    LISTEN      2629/dockerd        
+tcp6       0      0 :::7946                 :::*                    LISTEN      2629/dockerd        
+tcp6       0      0 :::6379                 :::*                    LISTEN      2629/dockerd        
+tcp6       0      0 :::10255                :::*                    LISTEN      4844/kubelet        
+tcp6       0      0 :::10257                :::*                    LISTEN      931/kube-controller 
+tcp6       0      0 :::10259                :::*                    LISTEN      929/kube-scheduler  
+
+#先更新
+helm repo update
+
+搜索引擎
+helm search hub harbor
+https://hub.helm.sh/charts/harbor/harbor      	1.3.1        	1.10.1     	An open source trusted cloud native registry th...
+
+root@xihei:~# helm search repo harbor
+NAME          	CHART VERSION	APP VERSION	DESCRIPTION                                       
+bitnami/harbor	5.0.7        	1.10.2     	Harbor is an an open source trusted cloud nativ...
+
+#再安装
+helm install wps azure/wordpress --set persistence.enabled=false --set expose.type=nodePort --set expose.tls.enabled=false --set externalURL=http://1.1.1.1:30002
+
+#没有存储器
+kubectl describe pvc data-wps-mariadb-0 
+no persistent volumes available
+
+#开放访问dashboard
+sudo microk8s.enable dns dashboard ingress storage
+sudo microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 & 
+sudo microk8s.kubectl -n kube-system edit deploy kubernetes-dashboard -o yaml 
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-dashboard
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        k8s-app: kubernetes-dashboard
+    spec:
+      containers:
+      - args:
+        - --auto-generate-certificates
+        - --namespace=kube-system
+        - --enable-skip-login
+
