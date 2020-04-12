@@ -1,0 +1,13 @@
+
+
+
+cdkbot/hostpath-provisioner-amd64:latest
+coredns/coredns:1.5.0
+k8s.gcr.io/heapster-amd64:v1.5.2
+cdkbot/addon-resizer-amd64:1.8.1
+k8s.gcr.io/heapster-grafana-amd64:v4.4.3
+k8s.gcr.io/heapster-influxdb-amd64:v1.3.3
+k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1
+
+
+
