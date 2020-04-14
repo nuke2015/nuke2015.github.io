@@ -1,5 +1,6 @@
 
-git教程
+git丢弃本地修改的所有文件（新增、删除、修改）
+git checkout . && git clean -xdf
 
 初始化
 git config --global user.name "nuke2015"
@@ -14,19 +15,13 @@ ssh-keygen -t rsa -C "youremail@example.com"
 存放位置
 C:\Users\19697\.ssh\id_rsa
 
-
 #拉代码+submodule
 git clone git@code.aliyun.com:group/depo.git
 git submodule init
 git submodule update
 
-
 子模块嵌套更新
 git submodule update --remote --recursive
-
-
-
-
 
 重置
 git config --global core.eol lf
@@ -38,32 +33,25 @@ git commit -m "init"
 rm -rf *
 git reset --hard HEAD
 
-
-
-
 #用bash批量转换to_unix,解决crlf的问题
 find . -type f -exec dos2unix {} \;
-
-
-
-
 
 #线上放弃修改
 git reset --hard HEAD
 git pull origin
 
-
 #放弃本地修改,强拉master最新
 git fetch origin master
 git reset --hard origin/master
-
 
 同映像换仓库
 git clone -–bare git@code.aliyun.com:demo/hello.git
 cd hello
 git push -–mirror git@code.aliyun.com:demo/hello_new.git
 
-
 远程仓库地址
 git remote -v
+
+
+
 
