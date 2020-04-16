@@ -1,0 +1,42 @@
+# hello-kubernetes.custom-message.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-jjys168-com
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: dev-jjys168-com
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-jjys168-com
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-jjys168-com
+  template:
+    metadata:
+      labels:
+        app: dev-jjys168-com
+    spec:
+      containers:
+      - name: hello-kubernetes
+        image: paulbouwer/hello-kubernetes:1.7
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MESSAGE
+          value: I just deployed this on Kubernetes!
+        volumeMounts:
+        - mountPath: /nfs/
+          name: nfsdata
+      volumes:
+      - name: nfsdata
+        hostPath:
+          path: /nfs/
