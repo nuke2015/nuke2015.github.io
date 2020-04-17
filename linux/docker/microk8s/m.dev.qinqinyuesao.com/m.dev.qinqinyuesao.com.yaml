@@ -1,0 +1,74 @@
+# jjmy-m.dev.qinqinyuesao.com
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-jjys168-com
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8088
+    targetPort: 80
+  selector:
+    app: dev-jjys168-com
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-jjys168-com
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-jjys168-com
+  template:
+    metadata:
+      labels:
+        app: dev-jjys168-com
+    spec:
+      containers:
+      - name: dev-jjys168-com
+        stdin: true
+        tty: true
+        image: ddys/phper:7.0
+        ports:
+        - containerPort: 80
+        env:
+        - name: MESSAGE
+          value: I just deployed this on Kubernetes!
+        volumeMounts:
+        - mountPath: /home/ddys_run/
+          name: nfs-runtime-dev
+        - mountPath: /www/win/
+          name: mnt-win
+        - mountPath: /home/
+          name: nfs-home-dev-home
+        - mountPath: /www/php/
+          name: phper
+        - mountPath: /www/package/
+          name: packager
+        - mountPath: /git/composer/
+          name: composer
+        - mountPath: /root/docker_start_2.sh
+          name: dev-sh
+      volumes:
+      - name: nfs-runtime-dev
+        hostPath:
+          path: /nfs/runtime/dev/
+      - name: mnt-win
+        hostPath:
+          path: /mnt/win/
+      - name: nfs-home-dev-home
+        hostPath:
+          path: /nfs/home/dev/home/
+      - name: phper
+        hostPath:
+          path: /nfs/www/phper/tester/
+      - name: packager
+        hostPath:
+          path: /nfs/www/package/
+      - name: composer
+        hostPath:
+          path: /nfs/www/composer/
+      - name: dev-sh
+        hostPath:
+          path: /nfs/home/dev/dev.sh
