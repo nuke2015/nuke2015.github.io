@@ -87,4 +87,9 @@ CMD ["node", "/src/index.js"]
 增加端口映射
 iptables -t nat -A  DOCKER -p tcp --dport 8181 -j DNAT --to-destination 172.17.0.4:8181
 
+查token
+dk swarm join-token manager
+dk swarm join-token worker
+
+
 
