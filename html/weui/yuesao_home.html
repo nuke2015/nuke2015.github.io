@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width,initial-scale=1,user-scalable=0" name="viewport"/>
+        <title>
+            家家月嫂
+        </title>
+        <link href="https://unpkg.com/swiper/css/swiper.min.css" rel="stylesheet"/>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js">
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+        <link href="https://cdn.bootcdn.net/ajax/libs/weui/2.3.0/style/weui.min.css" rel="stylesheet"/>
+    </head>
+</html>
+<style>
+    body{
+        background: #edf0f7;
+    }
+    .clearfix{
+        zoom:1;
+    }
+    .fa{
+        font-size: 24px;
+    }
+    .fa-user{
+        font-size: 48px;
+    }
+    .fr{
+        float:right;
+    }
+    .fl{
+        float:left;
+    }
+    .page-hd{
+        background:#7916be;
+        color:#ffffff;
+        padding:10px;
+        text-align: center;
+    }
+    .fr10{
+        float:right;
+        margin-right: 10px;
+    }
+    .fl10{
+        float:left;
+        margin-left: 10px;
+    }
+    .ma{
+        display: -webkit-box;
+        margin: auto;
+        width:100%;
+        height:100%;
+    }
+    .menu-ul{
+        background: #ffffff;
+        padding:20px;
+        height: 150px;
+        width:100%;
+        text-align: center;
+    }
+    .menu-ul>li{
+        float:left;
+        height: 75px;
+        line-height: 75px;
+        width:25%;
+        list-style-type: none;
+    }
+    .menu-fa{
+        font-size: 48px;
+    }
+    .home-xing{
+        margin-top:10px;
+        background:#ffffff;
+        padding:10px;
+    }
+    .home-xing-bd{
+        overflow: scroll;
+        background:#ffffff;
+    }
+    .home-xing-item{
+        margin:10px 10px;
+        height:200px;
+        text-align: center;
+        float:left;
+        font-size: 14px;
+        padding: 10px 10px;
+        box-shadow: 0px 2px 8px 4px rgba(216, 38, 38, 0.4);
+        border-radius: 5px;
+    }
+    .redtitle{
+        font-size: 20px;
+    color: #cc3399;
+    font-weight: bold;
+    }
+    .home-comment{
+        margin:20px 20px;
+        box-shadow: 0px 2px 8px 4px rgba(216, 38, 38, 0.4);
+        border-radius: 5px; 
+        width:90%;
+        height: 250px;
+        overflow: hidden;
+    }
+    .home-comment-icon{
+        height: 65px;
+    }
+    .home-comment-txt{
+        margin: 10px 10px;
+        width:90%;
+        letter-spacing:1px;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow:ellipsis; 
+        white-space:wrap;
+        display: -webkit-box;
+        -webkit-box-orient:vertical;
+         -webkit-line-clamp:3;
+    }
+    .home-comment-img{
+        overflow: hidden;
+        padding: 1px 5px;
+        width:90%;
+    }
+    .home-comment-img>img{
+        margin:2px 5px; 
+        width:95px;
+        height:95px;
+    }
+    .comment-uicon{
+        margin:10px 10px;
+        padding:10px 10px;
+    }
+    .comment-name{
+        margin-top:25px;
+        height: 40px;
+        width:90%;
+        line-height: 20px;
+    }
+    .comment-server{
+        overflow: hidden;
+        font-size: 10px;
+    }
+    .comment>i{
+        font-size: 10px;
+    }
+    .home-footer{
+        margin:20px auto;
+    }
+    .article-title{
+        overflow: hidden;
+        text-overflow:ellipsis; 
+        white-space:nowrap;
+        width: 250px;
+        margin:10px 10px;
+    }
+    .article-desp{
+        margin:10px 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        text-overflow:ellipsis; 
+        white-space:wrap;
+        display: -webkit-box;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:3;
+    }
+</style>
+<body ontouchstart="">
+    <!-- Your Code -->
+    <div class="container">
+        <div class="page flex ">
+            <div class="weui-flex page-hd">
+                <div>
+                    <div class="placeholder">
+                        <i class="fa fa-angle-left">
+                        </i>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        家家月嫂服务号
+                    </div>
+                </div>
+                <div>
+                    <div class="placeholder">
+                        <i class="fa fa-home">
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex home-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img alt="banner" src="http://placehold.it/400x156?text=banner1"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img alt="banner" src="http://placehold.it/400x156?text=banner2"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img alt="banner" src="http://placehold.it/400x156?text=baner3"/>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination">
+                    </div>
+                    <!-- 如果需要导航按钮 -->
+                    <!-- <div class="swiper-button-prev">
+                    </div>
+                    <div class="swiper-button-next">
+                    </div> -->
+                    <!-- 如果需要滚动条 -->
+                    <!-- <div class="swiper-scrollbar">
+                    </div> -->
+                </div>
+            </div>
+            <div class="weui-flex home-menu">
+                <ul class="menu-ul">
+                    <li>
+                        <i class="fa fa-heart-o menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-pied-piper-alt menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-viadeo menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-stethoscope menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-wordpress menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-linux menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-linode menu-fa">
+                        </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-firefox menu-fa">
+                        </i>
+                    </li>
+                </ul>
+            </div>
+            <div class="weui-flex home-xing">
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <i class="fa fa-xing">
+                        </i>
+                        月嫂之星
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder fr">
+                        更多
+                        <i class="fa fa-angle-double-right">
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex home-xing-bd">
+                <p class="home-xing-item">
+                    <img alt="" src="http://placehold.it/150x150?text=yuesao1">
+                        <br/>
+                        广东省-锋子
+                        <br>
+                            <span class="redtitle">
+                                六星月嫂
+                            </span>
+                        </br>
+                    </img>
+                </p>
+                <p class="home-xing-item">
+                    <img alt="" src="http://placehold.it/150x150?text=yuesao2">
+                        <br/>
+                        广东省-锋子
+                        <br>
+                            <span class="redtitle">
+                                六星月嫂
+                            </span>
+                        </br>
+                    </img>
+                </p>
+                <p class="home-xing-item">
+                    <img alt="" src="http://placehold.it/150x150?text=yuesao3">
+                        <br/>
+                        广东省-锋子
+                        <br>
+                            <span class="redtitle">
+                                六星月嫂
+                            </span>
+                        </br>
+                    </img>
+                </p>
+                <p class="home-xing-item">
+                    <img alt="" src="http://placehold.it/150x150?text=yuesao4">
+                        <br/>
+                        广东省-锋子
+                        <br>
+                            <span class="redtitle">
+                                六星月嫂
+                            </span>
+                        </br>
+                    </img>
+                </p>
+            </div>
+        </div>
+        <div class="weui-flex home-xing">
+            <div class="weui-flex__item">
+                <div class="placeholder">
+                    <i class="fa fa-users">
+                    </i>
+                    用户评价
+                </div>
+            </div>
+            <div class="weui-flex__item">
+                <div class="placeholder fr">
+                    更多
+                    <i class="fa fa-angle-double-right">
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="weui-flex home-xing-bd">
+            <div class="home-comment">
+                <div class="weui-flex home-comment-icon">
+                    <div class="weui-flex">
+                        <div class="comment-uicon">
+                            <i class="fa fa-user">
+                            </i>
+                        </div>
+                        <div class="comment-name">
+                            <span>
+                                王小姐
+                            </span>
+                            <span class="comment">
+                                <i class="fa fa-heart">
+                                </i>
+                                <i class="fa fa-heart">
+                                </i>
+                                <i class="fa fa-heart">
+                                </i>
+                                <i class="fa fa-heart-o">
+                                </i>
+                                <i class="fa fa-heart-o">
+                                </i>
+                            </span>
+                            <div class="comment-server">
+                                <span>
+                                    2020年5月16日 服务
+                                    <span class="redtitle">
+                                        26
+                                    </span>
+                                    天
+                                </span>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-flex home-comment-txt">
+                    时间过的好快，弹指间麦姐已在我家服务时间即将到期。在这服务期间里，非常感谢麦姐对我家庭的付出与宝宝的贴心照顾，也使我在这26天月子里能轻松，愉快的度过。服务期间，我家对麦姐的为人，责任心，做事勤劳表示很满意。做的月子餐味道很不错，值得推荐！[微笑][微笑]
+                </div>
+                <div class="weui-flex home-comment-img">
+                    <img alt="" src="http://placehold.it/95x95?text=comment1">
+                        <img alt="" src="http://placehold.it/95x95?text=comment2">
+                            <img alt="" src="http://placehold.it/95x95?text=comment3">
+                            </img>
+                        </img>
+                    </img>
+                </div>
+            </div>
+        </div>
+        <div class="weui-flex home-xing">
+            <div class="weui-flex__item">
+                <div class="placeholder">
+                    <i class="fa fa-users">
+                    </i>
+                    育婴知识
+                </div>
+            </div>
+            <div class="weui-flex__item">
+                <div class="placeholder fr">
+                    更多
+                    <i class="fa fa-angle-double-right">
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="weui-flex home-xing-bd">
+            <div class="weui-cells">
+                <a class="weui-cell weui-media-box">
+                    <div class="weui-cell__bd">
+                        <img alt="" src="http://placehold.it/95x95?text=article"/>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <h4 class="article-title">
+                            12个分娩前后需要注意的细节，请孕妈早做准备！
+                        </h4>
+                        <p class="article-desp">
+                            无论是否生育过，孕妈到生产时多多少少都会有点担心。分娩有哪些需要提前了解和准备的呢？下面家家月嫂告诉你9个分娩细节，让你轻松生产。
+                        </p>
+                    </div>
+                </a>
+                <a class="weui-cell weui-media-box">
+                    <div class="weui-cell__bd">
+                        <img alt="" src="http://placehold.it/95x95?text=article"/>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <h4 class="article-title">
+                            12个分娩前后需要注意的细节，请孕妈早做准备！
+                        </h4>
+                        <p class="article-desp">
+                            无论是否生育过，孕妈到生产时多多少少都会有点担心。分娩有哪些需要提前了解和准备的呢？下面家家月嫂告诉你9个分娩细节，让你轻松生产。
+                        </p>
+                    </div>
+                </a>
+                <a class="weui-cell weui-media-box">
+                    <div class="weui-cell__bd">
+                        <img alt="" src="http://placehold.it/95x95?text=article"/>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <h4 class="article-title">
+                            12个分娩前后需要注意的细节，请孕妈早做准备！
+                        </h4>
+                        <p class="article-desp">
+                            无论是否生育过，孕妈到生产时多多少少都会有点担心。分娩有哪些需要提前了解和准备的呢？下面家家月嫂告诉你9个分娩细节，让你轻松生产。
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="weui-footer home-footer">
+            <p class="weui-footer__links">
+                <a class="weui-footer__link" href="javascript:">
+                    家家母婴,版权所有
+                </a>
+            </p>
+            <p class="weui-footer__text">
+                Copyright © 2008-2016 weui.io
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+</script>
