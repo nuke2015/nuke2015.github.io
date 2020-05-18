@@ -1,0 +1,227 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body,dd,dl,dt,h1,h2,h3,h4,h5,h6,li,ol,p,ul{margin:0;padding:0;list-style:none;-webkit-text-size-adjust:none}i,em{font-style:normal;}
+img{border:0;}input{outline:0;vertical-align:middle;}.clear{clear:both;}table{border-collapse:collapse;border-spacing:0}
+body{font:12px "Microsoft YaHei";color:#222;text-rendering:geometricPrecision}
+a{color:inherit;text-decoration:none;cursor:pointer;}
+a:hover,.breadcrumb a:hover,.site a:hover,.site .site-t strong a:hover, .site .site-t span a:hover{color:#7714bc;text-decoration:none;}:focus{outline:0}
+html,body{width:100%;background: #f6f6f6;}
+body{ 
+  overflow:scroll;
+  overflow-x:hidden;
+}
+fieldset, img {
+	border: 0;
+}
+input{
+  border:none;
+  background:transparent;
+}
+span{
+  display: inline-block;
+}
+/*margin*/
+.mm{margin:0 auto;}
+.mr{margin-right: 0;}
+.ml10{margin-left: 10px;}
+.ml20{margin-left: 20px;}
+.ml30{margin-left: 30px;}
+.ml40{margin-left: 40px;}
+.mr30{margin-right: 30px;}
+.mr50{margin-right: 50px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.mt40{margin-top:40px;}
+.mt50{margin-top:50px;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb30{margin-bottom:30px;}
+.mlr30{margin: 0 30px;}
+.m_auto{margin: 0 auto;}
+/*padding*/
+.pt40{padding-top: 40px;}
+.pt50{padding-top: 50px;}
+.pt55{padding-top: 55px;}
+.pr30{padding-right: 30px;}
+.pb30{padding-bottom: 30px;}
+.pb35{padding-bottom: 35px;}
+.pb60{padding-bottom: 60px;}
+.pl30{padding-left: 30px;}
+.ptb20{padding: 20px 0;}
+.ptb35{padding: 35px 0;}
+.ptb50{padding: 50px 0;}
+.ptb70{padding: 70px 0;}
+.ptrbl10{padding: 10px;}
+.nopadding{padding: 0 !important;}
+/*字体大小*/
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+.f20{font-size:20px;}
+.f22{font-size:22px;}
+.f24{font-size:24px;}
+.f26{font-size:26px;}
+.f30{font-size:30px;}
+.f32{font-size:32px;}
+.f36{font-size:36px;}
+.f40{font-size:40px;}
+
+.hide{display: none;}
+.inline-block{display: inline-block;}
+.fl{float: left;}
+.fr{float: right;}
+.clearf{clear:both;}
+img{display:inline-block}
+.c{text-align: center;}
+.fw600{font-weight: 600;}
+.relative{position: relative;}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+address, caption, cite, code, dfn,
+em, strong, th, var, optgroup {
+	font-style: normal;
+	font-weight: normal;
+}
+body{
+    padding-bottom: 50px;
+    text-size-adjust:none;
+    -webkit-text-size-adjust:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+abbr, acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+input, button, textarea,
+select, optgroup, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+code, kbd, samp, tt {
+	font-size: 100%;
+}
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input, button, textarea, select {
+	*font-size: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th {
+	text-align: left;
+}
+sup, sub {
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* remember to highlight anchors and inserts somehow! */
+:link, :visited , ins {
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/*by hedy*/
+.line-b{
+    border-bottom: #dddddd solid 1px;
+}
+.b-line-a{
+    border: 1px solid #dddddd;
+}
+.b-line{
+    border: #dddddd solid 1px;
+    border-radius: 2px;
+}
+.mb-color{
+   background: #af73d7;
+}
+.mb-weight-color{
+   background: #7916be;
+}
+.head-empty{
+   height: 205px;
+}
+/*字体颜色*/
+.purple{color: #7213c5;}
+.purple1{color: #7c18bf;}
+.purple2{color: #9f0bcc;}
+.c3{color:#333;}
+.c6{color:#666;}
+.c8{color:#888;}
+.red1{color: #f41a1a;}
+
+/*行高*/
+.lh45{line-height: 45px;}
+
+.clearfix{zoom:1}
+.clearfix:after {content:"";display:block;clear:both; visibility:hidden; overflow:hidden;}
+/*版心*/
+.webpageCon{
+  width: 1000px;
+  margin: 0 auto;
+}
+.webpageCon12{
+  width: 1200px;
+  margin: 0 auto;
+}
+/*背景*/
+.bgfff{
+  background-color: #fff;
+}
+.bgf6{
+  background-color: #f6f6f6;
+}
+/*布局*/
+.flex_layout{
+  display:box;  /*(伸缩盒最老版本)*/
+  display:-webkit-box;  /* iOS 6-, Safari 3.1-6 */
+  display:-webkit-flex; /* Chrome */
+  display:-moz-box;     /* Firefox 19 */
+  display:-ms-flexbox;   
+  display:flex;  /*flex容器*/
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+  -o-box-sizing: border-box; 
+  -ms-box-sizing: border-box; 
+  box-sizing: border-box;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap:wrap;
+}
+/********************整体布局********************************/
+
+
+
+
+
+
