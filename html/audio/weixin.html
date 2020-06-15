@@ -1,0 +1,26 @@
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+var audio = (function(){
+  var _audio = new Audio();
+  _audio.src = 'https://www.w3school.com.cn/i/horse.ogg';
+  _audio.load();
+  return _audio;
+})()
+
+// 微信配置信息（即使不正确也没问题
+wx.config({
+  debug: false,
+  appId: '',
+  timestamp: 1,
+  nonceStr: '',
+  signature: '',
+  jsApiList: []
+});
+// 在ready时触发相关事件
+wx.ready(function() {
+    console.log('f');
+  // 触发一下play事件
+  audio.play();
+});
+
+</script>
