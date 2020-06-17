@@ -6,3 +6,10 @@ sudo update-rc.d -f php5-fpm remove
 设置开机启动
 sudo update-rc.d docker defaults
 
+
+
+ubuntu新的开机启动
+systemctl enable ssh
+运行
+systemctl start ssh 
+
