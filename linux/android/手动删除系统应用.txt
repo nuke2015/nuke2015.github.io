@@ -100,3 +100,52 @@ adb shell pm uninstall --user 0 com.miui.notes
 adb shell pm uninstall --user 0 com.xiaomi.gamecenter
 
 
+
+
+
+
+
+#安装奇兔刷机大师>adb工具
+#list2
+adb devices
+adb shell pm uninstall --user 0 com.miui.systemAdSolution
+adb shell pm uninstall --user 0 com.miui.analytics
+adb shell pm uninstall --user 0 com.xiaomi.gamecenter.sdk.service
+adb shell pm uninstall --user 0 com.xiaomi.gamecenter
+adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
+adb shell pm uninstall --user 0 com.miui.player
+adb shell pm uninstall --user 0 com.miui.video
+#adb shell pm uninstall --user 0 com.miui.notes
+adb shell pm uninstall --user 0 com.miui.translation.youdao
+adb shell pm uninstall --user 0 com.miui.translation.kingsoft
+#adb shell pm uninstall --user 0 com.android.email
+#adb shell pm uninstall --user 0 com.xiaomi.scanner
+adb shell pm uninstall --user 0 com.miui.hybrid
+adb shell pm uninstall --user 0 com.miui.bugreport
+adb shell pm uninstall --user 0 com.milink.service
+adb shell pm uninstall --user 0 com.android.browser
+adb shell pm uninstall --user 0 com.miui.gallery
+adb shell pm uninstall --user 0 com.miui.yellowpage
+adb shell pm uninstall --user 0 com.xiaomi.midrop
+#adb shell pm uninstall --user 0 com.miui.virtualsim
+adb shell pm uninstall --user 0 com.xiaomi.payment
+adb shell pm uninstall --user 0 com.mipay.wallet
+adb shell pm uninstall --user 0 com.android.soundrecorder
+#adb shell pm uninstall --user 0 com.miui.screenrecorder
+adb shell pm uninstall --user 0 com.android.wallpaper
+adb shell pm uninstall --user 0 com.miui.voiceassist
+adb shell pm uninstall --user 0 com.miui.fm
+adb shell pm uninstall --user 0 com.miui.touchassistant
+adb shell pm uninstall --user 0 com.android.cellbroadcastreceiver
+adb shell pm uninstall --user 0 com.xiaomi.mitunes
+adb shell pm uninstall --user 0 com.xiaomi.pass
+adb shell pm uninstall --user 0 com.android.thememanager
+adb shell pm uninstall --user 0 com.android.wallpaper
+adb shell pm uninstall --user 0 com.android.wallpaper.livepicker
+adb shell pm uninstall --user 0 com.miui.klo.bugreport
+
+
+
+
+
+
