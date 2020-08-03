@@ -39,4 +39,9 @@ CREATE TABLE `ddys_corp_geo` (
 
 
 
+-- 入一条测试数据
+insert ddys_corp_geo
+set geoaddr=POINT(114,82),1596426422,2
+where corp_id=2
+
 
