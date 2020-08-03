@@ -18,3 +18,8 @@ UPDATE `ddys_corp_config` SET `geoaddr` = POINT(0,0);
 ALTER TABLE `ddys_corp_config`
 ADD  SPATIAL KEY `spa_geo` (`geoaddr`);
 
+-- 入一条测试数据
+update ddys_corp_config
+set geoaddr=POINT(114,82)
+where corp_id=2
+
