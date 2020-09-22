@@ -45,3 +45,20 @@ set geoaddr=POINT(114,82),1596426422,2
 where corp_id=2
 
 
+
+
+
+-- st_distance 函数 
+-- st_distance 函数是从mysql5.6.1才加入的。 
+SET @g1 = POINT(1,1), @g2 = POINT(2,2); 
+select st_distance (@g1, @g2); 
+-- 输出结果：1.4142135623730951
+SELECT st_distance (point (1, 1),point(2,2) ) * 111195 
+
+
+-- 坐标代入
+-- $longitude = trim($p['longitude']);
+-- $latitude = trim($p['latitude']);
+$field_geo = "ST_Distance(POINT($longitude, $latitude), sg.geoaddr)/1000 as distance";
+
+
