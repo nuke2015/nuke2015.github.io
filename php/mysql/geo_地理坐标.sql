@@ -61,4 +61,7 @@ SELECT st_distance (point (1, 1),point(2,2) ) * 111195
 -- $latitude = trim($p['latitude']);
 $field_geo = "ST_Distance(POINT($longitude, $latitude), sg.geoaddr)/1000 as distance";
 
+-- js描述
+-- distance(120.134241, 30.271482, 120.139684, 30.269618); //613.6539808118416
+
 
