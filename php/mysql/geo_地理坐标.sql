@@ -63,5 +63,33 @@ $field_geo = "ST_Distance(POINT($longitude, $latitude), sg.geoaddr)/1000 as dist
 
 -- js描述
 -- distance(120.134241, 30.271482, 120.139684, 30.269618); //613.6539808118416
+-- sql对应,cg.geoaddr=POINT(30.271482 120.134241) 
+
+-- select
+-- corp_id,ST_Distance(POINT(30.269618, 120.139684), cg.geoaddr)*6371000*3.1415926535898/180 as distance
+-- from ddys_corp_geo as cg
+-- order by distance ASC
+-- limit 3
+
+
+
+-- select * 
+-- from table
+-- where x between 116.307852-1km and 116.307852+1km
+-- and y between 40.057031-1km and 40.057031+1km
+
+-- // 请注意并且要乘以地球半球,纬度跟纬度,经度跟经度
+-- SELECT ST_Distance_Sphere(POINT(lng,lat), POINT(116.307852,40.057031)) as distance
+-- FROM table 
+-- where distance < 1000
+
+
+-- SELECT
+-- s.id,s.name,s.lng,s.lat,
+-- (st_distance (point (lng, lat),point(117.069,35.86) ) *111195) AS distance
+-- FROM
+-- road_servicearea s
+-- HAVING distance<50
+-- ORDER BY distanc
 
 
