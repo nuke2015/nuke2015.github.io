@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <title>{$host_title}</title>
+        <meta name="keywords" content="深圳月嫂公司,深圳育婴师公司,深圳月嫂价格,深圳月嫂培训,深圳育婴师培训,月嫂公司加盟">
+        <meta name="description" content="【家家母婴集团】是国家母婴产业联盟理事单位,全国领先的“互联网+月嫂”平台,为广大客户提供深圳月嫂、深圳催乳师、深圳育婴师、深圳月子护理等服务及培训的一站式母婴综合服务.现已服务10000+家庭,深受广大客户好评,集团公司已在深圳、杭州、西安、南京、武汉、大连等多个城市设立月嫂公司,并面向全国高端月嫂公司,家政公司招商加盟.服务热线400-080-8850.">
+
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="yes" name="apple-touch-fullscreen"/>
+        <meta content="fullscreen=yes,useHistoryState=yes,transition=yes" name="App-Config"/>
+        <meta content="True" name="HandheldFriendly"/>
+        <meta content="telephone=no,address=no,email=no" name="format-detection"/>
+        <link href="/static/css/gb.css" rel="stylesheet"/>
+        <link href="/static/css/sprite.css" rel="stylesheet"/>
+        <link href="/static/css/weui.css" rel="stylesheet"/>
+        <style>
+            #oss_uper .files{
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                background: url("/img/addpic.png") no-repeat center;
+                text-align: center;
+                margin: 20px 20px;
+                overflow: hidden;
+            }
+            #oss_uper .selectfiles{
+                width: 120px;
+                height: 120px;
+                opacity: 0;
+            }
+            #oss_uper .tip{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="oss_uper">
+            <a class="files" href="javascript:;">
+                <input accept="image/*" class="selectfiles" multiple="multiple" name="pics" type="file"/>
+            </a>
+            <div class="tip"></div>
+            <div class="tcontainer">
+                <img src="/static/images/html2wxapp.png" alt="测试打开小程序">
+            </div>
+        </div>
+
+        <script src="/static/js/lib/jquery-2.1.1.min.js">
+        </script>
+        <script src="/static/js/lib/template.js">
+        </script>
+        <script src="/static/js/utils/utils.js">
+        </script>
+        <script src="/static/js/lib/localResizeIMG/lrz.all.bundle.js">
+        </script>
+        <script src="/static/js/utils/upload_form.js">
+        </script>
+        <script>
+            // 文件上传监听
+            oss_uper({}).listen();
+            helper.setTitle("服务评价");
+        </script>
+    </body>
+</html>
