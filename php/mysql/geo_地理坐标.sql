@@ -93,3 +93,11 @@ $field_geo = "ST_Distance(POINT($longitude, $latitude), sg.geoaddr)/1000 as dist
 -- ORDER BY distanc
 
 
+-- 读取坐标 as text
+if ($info['corp_id']) {
+    $ddys_corp_geo = new model\ddys_corp_geo();
+    $tmp         = $ddys_corp_geo->find(['corp_id' => $corp_id], 'ST_ASTEXT(geoaddr) as geoaddr,corp_id');
+    $info['geoaddr'] = explode(' ', substr($tmp['geoaddr'], 6, -1));
+}
+
+
