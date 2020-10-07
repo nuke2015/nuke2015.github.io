@@ -12,7 +12,7 @@
         }
 
         #l-map {
-            height: 500px;
+            height: 80%;
             width: 100%;
         }
 
@@ -45,7 +45,7 @@
      if (this.getStatus() == BMAP_STATUS_SUCCESS) {
          var map = new BMap.Map("l-map");
         // var point = new BMap.Point(116.400244, 39.92556);
-         map.centerAndZoom(r.point, 12); //定义地图等级，就是放大倍数
+         map.centerAndZoom(r.point, 11); //定义地图等级，就是放大倍数
          map.enableScrollWheelZoom(true); //启用地图滚轮放大缩小   
          var marker = new BMap.Marker(r.point);// 创建标注
          map.addOverlay(marker);  // 将标注添加到地图中
@@ -57,7 +57,7 @@
 
          // 开启事件监听
          marker.addEventListener("dragend", function (e) {
-
+            console.log(e);
              var x = e.point.lng; //经度
              var y = e.point.lat; //纬度
              alert("拖到的地点的经纬度：" + x + "，" + y);
