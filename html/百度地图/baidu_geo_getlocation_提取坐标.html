@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+        <style type="text/css">
+            body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+
+        #l-map {
+            height: 500px;
+            width: 100%;
+        }
+
+        #r-result {
+            width: 100%;
+        }
+        </style>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=fjEOTea6oQGEcK1GSUHruG4efO9fccei" type="text/javascript">
+        </script>
+        <title>
+            设置点是否可拖拽
+        </title>
+    </head>
+    <body>
+        <div id="l-map">
+        </div>
+        <!--<div id="r-result">
+        <input type="button" onclick="marker.enableDragging();" value="可拖拽" />
+        <input type="button" onclick="marker.disableDragging();" value="不可拖拽" />
+    </div>-->
+    </body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+
+
+    //浏览器定位
+ var geolocation = new BMap.Geolocation();
+ geolocation.getCurrentPosition(function (r) {
+     if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+         var map = new BMap.Map("l-map");
+        // var point = new BMap.Point(116.400244, 39.92556);
+         map.centerAndZoom(r.point, 12); //定义地图等级，就是放大倍数
+         map.enableScrollWheelZoom(true); //启用地图滚轮放大缩小   
+         var marker = new BMap.Marker(r.point);// 创建标注
+         map.addOverlay(marker);  // 将标注添加到地图中
+         map.panTo(r.point);
+        // alert('您的位置：' + r.point.lng + ',' + r.point.lat);
+           
+         marker.enableDragging(); //标注可拖拽
+         //marker.disableDragging();           // 不可拖拽
+
+         // 开启事件监听
+         marker.addEventListener("dragend", function (e) {
+
+             var x = e.point.lng; //经度
+             var y = e.point.lat; //纬度
+             alert("拖到的地点的经纬度：" + x + "，" + y);
+
+         });
+     }
+     else {
+         alert('failed' + this.getStatus());
+     }
+ }, { enableHighAccuracy: true })
+
+ 
+
+
+    //关于状态码
+    //BMAP_STATUS_SUCCESS 检索成功。对应数值“0”。
+    //BMAP_STATUS_CITY_LIST 城市列表。对应数值“1”。
+    //BMAP_STATUS_UNKNOWN_LOCATION 位置结果未知。对应数值“2”。
+    //BMAP_STATUS_UNKNOWN_ROUTE 导航结果未知。对应数值“3”。
+    //BMAP_STATUS_INVALID_KEY 非法密钥。对应数值“4”。
+    //BMAP_STATUS_INVALID_REQUEST 非法请求。对应数值“5”。
+    //BMAP_STATUS_PERMISSION_DENIED 没有权限。对应数值“6”。(自 1.1 新增)
+    //BMAP_STATUS_SERVICE_UNAVAILABLE 服务不可用。对应数值“7”。(自 1.1 新增)
+    //BMAP_STATUS_TIMEOUT 超时。对应数值“8”。(自 1.1 新增)
+</script>
