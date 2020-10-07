@@ -101,3 +101,10 @@ if ($info['corp_id']) {
 }
 
 
+-- geomformtext
+INSERT INTO `bestphp_shop_geo` (`geoaddr`, `create_at`, `shop_id`)
+SELECT GeomFromText('POINT(23.00151 113.304586)'), '1602053814', '482'
+FROM `bestphp_shop_geo`
+WHERE ((`id` = '5'));
+
+
