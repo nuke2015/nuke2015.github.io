@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>tips</title>
+        <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js">
+        </script>
+    </head>
+    <body>
+        <style>
+            .alert_wrap{ width:100%; height:100%; position:fixed; z-index:10; top:0px;
+            left:0px; display:none; background:#000; filter:alpha(opacity:50); opacity:.5;
+            } 
+            .alert_div{ position:fixed; top:45%; left:0; width:95%; text-align:center;
+            margin-left:2.5%; height:40px; z-index:30; display:none; border-radius:4px;
+            -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
+            } 
+            .alert_message{ font-size:1.2em; line-height:40px; color:#007cd3;
+            display:inline-block; padding:0 15px; background:#FFF; height:40px; -moz-border-radius:4px;
+            -webkit-boreder-radius:4px; border-radius:4px; }
+        </style>
+        <script>
+            var alert = function(txt) {
+                jQuery('.alert_message').text(txt);
+                jQuery('.alert_wrap').show();
+                jQuery('.alert_div').show();
+                setTimeout(fadeOut, 2000);
+                function fadeOut() {
+                    jQuery(".alert_div").fadeOut(500);
+                    jQuery('.alert_wrap').fadeOut(200);
+                }
+            }
+            // //自动执行
+            // jQuery(function(){
+            //     alert('hello babay');
+            // })
+        </script>
+        <div class="alert_wrap"></div>
+        <div class="alert_div">
+           <span class='alert_message'></span>
+        </div>
+        <a href="#" onclick="alert('hello world!');">
+            点击
+        </a>
+    </body>
+</html>

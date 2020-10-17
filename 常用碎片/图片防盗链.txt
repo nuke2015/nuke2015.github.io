@@ -1,0 +1,5 @@
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://localhost/.*$ [OR,NC]
+RewriteCond %{HTTP_REFERER} !^http://mysite.com/.*$ [OR,NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mysite.com/.*$ [OR,NC]
+RewriteRule .*/.(gif|GIF|jpg|JPG)$ http://mysite/images/bad.gif [L,R]
