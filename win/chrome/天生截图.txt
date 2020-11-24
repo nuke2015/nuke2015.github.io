@@ -1,0 +1,6 @@
+
+在chrome浏览器的控制板内输入 shift+ctrl+p 然后输入命令：Capture full size screenshot 敲下回车，Chrome 就会自动截取整个网页内容并保存至本地。由于是渲染引擎直接输出，其比普通扩展速度更快，分辨率也更高。
+
+Command + ⇧Shift + M （Windows Ctrl + Shift + M）模拟移动设备
+
+
