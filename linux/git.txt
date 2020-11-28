@@ -47,7 +47,11 @@ git reset --hard origin/master
 同映像换仓库
 git clone -–bare git@code.aliyun.com:demo/hello.git
 cd hello
+#光推
 git push -–mirror git@code.aliyun.com:demo/hello_new.git
+#全推
+git push git@code.aliyun.com:demo/hello_new.git
+
 #本地切新仓库
 git remote set-url origin git@code.aliyun.com:demo/hello_new.git
 
