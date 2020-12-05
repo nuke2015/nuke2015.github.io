@@ -27,14 +27,12 @@ do-release-upgrade -c
 sudo do-release-upgrade -d
 
 
-
-内核升级
+#内核升级
 armbian内核
 sudo apt-get update
 sudo apt-get dist-upgrade
 
 
-
-修复系统级别漏洞
+#修复系统级别漏洞
 apt-get update && sudo apt-get dist-upgrade
 
