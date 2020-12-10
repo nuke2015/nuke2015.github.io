@@ -1,0 +1,6 @@
+
+php -r "print_r(openssl_get_cert_locations());"
+
+обть
+cd ~ && wget http://curl.haxx.se/ca/cacert.pem
+
