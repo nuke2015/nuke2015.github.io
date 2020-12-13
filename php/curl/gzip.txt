@@ -1,0 +1,8 @@
+Accept-Encoding:gzip,deflate,sdch
+这里是gzip 、deflate、sdch这三种方式，这里不一一说明是指什么，不懂的可以去找谷哥度娘，
+有些服务器强制返回gzip压缩的数据，我们采集的时候，返回的是乱码，根本无法读取使用，这个时候马上查看手册
+发现其实curl里有个参数，curl_setopt($ch, CURLOPT_ENCODING,'gzip');
+
+如果是gzip用
+echo gzdecode($c);
+可解
