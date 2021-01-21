@@ -17,6 +17,7 @@ set COMPOSER_PATH=D:\git\composer\vendor\
 
 setx JAVA_HOME %JAVA_HOME%
 setx ANT_HOME %ANT_HOME%
+setx ANDROID_HOME %ANDROID_HOME%
 setx GOROOT %GOROOT%
 setx GOPATH %GOPATH%
 
