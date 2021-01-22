@@ -1,0 +1,7 @@
+
+adb devices
+
+adb shell
+
+adb shell am start -W -n com.android.settings/.Settings$ApnEditorActivity
+
