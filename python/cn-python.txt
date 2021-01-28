@@ -1,0 +1,15 @@
+
+升级
+python -m pip install --upgrade pip
+
+国内默认源
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install scrapy -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+
+生成requirements.txt文件
+pip freeze > requirements.txt
+
+安装requirements.txt依赖
+pip install -r requirements.txt
+
