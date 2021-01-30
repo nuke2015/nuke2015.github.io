@@ -9,6 +9,7 @@ http://chromedriver.storage.googleapis.com/2.9/chromedriver_win32.zip
 chrome87
 https://r4---sn-j5o76n7l.gvt1.com/edgedl/release2/chrome/CUtGVpXHPGLv_SbZcTshgQ_87.0.4280.88/87.0.4280.88_chrome_installer.exe?cms_redirect=yes&mh=Bv&mip=113.104.196.232&mm=28&mn=sn-j5o76n7l&ms=nvh&mt=1611903393&mv=m&mvi=4&pl=18&shardbypass=yes
 
+http://redirector.gvt1.com/edgedl/release2/chrome/IqS0j-Mgh5ShRl3NTwatsw_80.0.3987.149/80.0.3987.149_chrome_installer.exe
 
 
 D:\soft\chrome44\chrome.exe --user-data-dir="D:\Cache\8080" --proxy-server=127.0.0.1:8080
