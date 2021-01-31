@@ -1,0 +1,9 @@
+
+#无跳转
+ssh -N -D 127.0.0.1:8080 -p 21119 root@59.173.17.88
+
+#有跳转新机器,screen
+ssh -D 8080 -p 21119 root@59.173.17.88
+netstat -ntlp|grep 8080
+curl --socks5 127.0.0.1:8080 http://myip.ipip.net
+
