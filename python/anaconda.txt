@@ -21,6 +21,8 @@ python -m pip install --upgrade pip
 conda info --envs
 conda create --name py27 python=2.7
 conda create --name py38 python=3.8
+conda create --name py37 python=3.7
+conda create --name py26 python=2.6
 
 激活
 activate py27
