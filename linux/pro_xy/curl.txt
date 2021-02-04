@@ -1,2 +1,10 @@
 
+#使用sock5连接
 curl -x socks5://fengsu:100@127.0.0.1:11690 http://news.ifeng.com
+
+#命令行直接下载
+curl -Lo /dev/null -skw "%{speed_download}\n" http://mirrors.163.com/ubuntu/ls-lR.gz
+
+#使用http代理连接
+curl -x http://127.0.0.1:3016 -Lo /dev/null -skw "%{speed_download}\n" http://mirrors.163.com/ubuntu/ls-lR.gz
+
