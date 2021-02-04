@@ -1,0 +1,36 @@
+
+
+win中快速切换
+conda --version
+conda 4.9.2
+
+conda config --show
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+
+
+pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install --upgrade pip
+
+
+
+
+conda info --envs
+conda create --name py27 python=2.7
+conda create --name py38 python=3.8
+
+激活
+activate py27
+activate py38
+activate base
+conda remove --name py27 --all
+
+
+
+
+
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-Linux-x86_64.sh
+bash Anaconda3-2019.03-Linux-x86_64.sh
+
+
+
