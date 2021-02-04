@@ -5,7 +5,10 @@ conda --version
 conda 4.9.2
 
 conda config --show
-conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+
 conda config --set show_channel_urls yes
 
 
