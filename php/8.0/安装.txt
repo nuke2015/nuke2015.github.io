@@ -1,7 +1,4 @@
 
-vcruntime140.dll补丁：
-https://www.microsoft.com/en-us/download/details.aspx?id=52685
-
 下载:
 https://windows.php.net/download/
 
@@ -11,3 +8,6 @@ https://visualstudio.microsoft.com/zh-hans/downloads/
 
 https://download.visualstudio.microsoft.com/download/pr/cd3a705f-70b6-46f7-b8e2-63e6acc5bd05/F299953673DE262FEFAD9DD19BFBE6A5725A03AE733BEBFEC856F1306F79C9F7/VC_redist.x64.exe
 
+
+自动升级
+composer self-update

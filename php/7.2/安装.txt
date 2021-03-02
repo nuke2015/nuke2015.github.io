@@ -5,11 +5,11 @@
  apt-get -y install php7.2
 
 
-php.ini-development¸Äphp.ini
+php.ini-developmentæ”¹php.ini
  
-¼òĞ´¿ÉÖ§³Ö£º
+ç®€å†™å¯æ”¯æŒï¼š
 extension_dir = "ext"
 
-°²×°composer
+å®‰è£…composer
 php -r "readfile('https://getcomposer.org/installer');" | php
 
