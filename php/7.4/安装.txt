@@ -9,3 +9,5 @@ Microsoft Visual C++ Redistributable for Visual Studio 2019
 https://visualstudio.microsoft.com/zh-hans/downloads/
 选择其它工具和框架>Microsoft Visual C++ Redistributable for Visual Studio 2019
 
+https://download.visualstudio.microsoft.com/download/pr/cd3a705f-70b6-46f7-b8e2-63e6acc5bd05/F299953673DE262FEFAD9DD19BFBE6A5725A03AE733BEBFEC856F1306F79C9F7/VC_redist.x64.exe
+
