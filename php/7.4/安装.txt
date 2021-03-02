@@ -4,3 +4,8 @@ https://www.microsoft.com/en-us/download/details.aspx?id=52685
 
 下载:
 https://windows.php.net/download/
+
+Microsoft Visual C++ Redistributable for Visual Studio 2019
+https://visualstudio.microsoft.com/zh-hans/downloads/
+选择其它工具和框架>Microsoft Visual C++ Redistributable for Visual Studio 2019
+
