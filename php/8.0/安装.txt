@@ -11,3 +11,5 @@ https://download.visualstudio.microsoft.com/download/pr/cd3a705f-70b6-46f7-b8e2-
 
 自动升级
 composer self-update
+composer --version
+Composer version 2.0.11 2021-02-24 14:57:23
