@@ -4,9 +4,23 @@ docker run -it --rm zenika/alpine-chrome --no-sandbox --dump-dom  https://baijia
 
 docker run -it --rm zenika/alpine-chrome --no-sandbox --entrypoint "--headless --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage" --dump-dom  https://baijiahao.baidu.com/u?app_id=1675743642106893
 
+
+#win
 start chrome --enable-logging --headless --disable-gpu --print-to-pdf=c:\misc\output.pdf https://baijiahao.baidu.com/u?app_id=1675743642106893
 
 
 start chrome --enable-logging --headless --disable-gpu --dump-dom https://baijiahao.baidu.com/u?app_id=1675743642106893
+
+
+
+
+
+#查看版本
+dk run --rm -it chrome-php chromium-browser --version
+
+#打印节点
+dk run --rm -it chrome-php chromium-browser --no-sandbox --enable-logging --headless --disable-gpu  --disable-software-rasterizer --disable-dev-shm-usage --dump-dom https://baijiahao.baidu.com/u?app_id=1675743642106893
+
+
 
 
