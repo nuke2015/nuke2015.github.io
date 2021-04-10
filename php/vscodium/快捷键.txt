@@ -47,6 +47,8 @@ f11,全屏
 f8,看问题
 f5,调试下断点
 alt+z一行换多行,多行变一行
+ctrl+shift+d,复制一行
+ctrl+shift+k,删除一行
 
 
 
