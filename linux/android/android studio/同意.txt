@@ -1,0 +1,7 @@
+
+
+2021年6月9日 01:52:59
+找到安卓sdk的目录中sdkmanage.bat所在目录 
+D:\advance\ANDROID_HOME\tools\bin
+echo yes | sdkmanager --licenses
+
