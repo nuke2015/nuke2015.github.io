@@ -13,6 +13,8 @@ adb shell pm uninstall --user 0 com.android.thememanager
 
 
 
+#检查连接
+adb devices
 
 
 
@@ -23,14 +25,12 @@ pm uninstall --user 0 com.miui.systemAdSolution
 adb shell pm uninstall --user 0 com.miui.hybrid
 #7.   删除米家: 
 adb shell pm uninstall --user 0 com.miui.smarthome
-#8.   删除搜狗输入法小米版
-adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi （我喜欢用讯飞输入法，手写和拼音可以在同个页面进行用，有些字拼不出来就写）
 #9.   删除小米音乐
 adb shell pm uninstall --user 0 com.miui.player
 #10. 删除应用商店
 adb shell pm uninstall --user 0 com.miui.market
 #13. 删除系统自带浏览器
-adb shell pm uninstall --user 0 com.android.browser
+#adb shell pm uninstall --user 0 com.android.browser
 #14. 删除米币支付
 adb shell pm uninstall --user 0 com.miui.payment
 #15. 删除全球上网
