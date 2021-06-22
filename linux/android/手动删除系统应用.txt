@@ -136,6 +136,8 @@ adb shell pm uninstall --user 0 com.xiaomi.gamecenter
 
 #安装奇兔刷机大师>adb工具
 #list2
+
+
 adb devices
 adb shell pm uninstall --user 0 com.miui.systemAdSolution
 adb shell pm uninstall --user 0 com.miui.analytics
