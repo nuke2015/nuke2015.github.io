@@ -145,13 +145,11 @@ adb shell pm uninstall --user 0 com.miui.player
 adb shell pm uninstall --user 0 com.miui.video
 adb shell pm uninstall --user 0 com.miui.translation.youdao
 adb shell pm uninstall --user 0 com.miui.translation.kingsoft
-#adb shell pm uninstall --user 0 com.android.email
 adb shell pm uninstall --user 0 com.miui.hybrid
 adb shell pm uninstall --user 0 com.miui.bugreport
 adb shell pm uninstall --user 0 com.milink.service
 adb shell pm uninstall --user 0 com.miui.yellowpage
 adb shell pm uninstall --user 0 com.xiaomi.midrop
-#adb shell pm uninstall --user 0 com.miui.virtualsim
 adb shell pm uninstall --user 0 com.xiaomi.payment
 adb shell pm uninstall --user 0 com.mipay.wallet
 adb shell pm uninstall --user 0 com.android.wallpaper
@@ -168,6 +166,8 @@ adb shell pm uninstall --user 0 com.miui.klo.bugreport
 
 
 
+#adb shell pm uninstall --user 0 com.android.email
+#adb shell pm uninstall --user 0 com.miui.virtualsim
 
 
 
