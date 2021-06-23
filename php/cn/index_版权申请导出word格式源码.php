@@ -1,18 +1,14 @@
 <?php
 
 $files  = dir_list('./x/');
-$leng   = 30;
+$leng   = 100;
 $i      = 0;
 $result = '';
 if ($files && count($files)) {
     foreach ($files as $key => $value) {
-        $result .= "#####" . basename($value) . '#####@start ' . "\r\n";
-        $result .= "\r\n\r\n";
+        $result .= "\r\n#####" . basename($value) . '#####@start' . "\r\n";
         $result .= file_get_contents($value);
-        $result .= "\r\n\r\n";
-        $result .= "#####" . basename($value) . '#####@end ' . "\r\n";
-        $result .= "\r\n\r\n";
-        $result .= "\r\n\r\n";
+        $result .= "\r\n#####" . basename($value) . '#####@end' . "\r\n";
         $i++;
         if ($i >= $leng) {
             break;
