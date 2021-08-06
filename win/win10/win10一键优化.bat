@@ -1,24 +1,4 @@
 
-@ECHO off
-TITLE Windows 10 一键优化工具
-COLOR 0a
- 
-set TempFile_Name=%SystemRoot%\System32\BatTestUACin_SysRt%Random%.batemp
-( echo "BAT Test UAC in Temp" >%TempFile_Name% ) 1>nul 2>nul
-if exist %TempFile_Name% (
-del %TempFile_Name% 1>nul 2>nul
-GOTO setting
-) else (
-GOTO admin
-)
- 
-:setting
-echo.
-echo.
-echo.
-ECHO                            按任意键开始一键优化！
-pause>nul
- 
  
 echo 优化开始
  
@@ -245,41 +225,3 @@ taskkill /f /im iexplore.exe
 ECHO 完成
  
 gpupdate /force
-taskkill /f /im explorer.exe
-start %systemroot%\explorer
- 
-COLOR 0a
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo                          恭喜！全部优化操作已经执行完毕
-echo.
-echo.
-echo.
-echo                              请自行向上翻看操作记录
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-pause>nul
-
- 
-:admin
-CLS
-COLOR 0a
-MODE con: COLS=30 LINES=8
-ECHO 操作失败。
-echo 请右键“以管理员身份运行”
-ECHO 按任意键退出...
-PAUSE >nul
-exit
