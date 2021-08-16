@@ -11,3 +11,7 @@ var data=$("#box_form").serialize(), // 你的formid
 自架服务器
 php -S 127.0.0.1:8002 -t .
 pause
+
+2021年8月16日 14:03:15
+也可以手动拉起php 服务
+php-cgi.exe -b 127.0.0.1:900X -c php.ini 
