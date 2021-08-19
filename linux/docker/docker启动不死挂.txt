@@ -1,0 +1,35 @@
+
+正常的docker启动了就关闭,没事不挂着,但是微信云上的,如果不挂着它就死了
+
+比如,
+dk run --rm  -it ddys/phper:7.4 
+dk run --rm  -it ddys/phper:7.4 /bin/bash
+都是正常的nginx+php都能正常拉起
+
+但是,那么问题来了:
+dk run ddys/phper:7.4 
+秒挂
+因为相关的事情已经做完了哇.
+
+要想不死挂咋整,只能硬挂.
+在/root/docker_start.sh中加入一行.
+
+tail -f /dev/null
+有这货在容器会一直运行.
+
+
+
+
+即:
+# /bin/bash
+
+service nginx start && service php7.4-fpm start && cron 
+
+#(ls /home/start.sh && /bin/bash /home/start.sh) || echo notfound
+
+echo "phper init done!"
+
+tail -f /dev/null
+
+
+
