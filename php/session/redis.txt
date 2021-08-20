@@ -1,0 +1,9 @@
+
+打开 php.ini 文件，设置下面两个值：
+
+session.save_handler = redis
+session.save_path = "tcp://127.0.0.1:6379"
+如果Redis有密码，用下面的配置：
+
+session.save_path = "tcp://127.0.0.1:6379?auth=password"
+配置完成后，重启PHP-FPM。
