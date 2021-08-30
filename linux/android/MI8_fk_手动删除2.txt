@@ -3,7 +3,7 @@
 adb shell pm uninstall --user 0 com.android.wallpapercropper
 
 #下载
-adb shell pm uninstall --user 0 com.android.providers.downloads.ui
+#adb shell pm uninstall --user 0 com.android.providers.downloads.ui
 
 #性能
 adb shell pm uninstall --user 0 com.qualcomm.qti.performancemode
@@ -100,7 +100,7 @@ adb shell pm uninstall --user 0 com.fido.asm
 adb shell pm uninstall --user 0 com.mobiletools.systemhelper
 
 #定位
-adb shell pm uninstall --user 0 com.xiaomi.bsp.gps.nps
+#adb shell pm uninstall --user 0 com.xiaomi.bsp.gps.nps
 
 #证书管理 
 adb shell pm uninstall --user 0 com.wapi.wapicertmanage
@@ -116,7 +116,7 @@ adb shell pm uninstall --user 0 com.miui.translation.kingsoft
 
 
 #
-adb shell pm uninstall --user 0 com.miui.contentcatcher
+#adb shell pm uninstall --user 0 com.miui.contentcatcher
 
 #
 adb shell pm uninstall --user 0 com.android.dynsystem
@@ -140,13 +140,13 @@ adb shell pm uninstall --user 0 com.android.providers.userdictionary
 adb shell pm uninstall --user 0 com.android.wallpaperbackup
 
 #融合位置服務
-adb shell pm uninstall --user 0 com.xiaomi.location.fused
+#adb shell pm uninstall --user 0 com.xiaomi.location.fused
 
 #雙劉海屏
 adb shell pm uninstall --user 0 com.android.internal.display.cutout.emulation.double
 
 #一體化位置信息
-adb shell pm uninstall --user 0 com.android.location.fused
+#adb shell pm uninstall --user 0 com.android.location.fused
 
 #工作設置
 adb shell pm uninstall --user 0 com.android.managedprovisioning
@@ -172,7 +172,7 @@ adb shell pm uninstall --user 0 com.android.emergency
 adb shell pm uninstall --user 0 com.android.backupconfirm
 
 #开机下载
-adb shell pm uninstall --user 0 com.android.providers.downloads
+#adb shell pm uninstall --user 0 com.android.providers.downloads
 
 #系統跟蹤
 adb shell pm uninstall --user 0 com.android.traceur
