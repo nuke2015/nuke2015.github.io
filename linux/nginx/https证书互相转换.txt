@@ -1,0 +1,10 @@
+
+
+
+pem转crt格式
+openssl x509 -in fullchain.pem -out fullchain.crt  
+
+pem转key格式
+openssl rsa -in privkey.pem -out privkey.key  
+
+
