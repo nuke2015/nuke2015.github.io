@@ -198,5 +198,35 @@ adb shell pm uninstall --user 0 android.ext.shared
 adb shell pm uninstall --user 0 android.ext.services
 
 
+#原生输入法
+adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
+#服务反馈
+adb shell pm uninstall --user 0 com.miui.miservice
+#蓝牙
+adb shell pm uninstall --user 0 com.android.bluetooth
+#钱包
+adb shell pm uninstall --user 0 com.mipay.wallet
+#主题
+adb shell pm uninstall --user 0 com.android.thememanager
+#智能助理
+adb shell pm uninstall --user 0 com.miui.personalassistant
+#智能出行
+adb shell pm uninstall --user 0 com.miui.smarttravel
+#智能卡
+adb shell pm uninstall --user 0 com.miui.tsmclient
+#画报
+adb shell pm uninstall --user 0 com.mfashiongallery.emag
+#搜索
+adb shell pm uninstall --user 0 com.android.quicksearchbox
+#黄页
+adb shell pm uninstall --user 0 com.miui.yellowpage
+
+
+
+
+
+
+
+
 
 
