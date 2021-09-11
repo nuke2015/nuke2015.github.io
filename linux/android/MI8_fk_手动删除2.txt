@@ -9,7 +9,7 @@ adb shell pm uninstall --user 0 com.android.wallpapercropper
 adb shell pm uninstall --user 0 com.qualcomm.qti.performancemode
 
 #证书
-adb shell pm uninstall --user 0 com.android.certinstaller
+#adb shell pm uninstall --user 0 com.android.certinstaller
 
 #stk
 adb shell pm uninstall --user 0 com.android.stk
@@ -103,10 +103,10 @@ adb shell pm uninstall --user 0 com.mobiletools.systemhelper
 #adb shell pm uninstall --user 0 com.xiaomi.bsp.gps.nps
 
 #证书管理 
-adb shell pm uninstall --user 0 com.wapi.wapicertmanage
+#adb shell pm uninstall --user 0 com.wapi.wapicertmanage
 
 #
-adb shell pm uninstall --user 0 com.android.localtransport
+#adb shell pm uninstall --user 0 com.android.localtransport
 
 #有道 
 adb shell pm uninstall --user 0 com.miui.translation.youdao
@@ -115,7 +115,7 @@ adb shell pm uninstall --user 0 com.miui.translation.youdao
 adb shell pm uninstall --user 0 com.miui.translation.kingsoft
 
 
-#
+#上下文
 #adb shell pm uninstall --user 0 com.miui.contentcatcher
 
 #
@@ -172,19 +172,19 @@ adb shell pm uninstall --user 0 com.android.emergency
 adb shell pm uninstall --user 0 com.android.backupconfirm
 
 #开机下载
-#adb shell pm uninstall --user 0 com.android.providers.downloads
+adb shell pm uninstall --user 0 com.android.providers.downloads
 
 #系統跟蹤
 adb shell pm uninstall --user 0 com.android.traceur
 
 #MIUI安全組件
-adb shell pm uninstall --user 0 com.miui.guardprovider
+#adb shell pm uninstall --user 0 com.miui.guardprovider
 
 #系統服務組件
-adb shell pm uninstall --user 0 com.miui.securityadd
+#adb shell pm uninstall --user 0 com.miui.securityadd
 
 #安全核心組件
-adb shell pm uninstall --user 0 com.miui.securitycore
+#adb shell pm uninstall --user 0 com.miui.securitycore
 
 #小米服務框架
 adb shell pm uninstall --user 0 com.xiaomi.xmsf
