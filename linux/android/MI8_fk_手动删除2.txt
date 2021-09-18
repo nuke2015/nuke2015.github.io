@@ -221,12 +221,17 @@ adb shell pm uninstall --user 0 com.android.quicksearchbox
 #黄页
 adb shell pm uninstall --user 0 com.miui.yellowpage
 
-
-
-
-
-
-
-
+#售后自动测试
+adb shell pm uninstall --user 0 com.longcheertel.AutoTest
+#收音机
+adb shell pm uninstall --user 0 com.caf.fmradio
+#常用语
+adb shell pm uninstall --user 0 com.miui.phrase
+#蓝牙
+adb shell pm uninstall --user 0 com.xiaomi.bluetooth
+#anylytics
+adb shell pm uninstall --user 0 com.miui.analytics
+#用户反馈
+adb shell pm uninstall --user 0 com.miui.bugreport
 
 
