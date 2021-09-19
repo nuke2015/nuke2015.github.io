@@ -235,3 +235,44 @@ adb shell pm uninstall --user 0 com.miui.analytics
 adb shell pm uninstall --user 0 com.miui.bugreport
 
 
+#米币支付
+adb shell pm uninstall --user 0 com.xiaomi.payment
+#书签
+adb shell pm uninstall --user 0 com.android.bookmarkprovider
+#相册?
+adb shell pm uninstall --user 0 com.miui.extraphoto
+#蓝牙服务
+adb shell pm uninstall --user 0 com.android.bluetoothmdiservice
+#音效
+adb shell pm uninstall --user 0 com.miui.audioeffect
+#智慧生活
+adb shell pm uninstall --user 0 com.miui.hybrid.accessory
+#小米支付
+adb shell pm uninstall --user 0 com.miui.nextpay
+#闻声
+adb shell pm uninstall --user 0 com.miui.accessibility
+#商城服务
+adb shell pm uninstall --user 0 com.xiaomi.ab
+#系统更新
+adb shell pm uninstall --user 0 com.android.updater
+#收音机调频
+adb shell pm uninstall --user 0 com.miui.fmservice
+#打印处理
+adb shell pm uninstall --user 0 com.android.printspooler
+#传送门
+adb shell pm uninstall --user 0 com.miui.contentextension
+#ana
+adb shell pm uninstall --user 0 com.miui.analytics
+#商店
+adb shell pm uninstall --user 0 com.xiaomi.market
+#扩展
+adb shell pm uninstall --user 0 com.miui.contentcatcher
+#小米互联
+adb shell pm uninstall --user 0 com.xiaomi.mi_connect_service
+#查找手机 
+adb shell pm uninstall --user 0 com.xiaomi.finddevice
+#投屏
+adb shell pm uninstall --user 0 com.milink.service
+
+#刷机大师
+adb shell pm uninstall --user 0 com.mgyun.shua.protector
