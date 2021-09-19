@@ -1,56 +1,56 @@
 
-#å£çº¸
+#±ÚÖ½
 adb shell pm uninstall --user 0 com.android.wallpapercropper
 
-#ä¸‹è½½
+#ÏÂÔØ
 #adb shell pm uninstall --user 0 com.android.providers.downloads.ui
 
-#æ€§èƒ½
+#ĞÔÄÜ
 adb shell pm uninstall --user 0 com.qualcomm.qti.performancemode
 
-#è¯ä¹¦
+#Ö¤Êé
 #adb shell pm uninstall --user 0 com.android.certinstaller
 
 #stk
 adb shell pm uninstall --user 0 com.android.stk
 
-#å±ä¿
+#ÆÁ±£
 adb shell pm uninstall --user 0 com.android.dreams.basic
 
-#ç³»ç»Ÿæ‰“å°
+#ÏµÍ³´òÓ¡
 adb shell pm uninstall --user 0 com.android.bips
 
-#è´¦å·
+#ÕËºÅ
 adb shell pm uninstall --user 0 com.xiaomi.account
 
-#å°ç±³æ”¯ä»˜
+#Ğ¡Ã×Ö§¸¶
 adb shell pm uninstall --user 0 com.xiaomi.miplay_client
 
-#å°ç±³åŠ©æ‰‹ 
+#Ğ¡Ã×ÖúÊÖ 
 adb shell pm uninstall --user 0 com.xiaomi.aiasst.vision
 
-#æ™ºèƒ½æœåŠ¡
+#ÖÇÄÜ·şÎñ
 adb shell pm uninstall --user 0 com.miui.systemAdSolution
 
-#è¬å‘æ¯å±
+#ÈfÏòÏ¢ÆÁ
 adb shell pm uninstall --user 0 com.miui.aod
 
-#éŸ³è³ªéŸ³æ•ˆ
+#ÒôÙ|ÒôĞ§
 adb shell pm uninstall --user 0 com.miui.misound
 
-#å°ç±³åˆ†äº«
+#Ğ¡Ã×·ÖÏí
 adb shell pm uninstall --user 0 com.miui.mishare.connectivity
 
-#è‡ªç”±è¡¨å•
+#×ÔÓÉ±íµ¥
 adb shell pm uninstall --user 0 com.miui.freeform
 
-#å°ç±³äº‘æœåŠ¡
+#Ğ¡Ã×ÔÆ·şÎñ
 adb shell pm uninstall --user 0 com.miui.cloudservice
 
-#å®‰å…¨é”®ç›˜
+#°²È«¼üÅÌ
 adb shell pm uninstall --user 0 com.miui.securityinputmethod
 
-#é“¶è”
+#ÒøÁª
 adb shell pm uninstall --user 0 com.unionpay.tsmservice.mi
 
 #gx
@@ -60,7 +60,7 @@ adb shell pm uninstall --user 0 com.qualcomm.qti.services.systemhelper
 
 adb shell pm uninstall --user 0 com.qualcomm.qti.poweroffalarm
 
-#å°ç±³åŠ©æ‰‹
+#Ğ¡Ã×ÖúÊÖ
 adb shell pm uninstall --user 0 com.xiaomi.aiasst.vision
 
 #ar
@@ -69,25 +69,25 @@ adb shell pm uninstall --user 0 com.google.ar.core
 #ai
 adb shell pm uninstall --user 0 com.xiaomi.aiasst.service
 
-#å°ç±³å¤‡ä»½
+#Ğ¡Ã×±¸·İ
 adb shell pm uninstall --user 0 com.miui.backup
 
-#å£çº¸ 
+#±ÚÖ½ 
 adb shell pm uninstall --user 0 com.miui.miwallpaper
 
-#æµ‹è¯•
+#²âÊÔ
 adb shell pm uninstall --user 0 com.miui.cit
 
-#äº‘åŒæ­¥
+#ÔÆÍ¬²½
 adb shell pm uninstall --user 0 com.miui.micloudsync
 
-#è¾¹è§’åˆ˜æµ·
+#±ß½ÇÁõº£
 adb shell pm uninstall --user 0 com.android.internal.display.cutout.emulation.corner
 
-#äº‘åŸºç¡€
+#ÔÆ»ù´¡
 adb shell pm uninstall --user 0 com.miui.cloudservice.sysbase
 
-#ç”¨æˆ·æ”¶é›†
+#ÓÃ»§ÊÕ¼¯
 adb shell pm uninstall --user 0 com.miui.daemon
 
 
@@ -99,59 +99,59 @@ adb shell pm uninstall --user 0 com.fido.asm
 
 adb shell pm uninstall --user 0 com.mobiletools.systemhelper
 
-#å®šä½
+#¶¨Î»
 #adb shell pm uninstall --user 0 com.xiaomi.bsp.gps.nps
 
-#è¯ä¹¦ç®¡ç† 
+#Ö¤Êé¹ÜÀí 
 #adb shell pm uninstall --user 0 com.wapi.wapicertmanage
 
 #
 #adb shell pm uninstall --user 0 com.android.localtransport
 
-#æœ‰é“ 
+#ÓĞµÀ 
 adb shell pm uninstall --user 0 com.miui.translation.youdao
 
-#é‡‘å±±
+#½ğÉ½
 adb shell pm uninstall --user 0 com.miui.translation.kingsoft
 
 
-#ä¸Šä¸‹æ–‡
+#ÉÏÏÂÎÄ
 #adb shell pm uninstall --user 0 com.miui.contentcatcher
 
 #
 adb shell pm uninstall --user 0 com.android.dynsystem
 
-#è®¡æ­¥
+#¼Æ²½
 adb shell pm uninstall --user 0 com.xiaomi.joyose
 
-#ç”µé‡
+#µçÁ¿
 adb shell pm uninstall --user 0 com.miui.powerkeeper
 
 #
 adb shell pm uninstall --user 0 com.miui.translation.xmcloud
 
-#ç…§ç‰‡å±å¹•ä¿è­·
+#ÕÕÆ¬ÆÁÄ»±£×o
 adb shell pm uninstall --user 0 com.android.dreams.phototable
 
-#ç”¨æˆ¶å­—å…¸
+#ÓÃ‘ô×Öµä
 adb shell pm uninstall --user 0 com.android.providers.userdictionary
 
-#æ¡Œçº¸å¤‡ä»½
+#×ÀÖ½±¸·İ
 adb shell pm uninstall --user 0 com.android.wallpaperbackup
 
-#èåˆä½ç½®æœå‹™
+#ÈÚºÏÎ»ÖÃ·ş„Õ
 #adb shell pm uninstall --user 0 com.xiaomi.location.fused
 
-#é›™åŠ‰æµ·å±
+#ëp„¢º£ÆÁ
 adb shell pm uninstall --user 0 com.android.internal.display.cutout.emulation.double
 
-#ä¸€é«”åŒ–ä½ç½®ä¿¡æ¯
+#Ò»ów»¯Î»ÖÃĞÅÏ¢
 #adb shell pm uninstall --user 0 com.android.location.fused
 
-#å·¥ä½œè¨­ç½®
+#¹¤×÷ÔOÖÃ
 adb shell pm uninstall --user 0 com.android.managedprovisioning
 
-#é‹ç‡Ÿå•†é»˜èªæ‡‰ç”¨
+#ß\ IÉÌÄ¬ÕJ‘ªÓÃ
 adb shell pm uninstall --user 0 com.android.carrierdefaultapp
 
 #
@@ -161,118 +161,146 @@ adb shell pm uninstall --user 0 com.android.sharedstoragebackup
 
 adb shell pm uninstall --user 0 com.android.onetimeinitializer
 
-#æ™‚é˜
+#•rçŠ
 adb shell pm uninstall --user 0 com.android.deskclock
 
-#æ€¥æ•‘ä¿¡æ¯
+#¼±¾ÈĞÅÏ¢
 adb shell pm uninstall --user 0 com.android.emergency
 
 
-#å¤‡ä»½ç¡®è®¤
+#±¸·İÈ·ÈÏ
 adb shell pm uninstall --user 0 com.android.backupconfirm
 
-#å¼€æœºä¸‹è½½
+#¿ª»úÏÂÔØ
 adb shell pm uninstall --user 0 com.android.providers.downloads
 
-#ç³»çµ±è·Ÿè¹¤
+#Ïµ½y¸úÛ™
 adb shell pm uninstall --user 0 com.android.traceur
 
-#MIUIå®‰å…¨çµ„ä»¶
+#MIUI°²È«½M¼ş
 #adb shell pm uninstall --user 0 com.miui.guardprovider
 
-#ç³»çµ±æœå‹™çµ„ä»¶
+#Ïµ½y·ş„Õ½M¼ş
 #adb shell pm uninstall --user 0 com.miui.securityadd
 
-#å®‰å…¨æ ¸å¿ƒçµ„ä»¶
+#°²È«ºËĞÄ½M¼ş
 #adb shell pm uninstall --user 0 com.miui.securitycore
 
-#å°ç±³æœå‹™æ¡†æ¶
+#Ğ¡Ã×·ş„Õ¿ò¼Ü
 adb shell pm uninstall --user 0 com.xiaomi.xmsf
 
 
 
-#åˆ†äº«
+#·ÖÏí
 adb shell pm uninstall --user 0 android.ext.shared
 
-#æœåŠ¡
+#·şÎñ
 adb shell pm uninstall --user 0 android.ext.services
 
 
-#åŸç”Ÿè¾“å…¥æ³•
+#Ô­ÉúÊäÈë·¨
 adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
-#æœåŠ¡åé¦ˆ
+#·şÎñ·´À¡
 adb shell pm uninstall --user 0 com.miui.miservice
-#è“ç‰™
+#À¶ÑÀ
 adb shell pm uninstall --user 0 com.android.bluetooth
-#é’±åŒ…
+#Ç®°ü
 adb shell pm uninstall --user 0 com.mipay.wallet
-#ä¸»é¢˜
+#Ö÷Ìâ
 adb shell pm uninstall --user 0 com.android.thememanager
-#æ™ºèƒ½åŠ©ç†
+#ÖÇÄÜÖúÀí
 adb shell pm uninstall --user 0 com.miui.personalassistant
-#æ™ºèƒ½å‡ºè¡Œ
+#ÖÇÄÜ³öĞĞ
 adb shell pm uninstall --user 0 com.miui.smarttravel
-#æ™ºèƒ½å¡
+#ÖÇÄÜ¿¨
 adb shell pm uninstall --user 0 com.miui.tsmclient
-#ç”»æŠ¥
+#»­±¨
 adb shell pm uninstall --user 0 com.mfashiongallery.emag
-#æœç´¢
+#ËÑË÷
 adb shell pm uninstall --user 0 com.android.quicksearchbox
-#é»„é¡µ
+#»ÆÒ³
 adb shell pm uninstall --user 0 com.miui.yellowpage
 
-#å”®åè‡ªåŠ¨æµ‹è¯•
+#ÊÛºó×Ô¶¯²âÊÔ
 adb shell pm uninstall --user 0 com.longcheertel.AutoTest
-#æ”¶éŸ³æœº
+#ÊÕÒô»ú
 adb shell pm uninstall --user 0 com.caf.fmradio
-#å¸¸ç”¨è¯­
+#³£ÓÃÓï
 adb shell pm uninstall --user 0 com.miui.phrase
-#è“ç‰™
+#À¶ÑÀ
 adb shell pm uninstall --user 0 com.xiaomi.bluetooth
 #anylytics
 adb shell pm uninstall --user 0 com.miui.analytics
-#ç”¨æˆ·åé¦ˆ
+#ÓÃ»§·´À¡
 adb shell pm uninstall --user 0 com.miui.bugreport
 
 
-#ç±³å¸æ”¯ä»˜
+#Ã×±ÒÖ§¸¶
 adb shell pm uninstall --user 0 com.xiaomi.payment
-#ä¹¦ç­¾
+#ÊéÇ©
 adb shell pm uninstall --user 0 com.android.bookmarkprovider
-#ç›¸å†Œ?
+#Ïà²á?
 adb shell pm uninstall --user 0 com.miui.extraphoto
-#è“ç‰™æœåŠ¡
+#À¶ÑÀ·şÎñ
 adb shell pm uninstall --user 0 com.android.bluetoothmdiservice
-#éŸ³æ•ˆ
+#ÒôĞ§
 adb shell pm uninstall --user 0 com.miui.audioeffect
-#æ™ºæ…§ç”Ÿæ´»
+#ÖÇ»ÛÉú»î
 adb shell pm uninstall --user 0 com.miui.hybrid.accessory
-#å°ç±³æ”¯ä»˜
+#Ğ¡Ã×Ö§¸¶
 adb shell pm uninstall --user 0 com.miui.nextpay
-#é—»å£°
+#ÎÅÉù
 adb shell pm uninstall --user 0 com.miui.accessibility
-#å•†åŸæœåŠ¡
+#ÉÌ³Ç·şÎñ
 adb shell pm uninstall --user 0 com.xiaomi.ab
-#ç³»ç»Ÿæ›´æ–°
+#ÏµÍ³¸üĞÂ
 adb shell pm uninstall --user 0 com.android.updater
-#æ”¶éŸ³æœºè°ƒé¢‘
+#ÊÕÒô»úµ÷Æµ
 adb shell pm uninstall --user 0 com.miui.fmservice
-#æ‰“å°å¤„ç†
+#´òÓ¡´¦Àí
 adb shell pm uninstall --user 0 com.android.printspooler
-#ä¼ é€é—¨
+#´«ËÍÃÅ
 adb shell pm uninstall --user 0 com.miui.contentextension
 #ana
 adb shell pm uninstall --user 0 com.miui.analytics
-#å•†åº—
+#ÉÌµê
 adb shell pm uninstall --user 0 com.xiaomi.market
-#æ‰©å±•
+#À©Õ¹
 adb shell pm uninstall --user 0 com.miui.contentcatcher
-#å°ç±³äº’è”
+#Ğ¡Ã×»¥Áª
 adb shell pm uninstall --user 0 com.xiaomi.mi_connect_service
-#æŸ¥æ‰¾æ‰‹æœº 
+#²éÕÒÊÖ»ú 
 adb shell pm uninstall --user 0 com.xiaomi.finddevice
-#æŠ•å±
+#Í¶ÆÁ
 adb shell pm uninstall --user 0 com.milink.service
 
-#åˆ·æœºå¤§å¸ˆ
+#ÌìÆø
+adb shell pm uninstall --user 0 com.miui.weather2
+#shop
+adb shell pm uninstall --user 0 com.xiaomi.shop
+#½¡¿µ
+adb shell pm uninstall --user 0 com.mi.health
+#½ğÈÚ
+adb shell pm uninstall --user 0 com.xiaomi.jr
+#Ã×¼Ò
+adb shell pm uninstall --user 0 com.xiaomi.smarthome
+#ÓÊ¼ş
+adb shell pm uninstall --user 0 com.android.email
+#ÊÕÒô»ú
+adb shell pm uninstall --user 0 com.miui.fm
+#Ò£¿Ø
+adb shell pm uninstall --user 0 com.duokan.phone.remotecontroller
+#ÔÄ¶Á
+adb shell pm uninstall --user 0 com.duokan.reader
+#baidu
+adb shell pm uninstall --user 0 com.baidu.searchbox
+#haokan
+adb shell pm uninstall --user 0 com.baidu.haokan
+
+
+#Ë¢»ú´óÊ¦
 adb shell pm uninstall --user 0 com.mgyun.shua.protector
+
+
+
+pause
