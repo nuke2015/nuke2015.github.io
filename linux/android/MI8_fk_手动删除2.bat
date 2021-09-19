@@ -296,6 +296,8 @@ adb shell pm uninstall --user 0 com.duokan.reader
 adb shell pm uninstall --user 0 com.baidu.searchbox
 #haokan
 adb shell pm uninstall --user 0 com.baidu.haokan
+#aiqiyi
+adb shell pm uninstall --user 0 com.qiyi.video
 
 
 #Ë¢»ú´óÊ¦
