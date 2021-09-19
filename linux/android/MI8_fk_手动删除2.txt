@@ -273,8 +273,6 @@ adb shell pm uninstall --user 0 com.xiaomi.mi_connect_service
 adb shell pm uninstall --user 0 com.xiaomi.finddevice
 #投屏
 adb shell pm uninstall --user 0 com.milink.service
-#newhome
-adb shell pm uninstall --user 0 com.miui.newhome
 
 #刷机大师
 adb shell pm uninstall --user 0 com.mgyun.shua.protector
