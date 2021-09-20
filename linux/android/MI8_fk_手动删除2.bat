@@ -225,5 +225,8 @@ adb shell pm uninstall --user 0 com.miui.analytics
 #用户反馈
 adb shell pm uninstall --user 0 com.miui.bugreport
 
+#原生输入法
+adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
+
 
 pause
