@@ -70,7 +70,7 @@ adb shell pm uninstall --user 0 com.google.ar.core
 adb shell pm uninstall --user 0 com.xiaomi.aiasst.service
 
 #小米备份
-adb shell pm uninstall --user 0 com.miui.backup
+#adb shell pm uninstall --user 0 com.miui.backup
 
 #壁纸 
 adb shell pm uninstall --user 0 com.miui.miwallpaper
@@ -157,7 +157,7 @@ adb shell pm uninstall --user 0 com.android.carrierdefaultapp
 #
 adb shell pm uninstall --user 0 com.miui.translationservice
 
-adb shell pm uninstall --user 0 com.android.sharedstoragebackup
+#adb shell pm uninstall --user 0 com.android.sharedstoragebackup
 
 adb shell pm uninstall --user 0 com.android.onetimeinitializer
 
@@ -169,25 +169,13 @@ adb shell pm uninstall --user 0 com.android.emergency
 
 
 #备份确认
-adb shell pm uninstall --user 0 com.android.backupconfirm
+#adb shell pm uninstall --user 0 com.android.backupconfirm
 
 #开机下载
 adb shell pm uninstall --user 0 com.android.providers.downloads
 
 #系統跟蹤
 adb shell pm uninstall --user 0 com.android.traceur
-
-#MIUI安全組件
-#adb shell pm uninstall --user 0 com.miui.guardprovider
-
-#系統服務組件
-#adb shell pm uninstall --user 0 com.miui.securityadd
-
-#安全核心組件
-#adb shell pm uninstall --user 0 com.miui.securitycore
-
-#小米服務框架
-adb shell pm uninstall --user 0 com.xiaomi.xmsf
 
 
 
@@ -198,111 +186,53 @@ adb shell pm uninstall --user 0 android.ext.shared
 adb shell pm uninstall --user 0 android.ext.services
 
 
-#原生输入法
-adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
 #服务反馈
 adb shell pm uninstall --user 0 com.miui.miservice
+
 #蓝牙
 adb shell pm uninstall --user 0 com.android.bluetooth
+
 #钱包
 adb shell pm uninstall --user 0 com.mipay.wallet
+
 #主题
 adb shell pm uninstall --user 0 com.android.thememanager
+
 #智能助理
 adb shell pm uninstall --user 0 com.miui.personalassistant
+
 #智能出行
 adb shell pm uninstall --user 0 com.miui.smarttravel
+
 #智能卡
 adb shell pm uninstall --user 0 com.miui.tsmclient
+
 #画报
 adb shell pm uninstall --user 0 com.mfashiongallery.emag
+
 #搜索
 adb shell pm uninstall --user 0 com.android.quicksearchbox
+
 #黄页
 adb shell pm uninstall --user 0 com.miui.yellowpage
 
 #售后自动测试
 adb shell pm uninstall --user 0 com.longcheertel.AutoTest
+
 #收音机
 adb shell pm uninstall --user 0 com.caf.fmradio
+
 #常用语
 adb shell pm uninstall --user 0 com.miui.phrase
+
 #蓝牙
 adb shell pm uninstall --user 0 com.xiaomi.bluetooth
+
 #anylytics
 adb shell pm uninstall --user 0 com.miui.analytics
+
 #用户反馈
 adb shell pm uninstall --user 0 com.miui.bugreport
-
-
-#米币支付
-adb shell pm uninstall --user 0 com.xiaomi.payment
-#书签
-adb shell pm uninstall --user 0 com.android.bookmarkprovider
-#相册?
-adb shell pm uninstall --user 0 com.miui.extraphoto
-#蓝牙服务
-adb shell pm uninstall --user 0 com.android.bluetoothmdiservice
-#音效
-adb shell pm uninstall --user 0 com.miui.audioeffect
-#智慧生活
-adb shell pm uninstall --user 0 com.miui.hybrid.accessory
-#小米支付
-adb shell pm uninstall --user 0 com.miui.nextpay
-#闻声
-adb shell pm uninstall --user 0 com.miui.accessibility
-#商城服务
-adb shell pm uninstall --user 0 com.xiaomi.ab
-#系统更新
-adb shell pm uninstall --user 0 com.android.updater
-#收音机调频
-adb shell pm uninstall --user 0 com.miui.fmservice
-#打印处理
-adb shell pm uninstall --user 0 com.android.printspooler
-#传送门
-adb shell pm uninstall --user 0 com.miui.contentextension
-#ana
-adb shell pm uninstall --user 0 com.miui.analytics
-#商店
-adb shell pm uninstall --user 0 com.xiaomi.market
-#扩展
-adb shell pm uninstall --user 0 com.miui.contentcatcher
-#小米互联
-adb shell pm uninstall --user 0 com.xiaomi.mi_connect_service
-#查找手机 
-adb shell pm uninstall --user 0 com.xiaomi.finddevice
-#投屏
-adb shell pm uninstall --user 0 com.milink.service
-
-#天气
-adb shell pm uninstall --user 0 com.miui.weather2
-#shop
-adb shell pm uninstall --user 0 com.xiaomi.shop
-#健康
-adb shell pm uninstall --user 0 com.mi.health
-#金融
-adb shell pm uninstall --user 0 com.xiaomi.jr
-#米家
-adb shell pm uninstall --user 0 com.xiaomi.smarthome
-#邮件
-adb shell pm uninstall --user 0 com.android.email
-#收音机
-adb shell pm uninstall --user 0 com.miui.fm
-#遥控
-adb shell pm uninstall --user 0 com.duokan.phone.remotecontroller
-#阅读
-adb shell pm uninstall --user 0 com.duokan.reader
-#baidu
-adb shell pm uninstall --user 0 com.baidu.searchbox
-#haokan
-adb shell pm uninstall --user 0 com.baidu.haokan
-#aiqiyi
-adb shell pm uninstall --user 0 com.qiyi.video
-
-
-#刷机大师
-adb shell pm uninstall --user 0 com.mgyun.shua.protector
-
 
 
 pause
