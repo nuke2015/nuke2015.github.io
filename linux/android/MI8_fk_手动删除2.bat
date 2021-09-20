@@ -165,9 +165,6 @@ adb shell pm uninstall --user 0 com.android.emergency
 #备份确认
 #adb shell pm uninstall --user 0 com.android.backupconfirm
 
-#开机下载
-adb shell pm uninstall --user 0 com.android.providers.downloads
-
 #系統跟蹤
 adb shell pm uninstall --user 0 com.android.traceur
 
