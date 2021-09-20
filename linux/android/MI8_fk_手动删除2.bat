@@ -20,14 +20,8 @@ adb shell pm uninstall --user 0 com.android.dreams.basic
 #系统打印
 adb shell pm uninstall --user 0 com.android.bips
 
-#账号
-adb shell pm uninstall --user 0 com.xiaomi.account
-
 #小米支付
 adb shell pm uninstall --user 0 com.xiaomi.miplay_client
-
-#小米助手 
-adb shell pm uninstall --user 0 com.xiaomi.aiasst.vision
 
 #智能服务
 adb shell pm uninstall --user 0 com.miui.systemAdSolution
