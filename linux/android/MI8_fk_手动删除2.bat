@@ -232,7 +232,7 @@ adb shell pm uninstall --user 0 com.miui.bugreport
 adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
 
 #查找手机
-adb shell pm uninstall --user 0 com.xiaomi.finddeviceadb shell pm uninstall --user 0 com.xiaomi.finddevice
+adb shell pm uninstall --user 0 com.xiaomi.finddevice
 
 #小爱同学
 adb shell pm uninstall --user 0 com.miui.voiceassist
