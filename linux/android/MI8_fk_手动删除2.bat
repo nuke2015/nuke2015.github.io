@@ -227,15 +227,4 @@ adb shell pm uninstall --user 0 com.miui.bugreport
 
 
 
-
-#原生输入法
-adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi
-
-#查找手机
-adb shell pm uninstall --user 0 com.xiaomi.finddevice
-
-#小爱同学
-adb shell pm uninstall --user 0 com.miui.voiceassist
-
-
 pause
