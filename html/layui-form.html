@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+		<script src="https://www.layuicdn.com/layui/layui.js"></script>
+	</head>
+
+	<body>
+
+		<form src="#" method="post" class="layui-form">
+			<input type="text" name="name" placeholder="用户名" required lay-verify="required"
+				class="layui-input layui-form-danger login-input">
+			<input type="password" name="password" placeholder="密码" required lay-verify="required"
+				class="layui-input layui-form-danger login-input">
+			<button class="layui-btn layui-btn-fluid login-btn" lay-submit lay-filter="login">登录</button>
+		</form>
+
+
+		<script type="text/javascript">
+			var $ = layui.jquery;
+			$(function() {
+				layui.use('form', function() {
+					var form = layui.form;
+					//监听提交
+					form.on('submit(login)', function(data) {
+						console.log(data, data.field);
+						alert(data.field)
+						return false;
+					});
+				});
+			})
+		</script>
+
+	</body>
+</html>
