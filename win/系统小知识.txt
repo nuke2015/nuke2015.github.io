@@ -19,3 +19,7 @@ C:\Users\19697\AppData\Roaming\Microsoft\Windows\SendTo
 2019年11月23日 15:31:13
 win+tab虚拟桌面,win+ctrl+左/右切桌面
 
+2021年9月26日 18:37:26
+系统引导问题，逻辑盘不是主盘。
+重新 格式化，以激活+主要盘，重新安装，自动修复win引导即可。
+
