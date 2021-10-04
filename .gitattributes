@@ -37,6 +37,8 @@
 *.tar   -text
 *.phar   -text
 *.bat   -text
+*.csv   -text
+*.pyc   -text
 
 # Custom for Visual Studio
 *.cs     diff=csharp
