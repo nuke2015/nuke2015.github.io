@@ -20,6 +20,7 @@
 *.7z   -text
 *.pdf   -text
 *.ttf   -text
+*.ttc   -text
 *.eot   -text
 *.woff   -text
 *.woff2   -text
@@ -34,4 +35,5 @@
 *.z   -text
 *.bz   -text
 *.tar   -text
+*.phar   -text
 *.bat   -text
