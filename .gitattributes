@@ -34,3 +34,4 @@
 *.z   -text
 *.bz   -text
 *.tar   -text
+*.bat   -text
