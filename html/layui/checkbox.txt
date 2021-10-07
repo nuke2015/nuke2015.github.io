@@ -1,0 +1,16 @@
+
+
+// 手动渲染,因为layui多选,是根据key的值自动选中的.
+$("input[name='certificate']").each(function(k, v) {
+    for (i in data.certificate) {
+        check = parseInt(data.certificate[i]);
+        val = parseInt($(v).val());
+        if (check == val) {
+            console.log(val);
+            $(v).attr('checked', 1);
+        }
+    }
+    layui.form.render(null, 'DistributeInfo')
+});
+// 注意layui.form.render需要重新渲染才能看到新效果.
+
