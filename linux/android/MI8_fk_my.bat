@@ -16,7 +16,9 @@ rem Œ¥—È÷§
 
 
 adb shell pm uninstall --user 0 com.milink.service
+
 adb shell pm uninstall --user 0 com.xiaomi.miplay_client
+
 adb shell pm uninstall --user 0 com.android.printspooler
 
 
