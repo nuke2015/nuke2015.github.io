@@ -8,5 +8,5 @@
 	{ "keys": ["shift+f12"], "command": "goto_definition_scope" },
 	{ "keys": ["f7"], "command": "insert_php_constructor_property" },
 	{ "keys": ["ctrl+alt+f"], "command": "alignment" },
-    { "keys": ["ctrl+shift+s"], "command": "save_all" },
+	{ "keys": ["ctrl+shift+w"], "command": "close_all" },
 ]
