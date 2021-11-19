@@ -1,0 +1,19 @@
+{
+    "check_update": false,
+    "color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+    "draw_minimap_border": true,
+    "font_size": 19,
+    "ignored_packages": [
+		"Vintage"
+    ],
+    "jsdocs_extra_tags": [
+        "@Author yangshuiping",
+        "@DateTime {{datetime}}"
+    ],
+    "jsdocs_function_description": true,
+    "line_padding_bottom": 6,
+    "smart_indent": false,
+    "trim_trailing_white_space_on_save": true,
+    "php_bin": "D:/lnmp/php/php.exe",
+    "format_on_save": true,
+}

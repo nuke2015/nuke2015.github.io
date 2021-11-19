@@ -1,0 +1,13 @@
+{
+	"enable_auto_align": false,
+	"indent_with_space": true,
+	"passes":
+	[
+		"OnlyOrderUseClauses",
+		"ReindentSwitchBlocks"
+	],
+	"psr1": true,
+	"psr1_naming": false,
+	"psr2": true,
+	"version": 4,
+}
