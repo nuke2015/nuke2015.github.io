@@ -1,0 +1,11 @@
+
+dk pull ddys/android-gradle:4.0
+
+dk run --itd ddys/android-gradle:4.0
+
+dk exec -it xx /bin/bash
+
+安装sdk依赖
+apt update && apt install android-sdk
+
+
