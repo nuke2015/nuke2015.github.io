@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1,user-scalable=0" name="viewport" />
+		<title>
+			榕城家政
+		</title>
+		<!-- 字体 -->
+		<link href="/rcjz/cssjs/css/font-awesome.css" rel="stylesheet" />
+		<!-- head 中 -->
+		<link rel="stylesheet" href="/rcjz/cssjs/css/weui.min.css">
+		<link rel="stylesheet" href="/rcjz/cssjs/css/jquery-weui.min.css">
+
+		<!-- body 最后 -->
+		<script src="/rcjz/cssjs/js/jquery.min.js"></script>
+		<script src="/rcjz/cssjs/js/jquery-weui.min.js"></script>
+
+		<!-- 如果使用了某些拓展插件还需要额外的JS -->
+		<script src="/rcjz/cssjs/js/swiper.min.js"></script>
+		<script src="/rcjz/cssjs/js/city-picker.min.js"></script>
+        
+        <script src="/rcjz/layui2.6/layui/layui.js"></script>
+        <script src="/rcjz/cssjs/common.js"></script>
+        <script src="/rcjz/cssjs/template_art.js"></script>
+        <script src="/rcjz/cssjs/utils_min.js"></script>
+
+		<link rel="stylesheet" href="/rcjz/cssjs/css/common.css" />
+	</head>
+</html>
+
+<body ontouchstart="">
+	<!-- Your Code -->
+	<div class="container">
+		<div class="page flex ">
+			
+			<div class="weui-flex home-banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img alt="banner" src="http://placehold.it/400x156?text=banner1" />
+						</div>
+						<div class="swiper-slide">
+							<img alt="banner" src="http://placehold.it/400x156?text=banner2" />
+						</div>
+						<div class="swiper-slide">
+							<img alt="banner" src="http://placehold.it/400x156?text=baner3" />
+						</div>
+					</div>
+					<!-- 如果需要分页器 -->
+					<div class="swiper-pagination">
+					</div>
+					<!-- 如果需要导航按钮 -->
+					<!-- <div class="swiper-button-prev">
+                    </div>
+                    <div class="swiper-button-next">
+                    </div> -->
+					<!-- 如果需要滚动条 -->
+					<!-- <div class="swiper-scrollbar">
+                    </div> -->
+				</div>
+			</div>
+			<div class="weui-flex home-menu">
+				<ul class="menu-ul">
+					<li>
+						<i class="fa fa-heart-o menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-pied-piper-alt menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-viadeo menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-stethoscope menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-wordpress menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-linux menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-linode menu-fa">
+						</i>
+					</li>
+					<li>
+						<i class="fa fa-firefox menu-fa">
+						</i>
+					</li>
+				</ul>
+			</div>
+			<div class="weui-flex home-xing">
+				<div class="weui-flex__item">
+					<div class="placeholder">
+						<i class="fa fa-xing">
+						</i>
+						月嫂之星
+					</div>
+				</div>
+				<div class="weui-flex__item">
+					<div class="placeholder fr">
+						更多
+						<i class="fa fa-angle-double-right">
+						</i>
+					</div>
+				</div>
+			</div>
+			<div class="weui-flex home-xing-bd">
+				<p class="home-xing-item">
+					<img alt="" src="http://placehold.it/150x150?text=yuesao1">
+					<br />
+					广东省-锋子
+					<br>
+					<span class="redtitle">
+						六星月嫂
+					</span>
+					</br>
+					</img>
+				</p>
+				<p class="home-xing-item">
+					<img alt="" src="http://placehold.it/150x150?text=yuesao2">
+					<br />
+					广东省-锋子
+					<br>
+					<span class="redtitle">
+						六星月嫂
+					</span>
+					</br>
+					</img>
+				</p>
+				<p class="home-xing-item">
+					<img alt="" src="http://placehold.it/150x150?text=yuesao3">
+					<br />
+					广东省-锋子
+					<br>
+					<span class="redtitle">
+						六星月嫂
+					</span>
+					</br>
+					</img>
+				</p>
+				<p class="home-xing-item">
+					<img alt="" src="http://placehold.it/150x150?text=yuesao4">
+					<br />
+					广东省-锋子
+					<br>
+					<span class="redtitle">
+						六星月嫂
+					</span>
+					</br>
+					</img>
+				</p>
+			</div>
+		</div>
+		<div class="weui-flex home-xing">
+			<div class="weui-flex__item">
+				<div class="placeholder">
+					<i class="fa fa-users">
+					</i>
+					用户评价
+				</div>
+			</div>
+			<div class="weui-flex__item">
+				<div class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right">
+					</i>
+				</div>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<div class="home-comment">
+				<div class="weui-flex home-comment-icon">
+					<div class="weui-flex">
+						<div class="comment-uicon">
+							<i class="fa fa-user">
+							</i>
+						</div>
+						<div class="comment-name">
+							<span>
+								王小姐
+							</span>
+							<span class="comment">
+								<i class="fa fa-heart">
+								</i>
+								<i class="fa fa-heart">
+								</i>
+								<i class="fa fa-heart">
+								</i>
+								<i class="fa fa-heart-o">
+								</i>
+								<i class="fa fa-heart-o">
+								</i>
+							</span>
+							<div class="comment-server">
+								<span>
+									2020年5月16日 服务
+									<span class="redtitle">
+										26
+									</span>
+									天
+								</span>
+							</div>
+						</div>
+						<div class="clearfix">
+						</div>
+					</div>
+				</div>
+				<div class="weui-flex home-comment-txt">
+					时间过的好快，弹指间麦姐已在我家服务时间即将到期。在这服务期间里，非常感谢麦姐对我家庭的付出与宝宝的贴心照顾，也使我在这26天月子里能轻松，愉快的度过。服务期间，我家对麦姐的为人，责任心，做事勤劳表示很满意。做的月子餐味道很不错，值得推荐！[微笑][微笑]
+				</div>
+				<div class="weui-flex home-comment-img">
+					<img alt="" src="http://placehold.it/95x95?text=comment1">
+					<img alt="" src="http://placehold.it/95x95?text=comment2">
+					<img alt="" src="http://placehold.it/95x95?text=comment3">
+					</img>
+					</img>
+					</img>
+				</div>
+			</div>
+		</div>
+		<div class="weui-flex home-xing">
+			<div class="weui-flex__item">
+				<div class="placeholder">
+					<i class="fa fa-users">
+					</i>
+					育婴知识
+				</div>
+			</div>
+			<div class="weui-flex__item">
+				<div class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right">
+					</i>
+				</div>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<div class="weui-cells">
+				<a class="weui-cell weui-media-box">
+					<div class="weui-cell__bd">
+						<img alt="" src="http://placehold.it/95x95?text=article" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="article-title">
+							12个分娩前后需要注意的细节，请孕妈早做准备！
+						</h4>
+						<p class="article-desp">
+							无论是否生育过，孕妈到生产时多多少少都会有点担心。分娩有哪些需要提前了解和准备的呢？下面榕城家政告诉你9个分娩细节，让你轻松生产。
+						</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-media-box">
+					<div class="weui-cell__bd">
+						<img alt="" src="http://placehold.it/95x95?text=article" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="article-title">
+							12个分娩前后需要注意的细节，请孕妈早做准备！
+						</h4>
+						<p class="article-desp">
+							无论是否生育过，孕妈到生产时多多少少都会有点担心。分娩有哪些需要提前了解和准备的呢？下面榕城家政告诉你9个分娩细节，让你轻松生产。
+						</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-media-box">
+					<div class="weui-cell__bd">
+						<img alt="" src="http://placehold.it/95x95?text=article" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="article-title">
+							12个分娩前后需要注意的细节，请孕妈早做准备！
+						</h4>
+						<p class="article-desp">
+							无论是否生育过，孕妈到生产时多多少少都会有点担心。分娩有哪些需要提前了解和准备的呢？下面榕城家政告诉你9个分娩细节，让你轻松生产。
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- 订单列表 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">订单列表</div>
+			<div class="weui-flex__item">
+				<span class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<img src="http://placehold.it/95x95?text=product" alt="产品名" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="order-title">保洁单
+							<span class="fr"> ￥150元</span>
+						</h4>
+						<div class="article-desp">东方首府，日常 保洁 三小时，</div>
+						<div class="article-desp">芳姐，海椒姐，晓兰姐，</div>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						客户:
+						<span class="fr">邹先生，13530861042</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">派人</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">收款</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">发放积分</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">跟进</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="weui-flex home-xing-bd">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<img src="http://placehold.it/95x95?text=product" alt="产品名" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="order-title">保姆单
+							<span class="fr"> ￥150元</span>
+						</h4>
+						<div class="article-desp">东方首府，日常 保洁 三小时，</div>
+						<div class="article-desp">芳姐，海椒姐，晓兰姐，</div>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						客户:
+						<span class="fr">邹先生，13530861042</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">派人</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">收款</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">发放积分</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">跟进</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 我的积分 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">
+				我的积分
+				<span class="placeholder fr">
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<div class="weui-cells weui-flex__item">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						订单消费
+						<span class="fr">+100分</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						后台发放
+						<span class="fr">+80分</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						推荐好友
+						<span class="fr">+20分</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						消费抵扣
+						<span class="fr">-200分</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 粉丝管理 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">粉丝管理</div>
+			<div class="weui-flex__item">
+				<span class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<img src="http://placehold.it/95x95?text=weixin" alt="微信昵称" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="order-title">路人假
+							<span class="fr">阿姨</span>
+						</h4>
+						<div class="article-desp">备注：不配合面试!</div>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						保洁3小时
+						<span class="fr">2022年2月19日 04:09:01</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						保洁2.5小时
+						<span class="fr">2022年2月19日 04:09:01</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						保洁全天
+						<span class="fr">2022年2月19日 04:09:01</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">简历</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">照片</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">积分</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">跟进</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 新订单 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">新订单</div>
+			<div class="weui-flex__item">
+				<span class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<!-- 服务内容 -->
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+						<div class="weui-textarea-counter"><span>0</span>/200</div>
+					</div>
+				</div>
+				<!-- 输入框 -->
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">价格</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="服务价格">
+					</div>
+				</div>
+				<!-- 日期 -->
+				<div class="weui-cell border-bottom">
+					<div class="weui-cell__hd">
+						<label for="birth" class="weui-label">出生日期</label>
+					</div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="birth" type="text" placeholder="请选择出生日期" readonly>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 订单收款 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">订单收款</div>
+			<div class="weui-flex__item">
+				<span class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<!-- 服务内容 -->
+			<div class="weui-cells weui-cells_form">
+
+				<!-- 输入框 -->
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">总金额</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="服务总金额">
+					</div>
+				</div>
+
+				<!-- 输入框 -->
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">结余</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="结余净利润">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<a class="weui-btn weui-btn_primary" href="javascript:">确定</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 订单派人 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">订单派人</div>
+			<div class="weui-flex__item">
+				<span class="placeholder fr">
+					更多
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<!-- 服务内容 -->
+			<div class="weui-cells weui-cells_form">
+
+				<!-- 输入框 -->
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">阿姨姓名</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请查找阿姨姓名">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<a class="weui-btn weui-btn_primary" href="javascript:">确定</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 版权提示 -->
+		<div class="weui-footer home-footer">
+			<p class="weui-footer__links">
+				<a class="weui-footer__link" href="javascript:">
+					家家母婴,版权所有
+				</a>
+			</p>
+			<p class="weui-footer__text">
+				Copyright © 2008-2016 weui.io
+			</p>
+		</div>
+	</div>
+</body>
+<script>
+	// var mySwiper = new Swiper('.swiper-container', {
+	// 	loop: true, // 循环模式选项
+
+	// 	// 如果需要分页器
+	// 	pagination: {
+	// 		el: '.swiper-pagination',
+	// 	},
+
+	// 	// 如果需要前进后退按钮
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+
+	// 	// 如果需要滚动条
+	// 	scrollbar: {
+	// 		el: '.swiper-scrollbar',
+	// 	},
+	// });
+	// 日期组件
+	$("#birth").datetimePicker();
+</script>

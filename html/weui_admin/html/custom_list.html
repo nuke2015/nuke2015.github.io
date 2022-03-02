@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1,user-scalable=0" name="viewport" />
+		<title>
+			客户管理(榕城家政)
+		</title>
+		<!-- 字体 -->
+		<link href="/rcjz/cssjs/css/font-awesome.css" rel="stylesheet" />
+		<!-- head 中 -->
+		<link rel="stylesheet" href="/rcjz/cssjs/css/weui.min.css">
+		<link rel="stylesheet" href="/rcjz/cssjs/css/jquery-weui.min.css">
+
+		<!-- body 最后 -->
+		<script src="/rcjz/cssjs/js/jquery.min.js"></script>
+		<script src="/rcjz/cssjs/js/jquery-weui.min.js"></script>
+
+		<!-- 如果使用了某些拓展插件还需要额外的JS -->
+		<script src="/rcjz/cssjs/js/swiper.min.js"></script>
+		<script src="/rcjz/cssjs/js/city-picker.min.js"></script>
+        
+        <script src="/rcjz/layui2.6/layui/layui.js"></script>
+        <script src="/rcjz/cssjs/common.js"></script>
+        <script src="/rcjz/cssjs/template_art.js"></script>
+        <script src="/rcjz/cssjs/utils_min.js"></script>
+
+		<link rel="stylesheet" href="/rcjz/cssjs/css/common.css" />
+	</head>
+</html>
+
+<body ontouchstart="">
+	<!-- Your Code -->
+	<div class="container">
+		<div class="page">
+		</div>
+		<div class="page__bd">
+			<div class="weui-search-bar" id="searchBar">
+				<form id="searchForm" role="combobox" aria-haspopup="true" aria-expanded="false"
+					aria-owns="searchResult" class="weui-search-bar__form">
+					<div class="weui-search-bar__box">
+						<i class="weui-icon-search"></i>
+						<input type="search" aria-controls="searchResult" class="weui-search-bar__input"
+							id="searchInput" placeholder="搜索" required="">
+						<a href="javascript:" role="button" title="清除" class="weui-icon-clear" id="searchClear"
+							wah-hotarea="click"></a>
+					</div>
+					<label for="searchInput" class="weui-search-bar__label" id="searchText" wah-hotarea="click">
+						<i class="weui-icon-search"></i>
+						<span aria-hidden="true">搜索</span>
+					</label>
+				</form>
+				<a href="javascript:" role="button" class="weui-search-bar__cancel-btn" id="searchCancel"
+					wah-hotarea="click">取消</a>
+			</div>
+
+		</div>
+		<strong>
+
+
+		</strong>
+
+		<!-- 粉丝管理 -->
+		<div class="weui-flex home-xing">
+			<i class="fa fa-users">
+			</i>
+			<div class="weui-flex__item">
+				
+			</div>
+			<div class="weui-flex__item">
+				<span class="placeholder fr">
+					<div class="weui-btn weui-btn_mini weui-btn_primary">新客户</div>
+					<!-- <i class="fa fa-angle-double-right"></i> -->
+				</span>
+			</div>
+		</div>
+		<div class="weui-flex home-xing-bd">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<img src="https://www.jjys168.com/a/image/?x=95&y=95&txt=weixin" alt="微信昵称" />
+					</div>
+					<div class="weui-cell__bd">
+						<h4 class="order-title">路人假
+							<span class="fr">阿姨</span>
+						</h4>
+						<div class="article-desp">备注：不配合面试!</div>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						保洁3小时
+						<span class="fr">2022年2月19日 04:09:01</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						保洁2.5小时
+						<span class="fr">2022年2月19日 04:09:01</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						保洁全天
+						<span class="fr">2022年2月19日 04:09:01</span>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">简历</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">照片</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">积分</a>
+					<a href="#" class="weui-btn weui-btn_mini weui-btn_primary">跟进</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

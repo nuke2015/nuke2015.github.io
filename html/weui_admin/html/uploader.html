@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1,user-scalable=0" name="viewport" />
+		<title>
+			榕城家政
+		</title>
+		<!-- 字体 -->
+		<link href="/rcjz/cssjs/css/font-awesome.css" rel="stylesheet" />
+		<!-- head 中 -->
+		<link rel="stylesheet" href="/rcjz/cssjs/css/weui.min.css">
+		<link rel="stylesheet" href="/rcjz/cssjs/css/jquery-weui.min.css">
+
+		<!-- body 最后 -->
+		<script src="/rcjz/cssjs/js/jquery.min.js"></script>
+		<script src="/rcjz/cssjs/js/jquery-weui.min.js"></script>
+
+		<!-- 如果使用了某些拓展插件还需要额外的JS -->
+		<script src="/rcjz/cssjs/js/swiper.min.js"></script>
+		<script src="/rcjz/cssjs/js/city-picker.min.js"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/webuploader/0.1.0/webuploader.min.js"></script>
+        
+        <script src="/rcjz/layui2.6/layui/layui.js"></script>
+        <script src="/rcjz/cssjs/common.js"></script>
+        <script src="/rcjz/cssjs/template_art.js"></script>
+        <script src="/rcjz/cssjs/utils_min.js"></script>
+
+		<link rel="stylesheet" href="/rcjz/cssjs/css/common.css" />
+	</head>
+</html>
+
+<body ontouchstart="">
+	<div class="container">
+		<div class="page">
+			
+		</div>
+		<div class="weui-cells weui-cells_form" id="uploader">
+			<div class="weui-cell">
+				<div class="weui-cell__bd">
+					<div class="weui-uploader__bd">
+						<ul class="weui-uploader__files" id="imgList">
+							<!-- <li id="" class="weui-uploader__file" style="background-image:url()"></li> -->
+						</ul>
+						<div class="weui-uploader__input-box">
+							<div id="imgInput" class="weui-uploader__input">选择图片</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 版权提示 -->
+		<div class="weui-footer home-footer">
+			<p class="weui-footer__links">
+				<a class="weui-footer__link" href="javascript:">
+					家家母婴,版权所有
+				</a>
+			</p>
+			<p class="weui-footer__text">
+				Copyright © 2008-2016 weui.io
+			</p>
+		</div>
+	</div>
+</body>
+<script>
+	var uploader = WebUploader.create({
+		auto: true,
+		swf: '/statics/webuploader-0.1.5/Uploader.swf',
+		server: 'http://api.loc.qinqinyuesao.com/?methodName=FileUpload',
+		pick: '#imgInput',
+		accept: {
+			title: 'Images',
+			extensions: 'gif,jpg,jpeg,bmp,png',
+			mimeTypes: 'image/*'
+		},
+		method: 'POST',
+		formData: {
+			'user_id': '1'
+		}
+	});
+	uploader.on('uploadStart', function(file) {
+		this.options.formData.key = 'image/' + new Date().getTime() + '/' + file.name.replace(/,/g, '');
+	});
+	uploader.on('fileQueued', function(file) {
+		var $preview = $('<li id="' + file.id +
+			'" class="weui-uploader__file weui-uploader__file_status"><div class="weui-uploader__file-content">0%</div></li>'
+			);
+		$('#imgList').append($preview);
+		uploader.makeThumb(file, function(error, src) {
+			$('#' + file.id).css('background-image', 'url(' + src + ')');
+		}, 79, 79);
+	});
+	uploader.on('uploadProgress', function(file, percentage) {
+		$('#' + file.id).find('.weui-uploader__file-content').html(percentage + '%');
+	});
+	uploader.on('uploadSuccess', function(file, response) {
+		$('#' + file.id).removeClass('weui-uploader__file_status')
+			.find('.weui-uploader__file-content')
+			.remove();
+		console.log(file, response);
+	});
+</script>
