@@ -4,14 +4,14 @@
 // app交互行为定制
 var app = {
     // 跳转到app界面,比如uri=index,跳转到首页
-    jump: function (uri) {
+    jump: function(uri) {
         var obj = {
             func: 'jump',
             'topage': uri
         };
         this.send(obj);
     },
-    login: function (topage) {
+    login: function(topage) {
         // app内部登陆事件
         var obj = {
             func: "login",
@@ -20,7 +20,7 @@ var app = {
         this.send(obj);
     },
     // 发送报文
-    send: function (obj) {
+    send: function(obj) {
         var platform = helper.get_platform();
         // 只有app内嵌页面才进行召唤.
         if (platform == 1 || platform == 2) {
@@ -31,32 +31,32 @@ var app = {
         }
     },
     // app.debug('feng', 'this is logger');
-    debug: function (title, data) {
+    debug: function(title, data) {
         doRequestwithnoheader({
             'methodName': 'AppDebug',
             'title': title,
             'data': data
-        }, function () {
+        }, function() {
             // succ
-        }, function () {
+        }, function() {
             //err
         });
     }
 };
 var isMobile = {
-    Android: function () {
+    Android: function() {
         return navigator.userAgent.match(/Android/i) ? true : false;
     },
-    BlackBerry: function () {
+    BlackBerry: function() {
         return navigator.userAgent.match(/BlackBerry/i) ? true : false;
     },
-    iOS: function () {
+    iOS: function() {
         return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
     },
-    Windows: function () {
+    Windows: function() {
         return navigator.userAgent.match(/IEMobile/i) ? true : false;
     },
-    any: function () {
+    any: function() {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
     }
 };
@@ -79,7 +79,7 @@ var helper = {
         school_footnav: 1, //学院底部：1(显示) 0(隐藏)
     },
     // 获取configWeb配置的缓存
-    getConfigWebInfo: function () {
+    getConfigWebInfo: function() {
         var data = helper._store('ConfigWeb');
         helper.jlog(data);
         if (data) {
@@ -88,18 +88,18 @@ var helper = {
             helper.updateConfigWebInfo();
         }
     },
-    updateConfigWebInfo: function () {
+    updateConfigWebInfo: function() {
         doRequestwithnoheader({
             "methodName": "ConfigCorp"
-        }, function (res) {
+        }, function(res) {
             if (res.data) {
                 helper._sess('ConfigWeb', res.data);
             }
-        }, function (res) {
+        }, function(res) {
             tip(res.msg);
         });
     },
-    kefu_contact: function (n) {
+    kefu_contact: function(n) {
         if (helper.isEmpty(helper.getConfigWebInfo().awt_kefu_id)) { // 没有商务通就打电话
             window.location.href = "tel:" + helper.kefu_phone();
         } else {
@@ -108,58 +108,59 @@ var helper = {
         }
     },
     // 客服电话
-    kefu_phone: function () {
+    kefu_phone: function() {
         return helper.getConfigWebInfo().contact;
     },
     //(多城市)商务通
-    kefu_url: function () {
+    kefu_url: function() {
         return helper.getConfigWebInfo().awt_kefu + encodeURIComponent(location.href) + '&r=' + encodeURIComponent(document.referrer);
     },
-   
-    autoload: function () {
+    autoload: function() {
         helper.config_autoload.weixin_append && this.weixin_append();
         helper.config_autoload.android_fit && this.android_fit(helper.config_autoload.android_fit_width);
         helper.config_autoload.common_append_must && this.common_append_must();
     },
-    citycode_set: function (code) {
+    citycode_set: function(code) {
         return true;
     },
     // 存corp_id【公司id】
-    store_corp_id: function (corp_id) {
+    store_corp_id: function(corp_id) {
         return true;
     },
-    common_append_must: function () {
-        this.xhr_get("/html/common_append.html", function (res) {
+    common_append_must: function() {
+        this.xhr_get("/html/common_append.html", function(res) {
             $('.page').prepend(res);
+            $('#webtitle').html(document.title);
         });
-        this.xhr_get("/html/common_footer.html", function (res) {
+        this.xhr_get("/html/common_footer.html", function(res) {
             $('body').append(res);
         });
+        // 回显示页面标题
         if (!helper.config_autoload.share_info_diy) {
             weixin_pub.shareDefault();
         }
     },
-    android_fit: function (a) {
+    android_fit: function(a) {
         if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
             document.write('<meta name="viewport" content="width=' + a + ',target-densitydpi=device-dpi,user-scalable=no" />');
         } else {
             document.write('<meta name="viewport" content="width=' + a + ', user-scalable=no">')
         }
     },
-    weixin_append: function () {
+    weixin_append: function() {
         // 微信浏览器,提前加载
         define = null;
         require = null;
         helper.js_append("https://res.wx.qq.com/open/js/jweixin-1.3.2.js");
         // helper.js_append("/js/utils/jweixin-1.0.0.js");
     },
-    jlog: function (obj) {
+    jlog: function(obj) {
         var log = JSON.stringify(obj);
         // 以json格式打日志
         console.log(log);
         return log;
     },
-    array_merge: function (a, c) {
+    array_merge: function(a, c) {
         // 数组合并,从c&&a的并集
         var d = {},
             b;
@@ -167,7 +168,7 @@ var helper = {
         for (b in c) d[b] = c[b];
         return d
     },
-    in_array: function (search, array) {
+    in_array: function(search, array) {
         // 数组存在判断
         for (var i in array) {
             if (array[i] == search) {
@@ -182,7 +183,7 @@ var helper = {
      * @param {String} 待分割字符串
      * @param {String} 分隔符
      */
-    str2Args: function (query, split) {
+    str2Args: function(query, split) {
         var args = {};
         query = query || '';
         split = split || '&';
@@ -205,7 +206,7 @@ var helper = {
      * @param {String} split 分隔符，默认是&
      * @return String 字符串参数
      */
-    args2Str: function (args, split) {
+    args2Str: function(args, split) {
         split = split || '&';
         var key, rtn = '',
             sp = '';
@@ -218,7 +219,7 @@ var helper = {
         }
         return rtn;
     },
-    jsonObjParams2Str: function (params, link) {
+    jsonObjParams2Str: function(params, link) {
         if (!link) {
             link = "&";
         }
@@ -233,7 +234,7 @@ var helper = {
         }
         return argsstr;
     },
-    isWeiXin: function () {
+    isWeiXin: function() {
         var ua = navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
             return true;
@@ -241,16 +242,16 @@ var helper = {
             return false;
         }
     },
-    isWechatApp: function () {
+    isWechatApp: function() {
         if (!window.WeixinJSBridge || !WeixinJSBridge.invoke) {
-            document.addEventListener('WeixinJSBridgeReady', function () {
+            document.addEventListener('WeixinJSBridgeReady', function() {
                 return window.__wxjs_environment === 'miniprogram'
             }, false)
         } else {
             return window.__wxjs_environment === 'miniprogram'
         }
     },
-    isHttps: function () {
+    isHttps: function() {
         var url = window.location.href;
         var isHttps = url.toUpperCase().indexOf("HTTPS");
         if (isHttps > -1) {
@@ -259,30 +260,30 @@ var helper = {
         return false;
     },
     // 登陆回跳
-    gotoLogin: function () {
+    gotoLogin: function() {
         location.href = '//' + TQ._domains.main + '/html/bindphone.html?topage=' + encodeURIComponent(location.href);
     },
     // 自由跳转
-    gotoUrl: function (url_to) {
+    gotoUrl: function(url_to) {
         location.href = '//' + TQ._domains.main + url_to;
     },
-    getProtocol: function () {
+    getProtocol: function() {
         if (helper.isHttps()) {
             return "https"
         }
         return "http";
     },
-    preventBackgroundScroll: function () {
+    preventBackgroundScroll: function() {
         $("body,html").css({
             "overflow": "hidden"
         });
     },
-    resumeBackgroundScroll: function () {
+    resumeBackgroundScroll: function() {
         $("body,html").css({
             "overflow": "auto"
         });
     },
-    js_append: function (url_t) {
+    js_append: function(url_t) {
         var hm = document.createElement("script");
         hm.src = url_t;
         hm.type = 'text/javascript';
@@ -290,23 +291,23 @@ var helper = {
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     },
-    setTitle: function (t) {
+    setTitle: function(t) {
         var $body = $('body');
         document.title = t;
         // hack在微信等webview中无法修改document.title的情况
         if (helper.isWeiXin()) {
-            var $iframe = $('<iframe src="/fav.ico" height="0"></iframe>').on('load', function () {
-                setTimeout(function () {
+            var $iframe = $('<iframe src="/fav.ico" height="0"></iframe>').on('load', function() {
+                setTimeout(function() {
                     $iframe.off('load').remove()
                 }, 0)
             }).appendTo($body);
         }
     },
-    set5Score: function (v, totalscore, width) {
+    set5Score: function(v, totalscore, width) {
         var t = (v * width * 100) / (totalscore * 100);
         return t;
     },
-    level2Txt: function (level) {
+    level2Txt: function(level) {
         var txt = "";
         if (level == 1) {
             txt = "特供月嫂";
@@ -333,7 +334,7 @@ var helper = {
         }
         return txt;
     },
-    level3Txt: function (level) {
+    level3Txt: function(level) {
         var txt = "";
         if (level == 2) {
             txt = "二星";
@@ -354,7 +355,7 @@ var helper = {
         }
         return txt;
     },
-    level3CareType: function (level) {
+    level3CareType: function(level) {
         var txt = "";
         if (level == 1) {
             txt = "育婴护理师";
@@ -367,7 +368,7 @@ var helper = {
         }
         return txt;
     },
-    level2Cls: function (level) {
+    level2Cls: function(level) {
         var txt = "jjys-big-start5";
         if (level == 1) {
             txt = "jjys-big-start1";
@@ -394,7 +395,7 @@ var helper = {
         }
         return txt;
     },
-    level3Cls: function (level) {
+    level3Cls: function(level) {
         var txt = "jjys-yuyin-start5";
         if (level == 3) {
             txt = "jjys-yuyin-start3";
@@ -418,7 +419,7 @@ var helper = {
     //* 出口参数：True：空
     //*           False：非空
     //*****************************************************************
-    isEmpty: function (v) {
+    isEmpty: function(v) {
         switch (typeof v) {
             case 'undefined':
                 return true;
@@ -440,21 +441,21 @@ var helper = {
         }
         return false;
     },
-    isAndroid: function () {
+    isAndroid: function() {
         var u = navigator.userAgent;
         if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { //安卓手机
             return true;
         }
         return false;
     },
-    isIOS: function () {
+    isIOS: function() {
         var u = navigator.userAgent;
         if (u.indexOf('iPhone') > -1) { //安卓手机
             return true;
         }
         return false;
     },
-    isMobile: function (phone) {
+    isMobile: function(phone) {
         // 手机号正则
         var reg = /^1[3|4|5|6|7|8|9][0-9]\d{8}$/;
         if (reg.test(phone)) {
@@ -462,7 +463,7 @@ var helper = {
         }
         return false;
     },
-    showPage: function (page, params, hashparams) {
+    showPage: function(page, params, hashparams) {
         if (this.isEmpty(params)) {
             if (this.isEmpty(hashparams)) {
                 window.location.href = page;
@@ -477,7 +478,7 @@ var helper = {
             window.location.href = page + "?" + this.jsonObjParams2Str(params) + "#" + this.jsonObjParams2Str(hashparams);
         }
     },
-    changeHash: function (hashparams) {
+    changeHash: function(hashparams) {
         var arr = window.location.href.split("#");
         window.location.href = arr[0] + "#" + this.jsonObjParams2Str(hashparams);
     },
@@ -487,7 +488,7 @@ var helper = {
      * @param obj   存储非函数类型的对象，不深度拷贝
      * @private
      */
-    _store: function (key, obj) {
+    _store: function(key, obj) {
         var value;
         // 因为open_id和手机号是关系断开的,所以,暂时用localstorage忽悠一下.
         //优先使用localstorege,其次使用cookie,
@@ -524,7 +525,7 @@ var helper = {
                 if (obj) {
                     if (typeof obj == "object") {
                         value = TQ.cookie(key, JSON.stringify(obj));
-                    } else if (typeof (obj) == "string" || typeof (obj) == "number") {
+                    } else if (typeof(obj) == "string" || typeof(obj) == "number") {
                         value = TQ.cookie(key, obj);
                     } else {
                         alert("localStorage:你存储的是非对象");
@@ -540,12 +541,12 @@ var helper = {
         }
         return value;
     },
-    _sess: function (key, obj) {
+    _sess: function(key, obj) {
         if (window.sessionStorage) {
             if (obj) {
                 if (typeof obj == "object") {
                     window.sessionStorage.setItem(key, JSON.stringify(obj));
-                } else if (typeof (obj) == "string" || typeof (obj) == "number") {
+                } else if (typeof(obj) == "string" || typeof(obj) == "number") {
                     window.sessionStorage.setItem(key, obj);
                 } else {
                     alert("sessionStorage:你存储的是非对象");
@@ -564,17 +565,17 @@ var helper = {
     /**
      * 获取url参数字段
      */
-    getUrlParams: function (name) {
+    getUrlParams: function(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
         var r = window.location.search.substr(1).match(reg); //匹配目标参数
         if (r != null) return decodeURIComponent(r[2]);
         return null; //返回参数值
     },
     //获取字符串的长度(区分中英文)
-    Bytelen: function (str) {
+    Bytelen: function(str) {
         return str.replace(/[^\x00-\xff]/g, "**").length;
     },
-    isLogin: function () {
+    isLogin: function() {
         var identityObj = helper._store("identity");
         if (identityObj && identityObj.user_id && identityObj.token) {
             return true;
@@ -584,15 +585,15 @@ var helper = {
     /**
      * [isLogout  清除用户信息]
      */
-    isLogout: function () {
+    isLogout: function() {
         localStorage.removeItem('identity')
     },
-    loading: function () {
+    loading: function() {
         if ($("body").has(".loading").length == 0) {
             $('body').append('<div class="loading"></div>');
         }
     },
-    reachBottom: function () {
+    reachBottom: function() {
         //瀑布流滚动识别
         var clientHeight = 0;
         var scrollHeight = 0;
@@ -613,7 +614,7 @@ var helper = {
             return false;
         }
     },
-    subStringCn: function (str, len, hasDot) {
+    subStringCn: function(str, len, hasDot) {
         // 截取多余的字符串
         var newLength = 0;
         // 强转
@@ -640,7 +641,7 @@ var helper = {
         return newStr;
     },
     // 1android2ios3公众号4小程序0wap
-    get_platform: function () {
+    get_platform: function() {
         var global_param = helper._store("global_param");
         if (!helper.isEmpty(global_param)) {
             platform = global_param.platform || 0;
@@ -661,7 +662,7 @@ var helper = {
         }
         return platform;
     },
-    getRandomArrItem: function (arr) {
+    getRandomArrItem: function(arr) {
         // 随机数组取其一
         if (helper.isEmpty(arr)) {
             return "";
@@ -672,7 +673,7 @@ var helper = {
         if (obj < 10) return "0" + "" + obj;
         else return obj;
     },
-    timeStampToDate: function (seconds, f) {
+    timeStampToDate: function(seconds, f) {
         // 时间戳转日期
         var md = new Date(1e3 * parseInt(seconds));
         var hour = md.getHours();
@@ -697,7 +698,7 @@ var helper = {
             return md.getFullYear() + "/" + (md.getMonth() + 1) + "/" + md.getDate() + " " + hour + ":" + minutes;
         }
     },
-    dateToTimeStamp: function (stringTime) {
+    dateToTimeStamp: function(stringTime) {
         // 转为时间戳,秒
         // 正确 var stringTime = '2013/07/10';
         // 不允许 var stringTime = '2013/9/7';
@@ -710,24 +711,24 @@ var helper = {
         }
         return timestamp;
     },
-    ossThumb: function (url_pic, thumb) {
+    ossThumb: function(url_pic, thumb) {
         // 云存储自动缩略图
         if (url_pic.indexOf('http://upload.ddys168.com/') != -1 || url_pic.indexOf('http://upload.jjys168.com/') != -1) {
             url_pic = url_pic + thumb;
         }
         return url_pic;
     },
-    toggle: function (x) {
+    toggle: function(x) {
         if (x) {
             return 0;
         } else {
             return 1;
         }
     },
-    timerOut: function (timeNow, className, fun) {
+    timerOut: function(timeNow, className, fun) {
         var timeEnd = timeNow.getTime() + 60 * 60 * 2 * 1000; //结束时间
         var text = '';
-        var timer = setInterval(function () {
+        var timer = setInterval(function() {
             var now = new Date();
             var timeLeft = parseInt((timeEnd - now.getTime()) / 1000);
             if (timeLeft <= 0) {
@@ -746,7 +747,7 @@ var helper = {
         }, 1000)
     },
     // 异步请求封装
-    xhr_get: function (uri, cb) {
+    xhr_get: function(uri, cb) {
         var xhr;
         if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();
@@ -754,7 +755,7 @@ var helper = {
             xhr = new ActiveXObject('Microsoft.XMLHTTP');
         }
         //异步接受响应
-        xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
                     cb(xhr.responseText);
@@ -766,7 +767,7 @@ var helper = {
         xhr.send();
     },
     // 异步post请求封装
-    xhr_post: function (uri, req, cb) {
+    xhr_post: function(uri, req, cb) {
         var xhr;
         if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();
@@ -774,7 +775,7 @@ var helper = {
             xhr = new ActiveXObject('Microsoft.XMLHTTP');
         }
         //异步接受响应
-        xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
                     cb(xhr.responseText);
@@ -792,7 +793,7 @@ var helper = {
      * @param  {Object} data 匹配城市数据的条件
      * @return {Object}      匹配成功的城市信息
      */
-    cityInfo: function (data) {
+    cityInfo: function(data) {
         var city = [{
             city: '深圳',
             code: '103212',
@@ -968,7 +969,7 @@ var helper = {
         return city;
     },
     /*获取当前城市信息*/
-    getCity: function () {
+    getCity: function() {
         var city_code = helper._store('city_code') || 103212;
         var city_config = helper.cityInfo();
         var result = {};
@@ -981,7 +982,7 @@ var helper = {
 //Base64编码
 var Base64 = {
     _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
-    encode: function (e) {
+    encode: function(e) {
         var t = "";
         var n, r, i, s, o, u, a;
         var f = 0;
@@ -1003,7 +1004,7 @@ var Base64 = {
         }
         return t
     },
-    decode: function (e) {
+    decode: function(e) {
         var t = "";
         var n, r, i;
         var s, o, u, a;
@@ -1028,7 +1029,7 @@ var Base64 = {
         t = Base64._utf8_decode(t);
         return t
     },
-    _utf8_encode: function (e) {
+    _utf8_encode: function(e) {
         e = e.replace(/\r\n/g, "\n");
         var t = "";
         for (var n = 0; n < e.length; n++) {
@@ -1046,7 +1047,7 @@ var Base64 = {
         }
         return t
     },
-    _utf8_decode: function (e) {
+    _utf8_decode: function(e) {
         var t = "";
         var n = 0;
         var r = c1 = c2 = 0;
@@ -1071,7 +1072,7 @@ var Base64 = {
 };
 // 只用于公众号的分享
 var weixin_pub = {
-    shareSend: function (wxParams) {
+    shareSend: function(wxParams) {
         // 避免非微信环境的调用
         if (!helper.isWeiXin()) {
             return 0;
@@ -1082,14 +1083,14 @@ var weixin_pub = {
             "methodName": "WeixinShare",
             "refer_url": encodeURIComponent(window.location.href)
         }
-        doRequestwithnoheader(req, function (res) {
+        doRequestwithnoheader(req, function(res) {
             weixin_pub.shareInit(wxParams, res.data);
-        }, function () {
+        }, function() {
             // no error
         });
     },
     //微信分享初始化
-    shareInit: function (wxParams, wxShareConfig) {
+    shareInit: function(wxParams, wxShareConfig) {
         if (wx) {
             wx.config({
                 debug: wxShareConfig.debug,
@@ -1115,7 +1116,7 @@ var weixin_pub = {
             wx.onMenuShareWeibo(wxData);
         });
     },
-    shareDefault: function () {
+    shareDefault: function() {
         // 分享定制
         var data_share = {
             "title": "家家月嫂平台,专业呵护母婴健康",
@@ -1128,11 +1129,11 @@ var weixin_pub = {
     }
 };
 // 异步请求
-var api_exam = function (req, handler, errorHandler) {
+var api_exam = function(req, handler, errorHandler) {
     ajax_send("/api_exam/?", req, handler, errorHandler);
 };
 // 异步请求
-var doRequestwithnoheader = function (req, handler, errorHandler) {
+var doRequestwithnoheader = function(req, handler, errorHandler) {
     var identity = helper._store('identity');
     // 登陆态注入
     if (identity && identity.admin_id && identity.token) {
@@ -1142,7 +1143,7 @@ var doRequestwithnoheader = function (req, handler, errorHandler) {
     ajax_send("/api_oa/?", req, handler, errorHandler);
 };
 // 异步请求
-var api_crm = function (req, handler, errorHandler) {
+var api_crm = function(req, handler, errorHandler) {
     req['_corp_id'] = helper.isEmpty(req['_corp_id']) ? 1 : req['_corp_id']
     req['token_type'] = 1;
     var identity = helper._store('identity');
@@ -1154,11 +1155,11 @@ var api_crm = function (req, handler, errorHandler) {
     ajax_send("/api_crm/?", req, handler, errorHandler);
 };
 // 系统方法
-var ajax_send = function (api, req, handler, errorHandler) {
+var ajax_send = function(api, req, handler, errorHandler) {
     // 覆盖最新版本号
     req.version = '4.11';
     var uri = '//' + g_host_api + api;
-    helper.xhr_post(uri, req, function (res) {
+    helper.xhr_post(uri, req, function(res) {
         var json = JSON.parse(res);
         if (json.code > 0) {
             // 如果是错误的用户指纹,需要清指纹并重新登陆
@@ -1187,7 +1188,7 @@ var global_sess = {};
 // api网关
 var g_host_api = location.host;
 window.TQ = {
-    debug: function () {
+    debug: function() {
         return true;
     },
     _domains: {
@@ -1195,12 +1196,12 @@ window.TQ = {
         imgcache: protocol + "://upload.ddys168.com",
         api: g_host_api
     },
-    set_host_api: function (uri) {
+    set_host_api: function(uri) {
         this._domains.api = protocol + '://' + uri;
     }
 };
 // 统一自动加载,配置可覆盖
-var autoload = (function () {
+var autoload = (function() {
     //config_autoload = helper.array_merge(config_autoload, g_params) //可以通过url进行配置项
     "undefined" != typeof config_autoload && (helper.config_autoload = helper.array_merge(helper.config_autoload, helper.array_merge(config_autoload, g_params)));
     helper.autoload();
