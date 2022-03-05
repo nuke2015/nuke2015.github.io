@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form json data</title>
-</head>
-<body>
-    <form id="myform" action="#" method="post">
-        <input type="text" name="title" />
-        <input type="text" name="phone" />
-        <input type="text" name="address" />
-        <input id="button" type="submit" value="提交">
-    </form>
-    <script>
-        $("#submit").click(function() {
-            var data = $("form").serializeArray();
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>form json data</title>
+		<link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" />
+		<script src="https://www.layuicdn.com/layui/layui.js"></script>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<form id="myform" class="layui-form layui-col-md5" action="#" method="post">
+			<p class="layui-form-item">姓名
+				<input type="text" class="layui-input" name="title" />
+			</p>
+			<p class="layui-form-item">电话：
+				<input type="text" class="layui-input"  name="phone" />
+			</p>
+			<p class="layui-form-item">地址：
+				<input type="text" class="layui-input"  name="address" />
+			</p>
+			<p class="layui-form-item">
+				<input id="mysub" class="layui-btn layui-btn-default"  type="button" value="提交">
+			</p>
+		</form>
+		<script>
+			$("#mysub").click(function() {
+				var data = $("form").serializeArray();
 
-            function convertFormToJSON(form) {
-                const array = $(form).serializeArray(); // Encodes the set of form elements as an array of names and values.
-                const json = {};
-                $.each(array, function() {
-                    json[this.name] = this.value || "";
-                });
-                return json;
-            }
-            var formData=convertFormToJSON("#myform");
-            console.log(data, formData);
-        });
-    </script>
-</body>
+				function convertFormToJSON(form) {
+					const array = $(form)
+				.serializeArray(); // Encodes the set of form elements as an array of names and values.
+					const json = {};
+					$.each(array, function() {
+						json[this.name] = this.value || "";
+					});
+					return json;
+				}
+				var formData = convertFormToJSON("#myform");
+				console.log(data, formData);
+				alert(formData);
+			});
+		</script>
+	</body>
 </html>
