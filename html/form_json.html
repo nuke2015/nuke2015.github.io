@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form json data</title>
+</head>
+<body>
+    <form id="myform" action="#" method="post">
+        <input type="text" name="title" />
+        <input type="text" name="phone" />
+        <input type="text" name="address" />
+        <input id="button" type="submit" value="提交">
+    </form>
+    <script>
+        $("#submit").click(function() {
+            var data = $("form").serializeArray();
+
+            function convertFormToJSON(form) {
+                const array = $(form).serializeArray(); // Encodes the set of form elements as an array of names and values.
+                const json = {};
+                $.each(array, function() {
+                    json[this.name] = this.value || "";
+                });
+                return json;
+            }
+            var formData=convertFormToJSON("#myform");
+            console.log(data, formData);
+        });
+    </script>
+</body>
+</html>
