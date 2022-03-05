@@ -40,8 +40,6 @@ layui
 https://www.layuicdn.com/layui/css/layui.css
 https://www.layuicdn.com/layui/layui.js
 
-weui
-
 
 zepto 
 http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js
