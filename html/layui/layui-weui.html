@@ -1,0 +1,156 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1,user-scalable=0" name="viewport" />
+		<title>
+			订单详情(榕城家政)
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+		<script src="https://www.layuicdn.com/layui/layui.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/weui/1.1.3/style/weui.min.css" />
+		
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	</head>
+	<style type="text/css">
+		.page-hd{
+			background: #7916be;
+			    color: #ffffff;
+			    padding: 10px;
+			    text-align: center;
+		}
+	</style>
+	<body ontouchstart="">
+
+		<!-- Your Code -->
+		<div class="container">
+			<div class="page flex ">
+				<div class="weui-flex page-hd">
+					<div>
+						<div class="placeholder">
+							<i class="fa fa-angle-left">
+							</i>
+						</div>
+					</div>
+					<div class="weui-flex__item">
+						<div class="placeholder" id="webtitle">订单详情(榕城家政)</div>
+					</div>
+					<div>
+						<div class="placeholder">
+							<i class="fa fa-home">
+							</i>
+						</div>
+					</div>
+				</div>
+				<!-- 新订单 -->
+				<div class="weui-flex home-xing">
+					<i class="fa fa-users">
+					</i>
+					<div class="weui-flex__item"></div>
+					<div class="weui-flex__item">
+						<span class="placeholder fr">
+							<div id="orderlist" class="weui-btn weui-btn_mini weui-btn_default">返回</div>
+							<!-- <i class="fa fa-angle-double-right"></i> -->
+						</span>
+					</div>
+				</div>
+				<form id="myform" method="post" class="layui-form" lay-filter="myform">
+					<div class="weui-flex home-xing-bd">
+						<!-- 服务内容 -->
+						<div class="weui-cells weui-cells_form" style="width:100%">
+							<div class="weui-cell">
+								<div class="weui-cell__bd">
+									<textarea class="weui-textarea" name="content" placeholder="请输入文本"
+										rows="3"></textarea>
+									<div class="weui-textarea-counter"><span>0</span>/200</div>
+								</div>
+							</div>
+
+							<!-- 输入框 -->
+							<div class="weui-cell">
+								<div class="weui-cell__hd"><label class="weui-label">客户</label></div>
+								<div class="weui-cell__bd">
+									<input class="weui-input" name="nickname" type="text" placeholder="客户姓名">
+								</div>
+							</div>
+							<!-- 输入框 -->
+							<div class="weui-cell">
+								<div class="weui-cell__hd"><label class="weui-label">电话</label></div>
+								<div class="weui-cell__bd">
+									<input class="weui-input" name="mobile" type="text" placeholder="客户电话">
+								</div>
+							</div>
+
+							<!-- 输入框 -->
+							<div class="weui-cell">
+								<div class="weui-cell__hd"><label class="weui-label">地址</label></div>
+								<div class="weui-cell__bd">
+									<input class="weui-input" name="address" type="text" placeholder="服务地址">
+								</div>
+							</div>
+							<!-- 输入框 -->
+							<div class="weui-cell">
+								<div class="weui-cell__hd"><label class="weui-label">价格</label></div>
+								<div class="weui-cell__bd">
+									<input class="weui-input" name="price" type="text" placeholder="服务价格">
+								</div>
+							</div>
+							<!-- 日期 -->
+							<div class="weui-cell border-bottom">
+								<div class="weui-cell__hd">
+									<label for="start_at" class="weui-label">上门日期</label>
+								</div>
+								<div class="weui-cell__bd">
+									<input class="weui-input" id="start_at" name="start_at" type="text"
+										placeholder="请选择日期" readonly>
+								</div>
+							</div>
+							<div class="weui-cell">
+								<div class="weui-cell__hd">
+									<label for="order_type" class="weui-label">
+										订单类型
+									</label>
+								</div>
+								<div class="weui-cell__bd">
+									<select class="layui-select" name="order_type">
+										<option value="1">保洁</option>
+										<option value="2">保姆</option>
+										<option value="3">月嫂</option>
+										<option value="4">育婴师</option>
+										<option value="5">护工</option>
+										<option value="6">学员</option>
+										<option value="7">加盟</option>
+									</select>
+								</div>
+							</div>
+							<div class="weui-cell">
+								<a id="submit" class="weui-btn weui-btn_primary" href="javascript:">确定</a>
+							</div>
+						</div>
+					</div>
+				</form>
+
+
+			</div>
+			<script type="text/javascript">
+				var form = layui.form;
+				var formData = {
+					content: "揭阳榕城家政",
+					nickname: "锋锋",
+					mobile: "13530861042",
+					address: "家家月嫂揭阳榕城店",
+					price: "50/小时",
+					start_at: "2022-03-05 10:30:00",
+					order_type: 3
+				};
+				form.val('myform', formData);
+				layui.laydate.render({
+					elem: '#start_at',
+					type: 'datetime'
+				});
+			</script>
+	</body>
+</html>

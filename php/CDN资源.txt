@@ -50,8 +50,8 @@ https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.all.js
 
 weui
-https://cdn.bootcdn.net/ajax/libs/weui/1.1.3/style/weui.min.css
-//res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css
+https://res.wx.qq.com/open/libs/weui/1.1.3/weui.min.css
+https://res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css
 
 jssdk
 //res.wx.qq.com/open/libs/weui/1.1.3/weui.min.css
