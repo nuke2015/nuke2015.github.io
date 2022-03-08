@@ -67,3 +67,6 @@ https://cdn.bootcss.com/vue/2.5.15/vue.min.js
 复制
 https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.min.js
 
+vconsole.js
+https://lianxin.ijiazhen.com/upload_xlx/wxapp/vconsole.min.js
+
