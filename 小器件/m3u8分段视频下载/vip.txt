@@ -1,0 +1,8 @@
+
+网页.ts分段视频下载方法:
+一:查找m3u8文件,这是个清单文件
+https://xxxyyy.net/zzz/3e49b3a020e.m3u8
+二,实时转化:
+ffmpeg -i https://xxxyyy.net/zzz/3e49b3a020e.m3u8 -c copy output.mp4
+三,要用最新版的ffmpeg
+
