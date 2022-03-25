@@ -6,6 +6,7 @@ sc config   Appinfo start= DISABLED
 sc config   AppMgmt start= DISABLED 
 sc config   AppReadiness start= DISABLED 
 sc config   AppVClient start= DISABLED 
+sc config   wsappx start= DISABLED 
 sc config   AppXSvc start= DISABLED 
 sc config   AudioEndpointBuilder start= AUTO 
 sc config   Audiosrv start= AUTO 

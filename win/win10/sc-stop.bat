@@ -6,6 +6,7 @@ sc  stop Appinfo
 sc  stop AppMgmt           
 sc  stop AppReadiness              
 sc  stop AppVClient            
+sc  stop wsappx           
 sc  stop AppXSvc           
 sc  stop AudioEndpointBuilder              
 sc  stop Audiosrv              
