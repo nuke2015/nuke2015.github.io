@@ -10,7 +10,7 @@ composer install
 本身升级
 composer self-update
 
-降级
+rem 降级
 composer self-update --1
 
 composer --version
