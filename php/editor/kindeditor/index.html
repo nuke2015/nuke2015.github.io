@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>editor</title>
+    <script src="/cssjs/js/lib/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+<style type="text/css">
+    .editor_content{
+
+    }
+</style>
+
+<textarea name="content" id="content" class="editor_content" cols="200" rows="20"></textarea>
+<p>
+    <span onclick="show()" style="border:1px solid red;">保存</span>
+</p>
+<script src="/cssjs/lib/Kindeditor/kindeditor-min.js">
+</script>
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor=K.create('#content', {
+        cssPath : '/cssjs/lib/Kindeditor/plugins/code/prettify.css',fileManagerJson:'/upimg.html',editorid:'content',upImgUrl:'/upload.php',upFlashUrl:'/upload.php',upMediaUrl:'/upload.php',allowFileManager : true
+        });
+        
+    });
+    function show(){
+        html = editor.html(); // KindEditor Node API
+        alert(html);
+        console.log(html);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+<div class="upbox">
+    <link href="/cssjs/css/common.css" rel="stylesheet"/>
+    <script src="/cssjs/js/lib/jquery-2.1.1.min.js">
+    </script>
+    <script src="/cssjs/js/lib/localResizeIMG/lrz.all.bundle.js"></script>
+    <script src="/cssjs/js/lib/upload_form.js"></script>
+<div class="oss_res_banner">
+    </div>
+<div id="tip_banner">
+</div>
+<style type="text/css">
+        
+    .oss_btn_upper {
+        display: inline-block;
+        background: url(/cssjs/img/admin_uploadbnt.png) no-repeat center;
+        text-align: center;
+        width: 100px;
+        height: 25px;
+        overflow: hidden;
+    }
+
+</style>
+<a class="oss_btn_upper" href="" id="img_banner">
+    <input accept="image/*" class="btn btn-xs" multiple="multiple" type="file"/>
+</a>
+<script>
+    var res_host = oss_uper.res_host;
+    oss_uper.upload_image('#img_banner>input', '#tip_banner', function(res) {
+        console.log('fileupload', res.data);
+        var html='<div class="res_item">';
+        html+="<img src="+res_host+res.data+' alt="" class="img-item" />';
+        html+='<input type="text" name="banner[]" value="'+res.data+'" size="70"/>';
+        html+='<span class="btn btn-xs js_img_remove"> 移除 </span>';
+        html+='</div>';
+        $('.oss_res_banner').append(html);
+        $('#tip_banner').html('');
+    });
+    $('.js_img_remove').click(function() {
+        $(this).parent().html('');
+    });
+</script></div>
