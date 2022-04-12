@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layout 后台大布局 - Layui</title>
+  <link rel="stylesheet" href="./layui/css/layui.css" />
+  <link rel="stylesheet" href="./ayq/modules/formDesigner.css" />
+  <link rel="stylesheet" href="./ayq/modules/cron.css" />
+  <link rel="stylesheet" href="./ayq/modules/labelGeneration.css" />
+  <link rel="stylesheet" href="./ayq/modules/formPreview.css" />
+  <style> 
+
+  </style>
+</head>
+
+<body >
+  <div >
+  
+    <div  id="testdemo" style="margin: 20px 20px;padding: 20px 20px;border: 1px solid #009688;">
+      
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="./layui/layui.js"></script>
+  <script type="text/javascript" src="./ayq/modules/Sortable/Sortable.js"> </script>
+  <script type="text/javascript" src="./ayq/modules/iceEditor/iceEditor.js"></script>
+    <script type="text/javascript" src="/cssjs/lib/utils_min.js"></script>
+  <script type="text/javascript" src="/cssjs/lib/common.js"></script>
+  <!-- <script type="text/javascript" src="/cssjs/busi/demo_info.js"></script> -->
+
+  <script>
+    var demojs =  [{
+            "id": "title",
+            "index": 0,
+            "label": "标题",
+            "tag": "input",
+            "tagIcon": "input",
+            "placeholder": "文章标题",
+            "defaultValue": null,
+            "labelWidth": 110,
+            "width": "100%",
+            "clearable": true,
+            "maxlength": null,
+            "showWordLimit": false,
+            "readonly": false,
+            "disabled": false,
+            "required": true,
+            "expression": "",
+            "document": ""
+        },
+        {
+            "id": "category_id",
+            "index": 1,
+            "label": "分章栏目",
+            "tag": "select",
+            "tagIcon": "select",
+            "labelWidth": 110,
+            "width": "100%",
+            "disabled": false,
+            "required": false,
+            "document": "",
+            "datasourceType": "local",
+            "remoteUrl": "http://",
+            "remoteMethod": "post",
+            "remoteOptionText": "options.data.dictName",
+            "remoteOptionValue": "options.data.dictId",
+            "remoteDefaultValue": "12",
+            "options": [{
+                    "text": "栏目",
+                    "value": "0",
+                    "checked": true
+                },
+                {
+                    "text": "育儿知识",
+                    "value": "1",
+                    "checked": false
+                },
+                {
+                    "text": "母婴用户",
+                    "value": "2",
+                    "checked": false
+                },
+                {
+                    "text": "早教",
+                    "value": "3",
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "id": "pic",
+            "index": 2,
+            "label": "封面图片",
+            "tag": "image",
+            "tagIcon": "image",
+            "placeholder": "上传封面图片",
+            "defaultValue": null,
+            "labelWidth": null,
+            "disabled": false,
+            "required": false,
+            "document": "",
+            "uploadUrl": ""
+        },
+        {
+            "id": "content",
+            "index": 3,
+            "label": "文章内容",
+            "tag": "editor",
+            "tagIcon": "editor",
+            "width": "100%",
+            "clearable": true,
+            "maxlength": null,
+            "showWordLimit": false,
+            "menu": [
+                "backColor",
+                "fontSize",
+                "foreColor",
+                "bold",
+                "italic",
+                "underline",
+                "strikeThrough",
+                "justifyLeft",
+                "justifyCenter",
+                "justifyRight",
+                "indent",
+                "outdent",
+                "insertOrderedList",
+                "insertUnorderedList",
+                "superscript",
+                "subscript",
+                "createLink",
+                "unlink",
+                "hr",
+                "face",
+                "table",
+                "files",
+                "music",
+                "video",
+                "insertImage",
+                "removeFormat",
+                "code",
+                "line"
+            ],
+            "height": "200px",
+            "uploadUrl": "",
+            "disabled": false,
+            "document": "/html/upload_help.html"
+        }
+    ];
+    //JavaScript代码区域
+    layui.config(
+		{base: './ayq/modules/'}).use(['formPreview', 'form','layer','upload'], function () {
+      var layer = layui.layer;
+      var $ = layui.jquery;
+      var upload  = layui.upload;
+      var index = layui.index;
+      var formPreview = layui.formPreview;
+      var form = layui.form;
+      var render;
+      
+        render = formPreview.render({
+          elem: '#testdemo',
+          data: demojs,
+          formData: {
+            "title":"demo标题",
+            "category_id":"2",
+            "pic":"tutu",
+            "content":"editor 中国编辑器tu",
+          }
+        });
+
+      //监听提交
+      form.on('submit(demo1)', function(data){
+        var json = render.getFormData();
+        console.log(json);
+        // layer.msg( JSON.stringify(json), {icon: 6});
+        /*$.ajax({
+          url:"/activiti-manager/addActivitiManagera",
+          type:"POST",
+          data:temp,
+          contentType:"application/json",
+          dataType: "json",
+          success:function(res){
+            alert(res.message);
+          }
+        });*/
+        return false;
+      });
+
+    });
+
+
+
+  </script>
+</body>
+
+</html>

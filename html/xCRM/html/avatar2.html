@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>阿姨头像上传</title>
+        <link rel="stylesheet" href="/layui/css/layui.css?t=20220126" media="all">
+		<link rel="stylesheet" href="/cssjs/cropperjs/cropper.css">
+	</head>
+	<body>
+		<div class="layui-container">
+			<h1 id="t1">头像编辑</h1>
+         
+            <label class="label" data-toggle="tooltip" title="Change your avatar">
+                <input type="file" id="myfile" name="myfile" class="layui-btn" accept="image/png, image/jpeg"></input>
+            </label>
+                <span id="cpbtn_edit" class="layui-btn">修图</span>
+                <span id="cpbtn" class="layui-btn">确认</span>
+                <!-- <span id="cpbtn_close" class="layui-btn layui-btn-primary">返回</span> -->
+
+                <p>预览：</p>
+                <img class="rounded" id="avatar" src="#"
+                    alt="avatar">
+        
+
+            <div class="layui-progress" style="margin: 15px 0 30px;">
+                <div class="layui-progress-bar" id="pbar" lay-percent="0"></div>
+            </div>
+		</div>
+    
+        <!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+        <script src="/layui/layui.js"></script>
+        <script src="/cssjs/cropperjs/cropper.js"></script>
+        <script src="/cssjs/lib/utils_min.js?t=20220126"></script>
+        <script src="/cssjs/lib/common.js?t=20220126"></script>
+        <script src="/cssjs/lib/feng_config.js?t=20220126"></script>
+		<script src="/cssjs/busi/avatar2.js"></script>
+
+	</body>
+</html>

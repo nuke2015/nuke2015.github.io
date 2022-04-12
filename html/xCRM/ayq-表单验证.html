@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>
+            表单设计器代码
+        </title>
+        <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.6/css/layui.css"
+        />
+        <link rel="stylesheet" href="./ayq/modules/formDesigner.css" />
+        <link rel="stylesheet" href="./ayq/modules/cron/cron.css" />
+        <link rel="stylesheet" href="./ayq/modules/labelGeneration/labelGeneration.css"
+        />
+        <link rel="stylesheet" href="./ayq/modules/formPreview.css" />
+    </head>
+
+    <body>
+        <div id="testdemo" style="margin: 10px 20px;">
+            <form class="layui-form" style="height:100%;" id="formPreviewForm">
+                <div id="input_1" class="layui-form-item active" data-id="input_1" data-tag="input"
+                data-index="0">
+                    <label class="layui-form-label layui-form-required" style="width: 110px;">
+                        <span style="color:red;">
+                            *
+                        </span>
+                        必填验证:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_1" value="" placeholder="请输入" class="layui-input" lay-vertype="tips"
+                        lay-verify="required" style="width:100%">
+                    </div>
+                </div>
+                <div id="input_2" class="layui-form-item active" data-id="input_2" data-tag="input"
+                data-index="1">
+                    <label class="layui-form-label " style="width: 110px;">
+                        <span style="color:red;">
+                        </span>
+                        非必填:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_2" value="" placeholder="请输入" class="layui-input" lay-vertype="tips"
+                        lay-verify="" style="width:100%">
+                    </div>
+                </div>
+                <div id="input_3" class="layui-form-item active" data-id="input_3" data-tag="input"
+                data-index="2">
+                    <label class="layui-form-label " style="width: 110px;">
+                        <span style="color:red;">
+                        </span>
+                        禁用:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_3" value="" placeholder="请输入" class="layui-input layui-disabled"
+                        lay-vertype="tips" lay-verify="" disabled="" style="width:100%">
+                    </div>
+                </div>
+                <div id="input_4" class="layui-form-item active" data-id="input_4" data-tag="input"
+                data-index="3">
+                    <label class="layui-form-label " style="width: 110px;">
+                        <span style="color:red;">
+                        </span>
+                        只读:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_4" value="" placeholder="请输入" class="layui-input" lay-vertype="tips"
+                        lay-verify="" readonly="" style="width:100%">
+                    </div>
+                </div>
+                <div id="input_5" class="layui-form-item active" data-id="input_5" data-tag="input"
+                data-index="4">
+                    <label class="layui-form-label layui-form-required" style="width: 110px;">
+                        <span style="color:red;">
+                            *
+                        </span>
+                        日期验证:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_5" value="" placeholder="请输入" class="layui-input" lay-vertype="tips"
+                        lay-verify="required|date" style="width:100%">
+                    </div>
+                </div>
+                <div id="input_6" class="layui-form-item active" data-id="input_6" data-tag="input"
+                data-index="5">
+                    <label class="layui-form-label layui-form-required" style="width: 110px;">
+                        <span style="color:red;">
+                            *
+                        </span>
+                        身份证验证:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_6" value="" placeholder="请输入" class="layui-input" lay-vertype="tips"
+                        lay-verify="required|identity" style="width:100%">
+                    </div>
+                </div>
+                <div id="input_7" class="layui-form-item active" data-id="input_7" data-tag="input"
+                data-index="6">
+                    <label class="layui-form-label layui-form-required" style="width: 110px;">
+                        <span style="color:red;">
+                            *
+                        </span>
+                        手机验证:
+                    </label>
+                    <div class="layui-input-block" style="margin-left: 110px">
+                        <input name="input_7" value="" placeholder="请输入" class="layui-input" lay-vertype="tips"
+                        lay-verify="required|phone" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button type="submit" class="layui-btn" lay-submit="" lay-filter="formPreviewForm">
+                            提交
+                        </button>
+                        <button type="reset" class="layui-btn layui-btn-primary">
+                            重置
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="https://www.layuicdn.com/layui-v2.5.6/layui.js">
+        </script>
+        <script type="text/javascript" src="./ayq/modules/Sortable/Sortable.js">
+        </script>
+        <script type="text/javascript" src="./ayq/modules/numberInput/numberInput.js">
+        </script>
+        <script type="text/javascript" src="./ayq/modules/icon/iconPicker.js">
+        </script>
+        <script type="text/javascript" src="./ayq/modules/cron/cron.js">
+        </script>
+        <script type="text/javascript" src="./ayq/modules/iceEditor/iceEditor.js">
+        </script>
+        <script type="text/javascript" src="./ayq/modules/labelGeneration/labelGeneration.js">
+        </script>
+        <script type="text/javascript" src="./ayq/js/config.js?v=100">
+        </script>
+        <script>
+            layui.use(["layer", "laytpl", "element", "form", "slider", "laydate", "rate", "colorpicker", "layedit", "carousel", "upload", "formField", "numberInput", "iconPicker", "cron", "labelGeneration"],
+            function() {
+                var $ = layui.jquery,
+                layer = layui.layer,
+                laytpl = layui.laytpl,
+                setter = layui.cache,
+                element = layui.element,
+                slider = layui.slider,
+                laydate = layui.laydate,
+                rate = layui.rate,
+                colorpicker = layui.colorpicker,
+                carousel = layui.carousel,
+                form = layui.form,
+                upload = layui.upload,
+                layedit = layui.layedit,
+                formField = layui.formField,
+                hint = layui.hint,
+                numberInput = layui.numberInput,
+                iconPicker = layui.iconPicker,
+                cron = layui.cron,
+                labelGeneration = layui.labelGeneration;
+            });
+        </script>
+    </body>
+
+</html>

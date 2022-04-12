@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>头像上传</title>
+		<link rel="stylesheet" href="https://unpkg.com/bootstrap@4/dist/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/cssjs/cropperjs/cropper.css">
+		<style>
+			.label {
+				cursor: pointer;
+			}
+
+			.progress {
+				display: none;
+				margin-bottom: 1rem;
+			}
+
+			.alert {
+				display: none;
+			}
+
+			.img-container img {
+				max-width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- http://crm_dajia.loc.qinqinyuesao.com/html/avatar.html?type=0&img=baidu.m -->
+		<!-- http://crm_dajia.loc.qinqinyuesao.com/html/avatar.html?type=1&img=baidu.m -->
+		<div class="container">
+			<h1>头像编辑</h1>
+			<label class="label" data-toggle="tooltip" title="Change your avatar">
+				<img class="rounded" id="avatar" src="https://avatars0.githubusercontent.com/u/3456749?s=160"
+					alt="avatar">
+				<input type="file" class="sr-only" id="input" name="image" accept="image/*">
+			</label>
+			<p>点击头像,运行裁剪!</p>
+			<div class="progress">
+				<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+					aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+			</div>
+			<div class="alert" role="alert"></div>
+			<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">方形头像</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="img-container">
+								<img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary" id="crop">确认</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://unpkg.com/jquery@3/dist/jquery.min.js" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/bootstrap@4/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		<script src="/cssjs/cropperjs/cropper.js"></script>
+
+		<script>
+			window.addEventListener('DOMContentLoaded', function() {
+				// 全局参数
+				console.log(g_params);
+                if(g_params.type=='pic_big'){
+                    aspectRatio_my= 16/9;
+                }else{
+                    aspectRatio_my=1;
+                }
+                console.log(g_params,aspectRatio_my);
+
+                var skiller_id=Number(g_params.skiller_id);
+                if(!skiller_id){
+                	layer.msg('参数错误skiller_id!');
+                }
+
+				var avatar = document.getElementById('avatar');
+				var image = document.getElementById('image');
+				var input = document.getElementById('input');
+				var $progress = $('.progress');
+				var $progressBar = $('.progress-bar');
+				var $alert = $('.alert');
+				var $modal = $('#modal');
+				var cropper;
+
+				$('[data-toggle="tooltip"]').tooltip();
+
+				input.addEventListener('change', function(e) {
+					var files = e.target.files;
+					var done = function(url) {
+						input.value = '';
+						image.src = url;
+						$alert.hide();
+						$modal.modal('show');
+					};
+					var reader;
+					var file;
+					var url;
+
+					if (files && files.length > 0) {
+						file = files[0];
+
+						if (URL) {
+							done(URL.createObjectURL(file));
+						} else if (FileReader) {
+							reader = new FileReader();
+							reader.onload = function(e) {
+								done(reader.result);
+							};
+							reader.readAsDataURL(file);
+						}
+					}
+				});
+
+				$modal.on('shown.bs.modal', function() {
+					cropper = new Cropper(image, {
+						// aspectRatio: 1,
+                        // aspectRatio: 4/3,
+						aspectRatio: aspectRatio_my,
+						viewMode: 3,
+					});
+				}).on('hidden.bs.modal', function() {
+					cropper.destroy();
+					cropper = null;
+				});
+
+				function corpper_to_canvas(canvas) {
+					initialAvatarURL = avatar.src;
+					avatar.src = canvas.toDataURL();
+					$progress.show();
+					$alert.removeClass('alert-success alert-warning');
+					canvas.toBlob(function(blob) {
+						var formData = new FormData();
+
+						formData.append('file', blob, 'avatar.jpg');
+
+						var identity = helper._store('identity');
+						// 鐧婚檰鎬佹敞鍏�
+						if (identity && identity.admin_id && identity.token) {
+							formData.admin_id = identity.admin_id;
+							formData.token = identity.token;
+						}
+						console.log(identity);
+
+						$.ajax('/api_crm/?methodName=FileUpload', {
+							method: 'POST',
+							data: formData,
+							processData: false,
+							contentType: false,
+
+							xhr: function() {
+								var xhr = new XMLHttpRequest();
+
+								xhr.upload.onprogress = function(e) {
+									var percent = '0';
+									var percentage = '0%';
+
+									if (e.lengthComputable) {
+										percent = Math.round((e.loaded / e.total) * 100);
+										percentage = percent + '%';
+										$progressBar.width(percentage).attr('aria-valuenow',
+											percent).text(percentage);
+									}
+								};
+
+								return xhr;
+							},
+
+							success: function(res) {
+								helper.jlog(res)
+								$alert.show().addClass('alert-success').text("上传成功!");
+								if(g_params.type=='pic_big'){
+								var req={"methodName":"SkillerEdit","pic_big":res.data.path,"id":skiller_id};
+								}else{
+								var req={"methodName":"SkillerEdit","pic":res.data.path,"id":skiller_id};
+								}
+								api_crm(req,function(res){
+									layui.msg(res.msg);
+								},function(){
+									layui.msg(res.msg);
+								});
+							},
+
+							error: function() {
+								avatar.src = initialAvatarURL;
+								$alert.show().addClass('alert-warning').text('上传失败哦!');
+							},
+
+							complete: function() {
+								$progress.hide();
+							},
+						});
+					});
+				};
+
+				document.getElementById('crop').addEventListener('click', function() {
+					var initialAvatarURL;
+					var canvas;
+
+					$modal.modal('hide');
+
+					if (cropper) {
+						if(g_params.type=='pic_big'){
+							canvas = cropper.getCroppedCanvas({
+								width: 750,
+								height: 450,
+							});
+						}else{
+							canvas = cropper.getCroppedCanvas({
+								width: 450,
+								height: 450,
+							});
+						}
+
+						corpper_to_canvas(canvas);
+
+					}
+				});
+			});
+		</script>
+		
+		<!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+		<script src="/layui/layui.js"></script>
+		<script src="/cssjs/lib/utils_min.js?t=20220126"></script>
+		<script src="/cssjs/lib/common.js?t=20220126"></script>
+		<script src="/cssjs/lib/feng_config.js?t=20220126"></script>
+
+	</body>
+</html>

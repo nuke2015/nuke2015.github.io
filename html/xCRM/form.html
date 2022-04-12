@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>测试 - layui</title>
+  <link rel="stylesheet" href="layui/css/layui.css">
+
+  <!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+  <script src="layui/layui.js"></script>
+</head>
+<body>
+
+<div class="layui-container">
+  <div class="layui-progress" style="margin: 15px 0 30px;">
+    <div class="layui-progress-bar" lay-percent="100%"></div>
+  </div>
+  
+  <div class="layui-form" id="myse1" lay-filter="test1">
+    <select></select>
+  </div>
+  
+  <div class="layui-form" id="myse2" lay-filter="test2">
+    <select></select>
+  </div>
+
+</div>
+
+
+<script>
+layui.use(function(){
+  var layer = layui.layer
+  ,form = layui.form
+  ,$ = layui.jquery
+  ,laypage = layui.laypage
+  ,element = layui.element
+  ,laydate = layui.laydate
+  ,util = layui.util;
+  
+     $("#myse1>select").append('<option value="0">she</option>');
+     $("#myse2>select").append('<option value="0">your</option>');
+
+  for(i=0;i<5;i++){
+    console.log(i);
+     $("#myse1>select").append('<option value="'+i+'">N:'+i+'</option>');
+     $("#myse2>select").append('<option value="'+i+'">N:'+i+'</option>');
+  }
+
+    form.render(null, 'test1'); //更新 lay-filter="test1" 所在容器内的全部表单状态
+  // form.render('select', 'test2'); //更新 lay-filter="test2" 所在容器内的全部 select 状态
+  
+});
+</script>
+</body>
+</html>

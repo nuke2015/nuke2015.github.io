@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>xCRM,奋斗,就有无限可能!</title>
+  <link rel="stylesheet" href="/layui/css/layui.css" />
+
+  <!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+  <script src="/layui/layui.js"></script>
+  <script src="/cssjs/lib/utils_min.js?t=20220126"></script>
+  <script src="/cssjs/lib/common.js?t=20220126"></script>
+  <script src="/cssjs/lib/feng_config.js?t=20220126"></script>
+  <script type="text/javascript">
+    var c=helper.isLogin();
+    if(!c){
+      helper.gotoLogin();
+    }
+  </script>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo layui-hide-xs layui-bg-black">xCRM</div>
+    <!-- 头部区域（可配合layui 已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <!-- 移动端显示 -->
+      <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+        <i class="layui-icon layui-icon-spread-left"></i>
+      </li>
+
+      <li class="layui-nav-item layui-hide-xs"><a href="/designer.html" target="demoAdmin" >表单设计器</a></li>
+      <li class="layui-nav-item layui-hide-xs"><a href="/html/test.html" target="demoAdmin" >测试第一页</a></li>
+      <li class="layui-nav-item layui-hide-xs"><a href="/html/hello_info.html" target="demoAdmin" >表单录入</a></li>
+      <li class="layui-nav-item layui-hide-xs"><a href="/html/demo_list.html" target="demoAdmin" >Demo</a></li>
+      
+    </ul>
+    <script type="text/javascript">
+        function logout(){
+            helper.isLogout();
+            layer.msg("您已退出登陆!",function(){
+                location.href="/html/login.html";
+            });
+        }
+    </script>
+
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+        <a id="admininfo" href="javascript:;">
+          <img src="/cssjs/image/head.jpg" class="layui-nav-img">
+          锋锋
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="/html/password.html" target="demoAdmin">修改密码</a></dd>
+          <dd><a href="javascript:logout();">退出登陆</a></dd>
+        </dl>
+      </li>
+      <!-- <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+        <a href="javascript:;">
+          <i class="layui-icon layui-icon-more-vertical"></i>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree" lay-filter="test">
+        
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">月嫂管理</a>
+          <dl class="layui-nav-child">
+            
+            <dd><a href="/html/skiller_list.html?r=20220109" target="demoAdmin" >月嫂管理</a></dd>
+            <dd><a href="/html/skiller_contact_list.html?r=20220109" target="demoAdmin" >月嫂通信录</a></dd>
+            <dd><a href="/html/skiller_map_list.html?r=20220109" target="demoAdmin" >阿姨接单配置</a></dd>
+            <dd><a href="/html/vacation_list.html?r=20220109" target="demoAdmin" >请假管理</a></dd>
+            <dd><a href="/html/schedule_list.html?r=20220109" target="demoAdmin" >月嫂档期管理</a></dd>
+            <dd><a href="/html/skiller_tag_list.html?r=20220109" target="demoAdmin" >月嫂标签配置</a></dd>
+            
+           
+            
+          </dl>
+        </li>
+
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">订单管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="/html/order_list.html?r=20220109" target="demoAdmin" >订单管理</a></dd>
+            <dd><a href="/html/order_follow_list.html?r=20220109" target="demoAdmin" >订单跟进记录</a></dd>
+            <dd><a href="/html/order_pay_list.html?r=20220109" target="demoAdmin" >系统收款记录</a></dd>
+            <dd><a href="/html/order_plan_list.html?r=20220109" target="demoAdmin" >应付账单记录</a></dd>
+            <dd><a href="/html/user_list.html?r=20220109" target="demoAdmin" >客户管理</a></dd>
+          </dl>
+        </li>
+        
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">日常运营</a>
+          <dl class="layui-nav-child">
+            <dd><a href="/html/article_list.html?r=20220109" target="demoAdmin" >文章管理</a></dd>
+            <dd><a href="/html/banner_list.html?r=20220109" target="demoAdmin" >轮播图管理</a></dd>
+            <dd><a href="/html/block_list.html?r=20220109" target="demoAdmin" >广告位管理</a></dd>
+            <dd><a href="/html/single_list.html?r=20220109" target="demoAdmin" >单页面管理</a></dd>
+            <dd><a href="/html/comment_list.html?r=20220109" target="demoAdmin" >用户评价管理</a></dd>
+          </dl>
+        </li>
+
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="javascript:;">系统设置</a>
+          <dl class="layui-nav-child">
+            <dd><a href="/html/product_list.html?r=20220109" target="demoAdmin" >产品配置</a></dd>
+            <dd><a href="/html/shop_list.html?r=20220109" target="demoAdmin" >门店管理</a></dd>
+            <dd><a href="/html/nav_list.html?r=20220109" target="demoAdmin" >小程序菜单</a></dd>
+            <dd><a href="/html/admin_list.html?r=20220109" target="demoAdmin" >员工管理</a></dd>
+            <dd><a href="/html/role_list.html?r=20220109" target="demoAdmin" >权限角色设置</a></dd>
+            <dd><a href="/html/node_list.html?r=20220109" target="demoAdmin" >权限节点设置</a></dd>
+            <dd><a href="/html/log_list.html?r=20220109" target="demoAdmin" >系统运行日志</a></dd>
+          </dl>
+        </li>
+<!--         <li class="layui-nav-item"><a href="javascript:;">click menu item</a></li>
+        <li class="layui-nav-item"><a href="">the links</a></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="layui-body">
+
+    <iframe src="/html/about.html" frameborder="0" id="demoAdmin" name="demoAdmin" style="width: 100%; height: 100%; border-radius: 2px;"></iframe>
+
+  </div>
+
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    power by 家政大系统!
+  </div>
+</div>
+
+<script>
+//JS
+layui.use(['element', 'layer', 'util'], function(){
+  var element = layui.element
+  ,layer = layui.layer
+  ,util = layui.util
+  ,$ = layui.$;
+
+  //头部事件
+  util.event('lay-header-event', {
+    //左侧菜单事件
+    menuLeft: function(othis){
+      layer.msg('展开左侧菜单的操作', {icon: 0});
+    }
+    ,menuRight: function(){
+      layer.open({
+        type: 1
+        ,content: '<div style="padding: 15px;">处理右侧面板的操作</div>'
+        ,area: ['260px', '100%']
+        ,offset: 'rt' //右上角
+        ,anim: 5
+        ,shadeClose: true
+      });
+    }
+  });
+
+});
+</script>
+</body>
+</html>

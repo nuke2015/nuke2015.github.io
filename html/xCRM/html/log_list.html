@@ -1,0 +1,121 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>日志管理</title>
+		<link rel="stylesheet" href="/layui/css/layui.css?t=20220126" media="all">
+		<script src="/layui/layui.js?t=20220126"></script>
+		<script src="/cssjs/lib/utils_min.js?t=20220126"></script>
+        <script src="/cssjs/lib/common.js?t=20220126"></script>
+		<script src="/cssjs/lib/feng_config.js?t=20220126"></script>
+	</head>
+	<style>
+		.main {
+			margin: 20px 20px;
+			padding: 20px 20px;
+		}
+
+		.img_min {
+			width: 160px;
+			height: 160px;
+            margin: 5px 5px;
+            padding: 5px 5px;
+		}
+        .layui-table img{
+            max-width: 200px;
+        }
+        /*// 显示图片*/
+        .layui-table-cell{
+            text-align:center;
+            height: auto;
+            white-space: normal;
+        }
+	</style>
+	<body class="">
+
+		<div class="main layui-row layui-col-xs12">
+
+			<h1>系统日志管理</h1>
+			<form action="#" class="layui-form">
+
+				<div id="DistributeInfo" lay-filter="DistributeInfo">
+
+					<!--  <div class="action layui-inline">
+                <select name="level" id="js_level" lay-filter="level">
+                    <option value="" selected="1">星级</option>
+                </select>
+            </div>
+
+            <div class="action layui-inline">
+                  <select name="day_range" lay-filter="catid">
+                    <option value="0" selected="1">请选择天数范围</option>
+                    <option value="1" >4天以内</option>
+                    <option value="2" >4-7天</option>
+                    <option value="3" >7-26天</option>
+                    <option value="4" >26天以上</option>
+                  </select>
+            </div>
+ -->
+					<!-- <div class="action layui-inline" id="create_at" lay-key="7">
+						<div class="layui-input-inline">
+							<input type="text" name="start_time" autocomplete="off" id="start_time" class="layui-input"
+								placeholder="开始日期" />
+						</div>
+
+						<div class="layui-input-inline">
+							<input type="text" name="end_time" autocomplete="off" id="end_time" class="layui-input"
+								placeholder="结束日期" />
+						</div>
+
+
+					</div>
+
+					<div class="action layui-inline">
+						<label class="layui-form-label">标题</label>
+						<div class="layui-input-inline">
+							<input type="text" name="title" class="layui-input" value="" />
+						</div>
+					</div>
+
+					<div class="action layui-inline">
+						<label class="layui-form-label">工号</label>
+						<div class="layui-input-inline">
+							<input type="text" name="skiller_no" class="layui-input" value="" />
+						</div>
+					</div>
+
+					<button type="submit" class="layui-btn" lay-submit="" lay-filter="DistributeSubmit">搜索</button>
+ -->
+                    <!-- <a href="javascript:void(0);" id="daochu" class="layui-btn layui-pull-right">导出</a> -->
+					<!-- <a id="demo_add" class="layui-btn layui-pull-right">添加</a> -->
+				</div>
+			</form>
+
+		<!-- 	<div class="layui-tab">
+				<ul class="layui-tab-title" id="tab_switch">
+					<li data-status="1" class="layui-this">上线</li>
+                    <li data-status="0">下线</li>
+				</ul>
+			</div>
+ -->
+			<table class="layui-hide js_table"></table>
+			<div id="pagebar"></div>
+			<script type="text/html" id="table-attr-do">
+                <a href="/html/log_info.html?id={{d.c}}" class="js_end layui-btn layui-btn-default layui-btn-sm">详情</a>
+               <!--  {{# if(d.status==1){ }}
+				<a data-id="{{d.id}}" data-status="{{d.status}}" class="js_delete layui-btn layui-btn-default layui-btn-sm">下线</a>
+				{{# }else if(d.status==0){ }}
+				<a data-id="{{d.id}}" data-status="{{d.status}}" class="js_delete layui-btn layui-btn-default layui-btn-sm">上线</a>
+				{{# }  }} -->
+			</script>
+		</div>
+
+		<!-- 导出excel表 -->
+		<script src="/cssjs/sheetjs/xlsx.full.min.js"></script>
+
+		<script src="/cssjs/busi/log_list.js"></script>
+
+	</body>
+
+</html>

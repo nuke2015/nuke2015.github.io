@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1,user-scalable=0" name="viewport" />
+		<title>
+			心连心
+		</title>
+		<!-- 字体 -->
+		<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+		<!-- head 中 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+
+		<!-- body 最后 -->
+		<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+
+		<!-- 如果使用了某些拓展插件还需要额外的JS -->
+		<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/swiper.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/city-picker.min.js"></script>
+	</head>
+</html>
+<style>
+	body {
+		background: #edf0f7;
+	}
+
+	.clearfix {
+		zoom: 1;
+	}
+
+	.fa {
+		font-size: 24px;
+	}
+
+	.fa-user {
+		font-size: 48px;
+	}
+
+	.fr {
+		float: right;
+	}
+
+	.fl {
+		float: left;
+	}
+	.ac{
+		align:center;
+	}
+
+	.page-hd {
+		background: #7916be;
+		color: #ffffff;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.fr10 {
+		float: right;
+		margin-right: 10px;
+	}
+
+	.fl10 {
+		float: left;
+		margin-left: 10px;
+	}
+
+	.ma {
+		display: -webkit-box;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+	}
+
+	.menu-ul {
+		background: #ffffff;
+		padding: 5px;
+		height: 180px;
+		width: 200%;
+		text-align: center;
+	}
+
+	.menu-ul>li {
+		float: left;
+		height: 75px;
+        margin:10px;
+        width: 75px;
+		list-style-type: none;
+	}
+
+	.menu-fa {
+		font-size: 36px;
+		color: #aa00ff;
+        width: 100%;
+	}
+
+	.home-xing {
+		margin-top: 10px;
+		background: #ffffff;
+		padding: 10px;
+	}
+
+	.home-xing-bd {
+		overflow: scroll;
+		background: #ffffff;
+	}
+
+	.home-xing-item {
+		margin: 10px 10px;
+		height: 200px;
+		text-align: center;
+		float: left;
+		font-size: 14px;
+		padding: 10px 10px;
+		box-shadow: 0px 2px 8px 4px rgba(216, 38, 38, 0.4);
+		border-radius: 5px;
+	}
+
+	.redtitle {
+		font-size: 20px;
+		color: #cc3399;
+		font-weight: bold;
+	}
+
+	.home-comment {
+		margin: 20px 20px;
+		box-shadow: 0px 2px 8px 4px rgba(216, 38, 38, 0.4);
+		border-radius: 5px;
+		width: 90%;
+		height: 250px;
+		overflow: hidden;
+	}
+
+	.home-comment-icon {
+		height: 65px;
+	}
+
+	.home-comment-txt {
+		margin: 10px 10px;
+		width: 90%;
+		letter-spacing: 1px;
+		font-size: 12px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: wrap;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+	}
+
+	.home-comment-img {
+		overflow: hidden;
+		padding: 1px 5px;
+		width: 90%;
+	}
+
+	.home-comment-img>img {
+		margin: 2px 5px;
+		width: 95px;
+		height: 95px;
+	}
+
+	.comment-uicon {
+		margin: 10px 10px;
+		padding: 10px 10px;
+	}
+
+	.comment-name {
+		margin-top: 25px;
+		height: 40px;
+		width: 90%;
+		line-height: 20px;
+	}
+
+	.comment-server {
+		overflow: hidden;
+		font-size: 10px;
+	}
+
+	.comment>i {
+		font-size: 10px;
+	}
+
+	.home-footer {
+		margin: 20px auto;
+	}
+
+	.article-title {
+		color: #CC3399;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 250px;
+		margin: 10px 10px;
+	}
+
+	.article-desp {
+		margin: 10px 10px;
+		font-size: 12px;
+		letter-spacing: 1px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: wrap;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+	}
+
+	.order-title {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 250px;
+		color: #7916BE;
+		margin: 10px 10px;
+	}
+
+	.border {
+		border: 1px solid red;
+	}
+	.justify{
+		justify-content: center;
+	}
+	.align{
+		align-items: center;
+	}
+</style>
+<body ontouchstart="">
+	<!-- Your Code -->
+	<div class="container">
+		<div class="page flex ">
+			<div class="weui-flex page-hd">
+				<div>
+					<div class="placeholder">
+						<i class="fa fa-angle-left">
+						</i>
+					</div>
+				</div>
+				<div class="weui-flex__item">
+					<div class="placeholder">
+						心连心
+					</div>
+				</div>
+				<div>
+					<div class="placeholder">
+						<i class="fa fa-home">
+						</i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="weui-flex home-menu">
+				<ul class="menu-ul">
+					<li data-turl="/html/order_info.html">
+                        <i class="fa fa-heart-o menu-fa">
+                        </i>
+                        新订单
+					</li>
+					<li data-turl="/html/order_list.html">
+						<i class="fa fa-pied-piper-alt menu-fa">
+						</i>
+                        订单管理
+					</li>
+					<li data-turl="/html/skiller_contact_list.html">
+						<i class="fa fa-viadeo menu-fa">
+						</i>
+                        阿姨管理
+					</li>
+					<li data-turl="/html/skiller_list.html">
+						<i class="fa fa-stethoscope menu-fa">
+						</i>
+                        阿姨筛选
+					</li>
+					<li data-turl="/html/order_pay_list.html">
+						<i class="fa fa-wordpress menu-fa">
+						</i>
+                        收款记录
+					</li>
+					<li data-turl="/html/user_list.html">
+						<i class="fa fa-linux menu-fa">
+						</i>
+                        客户管理
+					</li>
+					<li data-turl="/html/comment_list.html">
+						<i class="fa fa-linode menu-fa">
+						</i>
+                        评价管理 
+					</li>
+					<li data-turl="/html/order_follow_list.html">
+						<i class="fa fa-firefox menu-fa">
+						</i>
+                        订单跟进
+					</li>
+				</ul>
+			</div>
+            <div >
+                 <iframe src="/html/about.html" frameborder="0" id="demoAdmin" name="demoAdmin" style="width: 100%; height: 3500px; border-radius: 2px;"></iframe>
+            </div>
+		</div>
+	</div>
+</body>
+<script>
+	$('.menu-ul>li').click(function(){
+        var turl=$(this).attr('data-turl');
+        console.log(turl);
+        $("#demoAdmin").attr('src',turl);
+    })
+</script>

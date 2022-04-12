@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layout 后台大布局 - Layui</title>
+  <link rel="stylesheet" href="./layui/css/layui.css" />
+  <link rel="stylesheet" href="./ayq/modules/formDesigner.css" />
+  <link rel="stylesheet" href="./ayq/modules/cron.css" />
+  <link rel="stylesheet" href="./ayq/modules/labelGeneration.css" />
+  <link rel="stylesheet" href="./ayq/modules/formPreview.css" />
+  <style> 
+
+  </style>
+</head>
+
+<body >
+  <div >
+    <div>
+      <button type="button" class="layui-btn" id="importJson">导入数据</button>
+      <button type="button" class="layui-btn layui-btn-danger" id="globalDisable">禁用表单</button>
+      <button type="button" class="layui-btn layui-btn-normal" id="globalNoDisable">启用表单</button>
+      <button type="button" class="layui-btn layui-btn-warm" id="getFormData" >获取表单数据</button>
+    </div>
+    <div  id="testdemo" style="margin: 20px 20px;padding: 20px 20px;border: 1px solid #009688;">
+      
+    </div>
+  </div>
+  <div class="importjsoncodeview" style="display: none;">
+    <textarea class="site-demo-text" id="import-json-code-view">
+      [
+    {
+        "id": "textarea_1",
+        "index": 0,
+        "label": "多行文本",
+        "tag": "textarea",
+        "tagIcon": "textarea",
+        "placeholder": "请输入",
+        "defaultValue": null,
+        "width": "100%",
+        "readonly": false,
+        "disabled": false,
+        "required": true,
+        "document": ""
+    },
+    {
+        "id": "rate_19",
+        "index": 1,
+        "label": "评分",
+        "tag": "rate",
+        "tagIcon": "rate",
+        "labelWidth": 110,
+        "defaultValue": 0,
+        "rateLength": 5,
+        "half": false,
+        "text": false,
+        "theme": "default",
+        "showBottom": true,
+        "readonly": false,
+        "document": ""
+    },
+    {
+        "id": "editor_21",
+        "index": 2,
+        "label": "编辑器",
+        "tag": "editor",
+        "tagIcon": "editor",
+        "width": "100%",
+        "clearable": true,
+        "maxlength": null,
+        "showWordLimit": false,
+        "menu": [
+            "backColor",
+            "fontSize",
+            "foreColor",
+            "bold",
+            "italic",
+            "underline",
+            "strikeThrough",
+            "justifyLeft",
+            "justifyCenter",
+            "justifyRight",
+            "indent",
+            "outdent",
+            "insertOrderedList",
+            "insertUnorderedList",
+            "superscript",
+            "subscript",
+            "createLink",
+            "unlink",
+            "hr",
+            "face",
+            "table",
+            "files",
+            "music",
+            "video",
+            "insertImage",
+            "removeFormat",
+            "code",
+            "line"
+        ],
+        "height": "200px",
+        "uploadUrl": "/upload/",
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "colorpicker_20",
+        "index": 3,
+        "label": "颜色选择器",
+        "tag": "colorpicker",
+        "tagIcon": "colorpicker",
+        "labelWidth": 110,
+        "defaultValue": "rgba(0, 0, 0, 1)",
+        "colorformat": "#fff",
+        "alpha": false,
+        "colors": [],
+        "size": "",
+        "showBottom": true,
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "switch_18",
+        "index": 4,
+        "label": "开关",
+        "tag": "switch",
+        "tagIcon": "switch",
+        "labelWidth": 110,
+        "width": "100%",
+        "switchValue": false,
+        "showWordLimit": false,
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "slider_17",
+        "index": 5,
+        "label": "滑块",
+        "tag": "slider",
+        "tagIcon": "slider",
+        "labelWidth": 110,
+        "width": "100%",
+        "defaultValue": 10,
+        "maxValue": 100,
+        "minValue": 1,
+        "stepValue": 2,
+        "isInput": true,
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "carousel_16",
+        "index": 6,
+        "label": "轮播图",
+        "tag": "carousel",
+        "tagIcon": "carousel",
+        "width": "100%",
+        "height": "500px",
+        "full": false,
+        "anim": "default",
+        "interval": 3000,
+        "startIndex": 0,
+        "arrow": "hover",
+        "autoplay": true,
+        "document": "",
+        "datasourceType": "local",
+        "remoteUrl": "http://",
+        "remoteMethod": "post",
+        "remoteOptionText": "options.data.dictName",
+        "remoteOptionValue": "options.data.dictId",
+        "options": [
+            {
+                "text": "banner1",
+                "value": "./ayq/images/banner1.PNG",
+                "checked": true
+            },
+            {
+                "text": "banner2",
+                "value": "./ayq/images/banner2.PNG",
+                "checked": false
+            },
+            {
+                "text": "banner3",
+                "value": "./ayq/images/banner3.PNG",
+                "checked": false
+            }
+        ]
+    },
+    {
+        "id": "input_2",
+        "index": 7,
+        "label": "sdfs s",
+        "tag": "input",
+        "tagIcon": "input",
+        "placeholder": "请输入",
+        "defaultValue": null,
+        "labelWidth": 110,
+        "width": "100%",
+        "clearable": true,
+        "maxlength": null,
+        "showWordLimit": false,
+        "readonly": false,
+        "disabled": false,
+        "required": false,
+        "expression": "",
+        "document": ""
+    },
+    {
+        "id": "image_15",
+        "index": 8,
+        "label": "上传图片",
+        "tag": "image",
+        "tagIcon": "image",
+        "placeholder": "请输入",
+        "defaultValue": null,
+        "labelWidth": null,
+        "disabled": false,
+        "required": true,
+        "document": "",
+        "uploadUrl": ""
+    },
+    {
+        "id": "dateRange_14",
+        "index": 9,
+        "label": "日期范围",
+        "tag": "dateRange",
+        "tagIcon": "dateRange",
+        "labelWidth": 110,
+        "dateRangeDefaultValue": "2021-06-19 - 2021-07-17",
+        "clearable": true,
+        "maxlength": null,
+        "datetype": "date",
+        "dateformat": "yyyy-MM-dd",
+        "isInitValue": true,
+        "dataMaxValue": "2088-12-31",
+        "dataMinValue": "1900-01-01",
+        "trigger": null,
+        "position": "absolute",
+        "theme": "default",
+        "mark": null,
+        "showBottom": true,
+        "zindex": 66666666,
+        "disabled": false,
+        "required": true,
+        "document": ""
+    },
+    {
+        "id": "input_3",
+        "index": 10,
+        "label": "单行文本",
+        "tag": "input",
+        "tagIcon": "input",
+        "placeholder": "请输入",
+        "defaultValue": null,
+        "labelWidth": 110,
+        "width": "100%",
+        "clearable": true,
+        "maxlength": null,
+        "showWordLimit": false,
+        "readonly": false,
+        "disabled": false,
+        "required": true,
+        "expression": "",
+        "document": ""
+    },
+    {
+        "id": "file_13",
+        "index": 11,
+        "label": "上传文件",
+        "tag": "file",
+        "tagIcon": "file",
+        "placeholder": "请输入",
+        "defaultValue": null,
+        "labelWidth": null,
+        "disabled": false,
+        "required": true,
+        "document": "",
+        "uploadUrl": ""
+    },
+    {
+        "id": "checkbox_4",
+        "index": 12,
+        "label": "复选组",
+        "tag": "checkbox",
+        "tagIcon": "checkbox",
+        "labelWidth": 110,
+        "disabled": false,
+        "required": true,
+        "document": "",
+        "datasourceType": "local",
+        "remoteUrl": "http://",
+        "remoteMethod": "post",
+        "remoteOptionText": "options.data.dictName",
+        "remoteOptionValue": "options.data.dictId",
+        "options": [
+            {
+                "text": "option1",
+                "value": "value1",
+                "checked": true
+            },
+            {
+                "text": "option2",
+                "value": "value2",
+                "checked": true
+            },
+            {
+                "text": "option3",
+                "value": "value3",
+                "checked": false
+            }
+        ]
+    },
+    {
+        "id": "iconPicker_5",
+        "index": 13,
+        "label": "图标选择器",
+        "tag": "iconPicker",
+        "tagIcon": "iconPicker",
+        "labelWidth": 110,
+        "defaultValue": "",
+        "iconPickerSearch": true,
+        "iconPickerPage": true,
+        "iconPickerLimit": 12,
+        "iconPickerCellWidth": "43px",
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "grid_12",
+        "index": 14,
+        "tag": "grid",
+        "span": 2,
+        "columns": [
+            {
+                "span": 12,
+                "list": []
+            },
+            {
+                "span": 12,
+                "list": []
+            }
+        ]
+    },
+    {
+        "id": "numberInput_11",
+        "index": 15,
+        "label": "排序文本框",
+        "tag": "numberInput",
+        "tagIcon": "numberInput",
+        "labelWidth": 110,
+        "width": "100%",
+        "defaultValue": 0,
+        "maxValue": 100,
+        "minValue": 0,
+        "stepValue": 1,
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "cron_10",
+        "index": 16,
+        "label": "Cron表达式",
+        "tag": "cron",
+        "tagIcon": "cron",
+        "placeholder": "请输入cron表达式,如:0 0 12 * * ?",
+        "labelWidth": 110,
+        "width": "100%",
+        "defaultValue": "* * * * * ?",
+        "cronUrl": "",
+        "disabled": false,
+        "required": true,
+        "document": ""
+    },
+    {
+        "id": "numberInput_6",
+        "index": 17,
+        "label": "排序文本框",
+        "tag": "numberInput",
+        "tagIcon": "numberInput",
+        "labelWidth": 110,
+        "width": "100%",
+        "defaultValue": 0,
+        "maxValue": 100,
+        "minValue": 0,
+        "stepValue": 1,
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "editor_9",
+        "index": 18,
+        "label": "编辑器",
+        "tag": "editor",
+        "tagIcon": "editor",
+        "width": "100%",
+        "clearable": true,
+        "maxlength": null,
+        "showWordLimit": false,
+        "menu": [
+            "backColor",
+            "fontSize",
+            "foreColor",
+            "bold",
+            "italic",
+            "underline",
+            "strikeThrough",
+            "justifyLeft",
+            "justifyCenter",
+            "justifyRight",
+            "indent",
+            "outdent",
+            "insertOrderedList",
+            "insertUnorderedList",
+            "superscript",
+            "subscript",
+            "createLink",
+            "unlink",
+            "hr",
+            "face",
+            "table",
+            "files",
+            "music",
+            "video",
+            "insertImage",
+            "removeFormat",
+            "code",
+            "line"
+        ],
+        "height": "200px",
+        "uploadUrl": "/upload/",
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "iconPicker_8",
+        "index": 19,
+        "label": "图标选择器",
+        "tag": "iconPicker",
+        "tagIcon": "iconPicker",
+        "labelWidth": 110,
+        "defaultValue": "",
+        "iconPickerSearch": true,
+        "iconPickerPage": true,
+        "iconPickerLimit": 12,
+        "iconPickerCellWidth": "43px",
+        "disabled": false,
+        "document": ""
+    },
+    {
+        "id": "labelGeneration_7",
+        "index": 20,
+        "label": "标签组件",
+        "tag": "labelGeneration",
+        "tagIcon": "labelGeneration",
+        "labelWidth": 110,
+        "width": "100%",
+        "isEnter": false,
+        "disabled": false,
+        "document": ""
+    }
+]
+    </textarea>
+    <a href="javascript:;" class="layui-btn layui-btn-normal" style="margin-right:20px;" id="import-json-code">导入数据</a>
+  </div>
+  <div class="getFormData" style="display: none;">
+    <textarea class="site-demo-text" id="get-form-data"></textarea>
+  </div>
+  <script type="text/javascript" src="./layui/layui.js"></script>
+  <script type="text/javascript" src="./ayq/modules/Sortable/Sortable.js"> </script>
+  <script type="text/javascript" src="./ayq/modules/iceEditor/iceEditor.js"></script>
+
+  <script>
+    var demojs = [];
+    //JavaScript代码区域
+    layui.config(
+		{base: './ayq/modules/'}).use(['formPreview', 'form','layer','upload'], function () {
+      var layer = layui.layer;
+      var $ = layui.jquery;
+      var upload  = layui.upload;
+      var index = layui.index;
+      var formPreview = layui.formPreview;
+      var form = layui.form;
+      var render;
+      if (window.localStorage.getItem('layui_form_json') !== undefined) {
+        demojs = JSON.parse($("#import-json-code-view").html());
+        render = formPreview.render({
+          elem: '#testdemo',
+          data: demojs,
+          formData: demojs
+        });
+        var images = render.getImages();
+        for (var i = 0; i < images.length; i++) {
+          upload.render({
+            elem: '#' + images[i].select
+            , url: '' + images[i].uploadUrl + ''
+            , multiple: true
+            , before: function (obj) {
+              layer.msg('图片上传中...', {
+                icon: 16,
+                shade: 0.01,
+                time: 0
+              })
+            }
+            , done: function (res) {
+              layer.close(layer.msg());//关闭上传提示窗口
+              //上传完毕
+              $('#uploader-list-' + item.id).append(
+                      '<div id="" class="file-iteme">' +
+                      '<div class="handle"><i class="layui-icon layui-icon-delete"></i></div>' +
+                      '<img style="width: 100px;height: 100px;" src=' + res.data.src + '>' +
+                      '<div class="info">' + res.data.title + '</div>' +
+                      '</div>'
+              );
+            }
+          });
+        }
+
+        var filesData = render.getFiles();
+        for (var i = 0; i < filesData.length; i++) {
+          upload.render({
+            elem: '#' + filesData[i].select
+            , elemList: $('#list-' + filesData[i].select) //列表元素对象
+            , url: '' + filesData[i].uploadUrl + ''
+            , accept: 'file'
+            , multiple: true
+            , number: 3
+            , auto: false
+            , bindAction: '#listAction-' + filesData[i].select
+            , choose: function (obj) {
+              var that = this;
+              var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
+              //读取本地文件
+              obj.preview(function (index, file, result) {
+                var tr = $(['<tr id="upload-' + index + '">'
+                  , '<td>' + file.name + '</td>'
+                  , '<td>' + (file.size / 1014).toFixed(1) + 'kb</td>'
+                  , '<td><div class="layui-progress" lay-filter="progress-demo-' + index + '"><div class="layui-progress-bar" lay-percent=""></div></div></td>'
+                  , '<td>'
+                  , '<button class="layui-btn layui-btn-xs demo-reload layui-hide">重传</button>'
+                  , '<button class="layui-btn layui-btn-xs layui-btn-danger demo-delete">删除</button>'
+                  , '</td>'
+                  , '</tr>'].join(''));
+
+                //单个重传
+                tr.find('.demo-reload').on('click', function () {
+                  obj.upload(index, file);
+                });
+
+                //删除
+                tr.find('.demo-delete').on('click', function () {
+                  delete files[index]; //删除对应的文件
+                  tr.remove();
+                  uploadListIns.config.elem.next()[0].value = ''; //清空 input file 值，以免删除后出现同名文件不可选
+                });
+
+                that.elemList.append(tr);
+                element.render('progress'); //渲染新加的进度条组件
+              });
+            }
+            , done: function (res, index, upload) { //成功的回调
+              var that = this;
+              //if(res.code == 0){ //上传成功
+              var tr = that.elemList.find('tr#upload-' + index)
+                      , tds = tr.children();
+              tds.eq(3).html(''); //清空操作
+              delete this.files[index]; //删除文件队列已经上传成功的文件
+              return;
+              //}
+              this.error(index, upload);
+            }
+            , allDone: function (obj) { //多文件上传完毕后的状态回调
+              console.log(obj)
+            }
+            , error: function (index, upload) { //错误回调
+              var that = this;
+              var tr = that.elemList.find('tr#upload-' + index)
+                      , tds = tr.children();
+              tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
+            }
+            , progress: function (n, elem, e, index) {
+              element.progress('progress-demo-' + index, n + '%'); //执行进度条。n 即为返回的进度百分比
+            }
+          });
+        }
+      }
+      //监听提交
+      form.on('submit(demo1)', function(data){
+        var json = render.getFormData();
+        console.log(json);
+        layer.msg( JSON.stringify(json), {icon: 6});
+        /*$.ajax({
+          url:"/activiti-manager/addActivitiManagera",
+          type:"POST",
+          data:temp,
+          contentType:"application/json",
+          dataType: "json",
+          success:function(res){
+            alert(res.message);
+          }
+        });*/
+        return false;
+      });
+
+      //导入数据
+      $('#importJson').on('click', function () {
+        layer.open({
+          type: 1
+          , title: 'JSON模板数据导入'
+          , id: 'Lay_layer_importjsoncodeview'
+          , content: $('.importjsoncodeview')
+          , area: ['800px', '640px']
+          , shade: false
+          , resize: false
+          , success: function (layero, index) {
+          }
+          , end: function () {
+            $('.importjsoncodeview').css("display","none")
+          }
+        });
+      });
+
+      //导入数据
+      $('#getFormData').on('click', function () {
+        var _value = render.getFormData();
+        $('#get-form-data').val(JSON.stringify(_value,null,4));
+        layer.open({
+          type: 1
+          , title: 'JSON模板数据导入'
+          , id: 'Lay_layer_importjsoncodeview'
+          , content: $('.getFormData')
+          , area: ['800px', '640px']
+          , shade: false
+          , resize: false
+          , success: function (layero, index) {
+          }
+          , end: function () {
+            $('.getFormData').css("display","none")
+          }
+        });
+      });
+
+      $('#import-json-code').on('click', function () {
+        var _value = document.getElementById("import-json-code-view").value;
+        try {
+          var json = JSON.parse(_value);
+          render.setFormData(json);
+          layer.closeAll();
+          layer.msg('导入成功');
+        }catch (e) {
+          layer.closeAll();
+          layer.msg('导入数据格式异常');
+        }
+      });
+
+      $('#globalDisable').on('click', function () {
+        render.globalDisable();
+      });
+      $('#globalNoDisable').on('click', function () {
+        render.globalNoDisable();
+      });
+    });
+
+
+    function getSubmitData(){
+      var data=$('#testdemo').form[0].serialize();
+      console.log(data);
+      return data;
+    }
+
+  </script>
+</body>
+
+</html>

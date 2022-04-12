@@ -1,0 +1,10 @@
+<!-- power by fengfeng! -->
+<img id="HeartBeat" src="#" style="display:none;" />
+<script type="text/javascript">
+	var identityObj = helper._store("identity");
+	if (identityObj && identityObj.admin_id && identityObj.token) {
+		var turl = "/api_crm/?methodName=Heart&admin_id=" + identityObj.admin_id + "&title=" + document.title + "&turl=" +
+			encodeURIComponent(location.href);
+		$("#HeartBeat").attr("src", turl);
+	}
+</script>

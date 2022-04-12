@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layout 后台大布局 - Layui</title>
+  <link rel="stylesheet" href="./layui/css/layui.css" />
+  <link rel="stylesheet" href="./ayq/modules/formDesigner.css" />
+  <link rel="stylesheet" href="./ayq/modules/cron.css" />
+  <link rel="stylesheet" href="./ayq/modules/labelGeneration.css" />
+  <link rel="stylesheet" href="./ayq/modules/formPreview.css" />
+  <style> 
+
+  </style>
+</head>
+
+<body >
+  <div >
+  
+    <div  id="testdemo" style="margin: 20px 20px;padding: 20px 20px;border: 1px solid #009688;">
+      
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="./layui/layui.js"></script>
+  <script type="text/javascript" src="./ayq/modules/Sortable/Sortable.js"> </script>
+  <script type="text/javascript" src="./ayq/modules/iceEditor/iceEditor.js"></script>
+    <script type="text/javascript" src="/cssjs/lib/utils_min.js"></script>
+  <script type="text/javascript" src="/cssjs/lib/common.js"></script>
+  <script type="text/javascript" src="/cssjs/lib/p_c_a.js"></script>
+  <!-- <script type="text/javascript" src="/cssjs/busi/demo_info.js"></script> -->
+
+  <script>
+    var demojs = [
+    {
+        "id": "locat",
+        "index": 0,
+        "label": "省市区",
+        "tag": "pca",
+        "tagIcon": "pca",
+        "width": "100%",
+        "clearable": true,
+        "maxlength": null,
+        "showWordLimit": false,
+        "menu": [
+            "backColor",
+            "fontSize",
+            "foreColor",
+            "bold",
+            "italic",
+            "underline",
+            "strikeThrough",
+            "justifyLeft",
+            "justifyCenter",
+            "justifyRight",
+            "indent",
+            "outdent",
+            "insertOrderedList",
+            "insertUnorderedList",
+            "superscript",
+            "subscript",
+            "createLink",
+            "unlink",
+            "hr",
+            "face",
+            "table",
+            "files",
+            "music",
+            "video",
+            "insertImage",
+            "removeFormat",
+            "code",
+            "line"
+        ],
+        "height": "200px",
+        "uploadUrl": "/upload/",
+        "disabled": false,
+        "document": ""
+    }
+];
+    //JavaScript代码区域
+    layui.config(
+		{base: './ayq/modules/'}).use(['formPreview', 'form','layer','upload'], function () {
+      var layer = layui.layer;
+      var $ = layui.jquery;
+      var upload  = layui.upload;
+      var index = layui.index;
+      var formPreview = layui.formPreview;
+      var form = layui.form;
+      var render;
+      
+        render = formPreview.render({
+          elem: '#testdemo',
+          data: demojs,
+          formData: {
+            "title":"demo标题",
+            "category_id":"2",
+            "pic":"tutu",
+            "content":"editor 中国编辑器tu",
+          }
+        });
+
+        form.render();
+      
+      //监听提交
+      form.on('submit(demo1)', function(data){
+        var json = render.getFormData();
+        console.log(json);
+        // layer.msg( JSON.stringify(json), {icon: 6});
+        /*$.ajax({
+          url:"/activiti-manager/addActivitiManagera",
+          type:"POST",
+          data:temp,
+          contentType:"application/json",
+          dataType: "json",
+          success:function(res){
+            alert(res.message);
+          }
+        });*/
+        return false;
+      });
+
+    });
+
+
+
+  </script>
+</body>
+
+</html>

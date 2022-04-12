@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>CRM,奋斗,就有无限可能!</title>
+  <link rel="stylesheet" href="/layui/css/layui.css" />
+
+  <!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+  <script src="/layui/layui.js"></script>
+  <script src="/cssjs/lib/utils_min.js?t=20220126"></script>
+  <script src="/cssjs/lib/common.js?t=20220126"></script>
+  <script src="/cssjs/lib/feng_config.js?t=20220126"></script>
+  <script type="text/javascript">
+    var c=helper.isLogin();
+    if(!c){
+      helper.gotoLogin();
+    }
+  </script>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo layui-hide-xs layui-bg-black">心连心后台</div>
+    <!-- 头部区域（可配合layui 已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <!-- 移动端显示 -->
+      <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+        <i class="layui-icon layui-icon-spread-left" id="menu_toggle"></i>
+      </li>
+<!-- 
+      <li class="layui-nav-item layui-hide-xs"><a href="/designer.html" target="demoAdmin" >表单设计器</a></li>
+      <li class="layui-nav-item layui-hide-xs"><a href="/html/test.html" target="demoAdmin" >测试第一页</a></li>
+      <li class="layui-nav-item layui-hide-xs"><a href="/html/hello_info.html" target="demoAdmin" >表单录入</a></li>
+      <li class="layui-nav-item layui-hide-xs"><a href="/html/demo_list.html" target="demoAdmin" >Demo</a></li>
+       -->
+    </ul>
+    <script type="text/javascript">
+        function logout(){
+            helper.isLogout();
+            layer.msg("您已退出登陆!",function(){
+                location.href="/html/login.html";
+            });
+        }
+    </script>
+
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+        <a id="admininfo" href="javascript:;">
+          <img src="/cssjs/image/head.jpg" class="layui-nav-img">
+          锋锋
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="/html/password.html" target="demoAdmin">修改密码</a></dd>
+          <dd><a href="javascript:logout();">退出登陆</a></dd>
+        </dl>
+      </li>
+      <!-- <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+        <a href="javascript:;">
+          <i class="layui-icon layui-icon-more-vertical"></i>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul id="sys_menu_html" class="layui-nav layui-nav-tree" lay-filter="test">
+        
+        <script id="sys_menu" type="text/html">
+        <li class="layui-nav-item layui-nav-itemed">
+          {{#  layui.each(d.category, function(catid, cat){ }}
+          {{# if(catid<5){ }}
+          <a class="" href="javascript:;">{{cat}}</a>
+          <dl class="layui-nav-child">
+            
+              {{#  layui.each(d.data, function(k2, item){ }}
+              
+                {{# if(item.pid==catid){ }}
+                <dd><a href="{{item.turl}}" target="demoAdmin" >{{item.title}}</a></dd>
+                {{# } }}
+
+              {{#  }); }}
+                
+          </dl>
+          {{# } }}
+          {{#  }); }}
+        </li>
+        </script>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="layui-body">
+
+    <iframe src="/html/about.html" frameborder="0" id="demoAdmin" name="demoAdmin" style="width: 100%; height: 100%; border-radius: 2px;"></iframe>
+
+  </div>
+
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    power by 家政大系统!
+  </div>
+</div>
+
+<script>
+//JS
+layui.use(['element', 'layer', 'util'], function(){
+  var element = layui.element
+  ,layer = layui.layer
+  ,util = layui.util
+  ,$ = layui.$;
+
+  $(".layui-logo").click(function(){
+    location.href="/";
+  });
+});
+</script>
+<script src="/cssjs/busi/index.js?t=20220126"></script>
+</body>
+</html>

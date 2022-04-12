@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>测试 - layui</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+
+		<!-- 引入 layui.js 的 <script> 标签最好放置在 html 末尾 -->
+		<script src="layui/layui.js"></script>
+
+		<script type="text/javascript" src="/cssjs/lib/utils_min.js"></script>
+		<script type="text/javascript" src="/cssjs/lib/common.js"></script>
+		<script type="text/javascript" src="/cssjs/lib/p_c_a.js"></script>
+	</head>
+	<body>
+
+		<div class="layui-container">
+
+			<div class="layui-form">
+				<div class="layui-form-item" id="test1" lay-filter="test1">
+					<div>
+						<div class="key fl layui-form-label ">省市区</div>
+						<div class="layui-input-inline">
+							<select name="provice" id="pca_province">
+								<option value="">省份</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="city" id="pca_city">
+								<option value="">市级</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="area" id="pca_area">
+								<option value="">区县</option>
+							</select>
+						</div>
+						<div class="cb"></div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">联动选择框</label>
+					<div class="layui-input-inline">
+						<select name="quiz1">
+							<option value="">请选择省</option>
+							<option value="浙江" selected="">浙江省</option>
+							<option value="你的工号">江西省</option>
+							<option value="你最喜欢的老师">福建省</option>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<select name="quiz2">
+							<option value="">请选择市</option>
+							<option value="杭州">杭州</option>
+							<option value="宁波" disabled="">宁波</option>
+							<option value="温州">温州</option>
+							<option value="温州">台州</option>
+							<option value="温州">绍兴</option>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<select name="quiz3">
+							<option value="">请选择县/区</option>
+							<option value="西湖区">西湖区</option>
+							<option value="余杭区">余杭区</option>
+							<option value="拱墅区">临安市</option>
+						</select>
+					</div>
+					<div class="layui-form-mid layui-word-aux">此处只是演示联动排版，并未做联动交互</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script>
+			layui.use(function() {
+				var layer = layui.layer,
+					form = layui.form,
+					$ = layui.jquery,
+					laypage = layui.laypage,
+					element = layui.element,
+					laydate = layui.laydate,
+					util = layui.util;
+
+				layer.ready(function() {
+					api_pca.init(0, 0, 0);
+					// layer.msg('很高兴一开场就见到你');
+          var x=$("#pca_province").val();
+
+          console.log(x);
+          
+          // render 早了,要在api_pca.init之后才行,没效果~
+					form.render(); //更新 lay-filter="test2" 所在容器内的全部 select 状态
+					// form.render(null, 'test1'); //更新 lay-filter="test1" 所在容器内的全部表单状态
+					// form.render('select', 'test'); //更新 lay-filter="test2" 所在容器内的全部 select 状态
+
+				});
+
+			});
+		</script>
+	</body>
+</html>
