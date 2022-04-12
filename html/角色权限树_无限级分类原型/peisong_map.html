@@ -1,0 +1,54 @@
+
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="/static/css/element2.8.2.css">
+    <link rel="stylesheet" href="/static/lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/static/css/bootstrap3.3.7.css">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/layout.css?v=2">
+    <link rel="stylesheet" href="/static/css/skin.css?v=2">
+
+    <script src="/static/js/jquery1.12.js"></script>
+    <script src="/static/js/vue2.5.16.min.js"></script>
+    <script src="/static/js/element2.8.2.js"></script>
+    <script src="/static/js/xlsx.full.min.js"></script>
+    <script src="/static/js/common.js?v=2"></script>
+    <script src="/static/rcjz/layui/layui.js"></script>
+    <script src="/static/rcjz/cssjs/lib/utils_min.js?t=20220126"></script>
+    <script src="/static/rcjz/cssjs/lib/common.js?t=20220126"></script>
+    <script src="/static/rcjz/cssjs/lib/feng_config.js?t=20220126"></script>
+    <script src="/static/rcjz/cssjs/lib/template.js"></script>
+
+    <div class="pd-15">
+
+
+            <h1>配送区域设置</h1>
+            <br>
+            
+            <div id="result"></div>
+            <span id="setok" class="layui-btn layui-btn-primary">保存</span>
+            <script type="text/html" id="mytpl">
+                <table class="layui-table">
+                {{each data as value key}}
+                    <tr>
+                        <td width="10%">
+                            <input type="checkbox" name="" class="direct" data-key="{{key}}" value="{{key}}">
+                        </td>
+                        <td>
+                                <ul>    
+                            {{each value as v k}}
+                                <ol>
+                                    <input type="checkbox" name="ids[]" value="{{v.province_id}}" class="js_map js_sub_{{key}} layui-checkbox" {{if v.hit}}checked{{/if}}>{{v.name}},
+                                </ol>
+                            {{/each}}
+                                </ul>
+                        </td>
+                    </tr>
+                {{/each}}
+                </table>
+            </script>
+
+        </div>
+</div>
+
+<script src="/static/rcjz/busi/peisong_map.js"></script>
