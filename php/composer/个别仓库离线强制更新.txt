@@ -1,0 +1,4 @@
+
+composer remove nuke2015/api
+
+composer require nuke2015/api dev-master
