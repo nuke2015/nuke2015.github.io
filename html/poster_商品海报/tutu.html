@@ -104,7 +104,7 @@
 				// 这里就按照chrome等新版浏览器来处理
 				const a = document.createElement('a')
 				a.href = imgUrl
-				a.setAttribute('download', 'chart-download')
+				a.setAttribute('download', 'result')
 				a.click()
 			}
 		},
@@ -126,8 +126,9 @@
 	    },
 	}
 	var c = document.getElementById("myCanvas"); // 使用id来寻找canvas元素
-		api.getBase64('https://upload.jjys168.com/jiajiamuying_upload/20220419/1650357863625e76670b28d.png@150h_150w_1e_1c',function(r1){
-		console.log(r1);
+	var pic='https://upload.jjys168.com/jiajiamuying_upload/20220419/1650357863625e76670b28d.png@150h_150w_1e_1c';
+	api.getBase64(pic,function(r1){
+		console.log(pic,r1);
 		api.make(c,r1,r1);
 	});
 	// api.make(c,'imgdemo.jpg','qrcode.png');
