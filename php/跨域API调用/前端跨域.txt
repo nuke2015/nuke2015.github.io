@@ -1,0 +1,27 @@
+
+// 原生 xml 的设置方式
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+// axios 设置方式
+axios.defaults.withCredentials = true;
+2.Access-Control-Allow-Credentials为true
+
+3.Access-Control-Allow-Origin为非*
+
+
+.前端示例
+分别演示一下前端部分简单请求和非简单请求
+
+简单请求
+<script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+<script>
+  axios.get("http://127.0.0.1:8080/api/corslist");
+</script>
+非简单请求
+这里我们加入了一个非集合内的header头cc来达到非简单请求的目的。
+
+<script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+<script>
+  axios.get("http://127.0.0.1:8080/api/corslist", { header: { cc: "xxx" } });
+</script>
+
